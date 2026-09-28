@@ -1,0 +1,4 @@
+# داده‌ها از وب قابل‌خواندن نباشند؛ فقط از طریق stats.php با کلید
+<FilesMatch "\.(jsonl|key)$">
+  Require all denied
+</FilesMatch>

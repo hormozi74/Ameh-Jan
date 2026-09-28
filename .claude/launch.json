@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "ameh", "runtimeExecutable": "node", "runtimeArgs": ["/Users/behtis/Documents/Personal Project/Ameh-Jan/build/serve.js", "8765"], "port": 8765 }
+  ]
+}
