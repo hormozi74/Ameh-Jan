@@ -21,100 +21,100 @@ const FIC_QUESTIONS = [
   /* `villain` در داده بود ولی هیچ سؤالی سراغش نمی‌رفت — فقط غیرمستقیم از
      «همه دوستش دارن؟» دیده می‌شد. برای صدها شروری که اضافه شدند این
      پرارزش‌ترین سؤالِ یک‌بیتی است. */
-  {id:'villain', cluster:'fict', text:'آدم‌بَدِ قصه‌ست؟ شرورِ داستانه؟',
+  {id:'villain', cluster:'fict', text:'نقشِ منفی و شرورِ داستانه؟',
    rule:t => has(t,'villain') ? .92 : .05},
 
-  {id:'lead', cluster:'fict', text:'خودش قهرمانِ اصلیِ ماجراست؟ همه‌چی دورِ خودش می‌چرخه؟',
+  {id:'lead', cluster:'fict', text:'شخصیتِ اصلیِ داستانه؟',
    rule:t => !t.has('fic') ? .10 : has(t,'lead') ? .90 : .12},
 
-  {id:'robot', cluster:'fict', text:'رباته؟ آدم‌آهنی و ماشینه؟',
+  {id:'robot', cluster:'fict', text:'رباته؟',
    rule:t => has(t,'robot') ? .93 : .02},
 
-  {id:'monster', cluster:'fict', text:'هیولاست؟ جن و غول و زامبی و خون‌آشام؟',
+  {id:'monster', cluster:'fict', text:'هیولاست؟ مثل زامبی، خون‌آشام یا غول',
    rule:t => has(t,'monster') ? .92 : has(t,'villain') ? .12 : .02},
 
   /* ---------------- world: دنیایی که توش می‌گذره ---------------- */
 
-  {id:'space', cluster:'world', text:'داستانش تو فضاست؟ سفینه و سیاره‌های دیگه؟',
+  {id:'space', cluster:'world', text:'داستانش تو فضا و سیاره‌های دیگه می‌گذره؟',
    rule:t => has(t,'space') ? .91 : .03},
 
-  {id:'fantasy', cluster:'world', text:'تو دنیای شمشیر و جادو و اژدها و قلعه‌ست؟',
+  {id:'fantasy', cluster:'world', text:'داستانش فانتزیه؟ دنیایِ جادو و اژدها و قلعه؟',
    rule:t => has(t,'fantasy') ? .90 : has(t,'mythic') ? .45 : .04},
 
-  {id:'horror', cluster:'world', text:'ترسناکه؟ آدم ازش می‌ترسه؟',
+  {id:'horror', cluster:'world', text:'داستانش ترسناکه؟',
    rule:t => has(t,'horror') ? .91 : has(t,'monster','villain') ? .25 : .03},
 
-  {id:'apoc', cluster:'world', text:'داستانش آخرالزمانیه؟ دنیا نابود شده، زامبی و ویرونه؟',
+  {id:'apoc', cluster:'world', text:'داستانش آخرالزمانیه؟ یعنی دنیا نابود شده؟',
    rule:t => has(t,'apoc') ? .90 : .03},
 
   /* ---------------- gear: ظاهر و ابزار ---------------- */
 
-  {id:'masked', cluster:'gear', text:'صورتش رو می‌پوشونه؟ ماسک یا نقاب داره؟',
+  {id:'masked', cluster:'gear', text:'ماسک یا نقاب می‌زنه؟',
    rule:t => has(t,'masked') ? .91 : .04},
 
-  {id:'costume', cluster:'gear', text:'یه لباسِ مخصوص داره که همیشه تنشه؟',
+  {id:'costume', cluster:'gear', text:'لباسِ مخصوص و همیشگی داره؟',
    rule:t => has(t,'costume') ? .88 : has(t,'super') ? .40 : .10},
 
-  {id:'gun', cluster:'gear', text:'همیشه تفنگ و اسلحه‌ی گرم دستشه؟',
+  {id:'gun', cluster:'gear', text:'سلاحش تفنگه؟',
    rule:t => has(t,'gun') ? .90 : has(t,'soldier','cop') ? .45 : .04},
 
-  {id:'sword', cluster:'gear', text:'شمشیر یا سلاحِ سرد داره؟',
+  {id:'sword', cluster:'gear', text:'سلاحش شمشیر یا سلاحِ سرده؟',
    rule:t => has(t,'sword') ? .90 : has(t,'epic','general') ? .30 : .03},
 
-  {id:'weirdhair', cluster:'gear', text:'موهاش رنگِ عجیبه؟ آبی و صورتی و سبز؟',
+  {id:'weirdhair', cluster:'gear', text:'موهاش رنگِ غیرعادی داره؟ مثل آبی یا صورتی',
    rule:t => has(t,'weirdhair') ? .88 : .02},
 
   /* ---------------- prof: نقش‌هایی که در داده بودند ولی سؤال نداشتند ---------------- */
 
-  {id:'cop', cluster:'prof', text:'پلیسه؟ کارآگاهه؟',
+  {id:'cop', cluster:'prof', text:'پلیس یا کارآگاهه؟',
    rule:t => has(t,'cop') ? .92 : .03},
 
-  {id:'criminal', cluster:'prof', text:'خلافکاره؟ دزد و گانگستر و قاچاقچی؟',
+  {id:'criminal', cluster:'prof', text:'خلافکاره؟ دزد، گانگستر یا قاچاقچی؟',
    rule:t => has(t,'criminal') ? .90 : has(t,'villain') ? .20 : .03},
 
-  {id:'soldier', cluster:'prof', text:'سربازه؟ نظامیه؟',
+  {id:'soldier', cluster:'prof', text:'نظامیه؟ سرباز یا افسر؟',
    rule:t => has(t,'soldier') ? .90 : has(t,'war','general') ? .30 : .03},
 
-  {id:'teacher', cluster:'prof', text:'معلمه؟ درس می‌ده؟',
+  {id:'teacher', cluster:'prof', text:'معلمه؟',
    rule:t => has(t,'teacher') ? .91 : has(t,'scientist','philosopher') ? .25 : .03},
 
   /* ---------------- work: خودِ اثر، نه شخصیت ----------------
      این‌ها چیزی را می‌پرسند که بازیکن بی‌درنگ بلد است جواب بدهد
      («بازیش رو با گوشی بازی می‌کنی؟») و یک‌تنه صدها نامزد را کنار می‌گذارند. */
 
-  {id:'playable', cluster:'work', text:'تو بازی، خودت کنترلش می‌کنی؟ باهاش بازی می‌کنی؟',
+  {id:'playable', cluster:'work', text:'تو بازی، خودت کنترلش می‌کنی؟',
    rule:t => !t.has('game') ? .03 : has(t,'playable') ? .90 : .15},
 
-  {id:'mobile_game', cluster:'work', text:'بازیش رو با گوشی بازی می‌کنی؟',
+  {id:'mobile_game', cluster:'work', text:'بازیش موبایلیه؟',
    rule:t => has(t,'mobile') ? .90 : t.has('game') ? .15 : .02},
 
-  {id:'online_game', cluster:'work', text:'بازیش آنلاینه؟ با بقیه بازی می‌کنی؟',
+  {id:'online_game', cluster:'work', text:'بازیش آنلاین و چندنفره‌ست؟',
    rule:t => has(t,'online') ? .89 : t.has('game') ? .18 : .02},
 
-  {id:'fighting', cluster:'work', text:'بازیش مبارزه‌ی تن‌به‌تنه؟ مثل مورتال کمبت و تکن؟',
+  {id:'fighting', cluster:'work', text:'بازیش مبارزه‌ی تن‌به‌تنه؟ مثل مورتال کمبت و تکن',
    rule:t => has(t,'fighting') ? .90 : t.has('game') ? .12 : .02},
 
-  {id:'shooter', cluster:'work', text:'بازیش تیراندازیه؟ مثل کالاف دیوتی و کانتر؟',
+  {id:'shooter', cluster:'work', text:'بازیش تیراندازیه؟ مثل کالاف دیوتی و کانتر',
    rule:t => has(t,'shooter') ? .90 : t.has('game') ? .12 : .02},
 
-  {id:'openworld', cluster:'work', text:'بازیش جهان‌بازه؟ مثل جی‌تی‌ای که آزاد می‌چرخی؟',
+  {id:'openworld', cluster:'work', text:'بازیش جهان‌بازه؟ مثل جی‌تی‌ای',
    rule:t => has(t,'openworld') ? .89 : t.has('game') ? .15 : .02},
 
-  {id:'retro', cluster:'work', text:'مال نسل قدیمِ بازی‌هاست؟ آتاری، سگا، میکرو؟',
+  {id:'retro', cluster:'work', text:'مالِ بازی‌های قدیمیه؟ آتاری، سگا، میکرو؟',
    rule:t => has(t,'retro') ? .88 : has(t,'d60') ? .30 : .04},
 
-  {id:'longrun', cluster:'work', text:'سریالش سال‌ها ادامه داشت؟ کلی فصل داشت؟',
+  {id:'longrun', cluster:'work', text:'سریالش فصل‌های زیادی داره؟',
    rule:t => has(t,'longrun') ? .89 : t.has('series') ? .25 : .04},
 
-  {id:'stream', cluster:'work', text:'سریالش مال نتفلیکس و شبکه‌ی خانگیه، نه تلویزیون؟',
+  {id:'stream', cluster:'work', text:'سریالش مالِ نتفلیکس یا پلتفرم‌های اینترنتیه؟',
    rule:t => has(t,'stream') ? .89 : t.has('series') ? .18 : .03},
 
-  {id:'sitcom', cluster:'work', text:'سریالش سیت‌کامه؟ مثل فرندز که هر قسمت می‌خندی؟',
+  {id:'sitcom', cluster:'work', text:'سریالش کمدیِ سیت‌کامه؟ مثل فرندز',
    rule:t => has(t,'sitcom') ? .90 : has(t,'comedy') ? .18 : .03},
 
   /* ---------------- bio ---------------- */
 
-  {id:'teen', cluster:'bio', text:'نوجوونه؟ هنوز مدرسه می‌ره؟',
+  {id:'teen', cluster:'bio', text:'نوجوونه؟',
    rule:t => has(t,'teen') ? .90 : has(t,'young') ? .28 : .04},
 ];
 

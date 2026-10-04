@@ -20,7 +20,7 @@ const first = name => {
 
 const LETTER_QUESTIONS = LETTERS.map((L, i) => ({
   id: 'ltr' + i, cluster: 'letter',
-  text: `یه سؤالِ شیطونی: اسمش با «${L === 'ا' ? 'الف' : L}» شروع می‌شه؟`,
+  text: `اسمش با حرفِ «${L === 'ا' ? 'الف' : L}» شروع می‌شه؟`,
   rule: t => t.has('kin') ? .5 : first(t.__name) === L ? .9 : .04,
 }));
 

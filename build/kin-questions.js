@@ -10,16 +10,16 @@
 const KIN_QUESTIONS = [
 
   /* --- تنها سؤالی که فامیل را از سلبریتی جدا می‌کند، و کاملاً طبیعی است --- */
-  {id:'fam_close', cluster:'fam', text:'خودت از نزدیک دیدیش؟ باهاش حرف زدی؟',
+  {id:'fam_close', cluster:'fam', text:'خودت از نزدیک می‌شناسیش؟ باهاش حرف زدی؟',
    rule:t => t.has('kin') ? .96 : .06},
 
-  {id:'fam_blood', cluster:'fam', text:'نسبتِ خونی باهات داره؟ نه اینکه با ازدواج فامیل شده باشه',
+  {id:'fam_blood', cluster:'fam', text:'نسبتِ خونی باهات داره؟ (نه از راهِ ازدواج)',
    rule:t => !t.has('kin') ? .04 : t.has('blood') ? .95 : .05},
 
-  {id:'fam_pat', cluster:'fam', text:'از طرفِ بابات قربونت برم؟',
+  {id:'fam_pat', cluster:'fam', text:'از طرفِ بابات فامیله؟',
    rule:t => !t.has('kin') ? .04 : t.has('pat') ? .95 : t.has('nuc') ? .35 : .04},
 
-  {id:'fam_mat', cluster:'fam', text:'از طرفِ مامانته؟',
+  {id:'fam_mat', cluster:'fam', text:'از طرفِ مامانت فامیله؟',
    rule:t => !t.has('kin') ? .04 : t.has('mat') ? .95 : t.has('nuc') ? .35 : .04},
 
   {id:'fam_inlaw', cluster:'fam', text:'از فامیلِ همسرته؟',
@@ -29,10 +29,10 @@ const KIN_QUESTIONS = [
    rule:t => !t.has('kin') ? .50 :
      t.has('g2up') ? .97 : t.has('g1up') ? .95 : t.has('g0') ? .45 : .03},
 
-  {id:'fam_gen0', cluster:'fam', text:'هم‌سن‌وسالِ خودته؟ با هم بزرگ شدین؟',
+  {id:'fam_gen0', cluster:'fam', text:'هم‌نسلِ خودته؟ تقریباً هم‌سن‌وسال؟',
    rule:t => !t.has('kin') ? .05 : t.has('g0') ? .90 : .05},
 
-  {id:'fam_g2up', cluster:'fam', text:'نسلِ بابابزرگ مامان‌بزرگ‌هاست؟',
+  {id:'fam_g2up', cluster:'fam', text:'از نسلِ پدربزرگ و مادربزرگته؟',
    rule:t => !t.has('kin') ? .03 : t.has('g2up') ? .95 : .03},
 
   /* پدر و مادر پرتکرارترین انتخاب‌اند ولی هیچ برچسب یکتایی نداشتند و با
@@ -40,13 +40,13 @@ const KIN_QUESTIONS = [
   {id:'fam_own_parent', cluster:'fam', text:'بابا یا مامانِ خودته؟',
    rule:t => !t.has('kin') ? .03 : t.has('parent0') ? .96 : .03},
 
-  {id:'fam_child', cluster:'fam', text:'بچه‌ی خودته مادرجان؟',
+  {id:'fam_child', cluster:'fam', text:'بچه‌ی خودته؟',
    rule:t => !t.has('kin') ? .02 : t.has('child') ? .96 : .02},
 
   {id:'fam_gchild', cluster:'fam', text:'نوه‌ته؟',
    rule:t => !t.has('kin') ? .02 : t.has('gchild') ? .95 : .02},
 
-  {id:'fam_cousin', cluster:'fam', text:'بچه‌ی عمو عمه دایی خاله‌ته؟',
+  {id:'fam_cousin', cluster:'fam', text:'بچه‌ی عمو، عمه، دایی یا خاله‌ته؟',
    rule:t => !t.has('kin') ? .03 : t.has('cousin') ? .95 : .03},
 
   {id:'fam_nibling', cluster:'fam', text:'بچه‌ی خواهر یا برادرته؟',
@@ -56,33 +56,33 @@ const KIN_QUESTIONS = [
    rule:t => !t.has('kin') ? .05 :
      (t.has('nuc') && t.has('blood')) ? .92 : t.has('nuc') ? .40 : .05},
 
-  {id:'fam_step', cluster:'fam', text:'ناتنیه؟ تنی که نیست؟',
+  {id:'fam_step', cluster:'fam', text:'ناتنیه؟',
    rule:t => !t.has('kin') ? .03 : t.has('step') ? .92 : .03},
 
-  {id:'fam_spouse', cluster:'fam', text:'همسرته؟ باهاش ازدواج کردی؟',
+  {id:'fam_spouse', cluster:'fam', text:'همسرته؟',
    rule:t => !t.has('kin') ? .02 : t.has('spouse') ? .96 : .02},
 
   /* --- واسطه: پسرعمو را از پسرعمه، و برادرزاده را از خواهرزاده جدا می‌کند --- */
-  {id:'fam_via_male', cluster:'fam', text:'واسطه‌تون یه مَرده؟ یعنی از طرف عمو، دایی، داداش یا پسرته؟',
+  {id:'fam_via_male', cluster:'fam', text:'از طریقِ یه مرد بهت وصله؟ یعنی از طرفِ عمو، دایی، برادر یا پسرت؟',
    rule:t => !t.has('kin') ? .30 : t.has('via_m') ? .93 : t.has('via_f') ? .05 : .30},
 
   /* --- خودِ بازیکن: مادرشوهر را از مادرزن، و باجناق را از برادرزن جدا می‌کند --- */
-  {id:'fam_you_male', cluster:'fam', text:'خودت مَردی قربونت برم؟',
+  {id:'fam_you_male', cluster:'fam', text:'خودت مَردی؟',
    rule:t => !t.has('kin') ? .45 : t.has('you_m') ? .93 : t.has('you_f') ? .05 : .45},
 
-  {id:'fam_married_in', cluster:'fam', text:'خودش با ازدواج اومده تو فامیل؟ عروسِ خونه‌ست یا دامادِ خونه؟',
+  {id:'fam_married_in', cluster:'fam', text:'با ازدواج وارد فامیل شده؟ عروس یا دامادِ خانواده‌ست؟',
    rule:t => !t.has('kin') ? .04 : t.has('married_in') ? .93 : .04},
 
   /* سه برچسبِ زیر در chars-09-family بودند ولی هیچ سؤالی سراغشان نمی‌رفت —
      یعنی اطلاعاتشان دور ریخته می‌شد. هر سه طبیعی‌ترین چیزی‌اند که یک عمه
      می‌پرسد، و هرکدام یک‌تنه چند نسبت را کنار می‌گذارند. */
-  {id:'fam_punc', cluster:'fam', text:'عمو یا عمه یا دایی یا خاله‌ته؟',
+  {id:'fam_punc', cluster:'fam', text:'عمو، عمه، دایی یا خاله‌ته؟',
    rule:t => !t.has('kin') ? .03 : t.has('punc') ? .95 : .03},
 
-  {id:'fam_sib', cluster:'fam', text:'داداش یا آبجیه؟ (چه مالِ خودت، چه مالِ همسرت)',
+  {id:'fam_sib', cluster:'fam', text:'خواهر یا برادره؟ (خودت یا همسرت)',
    rule:t => !t.has('kin') ? .03 : t.has('sib') ? .94 : .03},
 
-  {id:'fam_parentfig', cluster:'fam', text:'حکم پدر یا مادر رو داره ولی بابا مامانِ خودت نیست؟',
+  {id:'fam_parentfig', cluster:'fam', text:'نقشِ پدر یا مادر رو داره ولی پدر و مادرِ خودت نیست؟',
    rule:t => !t.has('kin') ? .03 : t.has('parent') ? .93 : .03},
 ];
 
