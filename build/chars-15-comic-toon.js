@@ -98,7 +98,7 @@ module.exports = [
 'روزی|ربات خدمتکار جتسون‌ها|1|f,us,fic,cartoon,tv,kids,comedy,retro,space,robot',
 
 // ---------- هانا-باربرا و کلاسیک‌ها ----------
-'یوگی بر|خرس پیک‌نیک‌دزد|3|m,us,fic,cartoon,tv,kids,comedy,retro,animal,beloved,worldfame',
+'یوگی بر|خرس پیک‌نیک‌دزد|3|m,us,fic,cartoon,tv,kids,comedy,retro,animal,beloved,worldfame,lead,chubby',
 'بوبو|خرس کوچک همراه یوگی|1|m,us,fic,cartoon,tv,kids,comedy,retro,animal,young',
 'هاکلبری هاند|سگ آبیِ آرام|1|m,us,fic,cartoon,tv,kids,comedy,retro,animal,weirdhair,celibate',
 'تاپ کت|گربه‌ی کلاهبردار|1|m,us,fic,cartoon,tv,kids,comedy,retro,animal,criminal,old',
@@ -119,7 +119,7 @@ module.exports = [
 'توئیتی|کاناری زرد کوچک|3|us,fic,cartoon,tv,kids,comedy,retro,animal,blond,beloved,worldfame',
 'سیلوستر|گربه‌ی لکنتی|3|m,us,fic,cartoon,tv,kids,comedy,retro,animal,villain,worldfame',
 'رودرانر|پرنده‌ی تندپا|3|us,fic,cartoon,tv,kids,comedy,retro,animal,legend,worldfame',
-'وایل کایوتی|گرگِ همیشه‌بازنده|3|m,us,fic,cartoon,tv,kids,comedy,retro,animal,villain,beloved',
+'وایل کایوتی|گرگِ همیشه‌بازنده|3|m,us,fic,cartoon,tv,kids,comedy,retro,animal,villain,beloved,inventor',
 'پورکی پیگ|خوک لکنتی|2|m,us,fic,cartoon,tv,kids,comedy,retro,animal,chubby,worldfame',
 'تاز|شیطان تاسمانی|2|m,us,fic,cartoon,tv,kids,comedy,retro,animal,monster,worldfame',
 'مارین مارشین|مریخیِ کوچک لونی تونز|2|m,us,fic,cartoon,tv,kids,comedy,retro,space,villain,masked',

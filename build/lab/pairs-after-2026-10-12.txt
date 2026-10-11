@@ -1,0 +1,981 @@
+جفت‌ها < 0.45: 244
+
+0.00  آقا حسینقلی ↔ درویش خان
+   A chars-22-people-ir.js:679  آقا حسینقلی|استاد تارِ قاجار|1|m,dead,ir,musician,traditional,classical,old,legend,teacher
+   B chars-22-people-ir.js:218  درویش خان|استاد تارِ قاجاری|1|m,dead,ir,musician,composer,traditional,classical,old,legend,teacher
+
+0.00  ابراهیم مرادی ↔ میرزا ابراهیم‌خان عکاس‌باشی
+   A chars-22-people-ir.js:1038  ابراهیم مرادی|فیلمسازِ پیشگام|1|m,dead,ir,director,cinema,old,legend
+   B chars-22-people-ir.js:596  میرزا ابراهیم‌خان عکاس‌باشی|نخستین فیلمبردار ایران|1|m,dead,ir,director,painter,old,legend,cinema
+
+0.00  امانوئل ملیک اصلانیان ↔ نورعلی برومند
+   A chars-22-people-ir.js:1019  امانوئل ملیک اصلانیان|آهنگساز و پیانیست ارمنی‌ایرانی|1|m,dead,ir,composer,musician,classical,prerev,elder,teacher
+   B chars-22-people-ir.js:221  نورعلی برومند|استاد ردیف|1|m,dead,ir,musician,teacher,traditional,classical,prerev,elder
+
+0.00  امیرحسینی هروی ↔ کسایی مروزی
+   A chars-22-people-ir.js:625  امیرحسینی هروی|عارف شاعر|1|m,dead,ir,poet,fr_classicpoet,ancient,book,mystic,religious
+   B chars-22-people-ir.js:351  کسایی مروزی|شاعر شیعیِ سامانی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,religious
+
+0.00  امیرشاهی سبزواری ↔ قطران تبریزی
+   A chars-22-people-ir.js:1051  امیرشاهی سبزواری|شاعر و شاهزاده‌ی تیموری|1|m,dead,ir,poet,painter,fr_classicpoet,ancient,book,rich
+   B chars-22-people-ir.js:358  قطران تبریزی|قصیده‌سرای آذربایجان|1|m,dead,ir,poet,fr_classicpoet,ancient,book,rich
+
+0.00  اوحدالدین کرمانی ↔ هلالی جغتایی
+   A chars-22-people-ir.js:371  اوحدالدین کرمانی|عارف رباعی‌سرا|1|m,dead,ir,poet,fr_classicpoet,ancient,book,mystic,love,controversial
+   B chars-22-people-ir.js:372  هلالی جغتایی|سراینده‌ی شاه و درویش|1|m,dead,ir,poet,fr_classicpoet,ancient,book,love,controversial,religious
+
+0.00  پدرام پالیز ↔ حامد محضرنیا
+   A chars-22-people-ir.js:1278  پدرام پالیز|خواننده و آهنگساز پاپ|1|m,alive,ir,singer,composer,musician,pop,modern,active,love,internet
+   B chars-22-people-ir.js:571  حامد محضرنیا|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,modern,active,internet,composer
+
+0.00  حبیب‌الله بدیعی ↔ مهدی خالدی
+   A chars-22-people-ir.js:232  حبیب‌الله بدیعی|ویولن‌نوازِ رادیو|1|m,dead,ir,musician,composer,classical,prerev,elder,love
+   B chars-22-people-ir.js:237  مهدی خالدی|آهنگساز و ویولن‌نواز|1|m,dead,ir,musician,composer,prerev,love,traditional,elder
+
+0.00  حمید امجد ↔ محمد یعقوبی
+   A chars-22-people-ir.js:167  حمید امجد|نمایشنامه‌نویس|1|m,alive,ir,writer,director,theater,modern,serious,active,book
+   B chars-22-people-ir.js:160  محمد یعقوبی|نمایشنامه‌نویس و کارگردان تئاتر|1|m,alive,ir,writer,director,theater,modern,active,serious
+
+0.00  حمید طالب‌زاده ↔ خشایار اعتمادی
+   A chars-22-people-ir.js:891  حمید طالب‌زاده|خواننده‌ی پاپ دهه‌ی هفتاد|1|m,alive,ir,singer,pop,d60,love,composer
+   B chars-02-music.js:36  خشایار اعتمادی|خواننده|1|m,alive,ir,singer,pop,d60,love
+
+0.00  حمیرا ریاضی ↔ سهیلا رضوی
+   A chars-22-people-ir.js:1130  حمیرا ریاضی|بازیگر سینما و تئاتر|1|f,alive,ir,actor,cinema,theater,series,modern,serious,d60,elder
+   B chars-22-people-ir.js:92  سهیلا رضوی|بازیگر سینما|1|f,alive,ir,actor,cinema,series,d60,serious,elder,theater
+
+0.00  داوری شیرازی ↔ مجمر اصفهانی
+   A chars-22-people-ir.js:719  داوری شیرازی|شاعر و نقاش قاجار|1|m,dead,ir,poet,fr_classicpoet,old,book,painter,diedyoung
+   B chars-22-people-ir.js:624  مجمر اصفهانی|شاعر جوانمرگ قاجار|1|m,dead,ir,poet,fr_classicpoet,old,book,diedyoung
+
+0.00  رویین پاکباز ↔ صالح حسینی
+   A chars-22-people-ir.js:916  رویین پاکباز|پژوهشگر هنر|1|m,alive,ir,writer,painter,book,elder,d60,teacher
+   B chars-22-people-ir.js:806  صالح حسینی|مترجم «خشم و هیاهو»|1|m,alive,ir,writer,book,teacher,elder,d60
+
+0.00  سیامک آقایی ↔ علی قمصری
+   A chars-22-people-ir.js:257  سیامک آقایی|نوازنده‌ی سنتور|1|m,alive,ir,musician,composer,traditional,modern,active,classical
+   B chars-22-people-ir.js:254  علی قمصری|نوازنده‌ی تار|1|m,alive,ir,musician,composer,traditional,modern,active
+
+0.00  سیف فرغانی ↔ نزاری قهستانی
+   A chars-22-people-ir.js:370  سیف فرغانی|قصیده‌سرای ستیزنده|1|m,dead,ir,poet,fr_classicpoet,ancient,book,mystic,controversial
+   B chars-22-people-ir.js:614  نزاری قهستانی|شاعر اسماعیلی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,religious,controversial
+
+0.00  عماد فقیه کرمانی ↔ واعظ قزوینی
+   A chars-22-people-ir.js:713  عماد فقیه کرمانی|شاعر و عارف کرمان|1|m,dead,ir,poet,fr_classicpoet,ancient,book,mystic,teacher
+   B chars-22-people-ir.js:717  واعظ قزوینی|شاعر واعظِ صفوی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,religious,teacher
+
+0.00  فخرالدین اسعد گرگانی ↔ منوچهری دامغانی
+   A chars-22-people-ir.js:356  فخرالدین اسعد گرگانی|سراینده‌ی ویس و رامین|1|m,dead,ir,poet,fr_classicpoet,ancient,book,love
+   B chars-19-people-ir.js:194  منوچهری دامغانی|شاعر طبیعت|1|m,dead,ir,poet,fr_classicpoet,ancient,book,love
+
+0.19  باب معمار ↔ سام آتش‌نشان
+   A chars-25-toon-film-game.js:320  باب معمار|بنّای مهربانِ کلاه‌زرد|2|m,fic,eu,cartoon,tv,kids,lead,costume,modern,beloved,hero
+   B chars-25-toon-film-game.js:321  سام آتش‌نشان|آتش‌نشانِ دهکده‌ی ولزی|1|m,fic,eu,cartoon,tv,kids,lead,hero,costume,modern,beloved,village
+
+0.19  تور ↔ ارجاسب
+   A chars-23-fiction.js:26  تور|برادرِ ایرج و نیای تورانیان|2|m,ir,fic,mythic,book,ancient,king,villain,epic,war,sword,fr_shahnameh
+   B chars-23-fiction.js:69  ارجاسب|شاهِ تورانِ دشمنِ گشتاسب|1|m,ir,fic,mythic,book,ancient,king,villain,war,epic,sword,fr_shahnameh
+
+0.19  فرنگیس ↔ کتایون
+   A chars-23-fiction.js:38  فرنگیس|دخترِ افراسیاب و همسرِ سیاوش|2|f,ir,fic,mythic,book,ancient,king,love,epic,serious,young,fr_shahnameh
+   B chars-23-fiction.js:66  کتایون|شاهزاده‌ی رومی، مادرِ اسفندیار|1|f,ir,fic,mythic,book,ancient,king,love,epic,young,serious,fr_shahnameh
+
+0.20  قاسم افشار ↔ مهدی مقدم
+   A chars-22-people-ir.js:892  قاسم افشار|خواننده‌ی پاپ دهه‌ی هفتاد|1|m,alive,ir,singer,pop,d60,love,beloved
+   B chars-22-people-ir.js:1275  مهدی مقدم|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,love,d60,beloved
+
+0.20  آصف آریا ↔ مهدی مدرس
+   A chars-22-people-ir.js:1271  آصف آریا|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,newgen,internet
+   B chars-02-music.js:65  مهدی مدرس|خواننده|1|m,alive,ir,singer,pop,active,modern,love
+
+0.24  امین رستمی ↔ مهدی مقدم
+   A chars-22-people-ir.js:1277  امین رستمی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,beloved,d60
+   B chars-22-people-ir.js:1275  مهدی مقدم|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,love,d60,beloved
+
+0.24  بابک مافی ↔ رضا ملک‌زاده
+   A chars-22-people-ir.js:303  بابک مافی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,modern,active,beloved
+   B chars-22-people-ir.js:890  رضا ملک‌زاده|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,modern,beloved
+
+0.24  بهرام بدخشانی ↔ حسین جعفریان
+   A chars-22-people-ir.js:1167  بهرام بدخشانی|فیلم‌بردار سینما|1|m,alive,ir,director,cinema,modern,d60,serious,active
+   B chars-22-people-ir.js:797  حسین جعفریان|فیلمبردار سینما|1|m,alive,ir,director,cinema,d60,modern,serious
+
+0.24  پوروچیستا خاکپور ↔ دینا نیری
+   A chars-22-people-ir.js:1013  پوروچیستا خاکپور|رمان‌نویس آمریکایی ایرانی|1|f,alive,ir,us,writer,book,modern
+   B chars-22-people-ir.js:741  دینا نیری|رمان‌نویس ایرانی‌تبار|1|f,alive,ir,us,writer,book,modern,active
+
+0.24  سپیده رئیس‌سادات ↔ مرجان وحدت
+   A chars-22-people-ir.js:935  سپیده رئیس‌سادات|خواننده‌ی آواز زن|1|f,alive,ir,singer,traditional,classical,modern
+   B chars-22-people-ir.js:632  مرجان وحدت|خواننده‌ی آواز زن|1|f,alive,ir,singer,traditional,classical,modern,active
+
+0.24  شهاب رمضان ↔ مسعود امامی
+   A chars-22-people-ir.js:305  شهاب رمضان|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,modern,active,tv
+   B chars-22-people-ir.js:1088  مسعود امامی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,modern,tv
+
+0.24  علی جهاندار ↔ وحید تاج
+   A chars-22-people-ir.js:576  علی جهاندار|خواننده‌ی آواز|1|m,alive,ir,singer,traditional,classical,d60,modern
+   B chars-22-people-ir.js:276  وحید تاج|خواننده‌ی آواز|1|m,alive,ir,singer,traditional,classical,modern,active,d60
+
+0.24  نیک آهنگ کوثر ↔ هادی حیدری
+   A chars-22-people-ir.js:534  نیک آهنگ کوثر|کاریکاتوریست|1|m,alive,ir,painter,comedy,controversial,modern,writer
+   B chars-22-people-ir.js:1219  هادی حیدری|کاریکاتوریست مطبوعات|1|m,alive,ir,painter,comedy,modern,active,controversial,writer
+
+0.24  احمد سلو ↔ سینا درخشنده
+   A chars-22-people-ir.js:309  احمد سلو|خواننده‌ی پاپ جوان|1|m,alive,ir,singer,pop,love,newgen,active,young
+   B chars-22-people-ir.js:887  سینا درخشنده|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,newgen,internet,young
+
+0.24  سلم ↔ شیده
+   A chars-23-fiction.js:25  سلم|برادرِ بدخواهِ ایرج|1|m,ir,fic,mythic,book,ancient,king,villain,epic,war,fr_shahnameh
+   B chars-23-fiction.js:59  شیده|پسرِ افراسیاب|1|m,ir,fic,mythic,book,ancient,villain,young,war,king,epic,fr_shahnameh
+
+0.25  سام ↔ گیو
+   A chars-23-fiction.js:29  سام|پهلوانِ اژدهاکش، پدرِ زال|2|m,ir,fic,mythic,book,ancient,hero,epic,war,sword,elder,beard,legend,fr_shahnameh
+   B chars-23-fiction.js:44  گیو|پهلوانی که کیخسرو را آورد|2|m,ir,fic,mythic,book,ancient,hero,epic,war,sword,beard,fr_shahnameh
+
+0.26  آتنه فقیه نصیری ↔ ملیحه نصیری
+   A chars-22-people-ir.js:1133  آتنه فقیه نصیری|بازیگر سینما|2|f,alive,ir,actor,cinema,series,modern,serious,d60,elder,tv
+   B chars-22-people-ir.js:1124  ملیحه نصیری|بازیگر سریال‌ها|1|f,alive,ir,actor,series,cinema,elder,d60,modern,serious,tv
+
+0.26  آناهیتا همتی ↔ مهسا کرامتی
+   A chars-22-people-ir.js:75  آناهیتا همتی|بازیگر سینما|2|f,alive,ir,actor,cinema,series,modern,active,love,serious,d60
+   B chars-22-people-ir.js:95  مهسا کرامتی|بازیگر سینما|1|f,alive,ir,actor,cinema,series,d60,serious,active,love
+
+0.26  امیر خلوت ↔ حصین
+   A chars-22-people-ir.js:1265  امیر خلوت|رپر|2|m,alive,ir,singer,fr_rap,modern,active,internet,serious
+   B chars-22-people-ir.js:334  حصین|رپر|1|m,alive,ir,singer,fr_rap,modern,active,internet,serious
+
+0.26  بتی ↔ فتانه
+   A chars-22-people-ir.js:1177  بتی|خواننده‌ی پاپ قبل از انقلاب|2|f,alive,ir,singer,pop,prerev,fr_la,love,elder
+   B chars-22-people-ir.js:346  فتانه|خواننده‌ی لس‌آنجلسی|1|f,alive,ir,singer,pop,fr_la,prerev,love,elder
+
+0.26  بنان ↔ رشید بهبودف
+   A chars-02-music.js:11  بنان|خواننده‌ی قدیمی آواز|2|m,dead,ir,singer,traditional,classical,prerev,legend,beloved
+   B chars-02-music.js:90  رشید بهبودف|خواننده‌ی آذری|1|m,dead,ir,singer,traditional,beloved,legend,prerev
+
+0.26  بهاره افشاری ↔ مریم معصومی
+   A chars-22-people-ir.js:1144  بهاره افشاری|بازیگر سینما|2|f,alive,ir,actor,cinema,series,modern,active,love,comedy,internet
+   B chars-22-people-ir.js:1254  مریم معصومی|بازیگر سینما و سریال|1|f,alive,ir,actor,cinema,series,modern,active,love,comedy,internet
+
+0.26  پریوش نظریه ↔ آزیتا لاچینی
+   A chars-22-people-ir.js:76  پریوش نظریه|بازیگر پیشکسوت|2|f,alive,ir,actor,series,cinema,elder,serious,d60,theater,prerev
+   B chars-22-people-ir.js:1131  آزیتا لاچینی|بازیگر پیشکسوت|1|f,alive,ir,actor,cinema,series,theater,elder,serious,prerev,d60,modern
+
+0.26  پوریا پورسرخ ↔ مسعود کرامتی
+   A chars-19-people-ir.js:26  پوریا پورسرخ|بازیگر سینما و سریال|2|m,alive,ir,actor,cinema,series,theater,active,modern,serious
+   B chars-22-people-ir.js:34  مسعود کرامتی|بازیگر سینما|1|m,alive,ir,actor,cinema,series,modern,active,serious,theater
+
+0.26  حسام نواب صفوی ↔ وحید رهبانی
+   A chars-22-people-ir.js:52  حسام نواب صفوی|بازیگر سریال و سینما|2|m,alive,ir,actor,series,cinema,modern,active,love,tv
+   B chars-22-people-ir.js:553  وحید رهبانی|بازیگر سینما و سریال|1|m,alive,ir,actor,cinema,series,modern,active,love,tv
+
+0.26  سعید سهیلی ↔ عبدالرضا کاهانی
+   A chars-22-people-ir.js:135  سعید سهیلی|کارگردان «گشت ارشاد»|2|m,alive,ir,director,writer,cinema,comedy,controversial,modern,active
+   B chars-22-people-ir.js:131  عبدالرضا کاهانی|کارگردان فیلم‌های تلخ‌وطنز|1|m,alive,ir,director,writer,cinema,modern,comedy,controversial,active
+
+0.26  سمیرا حسن‌پور ↔ نیلوفر پارسا
+   A chars-22-people-ir.js:1150  سمیرا حسن‌پور|بازیگر سینما و سریال|2|f,alive,ir,actor,cinema,series,modern,active,love,serious,young,tv
+   B chars-22-people-ir.js:1255  نیلوفر پارسا|بازیگر سریال‌ها|1|f,alive,ir,actor,series,cinema,modern,active,love,young,serious,tv
+
+0.26  سیاوش خیرابی ↔ علیرضا جلالی‌تبار
+   A chars-22-people-ir.js:30  سیاوش خیرابی|بازیگر سینما و سریال|2|m,alive,ir,actor,cinema,series,modern,active,love
+   B chars-22-people-ir.js:42  علیرضا جلالی‌تبار|بازیگر سریال|1|m,alive,ir,actor,series,cinema,modern,active,love
+
+0.26  شایع ↔ جی‌دال
+   A chars-19-people-ir.js:112  شایع|رپر نسل جدید|2|m,alive,ir,singer,fr_rap,internet,newgen,love,young,active
+   B chars-22-people-ir.js:337  جی‌دال|رپرِ عاشقانه‌خوان|1|m,alive,ir,singer,fr_rap,newgen,active,internet,young,love
+
+0.26  علی‌اکبر شهنازی ↔ حسین تهرانی
+   A chars-02-music.js:110  علی‌اکبر شهنازی|استاد تار|2|m,dead,ir,musician,traditional,classical,legend,prerev,elder,teacher
+   B chars-22-people-ir.js:223  حسین تهرانی|استاد تنبک|1|m,dead,ir,musician,traditional,classical,prerev,legend,elder,teacher
+
+0.26  علیرضا داوودنژاد ↔ فرج حیدری
+   A chars-22-people-ir.js:1304  علیرضا داوودنژاد|کارگردان خانواده‌ی داوودنژاد|2|m,alive,ir,director,cinema,prerev,d60,modern,serious,elder
+   B chars-22-people-ir.js:1166  فرج حیدری|فیلم‌بردار سینما|1|m,alive,ir,director,cinema,modern,d60,serious,elder,prerev
+
+0.26  فرشته حسینی ↔ هستی مهدوی
+   A chars-22-people-ir.js:72  فرشته حسینی|بازیگر سینما|2|f,alive,ir,actor,cinema,series,newgen,active,young,love
+   B chars-22-people-ir.js:81  هستی مهدوی|بازیگر جوان|1|f,alive,ir,actor,series,cinema,newgen,active,young,love
+
+0.26  فریدون آسرایی ↔ امین رستمی
+   A chars-22-people-ir.js:882  فریدون آسرایی|خواننده‌ی پاپ دهه‌ی هفتاد|2|m,alive,ir,singer,pop,love,d60,beloved,active
+   B chars-22-people-ir.js:1277  امین رستمی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,beloved,d60
+
+0.26  نوری بیلگه جیلان ↔ فاتح آکین
+   A chars-24-people-world.js:419  نوری بیلگه جیلان|کارگردان خواب زمستانی|2|m,alive,eu,director,writer,cinema,award,serious,beard,painter
+   B chars-24-people-world.js:421  فاتح آکین|کارگردان آلمانی‌ترک|1|m,alive,eu,director,writer,cinema,award,beard,serious
+
+0.26  نیما جاویدی ↔ بهتاش صناعی‌ها
+   A chars-22-people-ir.js:132  نیما جاویدی|کارگردان «ملبورن» و «سرخپوست»|2|m,alive,ir,director,writer,cinema,modern,active,serious
+   B chars-22-people-ir.js:138  بهتاش صناعی‌ها|کارگردان «قصیده‌ی گاو سفید»|1|m,alive,ir,director,writer,cinema,modern,serious,active
+
+0.27  ان‌تی‌آر جونیور ↔ رام چاران
+   A chars-24-people-world.js:394  ان‌تی‌آر جونیور|بازیگر آر آر آر|1|m,alive,asia,actor,dancer,cinema,hero,beard,active,epic
+   B chars-24-people-world.js:395  رام چاران|بازیگر آر آر آر|1|m,alive,asia,actor,dancer,cinema,hero,beard,active
+
+0.27  ایندرا ↔ ویشنو
+   A chars-23-fiction.js:1085  ایندرا|خدای رعدِ هندو|1|m,asia,fic,mythic,ancient,religious,super,king,war,legend
+   B chars-23-fiction.js:337  ویشنو|خدای نگهدارنده‌ی هندو|1|m,asia,fic,mythic,ancient,religious,super,king,hero,legend
+
+0.27  پشنگ ↔ سلم
+   A chars-23-fiction.js:57  پشنگ|شاهِ توران، پدرِ افراسیاب|1|m,ir,fic,mythic,book,ancient,king,villain,elder,war,fr_shahnameh
+   B chars-23-fiction.js:25  سلم|برادرِ بدخواهِ ایرج|1|m,ir,fic,mythic,book,ancient,king,villain,epic,war,fr_shahnameh
+
+0.27  کمال‌الدین اسماعیل ↔ هاتفی خرجردی
+   A chars-22-people-ir.js:363  کمال‌الدین اسماعیل|خلاق‌المعانی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,war
+   B chars-22-people-ir.js:716  هاتفی خرجردی|سراینده‌ی تیمورنامه|1|m,dead,ir,poet,fr_classicpoet,ancient,book,epic,war
+
+0.27  رزیتا یاراحمدی ↔ فریبا شاهین‌مقدم
+   A chars-22-people-ir.js:852  رزیتا یاراحمدی|دوبلور زن|1|f,alive,ir,fr_dubbing,cinema,cartoon,d60,modern
+   B chars-22-people-ir.js:1300  فریبا شاهین‌مقدم|دوبلور کارتون‌ها|1|f,alive,ir,fr_dubbing,cartoon,kids,cinema,d60,modern,active
+
+0.28  تزئوس ↔ یاسون
+   A chars-23-fiction.js:214  تزئوس|کشنده‌ی مینوتور|2|m,eu,fic,mythic,book,ancient,hero,sword,young,lead,cinema,king,epic
+   B chars-23-fiction.js:232  یاسون|سردارِ کشتیِ آرگو|1|m,eu,fic,mythic,book,ancient,hero,lead,sword,epic,cinema,king
+
+0.28  سیندرلا ↔ زیبای خفته
+   A chars-08-fiction.js:75  سیندرلا|شاهزاده‌خانم دیزنی|4|f,eu,fic,cartoon,kids,book,worldfame,beloved,us,love,fantasy,blond
+   A chars-18-animation.js:10  سیندرلا|انیمیشنِ کلاسیکِ دیزنی|4|film,cartoon,us,kids,femlead,royal,love,family,book,fantasy,musical,pre2000,prerev,legend,worldfame,beloved,fr_disney
+   B chars-08-fiction.js:76  زیبای خفته|شاهزاده‌خانم دیزنی|3|f,eu,fic,cartoon,kids,book,worldfame,blond,us,love,fantasy,beloved
+   B chars-18-animation.js:14  زیبای خفته|انیمیشنِ کلاسیکِ دیزنی|3|film,cartoon,us,kids,femlead,royal,love,book,fantasy,monster,sword,musical,pre2000,prerev,fr_disney
+
+0.29  شهرام قائدی ↔ محسن کیایی
+   A chars-22-people-ir.js:24  شهرام قائدی|بازیگر طنز|2|m,alive,ir,actor,comedian,series,cinema,comedy,modern,active
+   B chars-01-cinema.js:154  محسن کیایی|بازیگر طنز|2|m,alive,ir,actor,comedian,cinema,series,comedy,active
+
+0.29  مسعود رایگان ↔ ناصر هاشمی
+   A chars-19-people-ir.js:19  مسعود رایگان|بازیگر سینما و تئاتر|2|m,alive,ir,actor,cinema,theater,series,serious,active,elder
+   B chars-22-people-ir.js:1108  ناصر هاشمی|بازیگر سینما و تئاتر|2|m,alive,ir,actor,cinema,theater,series,modern,serious,active,elder
+
+0.29  اپیکور ↔ ویناک
+   A chars-22-people-ir.js:1267  اپیکور|رپر|1|m,alive,ir,singer,fr_rap,modern,active,internet,young,newgen
+   B chars-22-people-ir.js:333  ویناک|رپرِ جوان|1|m,alive,ir,singer,fr_rap,newgen,active,internet,young
+
+0.29  مهراد جم ↔ سینا درخشنده
+   A chars-22-people-ir.js:297  مهراد جم|خواننده‌ی پاپ جوان|2|m,alive,ir,singer,pop,love,newgen,active,young,internet
+   B chars-22-people-ir.js:887  سینا درخشنده|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,newgen,internet,young
+
+0.30  ارژنگ دیو ↔ پولادوند
+   A chars-23-fiction.js:61  ارژنگ دیو|دیوِ هفت‌خوانِ رستم|1|m,ir,fic,mythic,book,ancient,monster,villain,epic,war,fr_shahnameh
+   B chars-23-fiction.js:63  پولادوند|دیوزادی که با رستم کشتی گرفت|1|m,ir,fic,mythic,book,ancient,villain,monster,war,epic,super,fr_shahnameh
+
+0.30  ارنواز و شهرناز ↔ کتایون
+   A chars-23-fiction.js:23  ارنواز و شهرناز|خواهرانِ اسیرِ ضحاک|1|f,ir,fic,mythic,book,ancient,epic,king,love,young,fr_shahnameh
+   B chars-23-fiction.js:66  کتایون|شاهزاده‌ی رومی، مادرِ اسفندیار|1|f,ir,fic,mythic,book,ancient,king,love,epic,young,serious,fr_shahnameh
+
+0.31  اوفلیا ↔ فانتین
+   A chars-23-fiction.js:365  اوفلیا|دلدارِ دیوانه‌شده‌ی هملت|2|f,eu,fic,book,theater,cinema,love,young,diedyoung,old,serious
+   B chars-23-fiction.js:440  فانتین|مادرِ تیره‌روزِ کوزت|1|f,eu,fic,book,novelchar,cinema,theater,diedyoung,love,old,serious
+
+0.31  افراسیاب ↔ سلم
+   A chars-21-fiction-more.js:26  افراسیاب|پادشاهِ توران|2|m,ir,fic,mythic,book,villain,king,epic,ancient,war,fr_shahnameh,legend
+   B chars-23-fiction.js:25  سلم|برادرِ بدخواهِ ایرج|1|m,ir,fic,mythic,book,ancient,king,villain,epic,war,fr_shahnameh
+
+0.32  سینا پارسیان ↔ سینا درخشنده
+   A chars-22-people-ir.js:1274  سینا پارسیان|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,young,internet,newgen
+   B chars-22-people-ir.js:887  سینا درخشنده|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,newgen,internet,young
+
+0.33  آرون افشار ↔ سهراب پاکزاد
+   A chars-02-music.js:92  آرون افشار|خواننده‌ی پاپ|2|m,alive,ir,singer,pop,love,active,newgen,young,internet
+   B chars-22-people-ir.js:572  سهراب پاکزاد|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,newgen,active,young,composer
+
+0.33  فرزاد فرخ ↔ سینا پارسیان
+   A chars-22-people-ir.js:1269  فرزاد فرخ|خواننده‌ی پاپ|2|m,alive,ir,singer,pop,modern,active,love,young,newgen
+   B chars-22-people-ir.js:1274  سینا پارسیان|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,young,internet,newgen
+
+0.33  مهراد جم ↔ احمد سلو
+   A chars-22-people-ir.js:297  مهراد جم|خواننده‌ی پاپ جوان|2|m,alive,ir,singer,pop,love,newgen,active,young,internet
+   B chars-22-people-ir.js:309  احمد سلو|خواننده‌ی پاپ جوان|1|m,alive,ir,singer,pop,love,newgen,active,young
+
+0.33  رضا عباسی ↔ میرعماد
+   A chars-04-culture.js:130  رضا عباسی|نگارگر دوره‌ی صفوی|3|m,dead,ir,painter,traditional,old,legend,beard
+   B chars-04-culture.js:129  میرعماد|استاد خوشنویسی|3|m,dead,ir,painter,traditional,ancient,old,legend,beard
+
+0.33  آقا میرک ↔ بهزاد
+   A chars-22-people-ir.js:988  آقا میرک|نگارگرِ صفوی|1|m,dead,ir,painter,ancient,traditional,teacher
+   B chars-04-culture.js:103  بهزاد|نگارگر تیموری|1|m,dead,ir,painter,ancient,traditional,legend,teacher
+
+0.33  امیرحسینی هروی ↔ سنایی
+   A chars-22-people-ir.js:625  امیرحسینی هروی|عارف شاعر|1|m,dead,ir,poet,fr_classicpoet,ancient,book,mystic,religious
+   B chars-04-culture.js:10  سنایی|شاعر و عارف|1|m,dead,ir,poet,mystic,ancient,book,fr_classicpoet,legend
+
+0.33  انوری ↔ فلکی شروانی
+   A chars-19-people-ir.js:193  انوری|شاعر قصیده‌سرای سلجوقی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,scientist,legend
+   B chars-22-people-ir.js:619  فلکی شروانی|شاعر و منجم|1|m,dead,ir,poet,fr_classicpoet,ancient,book,scientist
+
+0.33  بهزاد ↔ میرزا غلامرضا اصفهانی
+   A chars-04-culture.js:103  بهزاد|نگارگر تیموری|1|m,dead,ir,painter,ancient,traditional,legend,teacher
+   B chars-22-people-ir.js:520  میرزا غلامرضا اصفهانی|خوشنویسِ قاجاری|1|m,dead,ir,painter,traditional,old,legend,teacher
+
+0.33  بیهقی ↔ سعدالدین وراوینی
+   A chars-19-people-ir.js:209  بیهقی|نویسنده‌ی تاریخ بیهقی|1|m,dead,ir,writer,ancient,book,serious,legend
+   B chars-22-people-ir.js:395  سعدالدین وراوینی|نویسنده‌ی مرزبان‌نامه|1|m,dead,ir,writer,ancient,book,serious
+
+0.33  سلطان محمد ↔ میرزا محمدرضا کلهر
+   A chars-22-people-ir.js:497  سلطان محمد|نگارگرِ صفوی|1|m,dead,ir,painter,ancient,traditional,legend
+   B chars-22-people-ir.js:519  میرزا محمدرضا کلهر|خوشنویسِ نستعلیقِ قاجار|1|m,dead,ir,painter,traditional,old,legend
+
+0.33  سنایی ↔ کسایی مروزی
+   A chars-04-culture.js:10  سنایی|شاعر و عارف|1|m,dead,ir,poet,mystic,ancient,book,fr_classicpoet,legend
+   B chars-22-people-ir.js:351  کسایی مروزی|شاعر شیعیِ سامانی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,religious
+
+0.33  شیخ محمود شبستری ↔ فیض کاشانی
+   A chars-22-people-ir.js:369  شیخ محمود شبستری|سراینده‌ی گلشن راز|1|m,dead,ir,poet,fr_classicpoet,ancient,book,mystic,philosopher,legend
+   B chars-22-people-ir.js:379  فیض کاشانی|عالم و شاعر صفوی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,religious,philosopher
+
+0.33  عبدالرشید دیلمی ↔ میرسیدعلی
+   A chars-22-people-ir.js:987  عبدالرشید دیلمی|خوشنویسِ صفوی در هند|1|m,dead,ir,painter,ancient,traditional,asia,legend
+   B chars-22-people-ir.js:665  میرسیدعلی|نگارگرِ صفوی در هند|1|m,dead,ir,painter,ancient,traditional,asia
+
+0.33  علیرضا عباسی تبریزی ↔ قوام‌الدین شیرازی
+   A chars-22-people-ir.js:675  علیرضا عباسی تبریزی|خوشنویس کتیبه‌های صفوی|1|m,dead,ir,painter,ancient,traditional,religious
+   B chars-22-people-ir.js:676  قوام‌الدین شیرازی|معمار مسجد گوهرشاد|1|m,dead,ir,painter,ancient,traditional,legend,religious
+
+0.34  داریوش بزرگ ↔ اردشیر بابکان
+   A chars-04-culture.js:56  داریوش بزرگ|شاه هخامنشی|3|m,dead,ir,king,general,ancient,legend,epic,beard,fr_iranking
+   B chars-19-people-ir.js:215  اردشیر بابکان|بنیان‌گذار ساسانیان|2|m,dead,ir,king,general,fr_iranking,ancient,legend,epic,war,beard
+
+0.34  گوستاو کلیمت ↔ رنوار
+   A chars-07-world-science.js:123  گوستاو کلیمت|نقاش بوسه|3|m,dead,eu,painter,old,worldfame,legend,love,beard
+   B chars-24-people-world.js:1126  رنوار|نقاش امپرسیونیست شادی‌ها|2|m,dead,eu,painter,old,legend,beard,love,worldfame
+
+0.34  امیر غفارمنش ↔ سیامک صفری
+   A chars-22-people-ir.js:25  امیر غفارمنش|بازیگر طنز|2|m,alive,ir,actor,comedian,series,cinema,comedy,modern,active,tv
+   B chars-22-people-ir.js:49  سیامک صفری|بازیگر سریال|1|m,alive,ir,actor,series,cinema,modern,active,comedy,tv
+
+0.35  لیلا اوتادی ↔ ملیکا شریفی‌نیا
+   A chars-01-cinema.js:193  لیلا اوتادی|بازیگر سینما|3|f,alive,ir,actor,cinema,series,active,beloved,internet
+   B chars-01-cinema.js:195  ملیکا شریفی‌نیا|بازیگر|3|f,alive,ir,actor,series,cinema,active,internet
+
+0.35  ارنی ↔ برت
+   A chars-15-comic-toon.js:259  ارنی|عروسکِ خیابان سمسم|2|m,us,fic,puppet,tv,kids,comedy,celibate,beloved,worldfame
+   B chars-15-comic-toon.js:260  برت|همراهِ ارنی|2|m,us,fic,puppet,tv,kids,comedy,celibate,serious,worldfame
+
+0.35  ثریا قاسمی ↔ مهرانه مهین‌ترابی
+   A chars-22-people-ir.js:77  ثریا قاسمی|بازیگر پیشکسوت|2|f,alive,ir,actor,series,cinema,elder,serious,d60,beloved
+   B chars-22-people-ir.js:61  مهرانه مهین‌ترابی|بازیگر سینما|2|f,alive,ir,actor,cinema,series,d60,serious,elder
+
+0.35  حمید استیلی ↔ سید جلال حسینی
+   A chars-03-sport.js:14  حمید استیلی|فوتبالیست ملی|2|m,alive,ir,athlete,footballer,legend,fr_teammelli,fr_persepolis,stadium
+   B chars-03-sport.js:16  سید جلال حسینی|مدافع پرسپولیس|2|m,alive,ir,athlete,footballer,fr_persepolis,fr_teammelli,stadium
+
+0.35  شبنم قلی‌خانی ↔ لیلا زارع
+   A chars-22-people-ir.js:1145  شبنم قلی‌خانی|بازیگر سریال و سینما|2|f,alive,ir,actor,series,cinema,modern,active,love,serious,tv,beloved
+   B chars-22-people-ir.js:73  لیلا زارع|بازیگر سینما و سریال|2|f,alive,ir,actor,cinema,series,modern,active,serious,love,tv
+
+0.35  محمد شیری ↔ میرطاهر مظلومی
+   A chars-22-people-ir.js:39  محمد شیری|بازیگر طنز|2|m,alive,ir,actor,comedian,series,cinema,comedy,elder,modern,beloved
+   B chars-22-people-ir.js:29  میرطاهر مظلومی|بازیگر طنز|2|m,alive,ir,actor,comedian,series,cinema,comedy,elder,modern
+
+0.35  ادیب خوانساری ↔ ناصر مسعودی
+   A chars-22-people-ir.js:207  ادیب خوانساری|آوازخوانِ اصفهانی|1|m,dead,ir,singer,traditional,classical,prerev,elder,legend
+   B chars-22-people-ir.js:899  ناصر مسعودی|خواننده‌ی گیلکی|1|m,dead,ir,singer,traditional,prerev,elder,legend,beloved
+
+0.35  بسحاق اطعمه ↔ سوزنی سمرقندی
+   A chars-22-people-ir.js:750  بسحاق اطعمه|شاعرِ شوخِ خوراکی‌ها|1|m,dead,ir,poet,fr_classicpoet,ancient,book,comedy,beloved
+   B chars-22-people-ir.js:615  سوزنی سمرقندی|شاعر هزال|1|m,dead,ir,poet,fr_classicpoet,ancient,book,comedy
+
+0.35  تایک ↔ نیبلز
+   A chars-25-toon-film-game.js:216  تایک|توله‌ی اسپایک|1|m,fic,us,cartoon,tv,kids,animal,comedy,childstar,retro,fr_looney
+   B chars-25-toon-film-game.js:217  نیبلز|موشِ کوچکِ پوشک‌پوش|1|m,fic,us,cartoon,tv,kids,animal,comedy,childstar,retro,beloved,fr_looney
+
+0.35  حمید حامی ↔ یوسف زمانی
+   A chars-22-people-ir.js:883  حمید حامی|خواننده‌ی پاپ دهه‌ی هشتاد|1|m,alive,ir,singer,pop,love,modern,composer
+   B chars-22-people-ir.js:885  یوسف زمانی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,modern,composer,beloved
+
+0.35  رضا شیری ↔ علیرضا روزگار
+   A chars-22-people-ir.js:1270  رضا شیری|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,young,beloved
+   B chars-22-people-ir.js:300  علیرضا روزگار|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,modern,active,young
+
+0.35  شاهین فرهت ↔ علی‌اکبر شکارچی
+   A chars-22-people-ir.js:1192  شاهین فرهت|آهنگساز سمفونی‌ها|1|m,alive,ir,composer,musician,classical,modern,elder,teacher,d60
+   B chars-22-people-ir.js:1021  علی‌اکبر شکارچی|کمانچه‌نوازِ لُر|1|m,alive,ir,musician,traditional,elder,d60,beloved,teacher
+
+0.35  علی تفرشی ↔ مهدی مقدم
+   A chars-22-people-ir.js:313  علی تفرشی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,d60,modern
+   B chars-22-people-ir.js:1275  مهدی مقدم|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,love,d60,beloved
+
+0.35  فرهنگ شریف ↔ همایون خرم
+   A chars-22-people-ir.js:228  فرهنگ شریف|استاد تار|1|m,dead,ir,musician,traditional,classical,prerev,elder,legend,love,d60
+   B chars-02-music.js:93  همایون خرم|آهنگساز و ویولونیست|1|m,dead,ir,composer,musician,classical,prerev,love,beloved,legend,d60
+
+0.35  نازی صفوی ↔ نسرین ثامنی
+   A chars-22-people-ir.js:449  نازی صفوی|نویسنده‌ی «دالان بهشت»|1|f,alive,ir,writer,book,love,d60,modern,beloved
+   B chars-22-people-ir.js:446  نسرین ثامنی|رمان‌نویسِ عامه‌پسند|1|f,alive,ir,writer,book,love,d60,modern
+
+0.35  رضا عنایتی ↔ مهدی رحمتی
+   A chars-19-people-ir.js:131  رضا عنایتی|گلزن استقلال|2|m,alive,ir,athlete,footballer,stadium,fr_esteghlal,fr_teammelli,modern,legend
+   B chars-03-sport.js:15  مهدی رحمتی|دروازه‌بان|2|m,alive,ir,athlete,footballer,fr_esteghlal,fr_teammelli,stadium,legend
+
+0.35  فرزاد فرخ ↔ مهراد جم
+   A chars-22-people-ir.js:1269  فرزاد فرخ|خواننده‌ی پاپ|2|m,alive,ir,singer,pop,modern,active,love,young,newgen
+   B chars-22-people-ir.js:297  مهراد جم|خواننده‌ی پاپ جوان|2|m,alive,ir,singer,pop,love,newgen,active,young,internet
+
+0.35  احمد سلو ↔ سینا پارسیان
+   A chars-22-people-ir.js:309  احمد سلو|خواننده‌ی پاپ جوان|1|m,alive,ir,singer,pop,love,newgen,active,young
+   B chars-22-people-ir.js:1274  سینا پارسیان|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,young,internet,newgen
+
+0.35  آنشرلی ↔ پرین
+   A chars-08-fiction.js:50  آنشرلی|دختر مو قرمز|3|f,asia,fic,cartoon,anime,tv,kids,book,beloved,d60,novelchar,lead
+   B chars-21-fiction-more.js:152  پرین|دخترِ یتیمِ کارخانه|2|f,asia,fic,anime,cartoon,tv,kids,lead,d60,beloved,book,novelchar,celibate,serious
+
+0.35  پگاه آهنگرانی ↔ مریم مقدم
+   A chars-22-people-ir.js:88  پگاه آهنگرانی|بازیگر و مستندساز|2|f,alive,ir,actor,director,cinema,modern,serious,controversial,active
+   B chars-22-people-ir.js:975  مریم مقدم|کارگردان و بازیگر «قصیده‌ی گاو سفید»|1|f,alive,ir,director,actor,cinema,modern,serious,controversial
+
+0.35  چارتار ↔ ایهام
+   A chars-22-people-ir.js:322  چارتار|گروه موسیقی پاپ|2|m,alive,ir,singer,musician,pop,fr_band,modern,active,love
+   B chars-22-people-ir.js:886  ایهام|گروه پاپ|1|m,alive,ir,singer,musician,fr_band,pop,modern,love
+
+0.35  سیدعلی صالحی ↔ ایرج زبردست
+   A chars-22-people-ir.js:425  سیدعلی صالحی|شاعر شعر گفتار|2|m,alive,ir,poet,book,d60,modern,active,love
+   B chars-22-people-ir.js:954  ایرج زبردست|غزلسرای معاصر|1|m,alive,ir,poet,book,modern,love,d60
+
+0.35  فریدون آسرایی ↔ مهدی مقدم
+   A chars-22-people-ir.js:882  فریدون آسرایی|خواننده‌ی پاپ دهه‌ی هفتاد|2|m,alive,ir,singer,pop,love,d60,beloved,active
+   B chars-22-people-ir.js:1275  مهدی مقدم|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,love,d60,beloved
+
+0.35  مائده طهماسبی ↔ نسیم ادبی
+   A chars-22-people-ir.js:79  مائده طهماسبی|بازیگر سینما|2|f,alive,ir,actor,cinema,series,modern,serious,theater
+   B chars-22-people-ir.js:69  نسیم ادبی|بازیگر تئاتر و سینما|1|f,alive,ir,actor,theater,cinema,series,modern,serious,active
+
+0.35  مهدی احمدوند ↔ حمید حامی
+   A chars-22-people-ir.js:299  مهدی احمدوند|خواننده‌ی پاپ|2|m,alive,ir,singer,composer,pop,love,modern,active
+   B chars-22-people-ir.js:883  حمید حامی|خواننده‌ی پاپ دهه‌ی هشتاد|1|m,alive,ir,singer,pop,love,modern,composer
+
+0.36  اوفلیا ↔ اپونین
+   A chars-23-fiction.js:365  اوفلیا|دلدارِ دیوانه‌شده‌ی هملت|2|f,eu,fic,book,theater,cinema,love,young,diedyoung,old,serious
+   B chars-23-fiction.js:444  اپونین|دخترِ عاشقِ ماریوس|1|f,eu,fic,book,novelchar,cinema,theater,love,diedyoung,young,old
+
+0.36  پیران ویسه ↔ گودرز
+   A chars-23-fiction.js:54  پیران ویسه|سپهسالارِ خردمندِ توران|2|m,ir,fic,mythic,book,ancient,general,elder,beard,war,epic,serious,fr_shahnameh
+   B chars-23-fiction.js:45  گودرز|پیرِ پهلوانانِ ایران|1|m,ir,fic,mythic,book,ancient,general,elder,beard,epic,war,hero,fr_shahnameh
+
+0.36  فرنگیس ↔ ارنواز و شهرناز
+   A chars-23-fiction.js:38  فرنگیس|دخترِ افراسیاب و همسرِ سیاوش|2|f,ir,fic,mythic,book,ancient,king,love,epic,serious,young,fr_shahnameh
+   B chars-23-fiction.js:23  ارنواز و شهرناز|خواهرانِ اسیرِ ضحاک|1|f,ir,fic,mythic,book,ancient,epic,king,love,young,fr_shahnameh
+
+0.36  پشنگ ↔ شیده
+   A chars-23-fiction.js:57  پشنگ|شاهِ توران، پدرِ افراسیاب|1|m,ir,fic,mythic,book,ancient,king,villain,elder,war,fr_shahnameh
+   B chars-23-fiction.js:59  شیده|پسرِ افراسیاب|1|m,ir,fic,mythic,book,ancient,villain,young,war,king,epic,fr_shahnameh
+
+0.36  امیر غفارمنش ↔ سام درخشانی
+   A chars-22-people-ir.js:25  امیر غفارمنش|بازیگر طنز|2|m,alive,ir,actor,comedian,series,cinema,comedy,modern,active,tv
+   B chars-01-cinema.js:69  سام درخشانی|بازیگر|2|m,alive,ir,actor,tv,series,cinema,active,comedy
+
+0.37  آتنه فقیه نصیری ↔ مهرانه مهین‌ترابی
+   A chars-22-people-ir.js:1133  آتنه فقیه نصیری|بازیگر سینما|2|f,alive,ir,actor,cinema,series,modern,serious,d60,elder,tv
+   B chars-22-people-ir.js:61  مهرانه مهین‌ترابی|بازیگر سینما|2|f,alive,ir,actor,cinema,series,d60,serious,elder
+
+0.37  آناهیتا همتی ↔ نگار فروزنده
+   A chars-22-people-ir.js:75  آناهیتا همتی|بازیگر سینما|2|f,alive,ir,actor,cinema,series,modern,active,love,serious,d60
+   B chars-22-people-ir.js:1146  نگار فروزنده|بازیگر سینما و سریال|2|f,alive,ir,actor,cinema,series,modern,active,love,serious,d60,tv
+
+0.37  امیر غفارمنش ↔ شهرام قائدی
+   A chars-22-people-ir.js:25  امیر غفارمنش|بازیگر طنز|2|m,alive,ir,actor,comedian,series,cinema,comedy,modern,active,tv
+   B chars-22-people-ir.js:24  شهرام قائدی|بازیگر طنز|2|m,alive,ir,actor,comedian,series,cinema,comedy,modern,active
+
+0.37  بیتا فرهی ↔ زهره حمیدی
+   A chars-22-people-ir.js:63  بیتا فرهی|بازیگر «خانه‌ی سبز»|2|f,alive,ir,actor,cinema,series,d60,love,elder,fr_khaneh
+   B chars-22-people-ir.js:1140  زهره حمیدی|بازیگر سریال‌های دهه‌ی هفتاد|2|f,alive,ir,actor,series,cinema,d60,love,tv,fr_khaneh,elder
+
+0.37  حسام نواب صفوی ↔ سیاوش خیرابی
+   A chars-22-people-ir.js:52  حسام نواب صفوی|بازیگر سریال و سینما|2|m,alive,ir,actor,series,cinema,modern,active,love,tv
+   B chars-22-people-ir.js:30  سیاوش خیرابی|بازیگر سینما و سریال|2|m,alive,ir,actor,cinema,series,modern,active,love
+
+0.37  خاطره اسدی ↔ سیما تیرانداز
+   A chars-22-people-ir.js:94  خاطره اسدی|بازیگر سریال|2|f,alive,ir,actor,series,cinema,modern,active,serious,tv
+   B chars-22-people-ir.js:59  سیما تیرانداز|بازیگر سریال‌ها|2|f,alive,ir,actor,series,cinema,serious,modern,active
+
+0.37  سحر جعفری جوزانی ↔ فلامک جنیدی
+   A chars-22-people-ir.js:1134  سحر جعفری جوزانی|لیلونِ شب‌های برره|2|f,alive,ir,actor,cinema,series,comedy,modern,active,fr_modiri,fr_barareh
+   B chars-22-people-ir.js:1160  فلامک جنیدی|بازیگر «شب‌های برره»|2|f,alive,ir,actor,series,cinema,comedy,modern,active,fr_modiri,fr_barareh,tv
+
+0.37  الهام طهموری ↔ نیکی مظفری
+   A chars-22-people-ir.js:1153  الهام طهموری|بازیگر سریال‌ها|1|f,alive,ir,actor,series,cinema,modern,active,love,tv,young,comedy
+   B chars-22-people-ir.js:1147  نیکی مظفری|بازیگر سینما|1|f,alive,ir,actor,cinema,series,modern,active,love,young,comedy
+
+0.37  بهرام بدخشانی ↔ مرتضی پورصمد
+   A chars-22-people-ir.js:1167  بهرام بدخشانی|فیلم‌بردار سینما|1|m,alive,ir,director,cinema,modern,d60,serious,active
+   B chars-22-people-ir.js:1169  مرتضی پورصمد|فیلم‌بردار سینما|1|m,alive,ir,director,cinema,modern,d60,active,serious,tv
+
+0.37  حمیرا ریاضی ↔ رویا تیموریان
+   A chars-22-people-ir.js:1130  حمیرا ریاضی|بازیگر سینما و تئاتر|1|f,alive,ir,actor,cinema,theater,series,modern,serious,d60,elder
+   B chars-01-cinema.js:105  رویا تیموریان|بازیگر|1|f,alive,ir,actor,cinema,series,elder,d60,tv
+
+0.37  رویا تیموریان ↔ سهیلا رضوی
+   A chars-01-cinema.js:105  رویا تیموریان|بازیگر|1|f,alive,ir,actor,cinema,series,elder,d60,tv
+   B chars-22-people-ir.js:92  سهیلا رضوی|بازیگر سینما|1|f,alive,ir,actor,cinema,series,d60,serious,elder,theater
+
+0.37  سپیده خداوردی ↔ نیلوفر خوش‌خلق
+   A chars-22-people-ir.js:96  سپیده خداوردی|بازیگر سینما|1|f,alive,ir,actor,cinema,series,modern,active,young,love
+   B chars-22-people-ir.js:104  نیلوفر خوش‌خلق|بازیگر سریال|1|f,alive,ir,actor,series,cinema,modern,active,love,tv,young
+
+0.37  ستار اورکی ↔ علیرضا کهن‌دیری
+   A chars-22-people-ir.js:249  ستار اورکی|آهنگساز فیلم و سریال|1|m,alive,ir,composer,musician,series,cinema,modern,active
+   B chars-22-people-ir.js:1171  علیرضا کهن‌دیری|آهنگساز تیتراژ سریال‌ها|1|m,alive,ir,composer,musician,series,tv,modern,active,cinema
+
+0.37  شهرزاد عبدالمجید ↔ نیلوفر پارسا
+   A chars-22-people-ir.js:1138  شهرزاد عبدالمجید|بازیگر سینما|1|f,alive,ir,actor,cinema,series,modern,active,love,serious,young
+   B chars-22-people-ir.js:1255  نیلوفر پارسا|بازیگر سریال‌ها|1|f,alive,ir,actor,series,cinema,modern,active,love,young,serious,tv
+
+0.37  علیرضا جلالی‌تبار ↔ وحید رهبانی
+   A chars-22-people-ir.js:42  علیرضا جلالی‌تبار|بازیگر سریال|1|m,alive,ir,actor,series,cinema,modern,active,love
+   B chars-22-people-ir.js:553  وحید رهبانی|بازیگر سینما و سریال|1|m,alive,ir,actor,cinema,series,modern,active,love,tv
+
+0.37  مجید واشقانی ↔ مهدی سلوکی
+   A chars-22-people-ir.js:36  مجید واشقانی|بازیگر سریال|1|m,alive,ir,actor,series,cinema,modern,active,serious,tv
+   B chars-22-people-ir.js:28  مهدی سلوکی|بازیگر سینما|1|m,alive,ir,actor,cinema,series,modern,active,serious
+
+0.37  پرابهاس ↔ یش
+   A chars-24-people-world.js:392  پرابهاس|باهوبالی|2|m,alive,asia,actor,cinema,hero,epic,beard,active
+   B chars-24-people-world.js:396  یش|راکی کی‌جی‌اف|1|m,alive,asia,actor,cinema,beard,active,hero
+
+0.38  تهمینه میلانی ↔ منیژه حکمت
+   A chars-01-cinema.js:32  تهمینه میلانی|کارگردان سینما|2|f,alive,ir,director,cinema,serious,controversial,active
+   B chars-22-people-ir.js:124  منیژه حکمت|کارگردان «زندان زنان»|2|f,alive,ir,director,cinema,modern,serious,controversial
+
+0.38  راغب ↔ شهاب مظفری
+   A chars-22-people-ir.js:307  راغب|خواننده‌ی پاپ جوان|2|m,alive,ir,singer,pop,love,newgen,active,young,internet,composer,beard
+   B chars-02-music.js:69  شهاب مظفری|خواننده‌ی پاپ|2|m,alive,ir,singer,pop,love,active,newgen,beard,internet
+
+0.38  سمیرا حسن‌پور ↔ لیلا زارع
+   A chars-22-people-ir.js:1150  سمیرا حسن‌پور|بازیگر سینما و سریال|2|f,alive,ir,actor,cinema,series,modern,active,love,serious,young,tv
+   B chars-22-people-ir.js:73  لیلا زارع|بازیگر سینما و سریال|2|f,alive,ir,actor,cinema,series,modern,active,serious,love,tv
+
+0.38  آزیتا ترکاشوند ↔ شهرزاد عبدالمجید
+   A chars-22-people-ir.js:91  آزیتا ترکاشوند|بازیگر سینما|1|f,alive,ir,actor,cinema,series,modern,active,serious,love
+   B chars-22-people-ir.js:1138  شهرزاد عبدالمجید|بازیگر سینما|1|f,alive,ir,actor,cinema,series,modern,active,love,serious,young
+
+0.38  آصف آریا ↔ سینا پارسیان
+   A chars-22-people-ir.js:1271  آصف آریا|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,newgen,internet
+   B chars-22-people-ir.js:1274  سینا پارسیان|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,young,internet,newgen
+
+0.38  الهام طهموری ↔ نگین معتضدی
+   A chars-22-people-ir.js:1153  الهام طهموری|بازیگر سریال‌ها|1|f,alive,ir,actor,series,cinema,modern,active,love,tv,young,comedy
+   B chars-22-people-ir.js:1257  نگین معتضدی|بازیگر سریال‌ها|1|f,alive,ir,actor,series,cinema,modern,active,love,tv,comedy
+
+0.38  امیر عظیمی ↔ حامد پهلان
+   A chars-22-people-ir.js:1280  امیر عظیمی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,serious,young
+   B chars-22-people-ir.js:316  حامد پهلان|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,modern,active,serious
+
+0.38  بابک مافی ↔ رضا شیری
+   A chars-22-people-ir.js:303  بابک مافی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,modern,active,beloved
+   B chars-22-people-ir.js:1270  رضا شیری|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,young,beloved
+
+0.38  سهراب پاکزاد ↔ ماهان بهرام‌خان
+   A chars-22-people-ir.js:572  سهراب پاکزاد|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,newgen,active,young,composer
+   B chars-22-people-ir.js:1017  ماهان بهرام‌خان|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,newgen,active,composer
+
+0.38  عاطف اسلم ↔ وائل کفوری
+   A chars-24-people-world.js:877  عاطف اسلم|خواننده‌ی پاکستانی|1|m,alive,asia,singer,pop,love,beard,young
+   B chars-24-people-world.js:849  وائل کفوری|خواننده‌ی لبنانی|1|m,alive,asia,singer,pop,love,beard
+
+0.38  محمدرضا غفاری ↔ مهدی سلوکی
+   A chars-22-people-ir.js:31  محمدرضا غفاری|بازیگر سینما|1|m,alive,ir,actor,cinema,series,modern,active,serious,young
+   B chars-22-people-ir.js:28  مهدی سلوکی|بازیگر سینما|1|m,alive,ir,actor,cinema,series,modern,active,serious
+
+0.38  مریم بوبانی ↔ ندا قاسمی
+   A chars-22-people-ir.js:101  مریم بوبانی|بازیگر سریال|1|f,alive,ir,actor,series,cinema,modern,active,comedy,tv
+   B chars-22-people-ir.js:1256  ندا قاسمی|بازیگر سریال‌های طنز|1|f,alive,ir,actor,series,cinema,comedy,modern,active,tv,young
+
+0.38  میو پوکمون ↔ لوگیا
+   A chars-25-toon-film-game.js:529  میو پوکمون|پوکمونِ صورتیِ افسانه‌ای|2|fic,asia,anime,cartoon,game,cinema,kids,animal,super,mythic,beloved,fr_pokemon
+   B chars-25-toon-film-game.js:530  لوگیا|پرنده‌ی افسانه‌ای دریا|1|fic,asia,anime,cartoon,game,cinema,kids,animal,super,mythic,sea,fr_pokemon
+
+0.38  عثمان مختاری ↔ عسجدی
+   A chars-22-people-ir.js:622  عثمان مختاری|قصیده‌سرای غزنوی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,epic,rich
+   B chars-22-people-ir.js:809  عسجدی|شاعر دربار غزنوی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,rich,war
+
+0.38  اپونین ↔ فانتین
+   A chars-23-fiction.js:444  اپونین|دخترِ عاشقِ ماریوس|1|f,eu,fic,book,novelchar,cinema,theater,love,diedyoung,young,old
+   B chars-23-fiction.js:440  فانتین|مادرِ تیره‌روزِ کوزت|1|f,eu,fic,book,novelchar,cinema,theater,diedyoung,love,old,serious
+
+0.39  آناهیتا همتی ↔ گلچهره سجادیه
+   A chars-22-people-ir.js:75  آناهیتا همتی|بازیگر سینما|2|f,alive,ir,actor,cinema,series,modern,active,love,serious,d60
+   B chars-22-people-ir.js:65  گلچهره سجادیه|بازیگر سینما|2|f,alive,ir,actor,cinema,series,serious,d60,love
+
+0.39  جت لی ↔ دانی ین
+   A chars-05-world-cinema.js:82  جت لی|بازیگر رزمی|2|m,alive,asia,actor,athlete,cinema,hero,worldfame
+   B chars-20-people-world.js:58  دانی ین|بازیگر ایپ من|2|m,alive,asia,actor,athlete,cinema,hero,worldfame,active,fr_fight
+
+0.39  سهراب مرادی ↔ کیانوش رستمی
+   A chars-03-sport.js:35  سهراب مرادی|وزنه‌بردار قهرمان|2|m,alive,ir,athlete,champion,worldfame,fr_olympic,fr_teammelli
+   B chars-03-sport.js:34  کیانوش رستمی|وزنه‌بردار قهرمان|2|m,alive,ir,athlete,champion,worldfame,fr_olympic,fr_teammelli,controversial
+
+0.39  امین رستمی ↔ قاسم افشار
+   A chars-22-people-ir.js:1277  امین رستمی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,beloved,d60
+   B chars-22-people-ir.js:892  قاسم افشار|خواننده‌ی پاپ دهه‌ی هفتاد|1|m,alive,ir,singer,pop,d60,love,beloved
+
+0.39  اکو ↔ اوریدیس
+   A chars-23-fiction.js:235  اکو|پریِ نفرین‌شده به پژواک|1|f,eu,fic,mythic,book,ancient,young,love,super,diedyoung
+   B chars-23-fiction.js:229  اوریدیس|همسرِ از دست‌رفته‌ی اورفئوس|1|f,eu,fic,mythic,book,ancient,love,diedyoung,young,legend
+
+0.39  بابک جهانبخش ↔ شهرام شکوهی
+   A chars-19-people-ir.js:74  بابک جهانبخش|خواننده و آهنگساز پاپ|2|m,alive,ir,singer,composer,pop,love,active,modern,beard
+   B chars-02-music.js:40  شهرام شکوهی|خواننده|1|m,alive,ir,singer,pop,beard,love
+
+0.39  سام درخشانی ↔ سیامک صفری
+   A chars-01-cinema.js:69  سام درخشانی|بازیگر|2|m,alive,ir,actor,tv,series,cinema,active,comedy
+   B chars-22-people-ir.js:49  سیامک صفری|بازیگر سریال|1|m,alive,ir,actor,series,cinema,modern,active,comedy,tv
+
+0.39  فرزاد فرخ ↔ احمد سلو
+   A chars-22-people-ir.js:1269  فرزاد فرخ|خواننده‌ی پاپ|2|m,alive,ir,singer,pop,modern,active,love,young,newgen
+   B chars-22-people-ir.js:309  احمد سلو|خواننده‌ی پاپ جوان|1|m,alive,ir,singer,pop,love,newgen,active,young
+
+0.39  مهراد جم ↔ سینا پارسیان
+   A chars-22-people-ir.js:297  مهراد جم|خواننده‌ی پاپ جوان|2|m,alive,ir,singer,pop,love,newgen,active,young,internet
+   B chars-22-people-ir.js:1274  سینا پارسیان|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,young,internet,newgen
+
+0.39  تهمینه ↔ فرانک
+   A chars-04-culture.js:79  تهمینه|مادر سهراب|1|f,dead,ir,mythic,fic,epic,ancient,book,fr_shahnameh,young
+   B chars-23-fiction.js:21  فرانک|مادرِ فریدون|1|f,ir,fic,mythic,book,ancient,epic,hero,serious,love,fr_shahnameh
+
+0.40  افراسیاب ↔ شیده
+   A chars-21-fiction-more.js:26  افراسیاب|پادشاهِ توران|2|m,ir,fic,mythic,book,villain,king,epic,ancient,war,fr_shahnameh,legend
+   B chars-23-fiction.js:59  شیده|پسرِ افراسیاب|1|m,ir,fic,mythic,book,ancient,villain,young,war,king,epic,fr_shahnameh
+
+0.40  رودابه ↔ ارنواز و شهرناز
+   A chars-21-fiction-more.js:27  رودابه|مادرِ رستم|2|f,ir,fic,mythic,book,love,king,ancient,epic,legend,fr_shahnameh
+   B chars-23-fiction.js:23  ارنواز و شهرناز|خواهرانِ اسیرِ ضحاک|1|f,ir,fic,mythic,book,ancient,epic,king,love,young,fr_shahnameh
+
+0.40  آناهیتا همتی ↔ لادن مستوفی
+   A chars-22-people-ir.js:75  آناهیتا همتی|بازیگر سینما|2|f,alive,ir,actor,cinema,series,modern,active,love,serious,d60
+   B chars-22-people-ir.js:62  لادن مستوفی|بازیگر سینما|2|f,alive,ir,actor,cinema,series,d60,love,active
+
+0.40  بهاره کیان‌افشار ↔ لیلا زارع
+   A chars-22-people-ir.js:71  بهاره کیان‌افشار|بازیگر سریال|2|f,alive,ir,actor,series,cinema,modern,love,active,tv
+   B chars-22-people-ir.js:73  لیلا زارع|بازیگر سینما و سریال|2|f,alive,ir,actor,cinema,series,modern,active,serious,love,tv
+
+0.40  حمیدرضا پگاه ↔ سیاوش خیرابی
+   A chars-22-people-ir.js:35  حمیدرضا پگاه|بازیگر سینما|2|m,alive,ir,actor,cinema,series,modern,active,love,serious
+   B chars-22-people-ir.js:30  سیاوش خیرابی|بازیگر سینما و سریال|2|m,alive,ir,actor,cinema,series,modern,active,love
+
+0.40  ابن یمین ↔ کمال‌الدین اسماعیل
+   A chars-22-people-ir.js:367  ابن یمین|قطعه‌سرای سربداری|1|m,dead,ir,poet,fr_classicpoet,ancient,book,serious,war
+   B chars-22-people-ir.js:363  کمال‌الدین اسماعیل|خلاق‌المعانی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,war
+
+0.40  ابوشکور بلخی ↔ جمال‌الدین اصفهانی
+   A chars-22-people-ir.js:354  ابوشکور بلخی|سراینده‌ی آفرین‌نامه|1|m,dead,ir,poet,fr_classicpoet,ancient,book,serious
+   B chars-22-people-ir.js:362  جمال‌الدین اصفهانی|قصیده‌سرای اصفهان|1|m,dead,ir,poet,fr_classicpoet,ancient,book,painter
+
+0.40  اثیرالدین اخسیکتی ↔ فخرالدین اسعد گرگانی
+   A chars-22-people-ir.js:810  اثیرالدین اخسیکتی|قصیده‌سرای سلجوقی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,love,serious
+   B chars-22-people-ir.js:356  فخرالدین اسعد گرگانی|سراینده‌ی ویس و رامین|1|m,dead,ir,poet,fr_classicpoet,ancient,book,love
+
+0.40  اثیرالدین اخسیکتی ↔ منوچهری دامغانی
+   A chars-22-people-ir.js:810  اثیرالدین اخسیکتی|قصیده‌سرای سلجوقی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,love,serious
+   B chars-19-people-ir.js:194  منوچهری دامغانی|شاعر طبیعت|1|m,dead,ir,poet,fr_classicpoet,ancient,book,love
+
+0.40  احمد عبادی ↔ رضا ورزنده
+   A chars-22-people-ir.js:227  احمد عبادی|استاد سه‌تار|1|m,dead,ir,musician,traditional,classical,prerev,elder,legend,serious
+   B chars-22-people-ir.js:229  رضا ورزنده|استاد سنتور|1|m,dead,ir,musician,traditional,classical,prerev,elder,composer,legend
+
+0.40  اسماعیل شاهرودی ↔ هوشنگ ایرانی
+   A chars-22-people-ir.js:413  اسماعیل شاهرودی|شاعر «آینده»|1|m,dead,ir,poet,book,prerev,serious,controversial
+   B chars-22-people-ir.js:427  هوشنگ ایرانی|شاعر «جیغ بنفش»|1|m,dead,ir,poet,painter,book,prerev,controversial
+
+0.40  اسماعیل فصیح ↔ پرویز داریوش
+   A chars-22-people-ir.js:436  اسماعیل فصیح|رمان‌نویس «ثریا در اغما»|1|m,dead,ir,writer,book,d60,serious,prerev
+   B chars-22-people-ir.js:996  پرویز داریوش|مترجم|1|m,dead,ir,writer,book,prerev,d60
+
+0.40  امیر عظیمی ↔ علیرضا روزگار
+   A chars-22-people-ir.js:1280  امیر عظیمی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,serious,young
+   B chars-22-people-ir.js:300  علیرضا روزگار|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,modern,active,young
+
+0.40  امیر معزی ↔ امیرشاهی سبزواری
+   A chars-22-people-ir.js:357  امیر معزی|ملک‌الشعرای سلجوقی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,rich,serious
+   B chars-22-people-ir.js:1051  امیرشاهی سبزواری|شاعر و شاهزاده‌ی تیموری|1|m,dead,ir,poet,painter,fr_classicpoet,ancient,book,rich
+
+0.40  امیر معزی ↔ قطران تبریزی
+   A chars-22-people-ir.js:357  امیر معزی|ملک‌الشعرای سلجوقی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,rich,serious
+   B chars-22-people-ir.js:358  قطران تبریزی|قصیده‌سرای آذربایجان|1|m,dead,ir,poet,fr_classicpoet,ancient,book,rich
+
+0.40  امیرحسینی هروی ↔ اوحدی مراغه‌ای
+   A chars-22-people-ir.js:625  امیرحسینی هروی|عارف شاعر|1|m,dead,ir,poet,fr_classicpoet,ancient,book,mystic,religious
+   B chars-22-people-ir.js:364  اوحدی مراغه‌ای|سراینده‌ی جام جم|1|m,dead,ir,poet,fr_classicpoet,ancient,book,mystic,serious
+
+0.40  اوحدی مراغه‌ای ↔ کسایی مروزی
+   A chars-22-people-ir.js:364  اوحدی مراغه‌ای|سراینده‌ی جام جم|1|m,dead,ir,poet,fr_classicpoet,ancient,book,mystic,serious
+   B chars-22-people-ir.js:351  کسایی مروزی|شاعر شیعیِ سامانی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,religious
+
+0.40  ایران درودی ↔ منیر فرمانفرماییان
+   A chars-19-people-ir.js:242  ایران درودی|نقاش زن|1|f,dead,ir,painter,prerev,elder,worldfame,serious,legend
+   B chars-04-culture.js:107  منیر فرمانفرماییان|هنرمند آینه‌کاری|1|f,dead,ir,painter,worldfame,elder,legend,prerev
+
+0.40  ایلیا رپین ↔ ایوان شیشکین
+   A chars-24-people-world.js:1149  ایلیا رپین|نقاش روس قایق‌کشان ولگا|1|m,dead,eu,painter,old,beard,legend,serious
+   B chars-24-people-world.js:1151  ایوان شیشکین|نقاش جنگل و خرس‌ها|1|m,dead,eu,painter,old,beard,legend
+
+0.40  پائولو سورنتینو ↔ توماس وینتربرگ
+   A chars-24-people-world.js:531  پائولو سورنتینو|کارگردان زیبایی بزرگ|1|m,alive,eu,director,writer,cinema,award,fr_oscar
+   B chars-24-people-world.js:533  توماس وینتربرگ|کارگردان یک دور دیگر|1|m,alive,eu,director,writer,cinema,award,fr_oscar,serious
+
+0.40  تندرکیا ↔ نصرت رحمانی
+   A chars-22-people-ir.js:1053  تندرکیا|شاعرِ آوانگارد|1|m,dead,ir,poet,book,prerev,controversial,writer
+   B chars-19-people-ir.js:184  نصرت رحمانی|شاعر معاصر|1|m,dead,ir,poet,book,prerev,serious,controversial,writer
+
+0.40  جلیل رسولی ↔ یعقوب عمامه‌پیچ
+   A chars-22-people-ir.js:524  جلیل رسولی|خوشنویسِ نوگرا|1|m,alive,ir,painter,traditional,elder,modern,d60
+   B chars-22-people-ir.js:1204  یعقوب عمامه‌پیچ|نقاش رئالیست|1|m,alive,ir,painter,d60,modern,elder,serious,traditional
+
+0.40  حمید حامی ↔ مانی رهنما
+   A chars-22-people-ir.js:883  حمید حامی|خواننده‌ی پاپ دهه‌ی هشتاد|1|m,alive,ir,singer,pop,love,modern,composer
+   B chars-22-people-ir.js:315  مانی رهنما|خواننده‌ی پاپ|1|m,alive,ir,singer,composer,pop,love,modern,serious
+
+0.40  ژاله قائم‌مقامی ↔ شمس کسمایی
+   A chars-22-people-ir.js:403  ژاله قائم‌مقامی|شاعره‌ی قاجاری|1|f,dead,ir,poet,old,book,serious,controversial
+   B chars-22-people-ir.js:995  شمس کسمایی|شاعره‌ی نوگرا|1|f,dead,ir,poet,old,book,controversial
+
+0.40  سپیده خداوردی ↔ شهرزاد عبدالمجید
+   A chars-22-people-ir.js:96  سپیده خداوردی|بازیگر سینما|1|f,alive,ir,actor,cinema,series,modern,active,young,love
+   B chars-22-people-ir.js:1138  شهرزاد عبدالمجید|بازیگر سینما|1|f,alive,ir,actor,cinema,series,modern,active,love,serious,young
+
+0.40  ستار اورکی ↔ مسعود سخاوت‌دوست
+   A chars-22-people-ir.js:249  ستار اورکی|آهنگساز فیلم و سریال|1|m,alive,ir,composer,musician,series,cinema,modern,active
+   B chars-22-people-ir.js:1175  مسعود سخاوت‌دوست|آهنگساز فیلم|1|m,alive,ir,composer,musician,cinema,modern,active,serious,series
+
+0.40  علی سردار افخمی ↔ قباد شیوا
+   A chars-22-people-ir.js:1048  علی سردار افخمی|معمار|1|m,alive,ir,painter,prerev,d60,elder
+   B chars-22-people-ir.js:493  قباد شیوا|گرافیست|1|m,alive,ir,painter,elder,prerev,d60,serious
+
+0.40  علی‌اصغر سیدآبادی ↔ محمدرضا کاتب
+   A chars-22-people-ir.js:1235  علی‌اصغر سیدآبادی|نویسنده‌ی کودک|1|m,alive,ir,writer,kids,book,modern,active,serious
+   B chars-22-people-ir.js:442  محمدرضا کاتب|رمان‌نویس|1|m,alive,ir,writer,book,modern,active,kids
+
+0.40  غلامحسین نامی ↔ یحیی دهقانپور
+   A chars-22-people-ir.js:1201  غلامحسین نامی|نقاش نوگرا|1|m,alive,ir,painter,prerev,d60,modern,elder,teacher
+   B chars-22-people-ir.js:1228  یحیی دهقانپور|عکاس و مدرس|1|m,alive,ir,painter,modern,d60,serious,elder,teacher,prerev
+
+0.40  فرخنده آقایی ↔ ناهید طباطبایی
+   A chars-22-people-ir.js:952  فرخنده آقایی|داستان‌نویس|1|f,alive,ir,writer,book,d60,modern,serious
+   B chars-22-people-ir.js:911  ناهید طباطبایی|داستان‌نویس|1|f,alive,ir,writer,book,modern,d60
+
+0.40  کارن همایونفر ↔ کریستوف رضاعی
+   A chars-02-music.js:55  کارن همایونفر|آهنگساز سینما|1|m,alive,ir,composer,musician,cinema,active,modern
+   B chars-22-people-ir.js:247  کریستوف رضاعی|آهنگساز فیلم|1|m,alive,ir,composer,musician,cinema,modern,active,serious
+
+0.40  مهدی کرم‌پور ↔ هادی مقدم‌دوست
+   A chars-22-people-ir.js:1309  مهدی کرم‌پور|کارگردان سینما|1|m,alive,ir,director,cinema,modern,active,serious,writer,love
+   B chars-22-people-ir.js:134  هادی مقدم‌دوست|کارگردان و فیلمنامه‌نویس|1|m,alive,ir,director,writer,cinema,modern,active,love
+
+0.40  نیلوفر پارسا ↔ نیلوفر خوش‌خلق
+   A chars-22-people-ir.js:1255  نیلوفر پارسا|بازیگر سریال‌ها|1|f,alive,ir,actor,series,cinema,modern,active,love,young,serious,tv
+   B chars-22-people-ir.js:104  نیلوفر خوش‌خلق|بازیگر سریال|1|f,alive,ir,actor,series,cinema,modern,active,love,tv,young
+
+0.40  اسکرپی دو ↔ بوبو
+   A chars-15-comic-toon.js:133  اسکرپی دو|توله‌سگ اسکوبی|2|m,us,fic,cartoon,tv,kids,comedy,retro,animal,young,beloved
+   B chars-15-comic-toon.js:102  بوبو|خرس کوچک همراه یوگی|1|m,us,fic,cartoon,tv,kids,comedy,retro,animal,young
+
+0.40  جینی ویزلی ↔ چو چانگ
+   A chars-21-fiction-more.js:32  جینی ویزلی|خواهرِ رون|2|f,eu,fic,cinema,book,novelchar,fantasy,super,teen,love,beloved,fr_hp
+   B chars-23-fiction.js:522  چو چانگ|دلدارِ اولِ هری|1|f,eu,fic,book,novelchar,cinema,teen,love,fantasy,super,fr_hp
+
+0.40  دزدمونا ↔ اپونین
+   A chars-23-fiction.js:373  دزدمونا|همسرِ بی‌گناهِ اتللو|2|f,eu,fic,book,theater,cinema,love,young,diedyoung,old,beloved
+   B chars-23-fiction.js:444  اپونین|دخترِ عاشقِ ماریوس|1|f,eu,fic,book,novelchar,cinema,theater,love,diedyoung,young,old
+
+0.40  علی تفرشی ↔ قاسم افشار
+   A chars-22-people-ir.js:313  علی تفرشی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,d60,modern
+   B chars-22-people-ir.js:892  قاسم افشار|خواننده‌ی پاپ دهه‌ی هفتاد|1|m,alive,ir,singer,pop,d60,love,beloved
+
+0.40  حامد همایون ↔ شهاب مظفری
+   A chars-02-music.js:72  حامد همایون|خواننده‌ی پاپ|2|m,alive,ir,singer,pop,love,active,beard,beloved
+   B chars-02-music.js:69  شهاب مظفری|خواننده‌ی پاپ|2|m,alive,ir,singer,pop,love,active,newgen,beard,internet
+
+0.40  علی یاسینی ↔ مهراد جم
+   A chars-22-people-ir.js:306  علی یاسینی|خواننده‌ی پاپ جوان|2|m,alive,ir,singer,pop,love,newgen,active,young,beloved
+   B chars-22-people-ir.js:297  مهراد جم|خواننده‌ی پاپ جوان|2|m,alive,ir,singer,pop,love,newgen,active,young,internet
+
+0.41  مهران غفوریان ↔ نادر فلاح
+   A chars-01-cinema.js:65  مهران غفوریان|بازیگر طنز|3|m,alive,ir,actor,comedian,tv,series,comedy,chubby,active,beloved
+   B chars-01-cinema.js:189  نادر فلاح|بازیگر طنز|3|m,alive,ir,actor,series,tv,comedy,active,chubby
+
+0.41  پیر ریشار ↔ ترنس هیل
+   A chars-24-people-world.js:500  پیر ریشار|بازیگر بلوند بلند با کفش سیاه|2|m,alive,eu,actor,comedian,cinema,comedy,blond,prerev,elder
+   B chars-24-people-world.js:522  ترنس هیل|ستاره‌ی وسترن کمدی ایتالیا|2|m,alive,eu,actor,cinema,comedy,blond,prerev,elder,beloved
+
+0.41  افراسیاب ↔ پشنگ
+   A chars-21-fiction-more.js:26  افراسیاب|پادشاهِ توران|2|m,ir,fic,mythic,book,villain,king,epic,ancient,war,fr_shahnameh,legend
+   B chars-23-fiction.js:57  پشنگ|شاهِ توران، پدرِ افراسیاب|1|m,ir,fic,mythic,book,ancient,king,villain,elder,war,fr_shahnameh
+
+0.41  دیو سفید ↔ پولادوند
+   A chars-08-fiction.js:29  دیو سفید|دیو شاهنامه|2|m,ir,fic,mythic,villain,epic,ancient,book,super,monster,fr_shahnameh,legend
+   B chars-23-fiction.js:63  پولادوند|دیوزادی که با رستم کشتی گرفت|1|m,ir,fic,mythic,book,ancient,villain,monster,war,epic,super,fr_shahnameh
+
+0.42  چارماندر ↔ لاپراس
+   A chars-25-toon-film-game.js:527  چارماندر|سوسمارِ دم‌آتشین|2|fic,asia,anime,cartoon,game,kids,animal,super,playable,beloved,fr_pokemon,worldfame
+   B chars-25-toon-film-game.js:532  لاپراس|پوکمونِ سواریِ دریا|1|fic,asia,anime,cartoon,game,kids,animal,sea,beloved,super,playable,fr_pokemon
+
+0.42  باباطاهر ↔ کمال خجندی
+   A chars-04-culture.js:13  باباطاهر|شاعر دوبیتی‌سرا|2|m,dead,ir,poet,mystic,ancient,love,book,fr_classicpoet,legend
+   B chars-22-people-ir.js:368  کمال خجندی|غزلسرای ساکن تبریز|1|m,dead,ir,poet,fr_classicpoet,ancient,book,mystic,love
+
+0.42  خاقانی ↔ مسعود سعد سلمان
+   A chars-19-people-ir.js:197  خاقانی|شاعر ایوان مداین|2|m,dead,ir,poet,fr_classicpoet,ancient,book,serious,controversial,legend
+   B chars-22-people-ir.js:359  مسعود سعد سلمان|شاعر حبسیه‌سرا|1|m,dead,ir,poet,fr_classicpoet,ancient,book,serious,controversial
+
+0.42  ذوالقرنین ↔ طالوت
+   A chars-23-fiction.js:167  ذوالقرنین|پادشاهِ سدساز در برابرِ یأجوج|2|m,dead,asia,religious,ancient,king,hero,legend,book,war,epic
+   B chars-23-fiction.js:173  طالوت|پادشاهِ سپاهِ داوود|1|m,dead,asia,religious,ancient,king,general,war,book,hero
+
+0.42  شاه نعمت‌الله ولی ↔ عماد فقیه کرمانی
+   A chars-22-people-ir.js:714  شاه نعمت‌الله ولی|عارف و شاعر|2|m,dead,ir,poet,fr_classicpoet,ancient,book,mystic,legend,religious,teacher
+   B chars-22-people-ir.js:713  عماد فقیه کرمانی|شاعر و عارف کرمان|1|m,dead,ir,poet,fr_classicpoet,ancient,book,mystic,teacher
+
+0.42  شاه نعمت‌الله ولی ↔ واعظ قزوینی
+   A chars-22-people-ir.js:714  شاه نعمت‌الله ولی|عارف و شاعر|2|m,dead,ir,poet,fr_classicpoet,ancient,book,mystic,legend,religious,teacher
+   B chars-22-people-ir.js:717  واعظ قزوینی|شاعر واعظِ صفوی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,religious,teacher
+
+0.42  محتشم کاشانی ↔ اوحدی مراغه‌ای
+   A chars-22-people-ir.js:374  محتشم کاشانی|سراینده‌ی «باز این چه شورش است»|2|m,dead,ir,poet,fr_classicpoet,ancient,book,religious,legend,serious
+   B chars-22-people-ir.js:364  اوحدی مراغه‌ای|سراینده‌ی جام جم|1|m,dead,ir,poet,fr_classicpoet,ancient,book,mystic,serious
+
+0.42  اردوان کامکار ↔ محسن شریفیان
+   A chars-22-people-ir.js:873  اردوان کامکار|نوازنده‌ی سنتورِ کامکارها|1|m,alive,ir,musician,composer,traditional,fr_band,modern,classical
+   B chars-22-people-ir.js:705  محسن شریفیان|نی‌انبان‌نوازِ گروه لیان|1|m,alive,ir,musician,traditional,fr_band,modern,active,beloved
+
+0.42  امین رستمی ↔ علی تفرشی
+   A chars-22-people-ir.js:1277  امین رستمی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,beloved,d60
+   B chars-22-people-ir.js:313  علی تفرشی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,d60,modern
+
+0.42  گیوم موسو ↔ مارک لوی
+   A chars-24-people-world.js:972  گیوم موسو|نویسنده‌ی پرفروش فرانسوی|1|m,alive,eu,writer,book,love,active,modern
+   B chars-24-people-world.js:973  مارک لوی|نویسنده‌ی اگر حقیقت داشت|1|m,alive,eu,writer,book,love,modern,beloved
+
+0.42  سالی کارریرا ↔ کولت
+   A chars-25-toon-film-game.js:99  سالی کارریرا|ماشینِ پورشه‌ی آبی|1|f,fic,us,cartoon,cinema,kids,love,modern,beloved,fr_disney
+   B chars-25-toon-film-game.js:102  کولت|آشپزِ زنِ موش سرآشپز|1|f,fic,us,cartoon,cinema,kids,love,young,modern,fr_disney
+
+0.43  سینا پارسیان ↔ مهدی مدرس
+   A chars-22-people-ir.js:1274  سینا پارسیان|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,young,internet,newgen
+   B chars-02-music.js:65  مهدی مدرس|خواننده|1|m,alive,ir,singer,pop,active,modern,love
+
+0.43  ارسطو ↔ افلاطون
+   A chars-07-world-science.js:30  ارسطو|فیلسوف یونانی|3|m,dead,eu,philosopher,scientist,ancient,worldfame,legend,book,beard
+   B chars-07-world-science.js:31  افلاطون|فیلسوف یونانی|3|m,dead,eu,philosopher,ancient,worldfame,legend,book,beard
+
+0.43  شهید بلخی ↔ فلکی شروانی
+   A chars-22-people-ir.js:352  شهید بلخی|شاعر و فیلسوف سامانی|1|m,dead,ir,poet,fr_classicpoet,ancient,book,philosopher
+   B chars-22-people-ir.js:619  فلکی شروانی|شاعر و منجم|1|m,dead,ir,poet,fr_classicpoet,ancient,book,scientist
+
+0.43  رضا بنفشه‌خواه ↔ میرطاهر مظلومی
+   A chars-22-people-ir.js:21  رضا بنفشه‌خواه|بازیگر طنز سریال‌ها|2|m,alive,ir,actor,series,cinema,comedy,elder,modern,tv
+   B chars-22-people-ir.js:29  میرطاهر مظلومی|بازیگر طنز|2|m,alive,ir,actor,comedian,series,cinema,comedy,elder,modern
+
+0.43  سام درخشانی ↔ محسن کیایی
+   A chars-01-cinema.js:69  سام درخشانی|بازیگر|2|m,alive,ir,actor,tv,series,cinema,active,comedy
+   B chars-01-cinema.js:154  محسن کیایی|بازیگر طنز|2|m,alive,ir,actor,comedian,cinema,series,comedy,active
+
+0.43  سیروس همتی ↔ نادر سلیمانی
+   A chars-22-people-ir.js:1111  سیروس همتی|بازیگر طنز سریال‌ها|2|m,alive,ir,actor,series,cinema,comedy,modern,active,tv,theater
+   B chars-22-people-ir.js:22  نادر سلیمانی|بازیگر طنز|2|m,alive,ir,actor,comedian,series,cinema,comedy,modern,active,theater
+
+0.43  آتنا ↔ والکیری‌ها
+   A chars-23-fiction.js:196  آتنا|ایزدبانوی خرد و جنگ|3|f,eu,fic,mythic,book,ancient,super,war,sword,costume,worldfame,game,fr_gow,celibate
+   B chars-23-fiction.js:271  والکیری‌ها|دوشیزگانِ جنگاورِ اودین|2|f,eu,fic,mythic,book,ancient,super,war,sword,costume,game,fr_gow,legend
+
+0.43  اسفندیار ↔ زریر
+   A chars-04-culture.js:73  اسفندیار|پهلوان شاهنامه|2|m,dead,ir,mythic,fic,hero,epic,ancient,book,fr_shahnameh,sword,war,general,legend,diedyoung
+   B chars-23-fiction.js:68  زریر|برادرِ گشتاسب و سردارِ کشته‌شده|1|m,ir,fic,mythic,book,ancient,general,hero,war,diedyoung,epic,sword,fr_shahnameh
+
+0.44  سه خرس ↔ مردخای و ریگبی
+   A chars-25-toon-film-game.js:271  سه خرس|خرس‌های کله‌پوک|2|m,fic,us,cartoon,tv,kids,animal,lead,comedy,modern,beloved,internet
+   B chars-25-toon-film-game.js:270  مردخای و ریگبی|پرنده و راکونِ پارک|2|m,fic,us,cartoon,tv,lead,animal,comedy,modern,young,internet
+
+0.44  پرویز شاپور ↔ خسرو شاهانی
+   A chars-22-people-ir.js:751  پرویز شاپور|طنزپرداز کاریکلماتور|2|m,dead,ir,writer,painter,comedy,book,prerev,d60,beloved
+   B chars-22-people-ir.js:963  خسرو شاهانی|طنزنویس|1|m,dead,ir,writer,comedy,book,prerev,d60
+
+0.44  چوی سو جونگ ↔ جانگ هیوک
+   A chars-24-people-world.js:438  چوی سو جونگ|جانگ بوگو امپراتور دریا|2|m,alive,asia,actor,series,tv,hero,epic,beloved
+   B chars-24-people-world.js:442  جانگ هیوک|بازیگر سریال تاریخی کره|1|m,alive,asia,actor,series,tv,epic,hero
+
+0.44  حسن کسائی ↔ رضا ورزنده
+   A chars-22-people-ir.js:226  حسن کسائی|استاد نی اصفهان|2|m,dead,ir,musician,traditional,classical,prerev,legend,elder,beloved
+   B chars-22-people-ir.js:229  رضا ورزنده|استاد سنتور|1|m,dead,ir,musician,traditional,classical,prerev,elder,composer,legend
+
+0.44  شهرام شب‌پره ↔ ایرج مهدیان
+   A chars-02-music.js:27  شهرام شب‌پره|خواننده‌ی شاد|2|m,alive,ir,singer,pop,prerev,elder,fr_la,beloved
+   B chars-02-music.js:89  ایرج مهدیان|خواننده‌ی قدیمیِ پاپ|1|m,alive,ir,singer,pop,prerev,fr_la,elder
+
+0.44  علی یاسینی ↔ احمد سلو
+   A chars-22-people-ir.js:306  علی یاسینی|خواننده‌ی پاپ جوان|2|m,alive,ir,singer,pop,love,newgen,active,young,beloved
+   B chars-22-people-ir.js:309  احمد سلو|خواننده‌ی پاپ جوان|1|m,alive,ir,singer,pop,love,newgen,active,young
+
+0.44  فریده سپاه‌منصور ↔ حمیرا ریاضی
+   A chars-22-people-ir.js:1106  فریده سپاه‌منصور|بازیگر پیشکسوت|2|f,alive,ir,actor,cinema,series,theater,elder,serious,d60,modern,beloved
+   B chars-22-people-ir.js:1130  حمیرا ریاضی|بازیگر سینما و تئاتر|1|f,alive,ir,actor,cinema,theater,series,modern,serious,d60,elder
+
+0.44  فریده سپاه‌منصور ↔ سهیلا رضوی
+   A chars-22-people-ir.js:1106  فریده سپاه‌منصور|بازیگر پیشکسوت|2|f,alive,ir,actor,cinema,series,theater,elder,serious,d60,modern,beloved
+   B chars-22-people-ir.js:92  سهیلا رضوی|بازیگر سینما|1|f,alive,ir,actor,cinema,series,d60,serious,elder,theater
+
+0.44  گرشا رضایی ↔ مجید رضوی
+   A chars-22-people-ir.js:1268  گرشا رضایی|خواننده‌ی پاپ|2|m,alive,ir,singer,pop,modern,active,love,internet
+   B chars-22-people-ir.js:1273  مجید رضوی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,internet,beloved
+
+0.44  مرتضی کاتوزیان ↔ یعقوب عمامه‌پیچ
+   A chars-22-people-ir.js:1203  مرتضی کاتوزیان|نقاش رئالیست|2|m,alive,ir,painter,d60,modern,elder,serious,traditional,beloved
+   B chars-22-people-ir.js:1204  یعقوب عمامه‌پیچ|نقاش رئالیست|1|m,alive,ir,painter,d60,modern,elder,serious,traditional
+
+0.44  مسعود روشن‌پژوه ↔ علی‌اصغر پورمحمدی
+   A chars-22-people-ir.js:1243  مسعود روشن‌پژوه|مجری مسابقه‌های تلویزیونی|2|m,alive,ir,tvhost,tv,modern,d60,beloved,elder
+   B chars-22-people-ir.js:859  علی‌اصغر پورمحمدی|مجری برنامه‌ی صبحگاهی|1|m,alive,ir,tvhost,tv,d60,modern,elder
+
+0.44  نگار عابدی ↔ مریم بوبانی
+   A chars-22-people-ir.js:1110  نگار عابدی|بازیگر سریال‌های طنز|2|f,alive,ir,actor,series,cinema,comedy,modern,active,tv,beloved
+   B chars-22-people-ir.js:101  مریم بوبانی|بازیگر سریال|1|f,alive,ir,actor,series,cinema,modern,active,comedy,tv
+
+0.44  ددالوس ↔ هفائستوس
+   A chars-23-fiction.js:231  ددالوس|سازنده‌ی هزارتو و بال‌ها|2|m,eu,fic,mythic,book,ancient,inventor,elder,beard,legend,game,fr_gow
+   B chars-23-fiction.js:202  هفائستوس|خدای آهنگر|1|m,eu,fic,mythic,book,ancient,super,inventor,beard,game,fr_gow,serious
+
+0.44  استورم ↔ روگ
+   A chars-15-comic-toon.js:9  استورم|بانوی طوفان|2|f,us,fic,cartoon,cinema,super,hero,costume,blond,worldfame
+   B chars-15-comic-toon.js:12  روگ|جهش‌یافته‌ی قدرت‌دزد|2|f,us,fic,cartoon,cinema,super,hero,costume,young,blond
+
+0.44  سیامک صفری ↔ محمد نادری
+   A chars-22-people-ir.js:49  سیامک صفری|بازیگر سریال|1|m,alive,ir,actor,series,cinema,modern,active,comedy,tv
+   B chars-22-people-ir.js:51  محمد نادری|بازیگر طنز|1|m,alive,ir,actor,comedian,series,comedy,modern,active,tv
+
+0.44  بهناز جعفری ↔ مائده طهماسبی
+   A chars-19-people-ir.js:30  بهناز جعفری|بازیگر سینما و سریال|2|f,alive,ir,actor,cinema,series,serious,active,modern,theater,tv
+   B chars-22-people-ir.js:79  مائده طهماسبی|بازیگر سینما|2|f,alive,ir,actor,cinema,series,modern,serious,theater
+
+0.44  افشین سنگ‌چاپ ↔ شهرخ فروتنیان
+   A chars-22-people-ir.js:45  افشین سنگ‌چاپ|بازیگر سریال|1|m,alive,ir,actor,series,cinema,modern,active,serious,tv,d60
+   B chars-22-people-ir.js:554  شهرخ فروتنیان|بازیگر سینما|1|m,alive,ir,actor,cinema,series,d60,serious,modern
+
+0.44  حسین جعفریان ↔ مرتضی پورصمد
+   A chars-22-people-ir.js:797  حسین جعفریان|فیلمبردار سینما|1|m,alive,ir,director,cinema,d60,modern,serious
+   B chars-22-people-ir.js:1169  مرتضی پورصمد|فیلم‌بردار سینما|1|m,alive,ir,director,cinema,modern,d60,active,serious,tv
+
+0.45  حمید حامی ↔ علی اصحابی
+   A chars-22-people-ir.js:883  حمید حامی|خواننده‌ی پاپ دهه‌ی هشتاد|1|m,alive,ir,singer,pop,love,modern,composer
+   B chars-22-people-ir.js:568  علی اصحابی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,modern,active,composer,young
+
+0.45  رضا شیری ↔ رضا ملک‌زاده
+   A chars-22-people-ir.js:1270  رضا شیری|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,young,beloved
+   B chars-22-people-ir.js:890  رضا ملک‌زاده|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,modern,beloved
+
+0.45  شبنم مقدمی ↔ مریم بوبانی
+   A chars-01-cinema.js:87  شبنم مقدمی|بازیگر طنز|2|f,alive,ir,actor,comedian,cinema,series,comedy,active,tv
+   B chars-22-people-ir.js:101  مریم بوبانی|بازیگر سریال|1|f,alive,ir,actor,series,cinema,modern,active,comedy,tv
+
+0.45  تهمورث ↔ گودرز
+   A chars-23-fiction.js:17  تهمورث|شاهِ دیوبند|2|m,ir,fic,mythic,book,ancient,king,hero,super,epic,beard,fr_shahnameh
+   B chars-23-fiction.js:45  گودرز|پیرِ پهلوانانِ ایران|1|m,ir,fic,mythic,book,ancient,general,elder,beard,epic,war,hero,fr_shahnameh
+
+0.45  بابک مافی ↔ مجید رضوی
+   A chars-22-people-ir.js:303  بابک مافی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,modern,active,beloved
+   B chars-22-people-ir.js:1273  مجید رضوی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,internet,beloved
+
+0.45  حامد پهلان ↔ رستاک حلاج
+   A chars-22-people-ir.js:316  حامد پهلان|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,modern,active,serious
+   B chars-22-people-ir.js:1276  رستاک حلاج|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,serious,internet
+
+0.45  شهاب رمضان ↔ ناصر زینعلی
+   A chars-22-people-ir.js:305  شهاب رمضان|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,love,modern,active,tv
+   B chars-22-people-ir.js:1272  ناصر زینعلی|خواننده‌ی پاپ|1|m,alive,ir,singer,pop,modern,active,love,tv,internet
+
+بر حسبِ فایلِ A: chars-22-people-ir.js×162  chars-23-fiction.js×21  chars-19-people-ir.js×10  chars-24-people-world.js×9  chars-04-culture.js×7  chars-01-cinema.js×7  chars-25-toon-film-game.js×6  chars-02-music.js×6  chars-21-fiction-more.js×5  chars-08-fiction.js×3  chars-15-comic-toon.js×3  chars-07-world-science.js×2  chars-03-sport.js×2  chars-05-world-cinema.js×1

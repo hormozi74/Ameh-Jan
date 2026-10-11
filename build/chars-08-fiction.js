@@ -26,7 +26,7 @@ module.exports = [
 'خاله سوسکه|شخصیت قصه‌ی کودکان|3|f,ir,fic,mythic,kids,book,old,love',
 'شنگول و منگول|شخصیت قصه‌ی کودکان|3|ir,fic,mythic,kids,book,beloved,animal',
 'بزبز قندی|شخصیت قصه‌ی کودکان|3|f,ir,fic,mythic,kids,book,animal',
-'دیو سفید|دیو شاهنامه|2|m,ir,fic,mythic,villain,epic,ancient,book,super',
+'دیو سفید|دیو شاهنامه|2|m,ir,fic,mythic,villain,epic,ancient,book,super,monster,fr_shahnameh,legend',
 
 // ---------- ژاپنی و انیمه ----------
 'فوتبالیست‌ها|کارتون محبوب دهه شصت|3|asia,fic,cartoon,anime,tv,kids,d60,beloved,athlete,footballer',
@@ -47,7 +47,7 @@ module.exports = [
 'میتی کومان|کارتون ژیمناستیک|2|f,asia,fic,cartoon,anime,tv,kids,d60,athlete',
 'دهکده‌ی حیوانات|کارتون کودکی|1|asia,fic,cartoon,anime,tv,kids,d60',
 'بابا لنگ‌دراز|کارتون و رمان|3|asia,fic,cartoon,anime,tv,kids,d60,love,book,beloved',
-'آنشرلی|دختر مو قرمز|3|f,asia,fic,cartoon,anime,tv,kids,book,beloved,d60,novelchar',
+'آنشرلی|دختر مو قرمز|3|f,asia,fic,cartoon,anime,tv,kids,book,beloved,d60,novelchar,lead',
 'پینوکیو|عروسک چوبی|4|m,eu,fic,cartoon,puppet,novelchar,tv,kids,book,beloved,worldfame,cinema,fr_disney',
 'دورا|کارتون آموزشی|2|f,us,fic,cartoon,tv,kids',
 'دورامون|گربه‌ی رباتیک ژاپنی|3|asia,fic,cartoon,anime,tv,kids,super,worldfame,beloved',

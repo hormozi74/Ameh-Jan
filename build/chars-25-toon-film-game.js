@@ -63,7 +63,7 @@ module.exports = [
 // ---------- دیزنی: امروز ----------
 'فلین رایدر|دزدِ گیسوکمند|2|m,fic,us,cartoon,cinema,kids,criminal,love,young,comedy,modern,fr_disney',
 'مادر گوتل|زندان‌بانِ راپونزل|2|f,fic,us,cartoon,cinema,kids,villain,super,modern,serious,fantasy,fr_disney',
-'پاسکال|آفتاب‌پرستِ راپونزل|1|m,fic,us,cartoon,cinema,kids,animal,modern,comedy,beloved,fr_disney',
+'پاسکال|آفتاب‌پرستِ راپونزل|1|m,fic,us,cartoon,cinema,kids,animal,modern,comedy,beloved,fr_disney,fantasy',
 'ونلوپی|دخترکِ مسابقه‌ی شیرینی|2|f,fic,us,cartoon,cinema,kids,game,teen,comedy,modern,beloved,fr_disney',
 'کریستوف|یخ‌فروشِ فروزن|2|m,fic,us,cartoon,cinema,kids,love,blond,young,modern,fantasy,fr_frozen,fr_disney',
 'اسون|گوزنِ کریستوف|1|fic,us,cartoon,cinema,kids,animal,modern,comedy,fantasy,beloved,fr_frozen,fr_disney',
@@ -108,7 +108,7 @@ module.exports = [
 'ترس|احساسِ بنفشِ ترسو|1|m,fic,us,cartoon,cinema,kids,comedy,weirdhair,modern,beloved,fr_disney',
 'انزجار|احساسِ سبزِ نق‌نقو|1|f,fic,us,cartoon,cinema,kids,comedy,weirdhair,modern,teen,fr_disney',
 'اضطراب|احساسِ نارنجیِ درون و بیرون ۲|1|f,fic,us,cartoon,cinema,kids,comedy,weirdhair,active,teen,lead,fr_disney',
-'بینگ بانگ|دوستِ خیالیِ ریلی|1|m,fic,us,cartoon,cinema,kids,animal,comedy,modern,beloved,fantasy,fr_disney',
+'بینگ بانگ|دوستِ خیالیِ ریلی|1|m,fic,us,cartoon,cinema,kids,animal,comedy,modern,beloved,fantasy,fr_disney,chubby',
 'میگل|پسرِ گیتاریستِ کوکو|2|m,fic,us,cartoon,cinema,kids,lead,teen,musician,modern,beloved,fr_disney',
 'هکتورِ کوکو|اسکلتِ بامزه‌ی سرزمینِ مردگان|1|m,fic,us,cartoon,cinema,kids,musician,comedy,modern,mustache,fr_disney',
 'ارنستو د لا کروز|خواننده‌ی معروفِ قاتلِ کوکو|1|m,fic,us,cartoon,cinema,kids,villain,singer,mustache,modern,fr_disney',
@@ -334,7 +334,6 @@ module.exports = [
 'بن و هالی|پریِ کوچک و الفِ بی‌جادو|1|fic,eu,cartoon,tv,kids,fantasy,super,modern,comedy,king',
 'تیمی|بره‌ی کوچکِ مهدکودک|1|m,fic,eu,cartoon,tv,kids,animal,lead,childstar,modern,comedy',
 'جورج پیگ|برادرِ کوچکِ پپا|2|m,fic,eu,cartoon,tv,kids,animal,childstar,comedy,modern,beloved',
-'خرس ماشا|خرسِ مهربانِ ماشا|2|m,fic,eu,cartoon,tv,kids,animal,elder,chubby,comedy,modern,beloved',
 'کوکوملون جی‌جی|بچه‌ی آوازخوانِ یوتیوب|1|m,fic,us,cartoon,kids,childstar,singer,internet,active,lead,fr_youtube',
 'لیدی‌باگ|دخترِ کفشدوزکیِ میراکلس|1|f,fic,eu,cartoon,tv,kids,lead,hero,super,masked,costume,teen,love,modern',
 'کت نوآر|گربه‌ی سیاهِ میراکلس|1|m,fic,eu,cartoon,tv,kids,hero,super,masked,costume,teen,blond,modern',
@@ -525,7 +524,7 @@ module.exports = [
 'ژیان|پسرِ قلدرِ دورامون|1|m,fic,asia,anime,cartoon,kids,teen,villain,chubby,singer,comedy',
 
 // ---------- پوکمون ----------
-'چارماندر|سوسمارِ دم‌آتشین|2|fic,asia,anime,cartoon,game,kids,animal,super,playable,beloved,fr_pokemon',
+'چارماندر|سوسمارِ دم‌آتشین|2|fic,asia,anime,cartoon,game,kids,animal,super,playable,beloved,fr_pokemon,worldfame',
 'رایچو|تکاملِ پیکاچو|1|fic,asia,anime,cartoon,game,kids,animal,super,playable,comedy,fr_pokemon',
 'میو پوکمون|پوکمونِ صورتیِ افسانه‌ای|2|fic,asia,anime,cartoon,game,cinema,kids,animal,super,mythic,beloved,fr_pokemon',
 'لوگیا|پرنده‌ی افسانه‌ای دریا|1|fic,asia,anime,cartoon,game,cinema,kids,animal,super,mythic,sea,fr_pokemon',

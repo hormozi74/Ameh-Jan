@@ -2,7 +2,7 @@
 module.exports = [
 'چارلی چاپلین|کمدین افسانه‌ای سینمای صامت|4|m,dead,eu,actor,director,comedian,cinema,comedy,worldfame,legend,prerev,mustache,beloved,kids',
 'لورل و هاردی|زوج کمدی سینما|3|m,dead,us,actor,comedian,cinema,comedy,worldfame,legend,prerev,beloved,kids',
-'مستر بین|شخصیت کمدی رووان اتکینسون|4|m,alive,eu,actor,comedian,tv,comedy,worldfame,kids,beloved,series,cinema,d60',
+'مستر بین|شخصیت کمدی رووان اتکینسون|4|m,alive,eu,actor,comedian,tv,comedy,worldfame,kids,beloved,series,cinema,d60,costume',
 'جکی چان|ستاره‌ی فیلم‌های رزمی|4|m,alive,asia,actor,cinema,comedy,hero,worldfame,beloved,athlete,legend,active,kids,d60,fr_fight',
 'بروس لی|استاد کونگ‌فو|4|m,dead,asia,actor,athlete,cinema,hero,worldfame,legend,diedyoung,fr_fight',
 'آرنولد شوارتزنگر|بازیگر اکشن|4|m,alive,us,actor,athlete,cinema,hero,worldfame,champion,legend,rich,d60,elder',

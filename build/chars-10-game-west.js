@@ -276,7 +276,6 @@ module.exports = [
 'لئون|قاتل نامرئی برال استارز|2|m,fic,eu,game,mobile,online,shooter,masked,kids,teen,active,internet',
 'اسپایک|کاکتوس کوچک برال استارز|2|fic,eu,game,mobile,online,shooter,kids,comedy,beloved,active,monster',
 'رد|پرنده‌ی عصبانی قرمز|3|m,fic,eu,game,mobile,animal,kids,comedy,worldfame,lead,cartoon,beloved,cinema',
-'تام سخنگو|گربه‌ی تکرارکننده‌ی موبایل|3|m,fic,eu,game,mobile,animal,kids,comedy,internet,beloved,cartoon',
 
 // ---------- بازی‌های مبارزه‌ای ----------
 'اسکورپیون|نینجای زرد مورتال کامبت|3|m,fic,us,game,fighting,playable,masked,sword,horror,villain,legend,worldfame',

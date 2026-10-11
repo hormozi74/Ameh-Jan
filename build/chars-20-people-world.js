@@ -159,7 +159,7 @@ module.exports = [
 'اشتفی گراف|ملکه‌ی تنیس آلمان|2|f,alive,eu,athlete,champion,stadium,worldfame,blond,legend,d60,fr_tennis,fr_olympic',
 
 // ---------- المپیک ----------
-'مایکل فلپس|شناگر رکورددار المپیک|3|m,alive,us,athlete,champion,worldfame,legend,beloved,fr_olympic',
+'مایکل فلپس|شناگر رکورددار المپیک|3|m,alive,us,athlete,champion,worldfame,legend,beloved,fr_olympic,controversial',
 'نادیا کومانچی|ژیمناست نمره‌ی ده|2|f,alive,eu,athlete,champion,childstar,prerev,legend,worldfame,fr_olympic',
 'سیمون بایلز|ژیمناست آمریکایی|2|f,alive,us,athlete,champion,active,legend,worldfame,fr_olympic',
 'جسی اونز|قهرمان المپیک برلین|2|m,dead,us,athlete,champion,hero,prerev,legend,worldfame,fr_olympic',
