@@ -105,7 +105,7 @@ module.exports = [
 'نورالدین خانزاده|شخصیت سریال نون‌خ|3|m,ir,fic,series,tv,modern,comedy,lead,mustache,traditional,beloved',
 
 // ---------- سینمای پیش از انقلاب ----------
-'قیصر|جوانمردِ فیلم قیصر|3|m,ir,fic,cinema,prerev,old,lead,serious,legend,criminal,sword,young',
+'قیصر|جوانمردِ فیلم قیصر|3|m,ir,fic,cinema,prerev,old,lead,serious,legend,criminal,sword,young,mustache',
 'فرمان|برادر قیصر|2|m,ir,fic,cinema,prerev,old,serious,wrestler,diedyoung,young,mustache',
 'کریم آب‌منگل|شرورِ فیلم قیصر|2|m,ir,fic,cinema,prerev,old,villain,criminal,serious,mustache,chubby',
 'فاطی|خواهر قیصر|2|f,ir,fic,cinema,prerev,old,serious,young,diedyoung,traditional',
@@ -132,7 +132,7 @@ module.exports = [
 'ناخدا خورشید|ناخدای جنوبی|2|m,ir,fic,cinema,old,lead,serious,criminal,beard,traditional,gun',
 
 // ---------- سینمای پس از انقلاب ----------
-'حاج کاظم|قهرمان آژانس شیشه‌ای|3|m,ir,fic,cinema,modern,lead,serious,war,soldier,gun,beard,beloved',
+'حاج کاظم|قهرمان آژانس شیشه‌ای|3|m,ir,fic,cinema,modern,lead,serious,war,soldier,gun,beard,beloved,d60',
 'عباس|همرزمِ حاج کاظم|2|m,ir,fic,cinema,modern,serious,war,soldier,young,diedyoung,beard',
 'سلحشور|مأمورِ آژانس شیشه‌ای|2|m,ir,fic,cinema,modern,serious,cop,gun,young,glasses',
 'مجید سوزوکی|شخصیت اخراجی‌ها|3|m,ir,fic,cinema,modern,comedy,lead,war,soldier,criminal,young,beloved',
@@ -144,9 +144,9 @@ module.exports = [
 'سیما ریاحی|پرستارِ فیلم شوکران|2|f,ir,fic,cinema,modern,serious,love,young,controversial,doctor',
 'رضا مارمولک|دزدِ ردای روحانی|4|m,ir,fic,cinema,modern,lead,comedy,criminal,beloved,beard,religious,costume',
 'حاج حیدر|محافظِ فیلم بادیگارد|2|m,ir,fic,cinema,modern,serious,soldier,cop,gun,elder,beard,lead',
-'حمید هامون|روشنفکرِ سرگردان|3|m,ir,fic,cinema,modern,lead,serious,glasses,love,young,philosopher,legend',
+'حمید هامون|روشنفکرِ سرگردان|3|m,ir,fic,cinema,modern,lead,serious,glasses,love,young,philosopher,legend,d60',
 'مهشید|همسر هامون|2|f,ir,fic,cinema,modern,serious,love,young,rich,painter',
-'لیلا|زنِ فیلم لیلا|3|f,ir,fic,cinema,modern,lead,serious,love,young,beloved,rich',
+'لیلا|زنِ فیلم لیلا|3|f,ir,fic,cinema,modern,lead,serious,love,young,beloved,rich,d60',
 'سارا|قهرمان فیلم سارا|2|f,ir,fic,cinema,modern,lead,serious,love,young,business',
 'پری|دخترِ فیلم پری|2|f,ir,fic,cinema,modern,lead,serious,young,mystic,philosopher',
 'عفت خانم|مامانِ مهمان مامان|3|f,ir,fic,cinema,modern,lead,comedy,elder,traditional,beloved,chubby',
@@ -154,8 +154,8 @@ module.exports = [
 'باشو|پسرکِ غریبه‌ی کوچک|3|m,ir,fic,cinema,d60,war,lead,kids,beloved,young,serious',
 'نایی|زنِ شمالیِ فیلم باشو|2|f,ir,fic,cinema,d60,war,serious,traditional,beloved,lead',
 'احمد|پسرکِ خانه دوست کجاست|2|m,ir,fic,cinema,d60,kids,lead,young,serious,award,worldfame',
-'علی|پسرکِ بچه‌های آسمان|3|m,ir,fic,cinema,modern,kids,lead,young,serious,beloved,award',
-'زهرا|خواهرِ بچه‌های آسمان|3|f,ir,fic,cinema,modern,kids,young,serious,beloved,award',
+'علی|پسرکِ بچه‌های آسمان|3|m,ir,fic,cinema,modern,kids,lead,young,serious,beloved,award,d60',
+'زهرا|خواهرِ بچه‌های آسمان|3|f,ir,fic,cinema,modern,kids,young,serious,beloved,award,d60',
 'محمد|پسرِ نابینای رنگ خدا|2|m,ir,fic,cinema,modern,kids,young,serious,award,lead,worldfame',
 'نادر|پدرِ جدایی نادر از سیمین|3|m,ir,fic,cinema,modern,lead,serious,award,worldfame,love',
 'سیمین|مادرِ جدایی نادر از سیمین|3|f,ir,fic,cinema,modern,lead,serious,award,worldfame,love,glasses',

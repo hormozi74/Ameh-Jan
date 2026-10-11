@@ -8,7 +8,7 @@ module.exports = [
 'رایان رینولدز|بازیگر ددپول|3|m,alive,us,actor,cinema,comedy,hero,worldfame,active,rich,internet,fr_marvel',
 'تام هالند|مرد عنکبوتی جدید|3|m,alive,eu,actor,cinema,hero,young,newgen,worldfame,active,beloved,fr_marvel',
 'آدام سندلر|کمدین فیلم‌های نتفلیکس|3|m,alive,us,actor,comedian,cinema,comedy,stream,worldfame,active,rich',
-'جنیفر انیستون|ریچل فرندز|3|f,alive,us,actor,series,cinema,tv,sitcom,comedy,blond,worldfame,active,rich,beloved,fr_friends',
+'جنیفر انیستون|ریچل فرندز|3|f,alive,us,actor,series,cinema,tv,sitcom,comedy,blond,worldfame,active,rich,beloved,fr_friends,internet',
 'متیو پری|چندلر فرندز|3|m,dead,us,actor,series,tv,sitcom,comedy,worldfame,controversial,fr_friends',
 'مت لبلانک|جویی فرندز|2|m,alive,us,actor,series,tv,sitcom,comedy,worldfame,beloved,fr_friends',
 'دیوید شوایمر|راس فرندز|2|m,alive,us,actor,director,series,tv,sitcom,comedy,worldfame,fr_friends',
@@ -26,10 +26,10 @@ module.exports = [
 'مارک همیل|لوک اسکای‌واکر|2|m,alive,us,actor,cinema,space,elder,blond,worldfame,legend,fr_starwars',
 'پیرس برازنان|جیمز باند دهه‌ی هفتاد شمسی|3|m,alive,eu,actor,cinema,hero,d60,elder,worldfame,fr_bond',
 'پل واکر|برایان سریع و خشن|3|m,dead,us,actor,cinema,hero,blond,diedyoung,worldfame,beloved,fr_fast',
-'جک نیکلسون|بازیگر درخشش|3|m,alive,us,actor,cinema,villain,elder,glasses,award,worldfame,legend,fr_oscar',
+'جک نیکلسون|بازیگر درخشش|3|m,alive,us,actor,cinema,villain,elder,glasses,award,worldfame,legend,fr_oscar,fr_dc',
 'نیکلاس کیج|بازیگر اکشن پرکار|3|m,alive,us,actor,cinema,hero,award,worldfame,internet,controversial,fr_oscar',
 'بروس ویلیس|جان مک‌کلین جان سخت|3|m,alive,us,actor,cinema,hero,bald,d60,worldfame,beloved',
-'چاک نوریس|رزمی‌کار و بازیگر اکشن|3|m,dead,us,actor,athlete,champion,cinema,hero,beard,d60,worldfame,internet,fr_fight',
+'چاک نوریس|رزمی‌کار و بازیگر اکشن|3|m,alive,us,actor,athlete,champion,cinema,hero,beard,d60,worldfame,internet,fr_fight',
 'ژان کلود ون دام|ستاره‌ی رزمی بلژیکی|3|m,alive,eu,actor,athlete,cinema,hero,d60,worldfame,fr_fight',
 'آنتونیو باندراس|زورو و گربه‌ی چکمه‌پوش|3|m,alive,eu,actor,cinema,hero,love,worldfame,fr_shrek,fr_dreamworks',
 
@@ -61,10 +61,10 @@ module.exports = [
 'برونو مارس|خواننده‌ی پاپ و فانک|3|m,alive,us,singer,musician,dancer,pop,mustache,worldfame,award,active',
 'د ویکند|خواننده‌ی کانادایی|3|m,alive,us,singer,pop,beard,serious,worldfame,active,rich',
 'هری استایلز|خواننده‌ی وان دایرکشن|3|m,alive,eu,singer,actor,pop,love,worldfame,award,active,internet,fr_band',
-'کیتی پری|خواننده‌ی پاپ|3|f,alive,us,singer,pop,weirdhair,tvhost,worldfame,active',
+'کیتی پری|خواننده‌ی پاپ|3|f,alive,us,singer,pop,weirdhair,tvhost,worldfame,active,internet',
 'بریتنی اسپیرز|پرنسس پاپ|3|f,alive,us,singer,dancer,pop,blond,childstar,d60,controversial,worldfame',
-'سلنا گومز|خواننده و بازیگر|3|f,alive,us,singer,actor,pop,series,childstar,business,internet,worldfame,active',
-'جنیفر لوپز|خواننده و بازیگر لاتین|3|f,alive,us,singer,dancer,actor,pop,cinema,love,rich,worldfame',
+'سلنا گومز|خواننده و بازیگر|3|f,alive,us,singer,actor,pop,series,childstar,business,internet,worldfame,active,fr_disney,rich',
+'جنیفر لوپز|خواننده و بازیگر لاتین|3|f,alive,us,singer,dancer,actor,pop,cinema,love,rich,worldfame,internet,active',
 'سیا|خواننده‌ی پشت کلاه‌گیس|2|f,alive,us,singer,composer,pop,masked,blond,worldfame',
 'جورج مایکل|خواننده‌ی بریتانیایی|3|m,dead,eu,singer,composer,pop,d60,beard,love,worldfame,legend,fr_band',
 'بونی ام|گروه دیسکوی دهه‌ی هفتاد|3|eu,singer,dancer,pop,prerev,beloved,legend,worldfame,fr_band',
@@ -91,7 +91,7 @@ module.exports = [
 'پیت‌بول|رپر کچل میامی|2|m,alive,us,singer,dancer,pop,bald,glasses,rich,worldfame,fr_rap',
 
 // ---------- موسیقی بی‌کلام، کلاسیک و عربی ----------
-'ریچارد کلایدرمن|پیانیست محبوب ایرانی‌ها|3|m,alive,eu,musician,classical,pop,blond,d60,love,beloved',
+'ریچارد کلایدرمن|پیانیست محبوب ایرانی‌ها|3|m,alive,eu,musician,classical,pop,blond,d60,love,beloved,worldfame',
 'کنی جی|نوازنده‌ی ساکسیفون|2|m,alive,us,musician,composer,pop,love,d60,beloved,worldfame',
 'آندره‌آ بوچلی|تنور نابینای ایتالیایی|2|m,alive,eu,singer,classical,love,elder,legend,beloved,worldfame',
 'کیتارو|آهنگساز جاده‌ی ابریشم|2|m,alive,asia,composer,musician,mystic,elder,award,d60,beloved',
@@ -123,7 +123,7 @@ module.exports = [
 'روبرتو کارلوس|مدافع ضربه‌ی آزاد|3|m,alive,us,athlete,footballer,stadium,worldfame,legend,bald,champion,d60,fr_realmadrid,fr_fifa',
 'لوئیس فیگو|وینگر پرتغالی|2|m,alive,eu,athlete,footballer,stadium,worldfame,award,controversial,fr_realmadrid,fr_barca,fr_fifa',
 'کارلس پویول|کاپیتان بارسا|2|m,alive,eu,athlete,footballer,stadium,worldfame,champion,legend,beloved,fr_barca,fr_fifa',
-'کارلو آنچلوتی|مربی رئال مادرید|3|m,alive,eu,athlete,footballer,stadium,worldfame,champion,elder,legend,fr_realmadrid,fr_england',
+'کارلو آنچلوتی|مربی رئال مادرید|3|m,alive,eu,athlete,footballer,stadium,worldfame,champion,elder,legend,fr_realmadrid,fr_england,active',
 'یورگن کلوپ|مربی لیورپول|3|m,alive,eu,athlete,footballer,stadium,worldfame,beard,glasses,champion,beloved,fr_england',
 
 // ---------- بسکتبال ----------
@@ -172,7 +172,7 @@ module.exports = [
 'زک کینگ|شعبده‌باز ویدیوهای کوتاه|2|m,alive,us,internet,comedy,kids,worldfame,active,fr_youtube',
 
 // ---------- کمدین‌های استندآپ ----------
-'کوین هارت|کمدین کوتاه‌قد|3|m,alive,us,comedian,actor,cinema,comedy,bald,rich,worldfame,active,fr_standup',
+'کوین هارت|کمدین کوتاه‌قد|3|m,alive,us,comedian,actor,cinema,comedy,bald,rich,worldfame,active,fr_standup,internet',
 'دیو شاپل|کمدین استندآپ|2|m,alive,us,comedian,comedy,stream,beard,controversial,fr_standup',
 'بیل بر|کمدین کچل عصبانی|2|m,alive,us,comedian,comedy,stream,bald,blond,fr_standup',
 'کریس راک|کمدینی که سیلی خورد|2|m,alive,us,comedian,actor,cinema,comedy,internet,fr_standup',

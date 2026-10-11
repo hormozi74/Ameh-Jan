@@ -57,11 +57,13 @@ const QUESTIONS = [
   {id:'iranian', cluster:'nat', text:'ایرانیه؟ یعنی خودش یا داستانش مالِ ایرانه؟',
    rule:t => t.has('ir') ? .97 : .03},
 
+  /* شخصیتِ دیزنی/هالیوود را بازیکن «آمریکایی» می‌داند حتی اگر قصه‌ی اصلی اروپایی باشد
+     (سیندرلا، سفیدبرفی، پینوکیو). خواننده‌ی لاتین/کانادایی هم برای بازیکنِ ایرانی «آمریکایی» است. */
   {id:'american', cluster:'nat', text:'آمریکاییه؟ یا داستانش ساختِ آمریکاست؟',
-   rule:t => t.has('us') ? .94 : t.has('ir') ? .02 : .10},
+   rule:t => t.has('us') ? .94 : t.has('ir') ? .02 : has(t,'fr_disney','fr_dreamworks','fr_marvel','fr_dc','fr_looney','fr_simpsons','fr_toystory','fr_shrek','fr_frozen','fr_lionking','fr_minions','fr_starwars','fr_pirates','fr_matrix','fr_jurassic','fr_fast','fr_transformers','fr_turtles') ? .60 : .10},
 
   {id:'european', cluster:'nat', text:'اروپاییه؟ یا داستانش ساختِ اروپاست؟',
-   rule:t => t.has('eu') ? .93 : t.has('ir') ? .02 : .12},
+   rule:t => t.has('eu') ? (t.has('fic') && has(t,'fr_disney','fr_dreamworks','fr_looney') ? .55 : .93) : t.has('ir') ? .02 : .12},
 
   {id:'eastern', cluster:'nat', text:'اهلِ شرقِ آسیاست؟ مثل ژاپن، چین، کره',
    rule:t => has(t,'asia') ? .92 : .04},
@@ -76,15 +78,18 @@ const QUESTIONS = [
   {id:'dahe60', cluster:'era', text:'اوجِ معروفیتش دهه‌ی شصت و هفتادِ شمسی بود؟',
    rule:t => has(t,'d60') ? .90 : has(t,'modern') ? .35 : .06},
 
+  /* بیشترِ ردیف‌های آدمِ زنده برچسبِ `active` ندارند ولی واقعاً فعال‌اند؛ برای زنده‌ی
+     غیرِ پیر «نمی‌دانیم» (۰.۵۵) درست‌تر از ۰.۳۵ است، وگرنه «آره»ی بازیکن شخصیتِ درست را می‌کُشد. */
   {id:'active', cluster:'era', text:'هنوز فعاله؟ یعنی این چند سال کارِ جدید (فیلم، آهنگ، بازی…) ازش اومده؟',
    rule:t => t.has('fic') ? (has(t,'active') ? .60 : .20)
-           : has(t,'active') ? .88 : t.has('alive') ? .35 : .04},
+           : has(t,'active') ? .88 : t.has('alive') ? (has(t,'elder','prerev') ? .30 : has(t,'newgen','modern') ? .75 : .55) : .04},
 
   {id:'newgen', cluster:'era', text:'همین چند سالِ اخیر معروف شده؟',
    rule:t => has(t,'newgen') ? .88 : .07},
 
+  /* بازیکن رده‌۴ را «بزرگِ رشته» می‌داند حتی اگر برچسبِ legend نداشته باشد */
   {id:'legend', cluster:'era', text:'جزوِ بزرگانِ تاریخِ رشته‌ی خودش حساب می‌شه؟',
-   rule:t => multiP(t, has(t,'legend') ? .88 : has(t,'ancient') ? .55 : .12)},
+   rule:t => multiP(t, has(t,'legend') ? .88 : has(t,'ancient') ? .55 : t.__tier === 4 ? .60 : t.__tier === 3 ? .30 : .10)},
 
   /* ---------------- prof: شغل ---------------- */
   {id:'artist', cluster:'prof', text:'هنرمنده؟ مثل بازیگر، خواننده، نویسنده',
@@ -144,12 +149,13 @@ const QUESTIONS = [
    rule:t => has(t,'tv') ? mediaP(t, .92) : has(t,'cinema','athlete','singer') ? .55 : .12},
 
   {id:'cinema', cluster:'media', text:'تو فیلمِ سینمایی دیدیش؟ نه فقط تلویزیون یا سریال',
-   rule:t => has(t,'cinema') ? mediaP(t, .93) : has(t,'tv') ? .30 : .05},
+   /* بازیگری که ردیفش فقط `series/tv` دارد معمولاً فیلم هم بازی کرده (داده ناقص است) → ۰.۵۵ نه ۰.۳۰ */
+   rule:t => has(t,'cinema') ? mediaP(t, .93) : has(t,'actor') ? .55 : has(t,'tv') ? .30 : .05},
 
   {id:'series', cluster:'media', text:'تو سریال بازی کرده یا شخصیتِ یه سریاله؟',
    /* شخصیتِ خیالیِ تلویزیونی (هومر، باب اسفنجی) برای بازیکن «سریال» است حتی اگر
       ردیفش فقط `tv` داشته باشد */
-   rule:t => has(t,'series') ? mediaP(t, .91) : (t.has('fic') && t.has('tv')) ? .70 : has(t,'actor') ? .35 : .04},
+   rule:t => has(t,'series') ? mediaP(t, .91) : (t.has('fic') && t.has('tv')) ? .70 : has(t,'actor') ? .50 : .04},
 
   {id:'cartoon_media', cluster:'media', text:'کارتون یا انیمیشن هم ازش هست؟ یعنی به شکلِ کارتونی هم دیده شده؟',
    rule:t => has(t,'cartoon','anime') ? mediaP(t, .94) : .03},
@@ -160,8 +166,9 @@ const QUESTIONS = [
   {id:'stadium', cluster:'media', text:'تو ورزشگاه و مسابقه‌های ورزشی می‌بینیش؟',
    rule:t => has(t,'stadium','athlete','footballer','wrestler') ? .90 : .02},
 
+  /* سلبریتیِ زنده‌ی معروف تقریباً همیشه در اینستاگرام پرطرفدار است */
   {id:'internet', cluster:'media', text:'تو اینستاگرام و شبکه‌های اجتماعی خیلی پرطرفداره؟',
-   rule:t => has(t,'internet') ? .90 : has(t,'newgen','active') ? .45 : .10},
+   rule:t => has(t,'internet') ? .90 : t.has('fic') ? .08 : t.has('alive') ? (has(t,'newgen') ? .70 : t.__tier >= 3 ? .60 : has(t,'active') ? .45 : .25) : .05},
 
   {id:'kids', cluster:'media', text:'بچه‌های کوچیک هم می‌شناسنش؟ مثلاً یه بچه‌ی هفت‌ساله اسمش رو بلده؟',
    rule:t => multiP(t, has(t,'kids') ? .93 : has(t,'cartoon','puppet') ? .80 : has(t,'worldfame') ? .35 : .12)},
@@ -240,7 +247,7 @@ const QUESTIONS = [
    rule:t => t.has('doctor') ? .93 : has(t,'scientist') ? .12 : .02},
 
   {id:'rich', cluster:'fame', text:'خیلی پولداره؟ یعنی به ثروتش معروفه؟',
-   rule:t => has(t,'rich','business') ? .90 : has(t,'worldfame') ? .45 : .18},
+   rule:t => has(t,'rich','business') ? .90 : has(t,'worldfame') ? (t.has('fic') ? .25 : .55) : (!t.has('fic') && t.__tier === 4) ? .45 : .18},
 
   {id:'bald', cluster:'look', text:'کچله؟',
    rule:t => has(t,'bald') ? .90 : .10},

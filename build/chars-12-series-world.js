@@ -10,7 +10,7 @@ module.exports = [
 // ---------- فرار از زندان ----------
 'مایکل اسکافیلد|مهندس فرار از زندان|4|m,us,fic,series,lead,hero,criminal,techie,young,serious,beloved,worldfame',
 'لینکلن باروز|برادر محکوم به اعدام|3|m,us,fic,series,criminal,hero,bald,serious,beloved,modern',
-'تی‌بگ|زندانی روانی|3|m,us,fic,series,villain,criminal,horror,glasses,controversial,serious,modern',
+'تی‌بگ|زندانی روانی|3|m,us,fic,series,villain,criminal,horror,controversial,serious,modern',
 'سوکره|زندانی خوش‌قلب|2|m,us,fic,series,criminal,comedy,love,young,beloved,modern',
 'آبروزی|رئیس مافیای زندان|2|m,us,fic,series,criminal,villain,religious,beard,serious,modern',
 'الکساندر ماهون|مامور اف‌بی‌آی|2|m,us,fic,series,cop,villain,gun,serious,young,modern',
@@ -124,7 +124,7 @@ module.exports = [
 'کاپیتان هولت|رئیس جدی پلیس|2|m,us,fic,series,sitcom,comedy,cop,bald,elder,costume,serious,modern',
 'روزا دیاز|کارآگاه خشن|1|f,us,fic,series,sitcom,comedy,cop,gun,young,serious,modern',
 'تد لاسو|مربی خوش‌بین|2|m,us,fic,series,stream,sitcom,comedy,athlete,mustache,beloved,active',
-'آقای بین|مرد بی‌کلام خنده‌دار|4|m,eu,fic,series,sitcom,comedy,lead,kids,internet,beloved,worldfame',
+'آقای بین|مرد بی‌کلام خنده‌دار|4|m,eu,fic,series,sitcom,comedy,lead,kids,internet,beloved,worldfame,cinema,cartoon,d60',
 
 // ---------- جنایی و کارآگاهی ----------
 'دکتر هاوس|پزشک بداخلاق|3|m,us,fic,series,doctor,lead,longrun,beard,serious,controversial,worldfame',
@@ -143,7 +143,7 @@ module.exports = [
 'جک باوئر|مامور ضدتروریست|3|m,us,fic,series,lead,cop,gun,soldier,war,longrun,serious',
 'هاچنر|رئیس ذهن‌های جنایی|2|m,us,fic,series,cop,gun,costume,longrun,modern,serious',
 'اسپنسر رید|نابغه‌ی ذهن‌های جنایی|2|m,us,fic,series,cop,scientist,glasses,young,longrun,beloved,modern',
-'سرگرد کلمبو|کارآگاه بارانی‌پوش|3|m,us,fic,series,tv,cop,comedy,glasses,costume,old,d60,beloved',
+'سرگرد کلمبو|کارآگاه بارانی‌پوش|3|m,us,fic,series,tv,cop,comedy,costume,old,d60,beloved',
 
 // ---------- مافیا و سریال‌های دوره‌ای ----------
 'تونی سوپرانو|رئیس مافیای نیوجرسی|3|m,us,fic,series,stream,lead,villain,criminal,chubby,bald,rich,serious',

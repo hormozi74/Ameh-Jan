@@ -16,7 +16,7 @@ module.exports = [
 
 // ---------- دیزنی: کلاسیک‌ها ----------
 'ملکه‌ی بدجنس|نامادریِ جادوگرِ سفیدبرفی|3|f,fic,us,cartoon,cinema,villain,super,king,kids,fantasy,costume,old,legend,fr_disney',
-'هفت کوتوله|دوستانِ معدنچیِ سفیدبرفی|2|m,fic,us,cartoon,cinema,kids,beard,elder,comedy,old,fantasy,beloved,fr_disney',
+'هفت کوتوله|دوستانِ معدنچیِ سفیدبرفی|3|m,fic,us,cartoon,cinema,kids,beard,elder,comedy,old,fantasy,beloved,fr_disney',
 'ژپتو|نجارِ پیرِ سازنده‌ی پینوکیو|2|m,fic,us,cartoon,cinema,kids,elder,mustache,glasses,old,beloved,fantasy,fr_disney',
 'جیمینی کریکت|جیرجیرکِ وجدانِ پینوکیو|2|m,fic,us,cartoon,cinema,kids,animal,costume,old,comedy,beloved,fr_disney',
 'پری مهربان|مادرخوانده‌ی جادوییِ سیندرلا|3|f,fic,us,cartoon,cinema,kids,super,elder,chubby,fantasy,old,beloved,fr_disney',
@@ -325,9 +325,9 @@ module.exports = [
 'مارشال|سگِ آتش‌نشانِ سگ‌های نگهبان|1|m,fic,us,cartoon,tv,kids,animal,costume,hero,active,comedy',
 'رایدرِ سگ‌های نگهبان|پسرِ رهبرِ سگ‌های نگهبان|1|m,fic,us,cartoon,tv,kids,lead,teen,hero,active,techie',
 'اسکای|سگِ خلبانِ سگ‌های نگهبان|1|f,fic,us,cartoon,tv,kids,animal,costume,hero,active,beloved',
-'اوگی|گربه‌ی آبیِ تنبل|2|m,fic,eu,cartoon,tv,kids,animal,lead,comedy,modern,beloved,chubby',
-'سوسک‌های اوگی|سه سوسکِ مزاحم|2|fic,eu,cartoon,tv,kids,animal,villain,comedy,modern,beloved',
-'لاروا|دو کرمِ زرد و قرمز|2|fic,asia,cartoon,tv,kids,animal,lead,comedy,modern,internet',
+'اوگی|گربه‌ی آبیِ تنبل|3|m,fic,eu,cartoon,tv,kids,animal,lead,comedy,modern,beloved,chubby',
+'سوسک‌های اوگی|سه سوسکِ مزاحم|3|fic,eu,cartoon,tv,kids,animal,villain,comedy,modern,beloved',
+'لاروا|دو کرمِ زرد و قرمز|3|fic,asia,cartoon,tv,kids,animal,lead,comedy,modern,internet',
 'پورورو|پنگوئنِ کوچکِ کره‌ای|1|m,fic,asia,cartoon,tv,kids,animal,lead,glasses,modern,beloved',
 'تایو|اتوبوسِ کوچکِ آبی|1|m,fic,asia,cartoon,tv,kids,robot,lead,modern,beloved,comedy',
 'پولی|ماشینِ پلیسِ رباتی|1|m,fic,asia,cartoon,tv,kids,robot,cop,hero,modern,lead',
@@ -520,7 +520,7 @@ module.exports = [
 'ران موری|دوستِ دخترِ کونان|1|f,fic,asia,anime,cartoon,teen,love,fighting,hero,beloved',
 'کوگورو موری|کارآگاهِ خواب‌آلود|1|m,fic,asia,anime,cartoon,cop,comedy,mustache,elder,chubby',
 'جین|مردِ سیاه‌پوشِ کونان|1|m,fic,asia,anime,cartoon,villain,criminal,gun,blond,serious,costume',
-'نوبیتا|پسرِ تنبلِ دوستِ دورامون|2|m,fic,asia,anime,cartoon,kids,lead,glasses,teen,comedy,beloved',
+'نوبیتا|پسرِ تنبلِ دوستِ دورامون|3|m,fic,asia,anime,cartoon,kids,lead,glasses,teen,comedy,beloved,tv',
 'شیزوکا|دخترِ مهربانِ دورامون|1|f,fic,asia,anime,cartoon,kids,teen,love,beloved,comedy',
 'ژیان|پسرِ قلدرِ دورامون|1|m,fic,asia,anime,cartoon,kids,teen,villain,chubby,singer,comedy',
 
@@ -1003,11 +1003,11 @@ module.exports = [
 // ---------- سینمای ایران ----------
 'آقای حکمتی|معلمِ عاشقِ رگبار|1|m,fic,ir,cinema,lead,teacher,love,glasses,prerev,serious,classical',
 'دایی غفور|پدرِ چشم‌انتظارِ بوی پیراهن یوسف|1|m,fic,ir,cinema,lead,elder,war,d60,serious,religious',
-'فیلشاه|بچه‌فیلِ قهرمانِ انیمیشنِ ایرانی|2|m,fic,ir,cartoon,cinema,kids,animal,lead,hero,king,modern,beloved',
+'فیلشاه|بچه‌فیلِ قهرمانِ انیمیشنِ ایرانی|3|m,fic,ir,cartoon,cinema,kids,animal,lead,hero,king,modern,beloved',
 'گبه|دخترِ عاشقِ قالیِ عشایری|1|f,fic,ir,cinema,lead,love,village,young,d60,traditional',
 
 // ---------- کارتون‌های بیشتر ----------
-'آلوین|سنجابِ شیطانِ آوازخوان|2|m,fic,us,cartoon,cinema,kids,animal,lead,singer,comedy,d60,beloved',
+'آلوین|سنجابِ شیطانِ آوازخوان|3|m,fic,us,cartoon,cinema,kids,animal,lead,singer,comedy,d60,beloved',
 'سایمون|سنجابِ عینکیِ باهوش|1|m,fic,us,cartoon,cinema,kids,animal,singer,glasses,d60,serious',
 'تئودور|سنجابِ تپلِ مهربان|1|m,fic,us,cartoon,cinema,kids,animal,singer,chubby,d60,beloved',
 'دیو سویل|پدرخوانده‌ی سنجاب‌ها|1|m,fic,us,cartoon,cinema,kids,musician,young,d60,comedy',

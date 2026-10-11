@@ -54,12 +54,12 @@ EXTRA_BLOCKS.push({
   'کپل':'animal', 'مدرسه موش‌ها':'animal', 'میتی کومان':'athlete',
   // بازیگران
   'برد پیت':'elder,rich', 'لئوناردو دی‌کاپریو':'rich,love',
-  'تام کروز':'elder,rich', 'وین دیزل':'bald,chubby',
+  'تام کروز':'elder,rich', 'وین دیزل':'bald',
   'جوکین فینیکس':'serious,villain', 'رابرت داونی جونیور':'hero,rich',
   'آنجلینا جولی':'hero,controversial', 'رابرت دنیرو':'comedy,elder',
-  'آل پاچینو':'serious', 'دواین جانسون':'bald,rich,chubby',
+  'آل پاچینو':'serious', 'دواین جانسون':'bald,rich',
   'پژمان جمشیدی':'athlete,footballer', 'امین حیایی':'singer',
-  'مهران غفوریان':'elder', 'بهرام افشاری':'newgen,beard',
+  'بهرام افشاری':'newgen,beard',
   // شعر و ادب و علم
   'مولانا':'writer,religious,epic',
   'زکریای رازی':'doctor', 'ابن سینا':'doctor',
@@ -72,7 +72,7 @@ EXTRA_BLOCKS.push({
   'داریوش اقبالی':'serious', 'ابی|خواننده':'beloved',
   'محسن یگانه':'beard,glasses', 'احسان خواجه‌امیری':'beloved',
   'مهدی طارمی':'beard,mustache', 'سردار آزمون':'internet',
-  'سندباد':'young,epic', 'بچه‌های کوه آلپ':'blond,love',
+  'سندباد':'young,epic', 'بچه‌های کوه آلپ':'blond',
   'جف بزوس':'bald,rich', 'ایلان ماسک':'rich', 'بیل گیتس':'rich,glasses',
   'استیو جابز':'rich', 'وارن بافت':'rich,elder', 'کیم کارداشیان':'rich',
   'کریستیانو رونالدو':'rich', 'لیونل مسی':'rich,beard',
@@ -97,7 +97,7 @@ EXTRA_BLOCKS.push({
   'کارل لوئیس':'serious,award',
   'مهناز افشار':'controversial,blond',
   'آناهیتا نعمتی':'beloved,serious',
-  'لوفی':'comedy,chubby',
+  'لوفی':'comedy',
   'تانجیرو':'beloved,serious',
   'میلاد عبادی‌پور':'beloved,active',
   'جواد فروغی':'glasses,serious',
@@ -239,25 +239,25 @@ EXTRA_BLOCKS.push({
   'موآنا':'lead,fr_disney,sea,fantasy', 'راپونزل':'lead,fr_disney,royal,fantasy', 'پری دریایی':'lead,fr_disney,sea,royal',
   'مولان':'lead,fr_disney,sword,soldier', 'شخصیت مینیون‌ها':'fr_minions,lead',
   'هالک':'fr_marvel,costume,lead,chubby', 'کاپیتان آمریکا':'fr_marvel,costume,lead,soldier,gun',
-  'ثور':'fr_marvel,sword,costume,lead', 'آیرون‌من':'fr_marvel,costume,masked,lead,robot',
+  'ثور':'fr_marvel,sword,costume,lead', 'آیرون‌من':'fr_marvel,costume,masked,lead',
   'واندروومن':'fr_dc,costume,lead,sword', 'ددپول':'fr_marvel,costume,masked,lead,sword,gun',
   'وولورین':'fr_marvel,costume,lead,sword', 'فلش':'fr_dc,costume,masked,lead', 'آکوامن':'fr_dc,costume,lead,sea',
   'بلک پنتر':'fr_marvel,costume,masked,lead,king', 'لوکی':'fr_marvel,costume,sword,villain',
   'هارلی کویین':'fr_dc,costume,weirdhair,criminal', 'دارث ویدر':'fr_starwars,masked,costume,sword,space,lead',
   'یودا':'fr_starwars,sword,space,teacher', 'ای‌تی':'space,lead,kidlead', 'گودزیلا':'monster,sea,horror,retro',
-  'کینگ کونگ':'monster,animal,retro,horror,fr_jurassic', 'فرانکنشتاین':'monster,horror,retro,scientist',
-  'دراکولا':'horror,costume,masked', 'ولدمورت':'fr_hp,sword,super,lead', 'دامبلدور':'fr_hp,teacher,lead',
+  'کینگ کونگ':'monster,animal,retro,horror', 'فرانکنشتاین':'monster,horror,retro,scientist',
+  'دراکولا':'horror,costume', 'ولدمورت':'fr_hp,super', 'دامبلدور':'fr_hp,teacher,lead',
   'گندالف':'fr_lotr,sword,teacher', 'ال':'fr_deathnote,glasses,cop,lead,fr_deathnote,teen',
   'ارن یگر':'fr_aot,monster,soldier,lead,teen', 'وجیتا':'fr_dbz,fighting,lead,blond,weirdhair,costume',
-  'تانجیرو':'fr_demonslayer,sword,lead,teen,costume', 'لوفی':'fr_onepiece,sea,sword,lead,teen,costume,weirdhair',
-  'گوکو':'fr_dbz,fighting,lead,weirdhair,costume,sword', 'ناروتو':'fr_naruto,fighting,lead,teen,costume,sword',
-  'پیکاچو':'fr_pokemon,lead', 'کریتوس':'fr_gow,gun,lead,costume', 'لینک':'fr_zelda,sword,lead,costume,fantasy,playable',
-  'پک‌من':'costume,retro,playable', 'انگری بردز':'fr_clash,mobile,lead,costume,animal',
+  'تانجیرو':'fr_demonslayer,sword,lead,teen,costume', 'لوفی':'fr_onepiece,sea,lead,teen,costume,weirdhair',
+  'گوکو':'fr_dbz,fighting,lead,weirdhair,costume', 'ناروتو':'fr_naruto,fighting,lead,teen,costume,sword',
+  'پیکاچو':'fr_pokemon,lead', 'کریتوس':'fr_gow,lead,costume', 'لینک':'fr_zelda,sword,lead,costume,fantasy,playable',
+  'پک‌من':'costume,retro,playable', 'انگری بردز':'mobile,lead,costume,animal',
   'کراش باندیکوت':'fr_crash,lead,animal,costume,retro,playable',
   'زورو':'masked,costume,sword,lead,criminal', 'رابین هود':'sword,criminal,costume,lead,epic',
-  'تارزان':'lead,animal,costume,beard', 'هرکول پوآرو':'cop,lead,costume,glasses',
+  'تارزان':'lead,animal,costume', 'هرکول پوآرو':'cop,lead,costume,glasses',
   'دون کیشوت':'sword,lead,costume,comedy', 'پیتر پن':'lead,costume,teen,kidlead,fantasy',
-  'آلیس':'lead,costume,fantasy,teen,kidlead,fr_disney', 'شنل قرمزی':'lead,costume,kidlead,animal,fantasy',
+  'آلیس':'lead,costume,fantasy,teen,kidlead,fr_disney', 'شنل قرمزی':'lead,costume,kidlead,fantasy',
   'مرد عنکبوتی':'fr_marvel,masked,costume,lead,teen',
 });
 
@@ -266,6 +266,8 @@ EXTRA_BLOCKS.push({
   'ابی|لست':'series,stream,lead',   // فصلِ دومِ سریالِ HBO؛ بازیکن «تو سریال دیدیش؟ آره» می‌گوید
 });
 
+/* ۱۱ اکتبر ۲۰۲۶ (عصر) — بازبینیِ برچسب از دیدِ بازیکن: برچسب‌های غلطِ EXTRA حذف شدند
+   (لوفی/گوکو sword، کریتوس gun، ولدمورت lead، آیرون‌من robot، وین دیزل chubby، غفوریان elder…) */
 const EXTRA = {}, EXTRA_KEYED = {};
 for (const block of EXTRA_BLOCKS)
   for (const [key, tags] of Object.entries(block)) {

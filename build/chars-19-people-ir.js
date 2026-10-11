@@ -35,14 +35,14 @@ module.exports = [
 'رضا میرکریمی|کارگردان سینما|2|m,alive,ir,director,cinema,serious,beard,active,writer',
 'حسن فتحی|کارگردان شهرزاد|2|m,alive,ir,director,writer,series,tv,fr_shahrzad,serious,love,active',
 'فریدون جیرانی|کارگردان و مجری هفت|2|m,alive,ir,director,tvhost,cinema,tv,glasses,elder,serious',
-'مسعود ده‌نمکی|کارگردان اخراجی‌ها|3|m,alive,ir,director,cinema,comedy,war,fr_ekhrajiha,beard,active',
+'مسعود ده‌نمکی|کارگردان اخراجی‌ها|3|m,alive,ir,director,cinema,comedy,war,fr_ekhrajiha,beard,active,controversial',
 'داوود میرباقری|کارگردان مختارنامه|3|m,alive,ir,director,writer,series,tv,fr_mokhtar,beard,serious,epic',
 'فرج‌الله سلحشور|کارگردان یوسف پیامبر|2|m,dead,ir,director,series,tv,fr_mokhtar,religious,beard,serious',
 'کیومرث پوراحمد|کارگردان قصه‌های مجید|3|m,dead,ir,director,writer,series,cinema,kids,glasses,beard,beloved,d60',
 'مانی حقیقی|کارگردان و بازیگر|2|m,alive,ir,director,actor,cinema,glasses,active,comedy',
 
 // ---------- کمدین‌ها و استندآپ ----------
-'حسن ریوندی|استندآپ‌کمدین و تقلید صدا|3|m,alive,ir,comedian,fr_standup,comedy,d60,internet,theater,beloved',
+'حسن ریوندی|استندآپ‌کمدین و تقلید صدا|3|m,alive,ir,comedian,fr_standup,comedy,d60,internet,theater,beloved,active',
 'علی صبوری|استندآپ‌کمدین خندوانه|3|m,alive,ir,comedian,fr_standup,comedy,tv,newgen,young,beloved,internet',
 'محمدرضا علیمردانی|استندآپ‌کمدین و بازیگر|2|m,alive,ir,comedian,actor,fr_standup,comedy,tv,series,newgen,active',
 'امید جلیلی|کمدین بریتانیایی ایرانی|2|m,alive,ir,eu,comedian,actor,fr_standup,comedy,cinema,bald,chubby,worldfame',
@@ -58,14 +58,14 @@ module.exports = [
 'محمد صالح علا|شاعر و مجری|2|m,alive,ir,poet,tvhost,tv,comedy,elder,book,glasses',
 'بهروز رضوی|گوینده‌ی رادیو|2|m,dead,ir,tvhost,fr_dubbing,tv,elder,beloved,serious,glasses',
 'منوچهر نوذری|مجری و دوبلور قدیمی|2|m,dead,ir,tvhost,fr_dubbing,tv,prerev,elder,legend,comedy',
-'چنگیز جلیلوند|دوبلور افسانه‌ای|2|m,dead,ir,fr_dubbing,cinema,prerev,legend,elder,serious,beloved',
+'چنگیز جلیلوند|دوبلور افسانه‌ای|3|m,dead,ir,fr_dubbing,cinema,prerev,legend,elder,serious,beloved',
 'ناصر طهماسب|دوبلور پیشکسوت|2|m,dead,ir,fr_dubbing,cinema,prerev,legend,elder,serious',
 'کریستین امانپور|خبرنگار سی‌ان‌ان|2|f,alive,ir,tvhost,tv,worldfame,serious,award,active',
 
 // ---------- برنامه‌ی کودک و کلاه‌قرمزی ----------
 'امیرمحمد متقیان|همراه کوچک عمو پورنگ|2|m,alive,ir,tvhost,tv,kids,fr_kidtv,childstar,young,beloved',
-'حمید جبلی|سازنده‌ی کلاه‌قرمزی|3|m,alive,ir,actor,director,writer,tv,cinema,kids,fr_kidtv,fr_kolah,beloved',
-'ایرج طهماسب|آقای مجریِ کلاه‌قرمزی|3|m,alive,ir,tvhost,director,actor,tv,cinema,kids,fr_kidtv,fr_kolah,beloved,beard',
+'حمید جبلی|سازنده‌ی کلاه‌قرمزی|3|m,alive,ir,actor,director,writer,tv,cinema,kids,fr_kidtv,fr_kolah,beloved,d60',
+'ایرج طهماسب|آقای مجریِ کلاه‌قرمزی|3|m,alive,ir,tvhost,director,actor,tv,cinema,kids,fr_kidtv,fr_kolah,beloved,beard,d60',
 'مرضیه محبوب|صدای پسرعمه‌زا|2|f,alive,ir,fr_dubbing,tv,kids,fr_kidtv,fr_kolah,comedy,active',
 'محمد بحرانی|صدای فامیل دور و ببعی|2|m,alive,ir,fr_dubbing,actor,tv,kids,fr_kidtv,fr_kolah,comedy',
 'مرضیه برومند|کارگردان مدرسه‌ی موش‌ها|3|f,alive,ir,director,tv,series,kids,fr_kidtv,d60,legend,elder',
@@ -101,7 +101,7 @@ module.exports = [
 'منصور|خواننده‌ی پاپ لس‌آنجلسی|2|m,alive,ir,singer,pop,fr_la,love,d60,beloved,active',
 'حسن شماعی‌زاده|خواننده و آهنگساز شاد|2|m,alive,ir,singer,composer,pop,fr_la,prerev,elder,dancer',
 'مارتیک|خواننده‌ی ارمنی‌ایرانی|2|m,alive,ir,singer,pop,fr_la,prerev,elder,love,d60',
-'آرش|خواننده‌ی بورو بورو|3|m,alive,ir,eu,singer,pop,fr_la,worldfame,beloved,active,d60',
+'آرش|خواننده‌ی بورو بورو|3|m,alive,ir,eu,singer,pop,fr_la,worldfame,beloved,active,modern',
 'سیاوش شمس|خواننده‌ی شاد لس‌آنجلسی|2|m,alive,ir,singer,pop,fr_la,d60,dancer,comedy,elder',
 
 // ---------- رپ ----------
@@ -226,7 +226,7 @@ module.exports = [
 'فتحعلی شاه|شاه ریش‌بلند قاجار|3|m,dead,ir,king,fr_iranking,old,beard,rich,controversial,war',
 'مظفرالدین شاه|شاه فرمان مشروطه|2|m,dead,ir,king,fr_iranking,old,mustache,elder,beloved',
 'احمد شاه قاجار|آخرین شاه قاجار|3|m,dead,ir,king,fr_iranking,old,young,chubby,mustache',
-'محمدرضا شاه پهلوی|آخرین شاه ایران|4|m,dead,ir,king,fr_iranking,prerev,rich,worldfame,serious',
+'محمدرضا شاه پهلوی|آخرین شاه ایران|4|m,dead,ir,king,fr_iranking,prerev,rich,worldfame,serious,controversial',
 
 // ---------- چهره‌های تاریخی ----------
 'محمد مصدق|نخست‌وزیر ملی‌شدن نفت|3|m,dead,ir,prerev,legend,elder,bald,serious,beloved,worldfame,writer',

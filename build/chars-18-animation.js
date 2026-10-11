@@ -3,7 +3,7 @@ module.exports = [
 
 // ---------- دیزنی: کلاسیک‌های قدیمی ----------
 'سفیدبرفی و هفت کوتوله|انیمیشنِ کلاسیکِ دیزنی|4|film,cartoon,us,kids,femlead,royal,book,fantasy,musical,pre2000,prerev,legend,worldfame,fr_disney',
-'پینوکیو|انیمیشنِ کلاسیکِ دیزنی|3|film,cartoon,us,kids,kidlead,book,fantasy,sea,village,pre2000,prerev,legend,fr_disney',
+'پینوکیو|انیمیشنِ کلاسیکِ دیزنی|3|film,cartoon,us,kids,kidlead,book,fantasy,sea,village,pre2000,prerev,legend,fr_disney,worldfame,beloved',
 'فانتازیا|انیمیشنِ موسیقاییِ دیزنی|2|film,cartoon,us,kids,musical,fantasy,pre2000,prerev,legend,fr_disney',
 'دامبو|انیمیشنِ فیلِ پرنده‌ی دیزنی|2|film,cartoon,us,kids,animals,family,pre2000,prerev,beloved,fr_disney',
 'بامبی|انیمیشنِ بچه‌آهوی دیزنی|3|film,cartoon,us,kids,animals,book,pre2000,prerev,legend,worldfame,fr_disney',

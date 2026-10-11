@@ -14,7 +14,7 @@ const engSrc = process.env.ENG_SRC ? fs.readFileSync(process.env.ENG_SRC, 'utf8'
 const ENG = eval(engSrc + '\n;ENG');
 const grab = re => { const m = src.match(re); return m ? +m[1] : null; };
 const MAXQ = grab(/const MAXQ\s*=\s*([\d.]+)/), MINQ = grab(/const MINQ\s*=\s*([\d.]+)/), RATIO = grab(/const RATIO\s*=\s*([\d.]+)/),
-      CONF = grab(/const CONF\s*=\s*([\d.]+)/), IG_FLOOR = grab(/const IG_FLOOR\s*=\s*([\d.]+)/), MAX_GUESSES = 3;
+      CONF = grab(/const CONF\s*=\s*([\d.]+)/), IG_FLOOR = grab(/const IG_FLOOR\s*=\s*([\d.]+)/), MAX_GUESSES = grab(/const MAX_GUESSES\s*=\s*([\d.]+)/) ?? 3;
 /* EXT هم از HTML خوانده می‌شود (قبلاً پیش‌فرض ۰ بود و باید همیشه CONSTS='{"EXT":4}' می‌دادی) */
 const C = Object.assign({MAXQ, MINQ, RATIO, CONF, IG_FLOOR, EXT: grab(/const EXT_Q\s*=\s*([\d.]+)/) ?? 0}, JSON.parse(process.env.CONSTS || '{}'));
 const idx = new Map(CHARACTERS.map((c, i) => [c.id, i]));

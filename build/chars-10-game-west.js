@@ -1,7 +1,7 @@
 /* دسته ۱۰ — شخصیت‌های بازی‌های غربی و کنسولی */
 module.exports = [
 // ---------- خانواده‌ی ماریو ----------
-'ماریو|لوله‌کش سیبیلوی ایتالیایی|4|m,fic,asia,game,playable,lead,hero,kids,worldfame,legend,retro,mustache,chubby,beloved',
+'ماریو|لوله‌کش سیبیلوی ایتالیایی|4|m,fic,asia,game,playable,lead,hero,kids,worldfame,legend,retro,mustache,chubby,beloved,active',
 'لوییجی|برادر سبزپوش ماریو|3|m,fic,asia,game,playable,kids,worldfame,retro,mustache,costume,comedy,beloved',
 'پرنسس پیچ|شاهزاده‌خانم قارچ‌پادشاهی|3|f,fic,asia,game,playable,kids,worldfame,retro,blond,king,costume,beloved',
 'باوزر|لاک‌پشت غول آتشین|3|m,fic,asia,game,villain,monster,kids,worldfame,retro,super,fantasy,serious',
@@ -32,9 +32,9 @@ module.exports = [
 'اینکلینگ|بچه‌ماهی رنگ‌پاش|1|fic,asia,game,shooter,online,kids,weirdhair,playable,teen,active,costume',
 
 // ---------- سونیک و سگا ----------
-'سونیک|خارپشت آبی سریع|4|m,fic,asia,game,playable,lead,hero,animal,kids,worldfame,legend,retro,beloved',
+'سونیک|خارپشت آبی سریع|4|m,fic,asia,game,playable,lead,hero,animal,kids,worldfame,legend,retro,beloved,active',
 'تیلز|روباه دم‌دوقلو|3|m,fic,asia,game,playable,animal,kids,retro,beloved,young,techie,hero',
-'ناکلز|خارپشت قرمز مشت‌زن|2|m,fic,asia,game,playable,animal,kids,retro,fighting,serious,internet,champion',
+'ناکلز|خارپشت قرمز مشت‌زن|3|m,fic,asia,game,playable,animal,kids,retro,fighting,serious,internet,champion',
 'دکتر اگمن|دانشمند سبیلوی شرور|3|m,fic,asia,game,villain,scientist,chubby,mustache,bald,kids,retro,comedy',
 'شدو|خارپشت سیاه مرموز|2|m,fic,asia,game,playable,animal,gun,villain,serious,super,space,active',
 'ایمی رز|خارپشت صورتی عاشق|2|f,fic,asia,game,playable,animal,kids,love,weirdhair,beloved,comedy',
@@ -49,11 +49,11 @@ module.exports = [
 'دیگ‌داگ|حفار بازی آتاری|1|m,fic,asia,game,retro,kids,playable,lead,comedy,legend,costume',
 
 // ---------- سونی و پلی‌استیشن ----------
-'کریتوس|خدای جنگ خشمگین|4|m,fic,us,game,playable,lead,hero,sword,mythic,fantasy,beard,bald,worldfame,epic,serious',
+'کریتوس|خدای جنگ خشمگین|4|m,fic,us,game,playable,lead,hero,sword,mythic,fantasy,beard,bald,worldfame,epic,serious,active',
 'آتریوس|پسر کمان‌دار کریتوس|2|m,fic,us,game,teen,young,epic,mythic,fantasy,sword,beloved,playable',
 'بالدور|شرور خدای جنگ|1|m,fic,us,game,villain,mythic,super,bald,fantasy,serious,epic,sword',
 'فریا|جادوگر خدای جنگ|1|f,fic,us,game,super,mythic,fantasy,villain,blond,epic,serious,sword',
-'ناتان دریک|گنج‌یاب ماجراجو|3|m,fic,us,game,playable,lead,gun,shooter,hero,comedy,young,worldfame',
+'ناتان دریک|گنج‌یاب ماجراجو|3|m,fic,us,game,playable,lead,gun,shooter,hero,comedy,young,worldfame,cinema',
 'سالیوان|همراه سبیلوی دریک|1|m,fic,us,game,elder,mustache,gun,comedy,criminal,shooter,beloved',
 'آلوی|شکارچی ماشین‌ها|3|f,fic,us,game,playable,lead,apoc,openworld,sword,hero,young,active,robot',
 // جوئل و الی هم بازی‌اند هم سریال — بازیکن از هر طرف بیاید باید برسد
@@ -96,7 +96,7 @@ module.exports = [
 'داگ‌میت|سگ وفادار فال‌اوت|1|fic,us,game,apoc,animal,openworld,beloved,hero,active,kids',
 
 // ---------- ماینکرفت ----------
-'استیو|شخصیت اصلی ماینکرفت|4|m,fic,eu,game,playable,lead,openworld,kids,worldfame,beard,online,legend,beloved',
+'استیو|شخصیت اصلی ماینکرفت|4|m,fic,eu,game,playable,lead,openworld,kids,worldfame,beard,online,legend,beloved,active',
 'الکس|شخصیت زن ماینکرفت|3|f,fic,eu,game,playable,openworld,kids,online,worldfame,young,beloved,blond',
 'کریپر|موجود سبز منفجرشونده|4|fic,eu,game,monster,openworld,kids,villain,horror,worldfame,internet,online',
 'اندرمن|موجود سیاه بلندقد|3|fic,eu,game,monster,openworld,kids,villain,horror,super,internet,active',
@@ -111,7 +111,7 @@ module.exports = [
 'تامی ورستی|گانگستر وایس سیتی|3|m,fic,us,game,playable,lead,criminal,openworld,gun,costume,retro,serious',
 'نیکو بلیک|مهاجر جی‌تی‌ای چهار|3|m,fic,us,game,playable,lead,criminal,openworld,gun,serious,soldier,war',
 'ترور فیلیپس|دیوانه‌ی جی‌تی‌ای پنج|3|m,fic,us,game,playable,criminal,openworld,gun,bald,controversial,comedy,internet',
-'مایکل دی‌سانتا|دزد بانک بازنشسته|3|m,fic,us,game,playable,criminal,openworld,gun,rich,chubby,serious,beard',
+'مایکل دی‌سانتا|دزد بانک بازنشسته|3|m,fic,us,game,playable,criminal,openworld,gun,rich,chubby,serious',
 'فرانکلین کلینتون|جوان بلندپرواز لس‌سانتوس|3|m,fic,us,game,playable,criminal,openworld,gun,young,serious,beloved,active',
 'لمار دیویس|دوست شوخ فرانکلین|1|m,fic,us,game,criminal,openworld,comedy,internet,young,online,beloved',
 'لستر|مغز متفکر سرقت‌ها|1|m,fic,us,game,criminal,openworld,glasses,techie,online,serious,business',
@@ -168,9 +168,9 @@ module.exports = [
 'ایمپاستر|خائن فضاپیمای اماگ آس|2|fic,us,game,online,mobile,masked,costume,internet,villain,comedy,space,active',
 
 // ---------- نقش‌آفرینی و فانتزی ----------
-'گرالت|ویچر موسفید|3|m,fic,eu,game,playable,lead,openworld,sword,fantasy,super,blond,beard,serious,worldfame,novelchar',
+'گرالت|ویچر موسفید|3|m,fic,eu,game,playable,lead,openworld,sword,fantasy,super,blond,beard,serious,worldfame,novelchar,series,stream',
 'ینیفر|جادوگر موسیاه ویچر|2|f,fic,eu,game,openworld,fantasy,super,love,serious,novelchar,beloved',
-'سیری|دختر جادویی ویچر|3|f,fic,eu,game,playable,openworld,fantasy,super,sword,young,blond,novelchar',
+'سیری|دختر جادویی ویچر|3|f,fic,eu,game,playable,openworld,fantasy,super,sword,young,blond,novelchar,series,stream',
 'تریس مریگولد|جادوگر موقرمز ویچر|2|f,fic,eu,game,openworld,fantasy,super,love,novelchar,young,beloved,doctor',
 'دندلاین|شاعر و خواننده‌ی ویچر|2|m,fic,eu,game,openworld,fantasy,musician,poet,comedy,novelchar,blond',
 'فرمانده شپرد|قهرمان مس افکت|3|m,fic,us,game,playable,lead,space,gun,shooter,soldier,hero,general,serious',
@@ -240,7 +240,7 @@ module.exports = [
 
 // ---------- لیگ آو لجندز و دوتا ----------
 'یاسو|شمشیرزن بادی لیگ|3|m,fic,us,game,online,playable,sword,fantasy,serious,internet,active,celibate',
-'جینکس|دختر دیوانه‌ی موآبی|3|f,fic,us,game,online,playable,weirdhair,gun,criminal,villain,comedy,active,teen',
+'جینکس|دختر دیوانه‌ی موآبی|3|f,fic,us,game,online,playable,weirdhair,gun,criminal,villain,comedy,active,teen,series,stream,cartoon',
 'آهری|روباه نه‌دم لیگ|3|f,fic,us,game,online,playable,animal,super,fantasy,love,beloved,active',
 'تیمو|موجود کوچک کلاه‌دار|3|fic,us,game,online,playable,animal,comedy,internet,kids,villain,active',
 'لاکس|بانوی نور دمیسیا|2|f,fic,us,game,online,playable,super,fantasy,blond,hero,costume,young',
@@ -275,8 +275,8 @@ module.exports = [
 'شلی|دختر شات‌گان‌به‌دست برال استارز|2|f,fic,eu,game,mobile,online,shooter,gun,young,blond,kids,active',
 'لئون|قاتل نامرئی برال استارز|2|m,fic,eu,game,mobile,online,shooter,masked,kids,teen,active,internet',
 'اسپایک|کاکتوس کوچک برال استارز|2|fic,eu,game,mobile,online,shooter,kids,comedy,beloved,active,monster',
-'رد|پرنده‌ی عصبانی قرمز|3|m,fic,eu,game,mobile,animal,kids,comedy,worldfame,lead,cartoon,beloved',
-'تام سخنگو|گربه‌ی تکرارکننده‌ی موبایل|2|m,fic,eu,game,mobile,animal,kids,comedy,internet,beloved,cartoon',
+'رد|پرنده‌ی عصبانی قرمز|3|m,fic,eu,game,mobile,animal,kids,comedy,worldfame,lead,cartoon,beloved,cinema',
+'تام سخنگو|گربه‌ی تکرارکننده‌ی موبایل|3|m,fic,eu,game,mobile,animal,kids,comedy,internet,beloved,cartoon',
 
 // ---------- بازی‌های مبارزه‌ای ----------
 'اسکورپیون|نینجای زرد مورتال کامبت|3|m,fic,us,game,fighting,playable,masked,sword,horror,villain,legend,worldfame',

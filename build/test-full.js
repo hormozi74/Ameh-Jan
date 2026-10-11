@@ -11,11 +11,12 @@ const ENG = eval(src.slice(s, e) + '\n;ENG');
 
 /* همان ثابت‌هایی که در بازی هستند — اگر آن‌جا عوض شدند این‌جا هم باید عوض شوند،
    وگرنه این تست چیزی را می‌سنجد که منتشر نشده است. */
-const MAXQ = 32, MINQ = 8, RATIO = 6, CONF = 0.80, IG_FLOOR = 0.15, MAX_GUESSES = 3, EXT_Q = 5;
+const grab = re => { const m = src.match(re); return m ? +m[1] : null; };
+const MAXQ = grab(/const MAXQ\s*=\s*([\d.]+)/) ?? 32, MINQ = 8, RATIO = 6, CONF = 0.80, IG_FLOOR = grab(/const IG_FLOOR\s*=\s*([\d.]+)/) ?? 0.10, MAX_GUESSES = grab(/const MAX_GUESSES\s*=\s*([\d.]+)/) ?? 4, EXT_Q = grab(/const EXT_Q\s*=\s*([\d.]+)/) ?? 5;
 
 function play(truth, noise) {
   let log = CHARACTERS.map(c => Math.log(c.prior));
-  const asked = [], cc = {}, rejected = [];
+  const asked = [], ws = [], cc = {}, rejected = [];
   let n = 0, guesses = [], cap = MAXQ;   // سقف بعد از هر حدسِ ردشده EXT_Q تا جلو می‌رود
   for (;;) {
     const probs = ENG.toProbs(log);
@@ -23,9 +24,10 @@ function play(truth, noise) {
       .filter(x => !rejected.includes(x.c.id)).sort((a, b) => b.p - a.p);
     let ready = (n >= MINQ && top[0].p > CONF &&
                  top[0].p / Math.max(top[1]?.p ?? 1e-9, 1e-9) > RATIO) || n >= cap;
-    const pool = ready ? null : ENG.rankQuestions(probs, asked, cc);
+    const unk = new Set(asked.filter((id, i) => ws[i] === null));
+    const pool = ready ? null : ENG.rankQuestions(probs, asked, cc, unk);
     if (!ready && n >= MINQ && pool.reduce((m, x) => Math.max(m, x.ig), 0) < IG_FLOOR) ready = true;
-    const q = ready ? null : ENG.pickQuestion(probs, asked, cc, pool);
+    const q = ready ? null : ENG.pickQuestion(probs, asked, cc, pool, unk);
     if (ready || !q) {
       if (!top.length) return { guesses, n };
       guesses.push(top[0].c.id);
@@ -40,7 +42,7 @@ function play(truth, noise) {
     if (Math.random() < noise) w = [1, .75, null, .25, 0][Math.floor(Math.random() * 5)];
     else w = Math.random() < p ? (Math.random() < .15 ? .75 : 1) : (Math.random() < .15 ? .25 : 0);
     log = ENG.update(log, q, w);
-    asked.push(q.id); cc[q.cluster] = (cc[q.cluster] || 0) + 1; n++;
+    asked.push(q.id); ws.push(w); cc[q.cluster] = (cc[q.cluster] || 0) + 1; n++;
   }
 }
 

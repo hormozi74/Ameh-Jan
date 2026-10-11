@@ -4,17 +4,17 @@ module.exports = [
 // ---------- کلاه‌قرمزی و پایتخت ----------
 'ببعی|برّه‌ی عروسکیِ کلاه‌قرمزی|3|ir,fic,puppet,tv,cinema,kids,animal,comedy,beloved,modern,fr_kolah,fr_kidtv',
 'آقای همساده|همسایه‌ای که هرگز دیده نمی‌شود|3|m,ir,fic,tv,cinema,kids,comedy,beloved,d60,fr_kolah,fr_kidtv',
-'بهتاش|شخصیتِ ساده‌دلِ پایتخت|3|m,ir,fic,series,sitcom,comedy,young,beloved,modern,longrun,fr_paytakht',
+'بهتاش|شخصیتِ ساده‌دلِ پایتخت|3|m,ir,fic,series,sitcom,comedy,young,beloved,modern,longrun,fr_paytakht,tv',
 
 // ---------- سریال‌های ایرانی ----------
-'مراد بیگ|قهرمانِ روزی روزگاری|3|m,ir,fic,series,tv,old,lead,criminal,hero,mustache,traditional,legend,serious',
+'مراد بیگ|قهرمانِ روزی روزگاری|3|m,ir,fic,series,tv,old,lead,criminal,hero,mustache,traditional,legend,serious,d60',
 'حاج یونس|پیرمردِ عاشقِ میوه‌ی ممنوعه|2|m,ir,fic,series,tv,elder,rich,love,religious,traditional,modern,serious',
 'ابن زیاد|حاکمِ کوفه در مختارنامه|3|m,ir,fic,series,tv,ancient,religious,villain,king,rich,young,beard,serious,fr_mokhtar',
 'شمر|فرمانده‌ی سنگدلِ کوفه|3|m,ir,fic,series,tv,ancient,religious,villain,soldier,sword,war,beard,horror,fr_mokhtar',
 'حرمله|تیراندازِ کوفه|2|m,ir,fic,series,tv,ancient,religious,villain,soldier,war,criminal,serious,fr_mokhtar',
 
 // ---------- قصه‌ها و کارتون‌های ایرانی ----------
-'ماهی سیاه کوچولو|قهرمانِ قصه‌ی صمد بهرنگی|3|ir,fic,book,cartoon,kids,animal,lead,hero,legend,d60,beloved',
+'ماهی سیاه کوچولو|قهرمانِ قصه‌ی صمد بهرنگی|3|ir,fic,book,cartoon,kids,animal,lead,hero,legend,d60,beloved,prerev',
 'حسنی|پسرِ شعرِ «حسنی نگو یه دسته گل»|3|m,ir,fic,book,cartoon,kids,lead,comedy,beloved,d60,traditional',
 'کدو قلقله‌زن|پیرزنِ قایم‌شده در کدو|3|f,ir,fic,book,cartoon,kids,elder,lead,comedy,traditional,legend',
 'آقا موشه|شوهرِ خاله سوسکه|2|m,ir,fic,book,cartoon,kids,animal,love,traditional,d60',

@@ -192,7 +192,7 @@ module.exports = [
 'مژده لواسانی|مجری زن تلویزیون|1|f,alive,ir,tvhost,tv,modern,serious,active',
 'ایرج گرگین|گوینده‌ی رادیو|1|m,dead,ir,tvhost,fr_dubbing,prerev,elder,serious,tv',
 'مسعود فراستی|منتقد سینما|2|m,alive,ir,writer,tvhost,tv,cinema,controversial,elder,serious',
-'منوچهر اسماعیلی|دوبلور افسانه‌ای|2|m,dead,ir,fr_dubbing,cinema,prerev,legend,elder,beloved,director',
+'منوچهر اسماعیلی|دوبلور افسانه‌ای|3|m,dead,ir,fr_dubbing,cinema,prerev,legend,elder,beloved,director',
 'ایرج ناظریان|دوبلور پیشکسوت|1|m,dead,ir,fr_dubbing,cinema,tv,prerev,elder,serious',
 'پرویز بهرام|صدای مارلون براندو|1|m,dead,ir,fr_dubbing,cinema,actor,prerev,elder,serious,theater',
 'سعید مظفری|دوبلور|1|m,alive,ir,fr_dubbing,cinema,tv,modern,active,serious',

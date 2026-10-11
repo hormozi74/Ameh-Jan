@@ -33,7 +33,7 @@ module.exports = [
 'اسکارلت ویچ|جادوگر سرخ‌پوش|3|f,us,fic,cinema,series,super,hero,costume,fantasy,active,worldfame',
 'ویژن|اندرویدِ انتقام‌جویان|2|m,us,fic,cinema,series,robot,super,hero,costume,weirdhair,love',
 'آنت‌من|قهرمان مورچه‌ای|2|m,us,fic,cinema,cartoon,hero,super,masked,costume,comedy,active',
-'دکتر استرنج|جادوگر اعظم|3|m,us,fic,cinema,cartoon,super,hero,doctor,fantasy,beard,costume',
+'دکتر استرنج|جادوگر اعظم|3|m,us,fic,cinema,cartoon,super,hero,doctor,fantasy,beard,costume,mustache,lead',
 'آلتران|رباتِ شرور مارول|2|m,us,fic,cinema,cartoon,robot,villain,super,techie,serious,worldfame',
 'نیک فیوری|رئیس شیلد|2|m,us,fic,cinema,cartoon,soldier,gun,bald,general,serious,worldfame',
 
@@ -57,7 +57,7 @@ module.exports = [
 'آلفرد|پیشخدمت وفادار بتمن|3|m,us,fic,cartoon,cinema,elder,mustache,serious,beloved,worldfame',
 'کامیسر گوردون|رئیس پلیس گاتهام|2|m,us,fic,cartoon,cinema,cop,mustache,glasses,elder,serious',
 'دوچهره|شرور سکه‌انداز|3|m,us,fic,cartoon,cinema,villain,criminal,horror,costume,serious,worldfame',
-'پنگوئن|شرور چتردست|3|m,us,fic,cartoon,cinema,villain,criminal,chubby,glasses,rich,comedy',
+'پنگوئن|شرور چتردست|3|m,us,fic,cartoon,cinema,villain,criminal,chubby,glasses,rich,comedy,costume',
 'ریدلر|شرور معماگو|3|m,us,fic,cartoon,cinema,villain,criminal,costume,masked,comedy,active',
 'مترسک|شرور ترس‌آور گاتهام|2|m,us,fic,cartoon,cinema,villain,horror,masked,monster,doctor,serious',
 'بین|شرور تنومند بتمن|3|m,us,fic,cinema,cartoon,villain,masked,super,criminal,chubby,serious',
@@ -69,7 +69,7 @@ module.exports = [
 'گرین لنترن|قهرمان حلقه‌ی سبز|3|m,us,fic,cartoon,cinema,hero,super,space,masked,costume,worldfame',
 'مارشن منهانتر|شکارچی مریخی|2|m,us,fic,cartoon,hero,super,space,monster,bald,serious',
 'سایبورگ|قهرمان نیمه‌ربات|2|m,us,fic,cartoon,cinema,robot,hero,super,teen,young,active',
-'شزم|نوجوانِ ابرقهرمان|3|m,us,fic,cinema,cartoon,hero,super,teen,costume,mythic,comedy',
+'شزم|نوجوانِ ابرقهرمان|3|m,us,fic,cinema,cartoon,hero,super,teen,costume,mythic,comedy,lead',
 'بلک آدام|ضدقهرمان مصری|2|m,us,fic,cinema,cartoon,villain,super,ancient,costume,mythic,serious',
 'جان کنستانتین|جادوگر سیگاری|2|m,us,fic,cinema,series,super,fantasy,horror,blond,mystic,serious',
 'اسوامپ تینگ|هیولای باتلاق|2|m,us,fic,cartoon,series,monster,super,horror,hero,fantasy,serious',
@@ -102,15 +102,15 @@ module.exports = [
 'بوبو|خرس کوچک همراه یوگی|1|m,us,fic,cartoon,tv,kids,comedy,retro,animal,young',
 'هاکلبری هاند|سگ آبیِ آرام|1|m,us,fic,cartoon,tv,kids,comedy,retro,animal,weirdhair,celibate',
 'تاپ کت|گربه‌ی کلاهبردار|1|m,us,fic,cartoon,tv,kids,comedy,retro,animal,criminal,old',
-'پلنگ صورتی|پلنگِ بی‌کلام|4|us,fic,cartoon,tv,kids,comedy,retro,animal,legend,beloved,worldfame',
+'پلنگ صورتی|پلنگِ بی‌کلام|4|us,fic,cartoon,tv,kids,comedy,retro,animal,legend,beloved,worldfame,lead',
 'بازرس کلوزو کارتونی|شخصیت پلنگ صورتی|1|m,us,fic,cartoon,tv,kids,comedy,retro,cop,mustache',
-'وودی وودپیکر|دارکوب پرسروصدا|3|m,us,fic,cartoon,tv,kids,comedy,retro,animal,weirdhair,worldfame',
+'وودی وودپیکر|دارکوب پرسروصدا|3|m,us,fic,cartoon,tv,kids,comedy,retro,animal,weirdhair,worldfame,lead',
 'آقای ماگو|پیرمرد نزدیک‌بین|2|m,us,fic,cartoon,tv,kids,comedy,retro,elder,glasses,bald',
 'دراپی|سگ بی‌حوصله|1|m,us,fic,cartoon,tv,kids,comedy,retro,animal,serious,old',
-'کاسپر|روح مهربان|3|us,fic,cartoon,tv,kids,comedy,retro,monster,horror,beloved,worldfame',
+'کاسپر|روح مهربان|3|us,fic,cartoon,tv,kids,comedy,retro,monster,beloved,worldfame,cinema,lead',
 
 // ---------- پوپای ----------
-'پوپای|ملوان اسفناج‌خور|3|m,us,fic,cartoon,tv,kids,comedy,retro,super,soldier,worldfame',
+'پوپای|ملوان اسفناج‌خور|3|m,us,fic,cartoon,tv,kids,comedy,retro,super,soldier,worldfame,lead,legend',
 'الیو اویل|دلدار پوپای|2|f,us,fic,cartoon,tv,kids,comedy,retro,love,worldfame',
 'بلوتو|رقیب پوپای|2|m,us,fic,cartoon,tv,kids,comedy,retro,villain,beard,chubby',
 
@@ -136,27 +136,27 @@ module.exports = [
 'مینی موس|دلدار میکی موس|3|f,us,fic,cartoon,kids,comedy,animal,love,beloved,worldfame',
 'دیزی داک|اردکِ شیکِ دیزنی|2|f,us,fic,cartoon,kids,comedy,animal,love,beloved,active',
 'پلوتو|سگ میکی موس|3|m,us,fic,cartoon,kids,comedy,animal,retro,beloved,worldfame',
-'عمو اسکروج|اردک پولدار|3|m,us,fic,cartoon,tv,kids,comedy,animal,rich,elder,glasses',
+'عمو اسکروج|اردک پولدار|3|m,us,fic,cartoon,tv,kids,comedy,animal,rich,elder,glasses,lead',
 'چیپ و دیل|دو سنجاب شیطان|3|us,fic,cartoon,tv,kids,comedy,animal,beloved,active,worldfame',
 
 // ---------- دیزنی: شیرشاه ----------
 'موفاسا|پادشاه شیرها|3|m,us,fic,cartoon,cinema,kids,animal,king,epic,beloved,worldfame',
 'اسکار|شیرِ شرورِ شیرشاه|3|m,us,fic,cartoon,cinema,kids,villain,animal,king,serious,worldfame',
-'تیمون|میرکتِ شیرشاه|2|m,us,fic,cartoon,cinema,kids,comedy,animal,worldfame,beloved',
-'پومبا|گرازِ شیرشاه|2|m,us,fic,cartoon,cinema,kids,comedy,animal,chubby,worldfame',
+'تیمون|میرکتِ شیرشاه|3|m,us,fic,cartoon,cinema,kids,comedy,animal,worldfame,beloved',
+'پومبا|گرازِ شیرشاه|3|m,us,fic,cartoon,cinema,kids,comedy,animal,chubby,worldfame,beloved',
 'رافیکی|بابونِ خردمند|2|m,us,fic,cartoon,cinema,kids,animal,elder,mystic,comedy',
 'زازو|پرنده‌ی مشاور شیرشاه|1|m,us,fic,cartoon,cinema,kids,animal,comedy,serious',
 
 // ---------- دیزنی: شرورها ----------
-'ملفیسنت|جادوگر شاخ‌دار|3|f,us,fic,cartoon,cinema,kids,villain,super,fantasy,serious,worldfame',
+'ملفیسنت|جادوگر شاخ‌دار|3|f,us,fic,cartoon,cinema,kids,villain,super,fantasy,serious,worldfame,costume',
 'کروئلا|شرورِ پوست‌دوست|3|f,us,fic,cartoon,cinema,kids,villain,rich,weirdhair,comedy,worldfame',
 'اورسولا|جادوگر هشت‌پا|3|f,us,fic,cartoon,cinema,kids,villain,monster,super,chubby,worldfame',
-'جعفر|وزیرِ شرورِ علاءالدین|3|m,us,fic,cartoon,cinema,kids,villain,super,beard,mystic,worldfame',
-'کاپیتان هوک|دزد دریایی قلاب‌دست|3|m,us,fic,cartoon,cinema,kids,villain,criminal,sword,mustache,worldfame',
+'جعفر|وزیرِ شرورِ علاءالدین|3|m,us,fic,cartoon,cinema,kids,villain,super,beard,mystic,worldfame,mustache,costume',
+'کاپیتان هوک|دزد دریایی قلاب‌دست|3|m,us,fic,cartoon,cinema,kids,villain,criminal,sword,mustache,worldfame,costume',
 
 // ---------- دیزنی: کلاسیک‌ها ----------
 'ابو|میمونِ علاءالدین|2|m,us,fic,cartoon,cinema,kids,animal,criminal,comedy,beloved',
-'یاسمین|شاهزاده‌خانم علاءالدین|3|f,us,fic,cartoon,cinema,kids,love,young,beloved,worldfame',
+'یاسمین|شاهزاده‌خانم علاءالدین|3|f,us,fic,cartoon,cinema,kids,love,young,beloved,worldfame,fantasy',
 'تینکربل|پریِ کوچک|3|f,us,fic,cartoon,cinema,kids,super,fantasy,blond,beloved,worldfame',
 'دامبو|فیلِ گوش‌بزرگ|3|us,fic,cartoon,cinema,kids,animal,super,young,beloved,worldfame',
 'بامبی|بچه‌آهوی دیزنی|3|m,us,fic,cartoon,cinema,kids,animal,retro,young,beloved,worldfame',
@@ -165,13 +165,13 @@ module.exports = [
 'بالو|خرسِ کتاب جنگل|3|m,us,fic,cartoon,cinema,kids,book,animal,chubby,comedy,beloved',
 'شرخان|ببرِ کتاب جنگل|3|m,us,fic,cartoon,cinema,kids,book,animal,villain,serious,worldfame',
 'باگیرا|پلنگِ کتاب جنگل|2|m,us,fic,cartoon,cinema,kids,book,animal,hero,serious',
-'پوکاهانتاس|دخترِ سرخ‌پوست دیزنی|3|f,us,fic,cartoon,kids,love,epic,young,beloved,worldfame',
-'کوازیمودو|گوژپشتِ نتردام|3|m,eu,fic,cartoon,cinema,novelchar,book,kids,monster,beloved,worldfame',
-'هرکول دیزنی|پهلوانِ انیمیشن|3|m,us,fic,cartoon,cinema,kids,mythic,hero,super,epic,worldfame',
+'پوکاهانتاس|دخترِ سرخ‌پوست دیزنی|3|f,us,fic,cartoon,kids,love,epic,young,beloved,worldfame,lead,cinema',
+'کوازیمودو|گوژپشتِ نتردام|3|m,eu,fic,cartoon,cinema,novelchar,book,kids,monster,beloved,worldfame,us,lead',
+'هرکول دیزنی|پهلوانِ انیمیشن|3|m,us,fic,cartoon,cinema,kids,mythic,hero,super,epic,worldfame,lead',
 'تیانا|شاهزاده‌خانمِ قورباغه|2|f,us,fic,cartoon,kids,love,young,beloved,worldfame',
 
 // ---------- وینی پو ----------
-'وینی پو|خرسِ عسل‌دوست|4|m,us,fic,cartoon,tv,kids,book,animal,chubby,beloved,worldfame',
+'وینی پو|خرسِ عسل‌دوست|4|m,us,fic,cartoon,tv,kids,book,animal,chubby,beloved,worldfame,lead',
 'تیگر|ببرِ جهنده‌ی وینی پو|2|m,us,fic,cartoon,tv,kids,book,animal,comedy,active',
 'ایور|الاغِ غمگین وینی پو|2|m,us,fic,cartoon,tv,kids,book,animal,serious,beloved',
 'خوک کوچولو|دوستِ ترسوی وینی پو|2|m,us,fic,cartoon,tv,kids,book,animal,young,love',
@@ -181,24 +181,24 @@ module.exports = [
 'آقای خرچنگ|رئیسِ خسیسِ باب اسفنجی|3|m,us,fic,cartoon,tv,kids,comedy,animal,rich,business,worldfame',
 'پلانکتون|شرورِ ریزه‌ی باب اسفنجی|3|m,us,fic,cartoon,tv,kids,comedy,villain,animal,active,worldfame',
 'سندی|سنجابِ فضانوردِ باب اسفنجی|2|f,us,fic,cartoon,tv,kids,comedy,animal,space,scientist,active',
-'اسکوئیدوارد|همسایه‌ی بدخلقِ باب اسفنجی|3|m,us,fic,cartoon,tv,kids,comedy,animal,musician,serious,worldfame',
+'اسکوئیدوارد|همسایه‌ی بدخلقِ باب اسفنجی|3|m,us,fic,cartoon,tv,kids,comedy,animal,musician,serious,worldfame,bald',
 'گری|حلزونِ باب اسفنجی|2|us,fic,cartoon,tv,kids,comedy,animal,beloved,active',
 
 // ---------- کارتون نتورک ----------
-'پاورپاف گرلز|سه دخترِ ابرقهرمان|3|f,us,fic,cartoon,tv,kids,super,hero,comedy,young,worldfame',
+'پاورپاف گرلز|سه دخترِ ابرقهرمان|3|f,us,fic,cartoon,tv,kids,super,hero,comedy,young,worldfame,lead',
 'موجو جوجو|میمونِ شرورِ پاورپاف|2|m,us,fic,cartoon,tv,kids,villain,animal,super,comedy',
-'دکستر|پسرِ دانشمندِ کارتونی|3|m,us,fic,cartoon,tv,kids,comedy,scientist,glasses,young,worldfame',
+'دکستر|پسرِ دانشمندِ کارتونی|3|m,us,fic,cartoon,tv,kids,comedy,scientist,glasses,young,worldfame,lead',
 'دی‌دی|خواهرِ دکستر|2|f,us,fic,cartoon,tv,kids,comedy,dancer,blond,teen,young',
-'جانی براوو|پسرِ عضلانیِ کارتونی|3|m,us,fic,cartoon,tv,kids,comedy,blond,young,celibate,worldfame',
-'بن تن|پسرِ ساعتِ بیگانه|3|m,us,fic,cartoon,tv,kids,super,hero,teen,space,active,worldfame',
-'کوراژ|سگِ ترسوی کارتونی|3|m,us,fic,cartoon,tv,kids,comedy,animal,horror,beloved,worldfame',
+'جانی براوو|پسرِ عضلانیِ کارتونی|3|m,us,fic,cartoon,tv,kids,comedy,blond,young,celibate,worldfame,glasses,lead',
+'بن تن|پسرِ ساعتِ بیگانه|3|m,us,fic,cartoon,tv,kids,super,hero,teen,space,active,worldfame,lead',
+'کوراژ|سگِ ترسوی کارتونی|3|m,us,fic,cartoon,tv,kids,comedy,animal,horror,beloved,worldfame,lead',
 'اد اد و ادی|سه پسرِ شیطانِ کارتونی|2|m,us,fic,cartoon,tv,kids,comedy,teen,active,worldfame',
-'گامبال|گربه‌ی آبیِ مدرسه‌ای|3|m,us,fic,cartoon,tv,kids,comedy,animal,teen,active,worldfame',
+'گامبال|گربه‌ی آبیِ مدرسه‌ای|3|m,us,fic,cartoon,tv,kids,comedy,animal,teen,active,worldfame,lead',
 'داروین|ماهیِ برادرِ گامبال|2|m,us,fic,cartoon,tv,kids,comedy,animal,young,active',
 'استیون یونیورس|پسرِ جواهرنشان|2|m,us,fic,cartoon,tv,kids,super,fantasy,chubby,young,active',
 
 // ---------- وقت ماجراجویی ----------
-'فین|قهرمانِ وقت ماجراجویی|3|m,us,fic,cartoon,tv,kids,fantasy,hero,sword,teen,active',
+'فین|قهرمانِ وقت ماجراجویی|3|m,us,fic,cartoon,tv,kids,fantasy,hero,sword,teen,active,lead',
 'جیک|سگِ کش‌سانِ وقت ماجراجویی|3|m,us,fic,cartoon,tv,kids,fantasy,animal,super,comedy,active',
 'پرنسس حبابی|شاهزاده‌خانمِ آدامسی|2|f,us,fic,cartoon,tv,kids,fantasy,king,weirdhair,scientist,active',
 'مارسلین|خون‌آشامِ وقت ماجراجویی|2|f,us,fic,cartoon,tv,kids,fantasy,monster,musician,horror,young',
@@ -210,7 +210,7 @@ module.exports = [
 'آرنولد|پسرِ کله‌فوتبالی|2|m,us,fic,cartoon,tv,kids,comedy,teen,young,beloved',
 'راگرتس|بچه‌های کارتونی|2|us,fic,cartoon,tv,kids,comedy,young,retro,beloved,worldfame',
 'رن و استیمپی|زوجِ کارتونیِ عجیب|1|us,fic,cartoon,tv,comedy,animal,retro,controversial,worldfame',
-'آنگ|آخرین بادافزار|3|m,us,fic,cartoon,tv,kids,super,hero,fantasy,bald,teen,active',
+'آنگ|آخرین بادافزار|3|m,us,fic,cartoon,tv,kids,super,hero,fantasy,bald,teen,active,lead',
 'زوکو|شاهزاده‌ی آتش|2|m,us,fic,cartoon,tv,kids,super,villain,fantasy,teen,serious,active',
 'کاتارا|آب‌افزارِ آواتار|2|f,us,fic,cartoon,tv,kids,super,hero,fantasy,teen,young',
 
@@ -223,13 +223,13 @@ module.exports = [
 'بیانکا کاستافیوره|خواننده‌ی اپرای تن‌تن|1|f,eu,fic,cartoon,book,kids,singer,classical,chubby,comedy',
 
 // ---------- آستریکس ----------
-'آستریکس|جنگجوی کوچکِ گل|3|m,eu,fic,cartoon,book,kids,hero,super,ancient,mustache,blond,worldfame',
+'آستریکس|جنگجوی کوچکِ گل|3|m,eu,fic,cartoon,book,kids,hero,super,ancient,mustache,blond,worldfame,lead',
 'اوبلیکس|غولِ مهربانِ آستریکس|3|m,eu,fic,cartoon,book,kids,super,ancient,chubby,comedy,worldfame',
 'ایدفیکس|سگِ اوبلیکس|1|m,eu,fic,cartoon,book,kids,animal,ancient,comedy',
 'پانورامیکس|جادوگرِ دهکده‌ی آستریکس|2|m,eu,fic,cartoon,book,kids,mystic,elder,beard,ancient,super',
 
 // ---------- لوک خوش‌شانس ----------
-'لوک خوش‌شانس|کابوی تندتر از سایه|3|m,eu,fic,cartoon,book,kids,gun,hero,celibate,beloved,worldfame',
+'لوک خوش‌شانس|کابوی تندتر از سایه|3|m,eu,fic,cartoon,book,kids,gun,hero,celibate,beloved,worldfame,lead',
 'جالی جامپر|اسبِ لوک خوش‌شانس|1|eu,fic,cartoon,book,kids,animal,comedy,beloved',
 'برادران دالتون|چهار برادرِ خلافکار|2|m,eu,fic,cartoon,book,kids,criminal,villain,comedy,worldfame',
 
@@ -240,11 +240,11 @@ module.exports = [
 'گارگاملا|جادوگرِ دشمنِ اسمورف‌ها|2|m,eu,fic,cartoon,tv,kids,villain,mystic,fantasy,beard,comedy',
 
 // ---------- کمیک‌استریپ‌های روزنامه ----------
-'گارفیلد|گربه‌ی تنبلِ نارنجی|4|m,us,fic,cartoon,tv,book,kids,comedy,animal,chubby,beloved,worldfame',
+'گارفیلد|گربه‌ی تنبلِ نارنجی|4|m,us,fic,cartoon,tv,book,kids,comedy,animal,chubby,beloved,worldfame,lead',
 'اودی|سگِ گارفیلد|2|m,us,fic,cartoon,tv,book,kids,comedy,animal,beloved',
 'جان آربوکل|صاحبِ گارفیلد|1|m,us,fic,cartoon,tv,book,kids,comedy,celibate,young',
 'اسنوپی|سگِ سفیدِ بادام‌زمینی‌ها|3|m,us,fic,cartoon,tv,book,kids,comedy,animal,retro,worldfame',
-'چارلی براون|پسرِ همیشه‌بازنده|3|m,us,fic,cartoon,tv,book,kids,comedy,retro,bald,young,worldfame',
+'چارلی براون|پسرِ همیشه‌بازنده|3|m,us,fic,cartoon,tv,book,kids,comedy,retro,bald,young,worldfame,lead',
 'کالوین و هابز|پسرک و ببرش|2|us,fic,cartoon,book,kids,comedy,animal,young,worldfame',
 'دنیس کوچولو|پسرِ شیطانِ کارتونی|2|m,us,fic,cartoon,tv,book,kids,comedy,blond,young,beloved',
 
