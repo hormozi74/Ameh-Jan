@@ -1,0 +1,44 @@
+N=100 seed=2 noise=0.1 final4 {"EXT":4}   حدس اول 58.0%  سه حدس 79.0%  میانگین سؤال 25.4
+دلیل توقف: {"conf":47,"maxq":46,"igfloor":7}  رتبه‌ی حقیقت: {"1":60,"2":12,"3":6,"4":2,"5":4,"6":1,"7":2,"9":1,">10":12}
+توزیع n: 12:1 13:4 15:5 16:6 17:7 18:6 19:5 20:5 22:1 23:1 24:3 26:2 27:3 28:12 29:1 30:3 31:2 32:17 33:1 36:15
+شکست‌ها بر حسب تعداد سؤال‌های جداکننده (Δp>0.5): {"6+":31,"1-2":1,"3-5":10}
+اریک کارتمن → حدس: آبروزی  n=36 رتبه=7 pT=0.01 pG=0.15 [maxq] جداکننده‌ها=13 (پرسیده‌شده 5): religious,cartoon_media,internet,kids,comedy,serious
+لوچانو پاواروتی → حدس: موتزارت  n=32 رتبه=2 pT=0.42 pG=0.42 [maxq] جداکننده‌ها=7 (پرسیده‌شده 6): died_young,ancient,singer,beard,chubby,ltr22
+ای.تی. → حدس: تایتانیک  n=36 رتبه=24 pT=0.06 pG=0.10 [maxq] جداکننده‌ها=11 (پرسیده‌شده 4): kids,love,award,f_scifi,f_true,f_kidlead
+اروین شرودینگر → حدس: آلبرت اینشتین  n=18 رتبه=2 pT=0.83 pG=0.83 [igfloor] جداکننده‌ها=2 (پرسیده‌شده 2): old_person,mustache
+جیسون استاتهام → حدس: هریسون فورد  n=36 رتبه=13 pT=0.09 pG=0.11 [maxq] جداکننده‌ها=8 (پرسیده‌شده 5): old_person,american,european,active,h_starwars,h_fast
+ژول ورن → حدس: هانس کریستین اندرسن  n=32 رتبه=2 pT=0.10 pG=0.10 [maxq] جداکننده‌ها=5 (پرسیده‌شده 1): married_fam,beard,theater,ltr11,ltr26
+مانی → حدس: محمدرضا شاه پهلوی  n=32 رتبه=12 pT=0.03 pG=0.05 [conf] جداکننده‌ها=11 (پرسیده‌شده 8): ancient,prerev,legend,artist,ruler,religious
+گالیور → حدس: رابینسون کروزوئه  n=32 رتبه=1 pT=0.18 pG=0.18 [maxq] جداکننده‌ها=3 (پرسیده‌شده 1): beard,ltr9,ltr21
+بروس آلمایتی → حدس: نئو  n=32 رتبه=3 pT=0.09 pG=0.09 [maxq] جداکننده‌ها=10 (پرسیده‌شده 4): legend,religious,comedy,serious,epic,glasses
+اش → حدس: الکس میسون  n=32 رتبه=5 pT=0.17 pG=0.17 [maxq] جداکننده‌ها=8 (پرسیده‌شده 8): male,epic,lead,costume,cop,playable
+کریس همسورث → حدس: سیلوستر استالونه  n=32 رتبه=5 pT=0.21 pG=0.25 [igfloor] جداکننده‌ها=8 (پرسیده‌شده 7): old_person,american,active,director,blond,h_marvel
+قطار بوسان → حدس: عروسک بازی مرکب  n=36 رتبه=51 pT=0.02 pG=0.15 [maxq] جداکننده‌ها=14 (پرسیده‌شده 7): cinema,series,internet,robot,apoc,stream
+پابلو پیکاسو → حدس: رامبراند  n=36 رتبه=6 pT=0.03 pG=0.09 [maxq] جداکننده‌ها=6 (پرسیده‌شده 3): old_person,ancient,prerev,legend,ltr2,ltr9
+سربازِ پابجی → حدس: تروریست کانتر  n=32 رتبه=2 pT=0.59 pG=0.59 [maxq] جداکننده‌ها=10 (پرسیده‌شده 8): european,eastern,legend,internet,costume,criminal
+انوشه انصاری → حدس: احسان علیخانی  n=36 رتبه=3 pT=0.02 pG=0.04 [maxq] جداکننده‌ها=8 (پرسیده‌شده 6): male,scientist,tvhost,businessman,tv,epic
+اگومون → حدس: سایلر مون  n=32 رتبه=4 pT=0.21 pG=0.21 [maxq] جداکننده‌ها=7 (پرسیده‌شده 4): blond,animal,game,lead,monster,ltr0
+دیو و دلبر → حدس: فروزن  n=19 رتبه=4 pT=0.80 pG=0.80 [conf] جداکننده‌ها=10 (پرسیده‌شده 5): legend,monster,f_sequel,f_pre2000,f_twist,f_family
+راسل کرو → حدس: امیر نادری  n=36 رتبه=216 pT=0.00 pG=0.05 [maxq] جداکننده‌ها=11 (پرسیده‌شده 10): old_person,iranian,prerev,legend,actor,director
+سیما بینا → حدس: فریبا نادری  n=30 رتبه=2 pT=0.91 pG=0.91 [maxq] جداکننده‌ها=11 (پرسیده‌شده 8): old_person,prerev,active,actor,singer,series
+ریدن مورتال کمبت → حدس: تام کروز  n=36 رتبه=65 pT=0.00 pG=0.04 [maxq] جداکننده‌ها=16 (پرسیده‌شده 6): alive,old_person,active,artist,actor,cinema
+برادران گریم → حدس: ونسان ونگوگ  n=36 رتبه=26 pT=0.02 pG=0.22 [maxq] جداکننده‌ها=10 (پرسیده‌شده 7): died_young,legend,writer,book_media,kids,beard
+کلاود استرایف → حدس: اسکوال  n=32 رتبه=2 pT=0.24 pG=0.24 [maxq] جداکننده‌ها=4 (پرسیده‌شده 1): epic,blond,ltr0,ltr20
+مریم → حدس: آهو خانم  n=30 رتبه=5 pT=0.18 pG=0.55 [maxq] جداکننده‌ها=4 (پرسیده‌شده 4): series,book_media,ltr0,ltr23
+جولز وینفیلد → حدس: هارلی رییس  n=32 رتبه=64 pT=0.13 pG=0.13 [maxq] جداکننده‌ها=10 (پرسیده‌شده 6): religious,cinema,series,beard,chubby,fantasy
+محمدحسین مهدویان → حدس: سعید روستایی  n=32 رتبه=2 pT=0.21 pG=0.21 [maxq] جداکننده‌ها=5 (پرسیده‌شده 4): epic,world,award,ltr12,ltr23
+فوزی بر → حدس: اندی وارهول  n=32 رتبه=3 pT=0.88 pG=0.88 [maxq] جداکننده‌ها=13 (پرسیده‌شده 5): legend,tv,kids,comedy,pop,controversial
+بهرام افشاری → حدس: رامبد جوان  n=36 رتبه=13 pT=0.06 pG=0.22 [maxq] جداکننده‌ها=10 (پرسیده‌شده 7): newgen,actor,director,tvhost,series,glasses
+مظفرالدین شاه → حدس: محمدرضا شاه پهلوی  n=31 رتبه=2 pT=0.08 pG=0.27 [maxq] جداکننده‌ها=7 (پرسیده‌شده 5): old_person,ancient,prerev,mustache,world,everyone
+شاه عباس صفوی → حدس: کریم‌خان زند  n=29 رتبه=7 pT=0.11 pG=0.18 [igfloor] جداکننده‌ها=3 (پرسیده‌شده 2): epic,ltr13,ltr20
+پسرخاله → حدس: زی‌زی‌گولو  n=28 رتبه=2 pT=0.30 pG=0.30 [igfloor] جداکننده‌ها=4 (پرسیده‌شده 3): dahe60,h_kolah,ltr2,ltr10
+ترمیناتور → حدس: آقای میاگی  n=32 رتبه=5 pT=0.82 pG=0.82 [maxq] جداکننده‌ها=10 (پرسیده‌شده 5): ancient,beloved,glasses,villain,robot,apoc
+مایکل اسکات → حدس: چندلر بینگ  n=32 رتبه=2 pT=0.29 pG=0.29 [maxq] جداکننده‌ها=4 (پرسیده‌شده 3): lead,h_friends,ltr5,ltr23
+گرتا تونبری → حدس: ریچارد کلایدرمن  n=36 رتبه=63 pT=0.00 pG=0.26 [maxq] جداکننده‌ها=14 (پرسیده‌شده 4): male,dahe60,active,artist,musician,internet
+لئون حرفه‌ای → حدس: تونی مونتانا  n=33 رتبه=13 pT=0.05 pG=0.09 [conf] جداکننده‌ها=7 (پرسیده‌شده 3): american,european,glasses,mustache,rich,ltr3
+دهکده‌ی حیوانات → حدس: ایوی  n=36 رتبه=3 pT=0.09 pG=0.19 [maxq] جداکننده‌ها=7 (پرسیده‌شده 5): dahe60,tv,everyone,game,h_pokemon,ltr0
+لیلا → حدس: ماتیلدا  n=36 رتبه=9 pT=0.03 pG=0.08 [maxq] جداکننده‌ها=8 (پرسیده‌شده 4): iranian,european,rich,lead,gun,teen
+وش استمپید → حدس: جوی ویلر  n=32 رتبه=1 pT=0.14 pG=0.14 [maxq] جداکننده‌ها=6 (پرسیده‌شده 4): glasses,apoc,gun,teen,ltr4,ltr25
+تینکربل → حدس: دامبو  n=30 رتبه=2 pT=0.35 pG=0.35 [maxq] جداکننده‌ها=5 (پرسیده‌شده 3): blond,animal,fantasy,ltr3,ltr8
+بره ناقلا → حدس: پت و مت  n=36 رتبه=3 pT=0.06 pG=0.11 [maxq] جداکننده‌ها=5 (پرسیده‌شده 4): ancient,inventor,animal,ltr1,ltr2
+ایلیدان → حدس: ایمپاستر  n=32 رتبه=2 pT=0.67 pG=0.67 [maxq] جداکننده‌ها=9 (پرسیده‌شده 9): legend,internet,comedy,superpower,monster,space

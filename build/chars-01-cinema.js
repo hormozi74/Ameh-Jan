@@ -131,7 +131,7 @@ module.exports = [
 'سیروس گرجستانی|بازیگر تلویزیون|1|m,dead,ir,actor,tv,series,elder',
 'رضا بابک|بازیگر و مجری کودک|1|m,alive,ir,actor,tvhost,tv,kids,elder',
 'فرزاد حسنی|مجری تلویزیون|2|m,alive,ir,tvhost,tv,active',
-'عادل فردوسی‌پور|مجری ورزشی|4|m,alive,ir,tvhost,tv,athlete,active,beloved,internet',
+'عادل فردوسی‌پور|مجری ورزشی|4|m,alive,ir,tvhost,tv,stadium,active,beloved,internet,serious,controversial,writer',
 'احسان علیخانی|مجری تلویزیون|4|m,alive,ir,tvhost,tv,serious,active,internet,beloved',
 'محمدرضا شهیدی‌فرد|—|1|m,alive,ir,tvhost,tv',
 'علی ضیا|مجری تلویزیون|2|m,alive,ir,tvhost,tv,active',

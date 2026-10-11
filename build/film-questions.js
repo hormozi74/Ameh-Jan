@@ -45,7 +45,7 @@ const FILM_DEF = [
 ];
 
 const FILM_QUESTIONS = [
-  {id:'is_film', cluster:'film', text:'خودِ یه فیلم یا انیمیشنه، نه یه شخصیت؟',
+  {id:'is_film', cluster:'film', text:'جوابت خودِ یه فیلم یا انیمیشنه؟ نه یه آدم یا شخصیت؟',
    rule:t => F(t) ? .96 : .03},
   ...FILM_DEF.map(([id, tag, text]) => ({
     id, cluster:'film', text,
@@ -79,6 +79,10 @@ const FILM_OVERRIDE = {
   tv:.40, cinema:.93, series:.05, stadium:.02, internet:.08, theater:.03,
   book_media: t => t.has('book') ? .60 : .08,
   game: t => t.has('game') ? .40 : .03,
+  /* چندرسانه‌ای: فیلمی که از روی کتاب است «اول کتاب بود» می‌گیرد؛ بقیه برای فیلم بی‌اثر */
+  multi_media: t => t.has('game') ? .40 : .06,
+  from_book: t => t.has('book') ? .75 : .05,
+  single_media: .40,
 
   /* style */
   epic: t => has(t,'warfilm','epic') ? .55 : .06,

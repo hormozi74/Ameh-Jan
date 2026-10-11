@@ -26,30 +26,71 @@ function normalizeFa(s) {
 }
 
 /* ---------- ساخت ---------- */
-const seen = new Set();
 const characters = [];
 const problems = [];
 
+/* ---------- هم‌نام‌ها ----------
+   یک نام می‌تواند هم سلبریتی باشد هم نسبت فامیلی («پسرخاله») یا هم شخصیت هم
+   فیلم («شرک») — کلید با #kin/#film دامنه‌دار می‌شود و هر دو می‌مانند.
+   بقیه‌ی هم‌نام‌ها دو جورند:
+   • همان موجودیت در دو فایل (دو «ماریو») → برچسب‌هایشان یکی می‌شود (اجتماع)،
+     رده‌ی بالاتر می‌ماند. قبلاً دومی بی‌صدا دور ریخته می‌شد و برچسب‌هایش هم.
+   • دو موجودیتِ متفاوت («ابی» خواننده و «ابی» لست آو آس، دو «دکستر») → هر دو
+     می‌مانند. قبلاً دومی حذف می‌شد و بازیکنی که به آن فکر می‌کرد هرگز نمی‌بُرد.
+   معیار: فاصله‌ی بردارِ احتمال‌ها. هم‌موجودیت‌ها زیر ۲.۵ بودند (هاگ رایدر ۲.۴)، متفاوت‌ها بالای ۲.۸. */
+const SAME_ENTITY = 2.6;
+function rowProbs(tags) {
+  const a = {};
+  for (const q of QUESTIONS) {
+    if (q.cluster === 'letter') continue;
+    let v;
+    if (tags.has('kin')) {
+      const ov = KIN_OVERRIDE[q.id];
+      v = ov !== undefined ? (typeof ov === 'function' ? ov(tags) : ov) : (KIN_CLUSTER_DEFAULT[q.cluster] ?? q.rule(tags));
+    } else if (tags.has('film')) {
+      const ov = FILM_OVERRIDE[q.id];
+      v = ov !== undefined ? (typeof ov === 'function' ? ov(tags) : ov) : q.rule(tags);
+    } else v = q.rule(tags);
+    a[q.id] = v;
+  }
+  return a;
+}
+function probDist(a, b) { let d = 0; for (const k in a) { const t = a[k] - b[k]; d += t * t; } return Math.sqrt(d); }
+
+const parsed = [];
 CHARS.forEach((line, i) => {
   const parts = line.split('|').map(x => x.trim());
   if (parts.length !== 4) { problems.push(`خط ${i}: فرمت غلط → ${line}`); return; }
   const [name, hint, tierRaw, tagStr] = parts;
   const tier = +tierRaw;
   if (!TIER_PRIOR[tier]) { problems.push(`${name}: رده‌ی نامعتبر ${tierRaw}`); return; }
-
   const tags = new Set(tagStr.split(',').map(s => s.trim()).filter(Boolean));
+  tags.__tier = tier; tags.__name = name;
+  parsed.push({ i, name, hint, tier, tags, key: normalizeFa(name) + (tags.has('kin') ? ' #kin' : tags.has('film') ? ' #film' : '') });
+});
+const byKey = new Map();
+for (const r of parsed) (byKey.get(r.key) || byKey.set(r.key, []).get(r.key)).push(r);
+const rows = [];
+let merged = 0, split = 0; const mergedNames = [];
+for (const group of byKey.values()) {
+  const kept = [];
+  for (const r of group) {
+    const twin = kept.find(k => probDist(rowProbs(k.tags), rowProbs(r.tags)) < SAME_ENTITY);
+    if (twin) {
+      for (const t of r.tags) twin.tags.add(t);
+      mergedNames.push(`${r.name} («${twin.hint}» + «${r.hint}»)`);
+      if (r.tier > twin.tier) { twin.tier = r.tier; twin.tags.__tier = r.tier; twin.hint = r.hint; }
+      merged++;
+    } else { if (kept.length) { split++; problems.push(`هم‌نامِ متفاوت نگه داشته شد: ${r.name} (${kept[0].hint} / ${r.hint})`); } kept.push(r); }
+  }
+  rows.push(...kept);
+}
+rows.sort((a, b) => a.i - b.i);
+console.log(`هم‌نام‌ها: ${merged} ادغام شد، ${split} به‌عنوانِ موجودیتِ متفاوت نگه داشته شد`);
+if (mergedNames.length) console.log('  ادغام‌شده: ' + mergedNames.join(' | '));
 
-  // یک نام می‌تواند هم سلبریتی باشد هم نسبت فامیلی — «پسرخاله» هم
-  // عروسکِ کلاه‌قرمزی است هم پسرِ خاله. کلید را دامنه‌دار می‌کنیم تا
-  // هر دو بمانند؛ در صفحه‌ی حدس، توضیح‌شان از هم جداشان می‌کند.
-  // فیلم هم همین‌طور: «شرک» هم شخصیت است هم خودِ انیمیشن.
-  const key = normalizeFa(name) + (tags.has('kin') ? ' #kin' : tags.has('film') ? ' #film' : '');
-  if (seen.has(key)) { problems.push(`تکراری: ${name}`); return; }
-  seen.add(key);
+rows.forEach(({ i, name, hint, tier, tags }) => {
   if (tags.size < 4) problems.push(`${name}: فقط ${tags.size} برچسب`);
-  tags.__tier = tier;
-  tags.__name = name;   // برای سؤالِ حرفِ اول (letter-questions.js)
-
   const id = 'c' + i;
   const a = {};
   // سؤال‌های دنیای سلبریتی برای یک فامیل بی‌معنا هستند؛ بدون اورراید،
@@ -70,7 +111,7 @@ CHARS.forEach((line, i) => {
 
   // kin به داده‌ی بازی هم می‌رود (k:1): رابط کاربری باید بداند این یک نسبت
   // است نه یک سلبریتی، تا اسمِ واقعیِ ذخیره‌شده را جای نسبت نشان دهد.
-  characters.push({ id, name, hint, prior: TIER_PRIOR[tier], a, kin: tags.has('kin'), film: tags.has('film'), _tags: tagStr, _tier: tier });
+  characters.push({ id, name, hint, prior: TIER_PRIOR[tier], a, kin: tags.has('kin'), film: tags.has('film'), _tags: [...tags].join(','), _tier: tier });
 });
 
 /* ---------- اعتبارسنجی ---------- */
@@ -82,8 +123,16 @@ console.log(`شخصیت‌ها: ${characters.length}   سؤال‌ها: ${QUESTI
 {
   const ruleSrc = ['./questions.js', './kin-questions.js', './fic-questions.js', './film-questions.js', './hot-questions.js']
     .map(f => fs.readFileSync(path.join(__dirname, f), 'utf8')).join('\n');
-  const referenced = new Set();
-  for (const m of ruleSrc.matchAll(/'([a-z_][a-z0-9_]*)'/g)) referenced.add(m[1]);
+  /* فقط برچسبی «خوانده‌شده» است که داخلِ has(t, …) یا t.has(…) یا جدول‌های
+     [tag, text] آمده باشد. قبلاً هر رشته‌ی نقل‌قولی حساب می‌شد و `stadium`
+     — که با idِ سؤال هم‌نام بود ولی هیچ قاعده‌ای نمی‌خواندش — روی ۱۱۲ ردیف
+     بی‌صدا دور ریخته می‌شد. */
+  const referenced = new Set(['marr', 'own', 'gparent']);   // توضیحیِ chars-09-family
+  for (const m of ruleSrc.matchAll(/has\(t,\s*((?:'[a-z_0-9]+'\s*,?\s*)+)\)/g))
+    for (const x of m[1].matchAll(/'([a-z_0-9]+)'/g)) referenced.add(x[1]);
+  for (const m of ruleSrc.matchAll(/t\.has\('([a-z_0-9]+)'\)/g)) referenced.add(m[1]);
+  for (const m of ruleSrc.matchAll(/\['(fr_[a-z0-9]+)'/g)) referenced.add(m[1]);
+  for (const m of ruleSrc.matchAll(/\['f_[a-z0-9]+',\s*'([a-z0-9]+)'/g)) referenced.add(m[1]);
 
   const used = {};
   for (const c of characters)

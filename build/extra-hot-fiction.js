@@ -119,7 +119,7 @@ module.exports = {
   'جوئل':'fr_tlou',
   'الی':'fr_tlou',
   'تس':'fr_tlou',
-  'ابی':'fr_tlou',
+  'ابی|لست':'fr_tlou',
   'اسپایرو':'fr_crash',
   'دکتر نئو کورتکس':'fr_crash',
   'مستر چیف':'fr_halo',

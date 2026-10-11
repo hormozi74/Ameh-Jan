@@ -82,7 +82,11 @@ module.exports = [
 'مائویی|نیمه‌خدای خالکوبی‌دار|3|m,us,fic,cartoon,cinema,kids,super,mythic,hero,chubby,comedy,fr_disney',
 'اولاف|آدم‌برفیِ سخنگو|3|m,us,fic,cartoon,cinema,kids,comedy,fantasy,super,beloved,worldfame,fr_disney,fr_frozen',
 'نالا|شیرِ ماده‌ی دوستِ سیمبا|2|f,us,fic,cartoon,cinema,kids,animal,love,hero,fr_disney,fr_lionking',
-'هادس|خدای شعله‌مو|2|m,us,fic,cartoon,cinema,kids,villain,super,mythic,weirdhair,comedy,fr_disney',
+/* سه تجسمِ کاملاً متفاوت از یک نام — سه ردیف. generate.js چون بردارهاشان دور است
+   هر سه را نگه می‌دارد و توضیح در صفحه‌ی حدس می‌گوید کدام است. */
+'هادس|خدای شعله‌موی دیزنی (هرکول)|2|m,us,fic,cartoon,cinema,kids,villain,super,mythic,weirdhair,comedy,fr_disney',
+'هادس|خدای جهانِ زیرین در اساطیرِ یونان|3|m,eu,fic,mythic,ancient,book,super,king,villain,serious,beard,epic,worldfame',
+'هادس|پدرِ زاگرئوس در بازیِ سوپرجاینت|1|m,us,fic,game,mythic,fantasy,king,villain,super,serious,beard,epic,elder',
 'بی‌مکس|رباتِ پرستارِ بادکنکی|3|m,us,fic,cartoon,cinema,kids,robot,hero,chubby,comedy,beloved,fr_disney',
 'رالف خرابکار|غولِ مهربانِ بازیِ ویدیویی|2|m,us,fic,cartoon,cinema,kids,lead,hero,chubby,comedy,game,fr_disney',
 

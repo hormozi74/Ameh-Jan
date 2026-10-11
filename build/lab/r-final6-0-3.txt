@@ -1,0 +1,18 @@
+N=100 seed=3 noise=0 final6 {"EXT":4}   حدس اول 86.0%  سه حدس 95.0%  میانگین سؤال 21.0
+دلیل توقف: {"conf":66,"igfloor":16,"maxq":18}  رتبه‌ی حقیقت: {"1":86,"2":4,"3":2,"4":1,"5":2,"6":1,"7":1,"10":1,">10":2}
+توزیع n: 11:1 12:4 13:8 14:6 15:9 16:7 17:3 18:4 19:7 20:4 21:5 22:6 23:2 24:6 25:2 26:2 27:3 28:9 30:1 31:1 32:3 36:7
+شکست‌ها بر حسب تعداد سؤال‌های جداکننده (Δp>0.5): {"3-5":3,"6+":11}
+اسنوپی → حدس: زبل‌خان  n=28 رتبه=2 pT=0.12 pG=0.12 [igfloor] جداکننده‌ها=5 (پرسیده‌شده 3): dahe60,book_media,retro,ltr0,ltr10
+موجو جوجو → حدس: پلانکتون  n=36 رتبه=3 pT=0.29 pG=0.29 [maxq] جداکننده‌ها=3 (پرسیده‌شده 2): superpower,ltr2,ltr23
+اکبر عبدی → حدس: فتحعلی اویسی  n=36 رتبه=2 pT=0.03 pG=0.04 [maxq] جداکننده‌ها=8 (پرسیده‌شده 5): prerev,series,comedy,chubby,everyone,h_ekhrajiha
+امیر آقایی → حدس: بیک ایمانوردی  n=32 رتبه=10 pT=0.66 pG=0.66 [maxq] جداکننده‌ها=13 (پرسیده‌شده 10): alive,old_person,prerev,active,writer,series
+پنگوئن → حدس: کارخانه هیولاها  n=36 رتبه=5 pT=0.00 pG=0.16 [maxq] جداکننده‌ها=14 (پرسیده‌شده 7): male,beloved,glasses,chubby,rich,villain
+رکس → حدس: تاکینگ تام  n=36 رتبه=6 pT=0.03 pG=0.08 [maxq] جداکننده‌ها=11 (پرسیده‌شده 5): ancient,dahe60,tv,series,internet,comedy
+ریکی مارتین → حدس: وارن بافت  n=36 رتبه=98 pT=0.00 pG=0.05 [maxq] جداکننده‌ها=10 (پرسیده‌شده 5): old_person,american,artist,singer,businessman,pop
+میستریو → حدس: جیگ‌ساو  n=36 رتبه=4 pT=0.08 pG=0.08 [maxq] جداکننده‌ها=10 (پرسیده‌شده 6): businessman,techie,cartoon_media,kids,cartoon_char,horror
+قدرت → حدس: ابیِ کندو  n=31 رتبه=2 pT=0.62 pG=0.62 [igfloor] جداکننده‌ها=5 (پرسیده‌شده 4): controversial,mustache,gun,ltr0,ltr19
+چارلز اینگالز → حدس: آقای میاگی  n=32 رتبه=3 pT=0.04 pG=0.04 [maxq] جداکننده‌ها=8 (پرسیده‌شده 2): dahe60,legend,cinema,series,kids,teacher
+عبید زاکانی → حدس: فردوسی  n=22 رتبه=7 pT=0.77 pG=0.77 [igfloor] جداکننده‌ها=7 (پرسیده‌شده 5): kids,comedy,epic,world,h_shahnameh,ltr16
+بن تن → حدس: آرنولد  n=36 رتبه=5 pT=0.05 pG=0.14 [maxq] جداکننده‌ها=6 (پرسیده‌شده 5): comedy,epic,superpower,space,ltr0,ltr1
+بهبود → حدس: حاجی فیروز  n=30 رتبه=2 pT=0.80 pG=0.80 [maxq] جداکننده‌ها=11 (پرسیده‌شده 8): series,kids,beloved,mustache,chubby,superpower
+کریستیانو رونالدو → حدس: ارلینگ هالند  n=32 رتبه=14 pT=0.38 pG=0.38 [maxq] جداکننده‌ها=7 (پرسیده‌شده 3): newgen,legend,blond,award,h_realmadrid,ltr0

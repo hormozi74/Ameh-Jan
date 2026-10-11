@@ -1,0 +1,25 @@
+N=100 seed=1 noise=0.1 final5 {"EXT":4}   حدس اول 79.0%  سه حدس 90.0%  میانگین سؤال 23.2
+دلیل توقف: {"maxq":27,"conf":61,"igfloor":12}  رتبه‌ی حقیقت: {"1":79,"2":5,"3":2,"4":1,"6":1,"7":1,"8":3,">10":8}
+توزیع n: 12:2 13:3 14:3 15:4 16:5 17:8 18:6 19:4 20:5 21:5 22:7 23:4 24:4 25:6 26:2 27:2 28:14 32:4 35:2 36:10
+شکست‌ها بر حسب تعداد سؤال‌های جداکننده (Δp>0.5): {"6+":14,"3-5":7}
+بادکنک سفید → حدس: طعم گیلاس  n=32 رتبه=2 pT=0.09 pG=0.09 [maxq] جداکننده‌ها=7 (پرسیده‌شده 5): legend,award,f_femlead,f_kidlead,f_road,ltr1
+کربی → حدس: یوشی  n=32 رتبه=2 pT=0.32 pG=0.32 [maxq] جداکننده‌ها=5 (پرسیده‌شده 4): chubby,animal,lead,ltr20,ltr27
+دکتر آلن گرنت → حدس: کوین مک‌کالیستر  n=36 رتبه=84 pT=0.01 pG=0.16 [maxq] جداکننده‌ها=9 (پرسیده‌شده 4): scientist,kids,comedy,serious,blond,teen
+ماکان بند → حدس: سینا شعبانخانی  n=21 رتبه=3 pT=0.21 pG=0.21 [igfloor] جداکننده‌ها=4 (پرسیده‌شده 2): love,h_band,ltr12,ltr23
+زیبای خفته → حدس: سیندرلا  n=35 رتبه=18 pT=0.85 pG=0.85 [maxq] جداکننده‌ها=16 (پرسیده‌شده 13): american,european,prerev,cinema,love,blond
+مهتاب کرامتی → حدس: لیلا اوتادی  n=35 رتبه=4 pT=0.05 pG=0.06 [maxq] جداکننده‌ها=4 (پرسیده‌شده 2): active,series,ltr22,ltr23
+مهدی آذریزدی → حدس: احمد محمود  n=36 رتبه=8 pT=0.00 pG=0.14 [maxq] جداکننده‌ها=5 (پرسیده‌شده 2): old_person,married_fam,kids,ltr0,ltr23
+آقای شگفت‌انگیز → حدس: هرکول دیزنی  n=36 رتبه=2 pT=0.23 pG=0.23 [maxq] جداکننده‌ها=5 (پرسیده‌شده 3): chubby,lead,masked,ltr0,ltr26
+سباستین فتل → حدس: میشائیل شوماخر  n=28 رتبه=8 pT=0.03 pG=0.30 [igfloor] جداکننده‌ها=4 (پرسیده‌شده 3): legend,blond,ltr12,ltr23
+ایمجین دراگونز → حدس: آلخاندرو ایناریتو  n=36 رتبه=35 pT=0.14 pG=0.14 [maxq] جداکننده‌ها=11 (پرسیده‌شده 10): newgen,director,singer,musician,cinema,pop
+اوشین → حدس: گودزیلا  n=36 رتبه=6 pT=0.04 pG=0.11 [maxq] جداکننده‌ها=15 (پرسیده‌شده 8): dahe60,legend,cinema,series,traditional,beloved
+ناکتیس → حدس: کلاود استرایف  n=36 رتبه=13 pT=0.03 pG=0.08 [maxq] جداکننده‌ها=6 (پرسیده‌شده 3): ruler,epic,blond,openworld,ltr20,ltr24
+دافی داک → حدس: سیلوستر  n=25 رتبه=3 pT=0.26 pG=0.26 [conf] جداکننده‌ها=3 (پرسیده‌شده 2): villain,ltr8,ltr12
+سفیدبرفی و هفت کوتوله → حدس: دیو و دلبر  n=18 رتبه=2 pT=0.76 pG=0.76 [conf] جداکننده‌ها=8 (پرسیده‌شده 5): prerev,love,award,monster,f_village,h_oscar
+توماس ادیسون → حدس: لئوناردو داوینچی  n=28 رتبه=2 pT=0.56 pG=0.56 [igfloor] جداکننده‌ها=8 (پرسیده‌شده 8): american,european,prerev,artist,businessman,beard
+کدو قلقله‌زن → حدس: ماه‌پیشونی  n=36 رتبه=28 pT=0.01 pG=0.11 [maxq] جداکننده‌ها=13 (پرسیده‌شده 8): legend,series,cartoon_media,book_media,kids,chubby
+بیلی الیوت → حدس: جناب خان  n=36 رتبه=220 pT=0.00 pG=0.10 [maxq] جداکننده‌ها=15 (پرسیده‌شده 9): iranian,european,artist,cinema,series,internet
+کریلین → حدس: ماریو  n=32 رتبه=8 pT=0.73 pG=0.73 [maxq] جداکننده‌ها=13 (پرسیده‌شده 9): comedy,mustache,superpower,everyone,bald,lead
+کیانوش استقامت → حدس: شنگول و منگول  n=36 رتبه=13 pT=0.04 pG=0.13 [maxq] جداکننده‌ها=12 (پرسیده‌شده 6): series,book_media,kids,comedy,glasses,superpower
+گبر سینگ → حدس: هانس گروبر  n=36 رتبه=7 pT=0.04 pG=0.19 [maxq] جداکننده‌ها=7 (پرسیده‌شده 4): european,eastern,ancient,legend,rich,ltr21
+دیوانه از قفس پرید → حدس: صورت‌زخمی  n=32 رتبه=13 pT=0.09 pG=0.09 [maxq] جداکننده‌ها=10 (پرسیده‌شده 6): prerev,dahe60,book_media,controversial,award,f_crime

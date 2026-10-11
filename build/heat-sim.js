@@ -13,7 +13,7 @@ const s = src.indexOf('const ENG'), e = src.indexOf('/* ========================
 const { QUESTIONS, CHARACTERS } = eval(fs.readFileSync(nodePath.join(__dirname, 'data-block.js'), 'utf8') + '\n;({QUESTIONS,CHARACTERS})');
 const ENG = eval(src.slice(s, e) + '\n;ENG');
 
-const MAXQ = 28, MINQ = 8, RATIO = 6, CONF = 0.80, IG_FLOOR = 0.15;
+const MAXQ = 32, MINQ = 8, RATIO = 6, CONF = 0.80, IG_FLOOR = 0.15, EXT_Q = 5;
 const HEAT_T = [0, 0.25, 0.45, 0.62, 0.80];
 const VAGUE = new Set(['serious','beloved','controversial','legend','rich','pop','epic','married_fam','active']);
 const N = +(process.argv[2] || 300);

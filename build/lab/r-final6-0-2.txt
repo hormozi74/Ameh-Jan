@@ -1,0 +1,22 @@
+N=100 seed=2 noise=0 final6 {"EXT":4}   حدس اول 82.0%  سه حدس 90.0%  میانگین سؤال 21.7
+دلیل توقف: {"conf":69,"igfloor":10,"maxq":21}  رتبه‌ی حقیقت: {"1":82,"2":6,"3":2,"4":2,"6":1,"7":1,">10":6}
+توزیع n: 10:2 11:2 12:1 13:7 14:5 15:3 16:6 17:9 18:4 19:8 20:4 21:5 22:2 23:4 24:3 25:5 26:1 27:4 28:10 29:2 31:1 32:3 34:1 35:2 36:6
+شکست‌ها بر حسب تعداد سؤال‌های جداکننده (Δp>0.5): {"6+":11,"1-2":1,"3-5":6}
+موش سرآشپز → حدس: در جست‌وجوی نمو  n=31 رتبه=3 pT=0.58 pG=0.58 [igfloor] جداکننده‌ها=6 (پرسیده‌شده 6): f_sequel,f_sea,f_family,f_road,ltr8,ltr23
+انوشیروان دادگر → حدس: داریوش بزرگ  n=21 رتبه=4 pT=0.21 pG=0.21 [igfloor] جداکننده‌ها=2 (پرسیده‌شده 1): ltr0,ltr8
+استن مارش → حدس: شین‌چان  n=35 رتبه=6 pT=0.68 pG=0.68 [maxq] جداکننده‌ها=7 (پرسیده‌شده 6): american,eastern,series,internet,longrun,ltr0
+فیلم لگو → حدس: رالف خرابکار  n=29 رتبه=2 pT=0.46 pG=0.46 [igfloor] جداکننده‌ها=5 (پرسیده‌شده 4): f_music,f_sport,h_disney,ltr9,ltr18
+سامارا → حدس: بلا سوان  n=32 رتبه=2 pT=0.36 pG=0.36 [maxq] جداکننده‌ها=7 (پرسیده‌شده 6): book_media,love,beloved,villain,horror,ltr1
+بابی فیشر → حدس: بابانوئل  n=36 رتبه=66 pT=0.02 pG=0.04 [maxq] جداکننده‌ها=12 (پرسیده‌شده 6): american,european,legend,athlete,kids,controversial
+سید میران → حدس: خان مظفر  n=36 رتبه=16 pT=0.06 pG=0.15 [maxq] جداکننده‌ها=9 (پرسیده‌شده 6): prerev,businessman,series,book_media,love,beard
+توئیتی → حدس: پلنگ صورتی  n=36 رتبه=19 pT=0.02 pG=0.08 [maxq] جداکننده‌ها=5 (پرسیده‌شده 2): legend,blond,h_looney,ltr2,ltr3
+کریم باقری → حدس: مهدی مهدوی‌کیا  n=24 رتبه=4 pT=0.12 pG=0.17 [igfloor] جداکننده‌ها=3 (پرسیده‌شده 1): active,ltr20,ltr23
+فریدون مشیری → حدس: لیلی  n=32 رتبه=7 pT=0.06 pG=0.15 [maxq] جداکننده‌ها=8 (پرسیده‌شده 7): male,ancient,artist,poet,real,superpower
+کپل → حدس: پپا پیگ  n=29 رتبه=2 pT=0.89 pG=0.89 [maxq] جداکننده‌ها=7 (پرسیده‌شده 6): iranian,european,dahe60,world,lead,ltr2
+نایت‌کراولر → حدس: گمبیت  n=34 رتبه=2 pT=0.16 pG=0.49 [maxq] جداکننده‌ها=5 (پرسیده‌شده 4): monster,weirdhair,criminal,ltr21,ltr24
+نیچه → حدس: کارل مارکس  n=28 رتبه=2 pT=0.25 pG=0.25 [maxq] جداکننده‌ها=4 (پرسیده‌شده 2): beard,mustache,ltr20,ltr24
+گلنار → حدس: شهر موش‌ها  n=36 رتبه=115 pT=0.00 pG=0.06 [maxq] جداکننده‌ها=9 (پرسیده‌شده 5): legend,fantasy,f_sequel,f_music,f_animals,f_femlead
+وریس → حدس: باچ کولیج  n=36 رتبه=52 pT=0.02 pG=0.10 [maxq] جداکننده‌ها=13 (پرسیده‌شده 6): athlete,cinema,series,stadium,epic,bald
+ایتاچی → حدس: هیسوکا  n=35 رتبه=2 pT=0.04 pG=0.10 [maxq] جداکننده‌ها=7 (پرسیده‌شده 2): died_young,superpower,horror,weirdhair,h_naruto,ltr0
+سام درخشانی → حدس: آزیتا حاجیان  n=36 رتبه=67 pT=0.00 pG=0.08 [maxq] جداکننده‌ها=8 (پرسیده‌شده 6): male,old_person,active,tv,cinema,theater
+کامران وفا → حدس: کیهان کلهر  n=32 رتبه=3 pT=0.15 pG=0.15 [maxq] جداکننده‌ها=4 (پرسیده‌شده 3): artist,musician,scientist,traditional

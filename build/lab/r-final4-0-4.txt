@@ -1,0 +1,20 @@
+N=100 seed=4 noise=0 final4 {"EXT":4}   حدس اول 84.0%  سه حدس 97.0%  میانگین سؤال 20.3
+دلیل توقف: {"conf":61,"maxq":18,"igfloor":21}  رتبه‌ی حقیقت: {"1":84,"2":9,"3":3,"4":1,"7":1,">10":2}
+توزیع n: 10:1 12:4 13:9 14:6 15:10 16:5 17:7 18:8 19:4 20:4 21:3 22:8 23:4 24:1 25:4 26:1 27:1 28:10 29:2 32:2 36:6
+شکست‌ها بر حسب تعداد سؤال‌های جداکننده (Δp>0.5): {"1-2":3,"6+":11,"3-5":2}
+جت لی → حدس: جکی چان  n=28 رتبه=2 pT=0.62 pG=0.62 [maxq] جداکننده‌ها=2 (پرسیده‌شده 2): comedy,everyone
+علی صبوری → حدس: بهرام افشاری  n=24 رتبه=2 pT=0.44 pG=0.44 [igfloor] جداکننده‌ها=8 (پرسیده‌شده 7): active,actor,series,beard,chubby,h_standup
+مختار → حدس: جومونگ  n=36 رتبه=2 pT=0.03 pG=0.08 [maxq] جداکننده‌ها=9 (پرسیده‌شده 5): iranian,eastern,ruler,religious,beard,longrun
+حمید هامون → حدس: رحیم  n=32 رتبه=4 pT=0.44 pG=0.44 [maxq] جداکننده‌ها=9 (پرسیده‌شده 4): legend,scientist,love,controversial,glasses,beard
+شیرینِ شهرزاد → حدس: سارا آسترک  n=32 رتبه=3 pT=0.23 pG=0.23 [maxq] جداکننده‌ها=7 (پرسیده‌شده 6): tv,epic,rich,stream,h_shahrzad,ltr12
+سعید راد → حدس: پرویز صیاد  n=29 رتبه=3 pT=0.13 pG=0.13 [maxq] جداکننده‌ها=6 (پرسیده‌شده 4): legend,director,comedy,everyone,ltr2,ltr12
+آگاتا کریستی → حدس: ژول ورن  n=23 رتبه=2 pT=0.26 pG=0.26 [igfloor] جداکننده‌ها=7 (پرسیده‌شده 5): male,old_person,ancient,kids,beard,ltr0
+دراگون‌بورن → حدس: ساب زیرو  n=36 رتبه=7 pT=0.92 pG=0.92 [maxq] جداکننده‌ها=9 (پرسیده‌شده 8): lead,fantasy,masked,sword,fighting,openworld
+دراگون‌بورن → حدس: جان اسنو  n=36 رتبه=15 pT=0.03 pG=0.06 [maxq] جداکننده‌ها=11 (پرسیده‌شده 6): legend,series,beard,superpower,game,playable
+آناهیتا نعمتی → حدس: ملیکا شریفی‌نیا  n=29 رتبه=2 pT=0.14 pG=0.14 [igfloor] جداکننده‌ها=2 (پرسیده‌شده 0): ltr0,ltr23
+پرین → حدس: آنشرلی  n=22 رتبه=2 pT=0.32 pG=0.32 [igfloor] جداکننده‌ها=2 (پرسیده‌شده 1): ltr0,ltr2
+سربازِ پابجی → حدس: سالید اسنیک  n=18 رتبه=2 pT=0.82 pG=0.82 [conf] جداکننده‌ها=9 (پرسیده‌شده 2): legend,epic,beard,lead,masked,playable
+تام و جری → حدس: رودرانر  n=19 رتبه=2 pT=0.53 pG=0.53 [igfloor] جداکننده‌ها=3 (پرسیده‌شده 3): retro,ltr3,ltr9
+میوتو → حدس: هیسوکا  n=36 رتبه=2 pT=0.14 pG=0.36 [maxq] جداکننده‌ها=8 (پرسیده‌شده 6): superpower,monster,horror,weirdhair,criminal,h_pokemon
+یوشیمیتسو → حدس: پایمون  n=36 رتبه=58 pT=0.09 pG=0.09 [maxq] جداکننده‌ها=15 (پرسیده‌شده 6): kids,comedy,robot,fantasy,horror,masked
+ویوین وارد → حدس: هاچیکو  n=36 رتبه=3 pT=0.49 pG=0.49 [maxq] جداکننده‌ها=4 (پرسیده‌شده 4): ancient,animal,ltr25,ltr26

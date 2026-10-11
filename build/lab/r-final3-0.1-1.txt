@@ -1,0 +1,25 @@
+N=100 seed=1 noise=0.1 final3 {"EXT":4}   حدس اول 79.0%  سه حدس 89.0%  میانگین سؤال 23.0
+دلیل توقف: {"maxq":25,"conf":62,"igfloor":13}  رتبه‌ی حقیقت: {"1":79,"2":4,"3":4,"7":2,"8":2,"9":1,">10":8}
+توزیع n: 11:1 13:3 14:8 15:2 16:4 17:7 18:5 19:5 20:5 21:9 22:5 23:4 24:4 25:4 26:5 27:2 28:11 32:4 34:1 36:11
+شکست‌ها بر حسب تعداد سؤال‌های جداکننده (Δp>0.5): {"6+":16,"3-5":5}
+بادکنک سفید → حدس: طعم گیلاس  n=32 رتبه=2 pT=0.09 pG=0.09 [maxq] جداکننده‌ها=7 (پرسیده‌شده 5): legend,award,f_femlead,f_kidlead,f_road,ltr1
+کربی → حدس: سگِ داک هانت  n=34 رتبه=11 pT=0.39 pG=0.39 [maxq] جداکننده‌ها=9 (پرسیده‌شده 8): dahe60,internet,chubby,superpower,animal,lead
+دکتر آلن گرنت → حدس: کوین مک‌کالیستر  n=36 رتبه=95 pT=0.01 pG=0.10 [maxq] جداکننده‌ها=9 (پرسیده‌شده 4): scientist,kids,comedy,serious,blond,teen
+ماکان بند → حدس: سینا شعبانخانی  n=23 رتبه=3 pT=0.22 pG=0.22 [igfloor] جداکننده‌ها=4 (پرسیده‌شده 2): love,h_band,ltr12,ltr23
+زیبای خفته → حدس: آنا  n=32 رتبه=13 pT=0.44 pG=0.44 [maxq] جداکننده‌ها=14 (پرسیده‌شده 11): prerev,cinema,book_media,love,monster,fantasy
+مهتاب کرامتی → حدس: الهام پاوه‌نژاد  n=27 رتبه=8 pT=0.04 pG=0.07 [igfloor] جداکننده‌ها=4 (پرسیده‌شده 2): cinema,theater,ltr0,ltr23
+مهدی آذریزدی → حدس: احمد شاملو  n=36 رتبه=7 pT=0.02 pG=0.09 [maxq] جداکننده‌ها=8 (پرسیده‌شده 3): old_person,married_fam,prerev,poet,kids,mustache
+آقای شگفت‌انگیز → حدس: هرکول دیزنی  n=36 رتبه=2 pT=0.22 pG=0.22 [maxq] جداکننده‌ها=5 (پرسیده‌شده 3): chubby,lead,masked,ltr0,ltr26
+سباستین فتل → حدس: میشائیل شوماخر  n=26 رتبه=8 pT=0.03 pG=0.31 [igfloor] جداکننده‌ها=4 (پرسیده‌شده 3): legend,blond,ltr12,ltr23
+گودزیلا → حدس: جنگ ستارگان  n=32 رتبه=2 pT=0.49 pG=0.49 [maxq] جداکننده‌ها=13 (پرسیده‌شده 7): american,eastern,everyone,robot,monster,space
+ایمجین دراگونز → حدس: آلخاندرو ایناریتو  n=36 رتبه=33 pT=0.06 pG=0.14 [maxq] جداکننده‌ها=11 (پرسیده‌شده 9): newgen,director,singer,musician,cinema,pop
+اوشین → حدس: گودزیلا  n=36 رتبه=7 pT=0.04 pG=0.11 [maxq] جداکننده‌ها=14 (پرسیده‌شده 8): dahe60,legend,cinema,series,traditional,beloved
+ناکتیس → حدس: کلاود استرایف  n=36 رتبه=3 pT=0.05 pG=0.15 [maxq] جداکننده‌ها=6 (پرسیده‌شده 4): ruler,epic,blond,openworld,ltr20,ltr24
+دافی داک → حدس: سیلوستر  n=21 رتبه=3 pT=0.26 pG=0.26 [conf] جداکننده‌ها=3 (پرسیده‌شده 2): villain,ltr8,ltr12
+سفیدبرفی و هفت کوتوله → حدس: دیو و دلبر  n=18 رتبه=2 pT=0.76 pG=0.76 [conf] جداکننده‌ها=8 (پرسیده‌شده 5): prerev,love,award,monster,f_village,h_oscar
+کدو قلقله‌زن → حدس: ماه‌پیشونی  n=36 رتبه=15 pT=0.01 pG=0.10 [maxq] جداکننده‌ها=13 (پرسیده‌شده 8): legend,series,cartoon_media,book_media,kids,chubby
+بیلی الیوت → حدس: حاجی فیروز  n=36 رتبه=155 pT=0.00 pG=0.10 [maxq] جداکننده‌ها=12 (پرسیده‌شده 5): iranian,european,artist,cinema,comedy,serious
+کریلین → حدس: ای‌کیوسان  n=36 رتبه=18 pT=0.17 pG=0.17 [maxq] جداکننده‌ها=9 (پرسیده‌شده 6): dahe60,tv,superpower,bald,game,fighting
+کیانوش استقامت → حدس: دایی جان  n=36 رتبه=13 pT=0.03 pG=0.11 [maxq] جداکننده‌ها=11 (پرسیده‌شده 4): prerev,legend,tv,book_media,glasses,mustache
+گبر سینگ → حدس: هانس گروبر  n=36 رتبه=9 pT=0.05 pG=0.23 [maxq] جداکننده‌ها=7 (پرسیده‌شده 4): european,eastern,ancient,legend,rich,ltr21
+دیوانه از قفس پرید → حدس: ده فرمان  n=32 رتبه=3 pT=0.11 pG=0.11 [maxq] جداکننده‌ها=9 (پرسیده‌شده 5): ancient,religious,book_media,award,f_sad,f_royal

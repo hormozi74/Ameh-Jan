@@ -7,6 +7,12 @@
    سلبریتی‌هاست عمه‌جان هیچ‌وقت این سؤال‌ها را نمی‌پرسد.
    ============================================================ */
 
+/* برچسب‌های توضیحیِ chars-09-family که سؤالی ندارند و لازم نیست داشته باشند:
+   `marr` (سببی) همان «نه blood» است، `gparent` همان `g2up`، `own` همان `nuc`.
+   این‌جا نام برده می‌شوند تا گزارشِ «برچسب‌های بی‌سؤال» در generate.js
+   خالی بماند و اشتباهِ واقعی در آن گم نشود. */
+const KIN_INFO_TAGS = ['marr', 'own', 'gparent'];
+
 const KIN_QUESTIONS = [
 
   /* --- تنها سؤالی که فامیل را از سلبریتی جدا می‌کند، و کاملاً طبیعی است --- */
@@ -56,7 +62,7 @@ const KIN_QUESTIONS = [
    rule:t => !t.has('kin') ? .05 :
      (t.has('nuc') && t.has('blood')) ? .92 : t.has('nuc') ? .40 : .05},
 
-  {id:'fam_step', cluster:'fam', text:'ناتنیه؟',
+  {id:'fam_step', cluster:'fam', text:'ناتنیه؟ یعنی ناپدری، نامادری یا خواهر و برادرِ ناتنی؟',
    rule:t => !t.has('kin') ? .03 : t.has('step') ? .92 : .03},
 
   {id:'fam_spouse', cluster:'fam', text:'همسرته؟',
@@ -121,6 +127,7 @@ const KIN_OVERRIDE = {
   // رسانه
   tv:.04, cinema:.03, series:.03, cartoon_media:.02, book_media:.03,
   stadium:.04, internet:.06, theater:.03, game:.02,
+  multi_media:.02, from_book:.02, single_media:.03,   // چندرسانه‌ای — برای فامیل بی‌معنا
   kids: .35,                    // «بچه‌ها هم می‌شناسنش؟» در فامیل بله، ولی گمراه‌کننده
 
   // واقعی/خیالی

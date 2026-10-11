@@ -1,0 +1,21 @@
+N=100 seed=1 noise=0 final2 {"EXT":4}   حدس اول 83.0%  سه حدس 96.0%  میانگین سؤال 20.4
+دلیل توقف: {"maxq":17,"conf":69,"igfloor":13,"noq":1}  رتبه‌ی حقیقت: {"1":83,"2":8,"3":2,"4":2,"5":2,"6":1,"9":1,">10":1}
+توزیع n: 10:1 11:1 12:2 13:5 14:9 15:10 16:6 17:9 18:5 19:4 20:8 21:6 22:4 23:5 24:2 25:1 26:2 27:2 28:6 30:1 32:6 36:5
+شکست‌ها بر حسب تعداد سؤال‌های جداکننده (Δp>0.5): {"6+":11,"3-5":6}
+بادکنک سفید → حدس: طعم گیلاس  n=36 رتبه=2 pT=0.16 pG=0.16 [maxq] جداکننده‌ها=7 (پرسیده‌شده 5): legend,award,f_femlead,f_kidlead,f_road,ltr1
+کربی → حدس: یوشی  n=27 رتبه=2 pT=0.39 pG=0.39 [igfloor] جداکننده‌ها=5 (پرسیده‌شده 4): chubby,animal,lead,ltr20,ltr27
+دکتر آلن گرنت → حدس: ولگرد چارلی چاپلین  n=36 رتبه=96 pT=0.02 pG=0.07 [maxq] جداکننده‌ها=10 (پرسیده‌شده 4): ancient,legend,scientist,comedy,serious,mustache
+ماکان بند → حدس: سینا شعبانخانی  n=22 رتبه=3 pT=0.22 pG=0.22 [igfloor] جداکننده‌ها=4 (پرسیده‌شده 2): love,h_band,ltr12,ltr23
+زیبای خفته → حدس: سیندرلا  n=28 رتبه=2 pT=0.83 pG=0.83 [conf] جداکننده‌ها=5 (پرسیده‌شده 3): legend,monster,f_family,ltr10,ltr12
+مهتاب کرامتی → حدس: ستاره اسکندری  n=26 رتبه=2 pT=0.11 pG=0.11 [igfloor] جداکننده‌ها=5 (پرسیده‌شده 3): director,series,theater,ltr12,ltr23
+مهدی آذریزدی → حدس: محمدعلی فروغی  n=36 رتبه=4 pT=0.24 pG=0.24 [maxq] جداکننده‌ها=5 (پرسیده‌شده 5): old_person,married_fam,legend,scientist,kids
+سباستین فتل → حدس: والنتینو روسی  n=27 رتبه=5 pT=0.03 pG=0.29 [igfloor] جداکننده‌ها=5 (پرسیده‌شده 4): active,legend,blond,ltr12,ltr25
+گودزیلا → حدس: آرواره‌ها  n=32 رتبه=6 pT=0.66 pG=0.66 [maxq] جداکننده‌ها=11 (پرسیده‌شده 6): american,eastern,book_media,horror,apoc,f_action
+ایمجین دراگونز → حدس: د ویکند  n=32 رتبه=2 pT=0.14 pG=0.14 [maxq] جداکننده‌ها=7 (پرسیده‌شده 7): newgen,musician,beard,h_rock,h_band,ltr0
+ناکتیس → حدس: کلاود استرایف  n=36 رتبه=2 pT=0.10 pG=0.23 [maxq] جداکننده‌ها=6 (پرسیده‌شده 4): ruler,epic,blond,openworld,ltr20,ltr24
+کوچ کوچ هوتا های → حدس: حس ششم  n=30 رتبه=2 pT=0.89 pG=0.89 [maxq] جداکننده‌ها=10 (پرسیده‌شده 8): american,eastern,love,horror,f_music,f_kidlead
+کدو قلقله‌زن → حدس: ماه‌پیشونی  n=32 رتبه=5 pT=0.16 pG=0.16 [maxq] جداکننده‌ها=13 (پرسیده‌شده 9): legend,series,cartoon_media,book_media,kids,chubby
+بیلی الیوت → حدس: گویدو  n=36 رتبه=9 pT=0.02 pG=0.04 [maxq] جداکننده‌ها=12 (پرسیده‌شده 7): artist,kids,comedy,serious,epic,award
+کیانوش استقامت → حدس: دایی جان  n=32 رتبه=2 pT=0.09 pG=0.09 [maxq] جداکننده‌ها=11 (پرسیده‌شده 4): prerev,legend,tv,book_media,glasses,mustache
+گبر سینگ → حدس: هانس گروبر  n=32 رتبه=4 pT=0.41 pG=0.41 [maxq] جداکننده‌ها=7 (پرسیده‌شده 4): european,eastern,ancient,legend,rich,ltr21
+دیوانه از قفس پرید → حدس: ده فرمان  n=32 رتبه=3 pT=0.12 pG=0.12 [maxq] جداکننده‌ها=9 (پرسیده‌شده 5): ancient,religious,book_media,award,f_sad,f_royal

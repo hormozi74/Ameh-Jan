@@ -1,0 +1,29 @@
+N=100 seed=2 noise=0 final4 {"EXT":4}   حدس اول 75.0%  سه حدس 91.0%  میانگین سؤال 22.6
+دلیل توقف: {"conf":57,"igfloor":13,"maxq":30}  رتبه‌ی حقیقت: {"1":75,"2":13,"3":1,"4":2,"5":1,"6":2,"8":1,"10":2,">10":3}
+توزیع n: 9:1 11:2 12:2 13:6 14:6 15:9 16:3 17:4 18:5 19:3 20:4 21:4 22:4 23:2 25:1 26:5 27:2 28:17 29:3 31:3 32:6 34:1 36:7
+شکست‌ها بر حسب تعداد سؤال‌های جداکننده (Δp>0.5): {"6+":17,"1-2":2,"3-5":6}
+جیسون وورهیس → حدس: راس الغول  n=29 رتبه=8 pT=0.37 pG=0.37 [conf] جداکننده‌ها=12 (پرسیده‌شده 8): ancient,religious,cartoon_media,beard,cartoon_char,monster
+اروین شرودینگر → حدس: آلبرت اینشتین  n=18 رتبه=2 pT=0.84 pG=0.84 [igfloor] جداکننده‌ها=2 (پرسیده‌شده 2): old_person,mustache
+مانی → حدس: پابلو پیکاسو  n=36 رتبه=50 pT=0.04 pG=0.13 [maxq] جداکننده‌ها=11 (پرسیده‌شده 8): old_person,iranian,european,ancient,prerev,religious
+بروس آلمایتی → حدس: آکوامن  n=32 رتبه=2 pT=0.52 pG=0.52 [maxq] جداکننده‌ها=8 (پرسیده‌شده 4): ruler,religious,comedy,epic,beard,h_dc
+کریس همسورث → حدس: سیلوستر استالونه  n=29 رتبه=5 pT=0.21 pG=0.26 [igfloor] جداکننده‌ها=8 (پرسیده‌شده 7): old_person,american,active,director,blond,h_marvel
+قطار بوسان → حدس: جنگ جهانی زد  n=29 رتبه=2 pT=0.91 pG=0.91 [maxq] جداکننده‌ها=7 (پرسیده‌شده 5): american,eastern,book_media,f_sequel,f_sad,ltr4
+پابلو پیکاسو → حدس: رامبراند  n=36 رتبه=6 pT=0.05 pG=0.15 [maxq] جداکننده‌ها=6 (پرسیده‌شده 3): old_person,ancient,prerev,legend,ltr2,ltr9
+انوشه انصاری → حدس: امیر مقاره  n=31 رتبه=3 pT=0.81 pG=0.81 [maxq] جداکننده‌ها=8 (پرسیده‌شده 6): male,newgen,scientist,techie,epic,world
+اگومون → حدس: سایلر مون  n=32 رتبه=2 pT=0.31 pG=0.31 [maxq] جداکننده‌ها=7 (پرسیده‌شده 4): blond,animal,game,lead,monster,ltr0
+دیو و دلبر → حدس: فروزن  n=22 رتبه=4 pT=0.95 pG=0.95 [conf] جداکننده‌ها=10 (پرسیده‌شده 6): legend,monster,f_sequel,f_pre2000,f_twist,f_family
+راسل کرو → حدس: نیکلاس کیج  n=36 رتبه=2 pT=0.04 pG=0.04 [maxq] جداکننده‌ها=5 (پرسیده‌شده 1): american,internet,controversial,ltr9,ltr24
+ریدن مورتال کمبت → حدس: ثور  n=36 رتبه=2 pT=0.02 pG=0.06 [maxq] جداکننده‌ها=10 (پرسیده‌شده 4): ancient,cinema,blond,game,playable,fighting
+برادران گریم → حدس: ونسان ونگوگ  n=31 رتبه=10 pT=0.03 pG=0.33 [maxq] جداکننده‌ها=10 (پرسیده‌شده 7): died_young,legend,writer,book_media,kids,beard
+کلاود استرایف → حدس: اسکوال  n=32 رتبه=2 pT=0.24 pG=0.24 [maxq] جداکننده‌ها=4 (پرسیده‌شده 1): epic,blond,ltr0,ltr20
+محمدحسین مهدویان → حدس: سعید روستایی  n=32 رتبه=2 pT=0.28 pG=0.28 [maxq] جداکننده‌ها=5 (پرسیده‌شده 4): epic,world,award,ltr12,ltr23
+بهرام افشاری → حدس: سروش صحت  n=36 رتبه=11 pT=0.11 pG=0.17 [maxq] جداکننده‌ها=8 (پرسیده‌شده 5): newgen,director,series,glasses,beard,chubby
+مظفرالدین شاه → حدس: محمدرضا شاه پهلوی  n=31 رتبه=2 pT=0.08 pG=0.27 [maxq] جداکننده‌ها=7 (پرسیده‌شده 5): old_person,ancient,prerev,mustache,world,everyone
+شاه عباس صفوی → حدس: کریم‌خان زند  n=28 رتبه=4 pT=0.15 pG=0.15 [igfloor] جداکننده‌ها=3 (پرسیده‌شده 2): epic,ltr13,ltr20
+پسرخاله → حدس: زی‌زی‌گولو  n=28 رتبه=2 pT=0.28 pG=0.28 [igfloor] جداکننده‌ها=4 (پرسیده‌شده 3): dahe60,h_kolah,ltr2,ltr10
+مایکل اسکات → حدس: چندلر بینگ  n=23 رتبه=2 pT=0.54 pG=0.54 [igfloor] جداکننده‌ها=4 (پرسیده‌شده 3): lead,h_friends,ltr5,ltr23
+گرتا تونبری → حدس: دیدیه دروگبا  n=36 رتبه=10 pT=0.03 pG=0.05 [maxq] جداکننده‌ها=12 (پرسیده‌شده 7): male,active,legend,athlete,footballer,stadium
+لئون حرفه‌ای → حدس: تونی مونتانا  n=36 رتبه=6 pT=0.42 pG=0.42 [maxq] جداکننده‌ها=7 (پرسیده‌شده 5): american,european,glasses,mustache,rich,ltr3
+دهکده‌ی حیوانات → حدس: خرس مهربان  n=32 رتبه=2 pT=0.10 pG=0.10 [maxq] جداکننده‌ها=2 (پرسیده‌شده 0): ltr7,ltr8
+ایلیدان → حدس: زد  n=32 رتبه=2 pT=0.71 pG=0.71 [maxq] جداکننده‌ها=6 (پرسیده‌شده 4): superpower,monster,playable,h_moba,ltr0,ltr10
+سایداک → حدس: آقای خرچنگ  n=34 رتبه=52 pT=0.05 pG=0.06 [igfloor] جداکننده‌ها=10 (پرسیده‌شده 5): american,eastern,businessman,tv,blond,rich

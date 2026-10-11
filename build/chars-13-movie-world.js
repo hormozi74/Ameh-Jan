@@ -62,7 +62,7 @@ module.exports = [
 'بریان اوکانر|پلیس سریع و خشن|3|m,us,fic,cinema,cop,criminal,blond,active,beloved,young',
 'لتی|راننده‌ی زن سریع و خشن|2|f,us,fic,cinema,criminal,love,active,serious,young',
 'لوک هابز|مأمور تنومند سریع و خشن|2|m,us,fic,cinema,cop,bald,gun,active,serious,modern',
-'ایندیانا جونز|باستان‌شناس ماجراجو|3|m,us,fic,cinema,hero,lead,ancient,gun,old,legend,worldfame',
+'ایندیانا جونز|باستان‌شناس ماجراجو|3|m,us,fic,cinema,hero,lead,gun,costume,d60,legend,worldfame',
 'ریک اوکانل|ماجراجوی فیلم مومیایی|2|m,us,fic,cinema,gun,hero,ancient,horror,comedy,modern',
 'ایموتپ|مومیایی نفرین‌شده|2|m,us,fic,cinema,villain,monster,horror,ancient,bald,super',
 'مرد بی‌نام|هفت‌تیرکش سیگار‌به‌لب|3|m,us,fic,cinema,gun,hero,criminal,old,legend,serious,worldfame',

@@ -1,6 +1,6 @@
 /* سرورِ ایستای پیش‌نمایش — node build/serve.js [port] */
 const http = require('http'), fs = require('fs'), path = require('path');
-const root = path.join(__dirname, '..'), port = +(process.argv[2] || 8765);
+const root = path.join(__dirname, '..'), port = +(process.argv[2] || process.env.PORT || 8765);
 const types = {'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.woff2':'font/woff2','.png':'image/png','.svg':'image/svg+xml','.json':'application/json','.webmanifest':'application/manifest+json'};
 http.createServer((req, res) => {
   let p = decodeURIComponent(req.url.split('?')[0]); if (p === '/') p = '/ameh-jan.html';

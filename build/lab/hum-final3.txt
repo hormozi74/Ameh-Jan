@@ -1,0 +1,76 @@
+
+### مهران مدیری — بُرد با 10 سؤال
+  حدس‌ها: مهران مدیری(89%,conf,رتبه‌ی حقیقت 1)
+  مسیر: real=1 artist=1 alive=1 iranian=1 actor=1 male=1 comedy=1 h_modiri=1 h_barareh=1 h_ghahveh=1
+!! نیست: مسی
+
+### هری پاتر — بُرد با 16 سؤال
+  حدس‌ها: هری پاتر(94%,conf,رتبه‌ی حقیقت 1)
+  مسیر: real=0 is_film=0 male=1 iranian=0 cartoon_char=0 american=0 game=0 european=1 series=0.25 fantasy=1 h_hp=1 villain=0 teen=1 comedy=0 ltr26=1 lead=1
+
+### باب اسفنجی — بُرد با 15 سؤال
+  حدس‌ها: باب اسفنجی(87%,conf,رتبه‌ی حقیقت 1)
+  مسیر: real=0 comedy=1 is_film=0 cartoon_char=1 animal=0.75 h_disney=0 american=1 h_looney=0 h_dreamworks=0 male=1 superpower=0 retro=0 lead=1 longrun=1 ltr1=1
+
+### محمدرضا شجریان — بُرد با 14 سؤال
+  حدس‌ها: محمدرضا شجریان(83%,conf,رتبه‌ی حقیقت 1)
+  مسیر: iranian=1 alive=0 is_film=0 real=1 artist=1 book_media=0 actor=0 singer=1 traditional=1 male=1 ltr23=1 world=0.25 dahe60=1 award=0.75
+
+### جوکر — بُرد با 28 سؤال
+  حدس‌ها: جوکر(92%,conf,رتبه‌ی حقیقت 1)
+  مسیر: real=0 comedy=0.75 is_film=0 iranian=0 cartoon_char=0.25 game=0.75 american=1 cinema=1 male=1 superpower=0 cartoon_media=0 gun=0.75 lead=0.75 criminal=1 villain=1 sword=0 openworld=0 masked=0.25 h_godfather=0 space=0 series=0.25 ancient=0 robot=0 horror=0.25 cop=0 h_dc=1 ltr4=1 weirdhair=1
+
+### خاله — بُرد با 11 سؤال
+  حدس‌ها: خاله(83%,conf,رتبه‌ی حقیقت 1)
+  مسیر: iranian=1 alive=1 actor=0 male=0 fam_close=1 fam_blood=1 fam_gen0=0 fam_older=1 fam_punc=1 fam_pat=0 fam_mat=1
+
+### والتر وایت — بُرد با 13 سؤال
+  حدس‌ها: والتر وایت(92%,conf,رتبه‌ی حقیقت 1)
+  مسیر: american=1 comedy=0 male=1 cinema=0.25 real=0 game=0 cartoon_char=0 series=1 villain=0.75 criminal=1 h_bb=1 scientist=0.75 ltr25=1
+
+### کریستیانو رونالدو — بُرد با 9 سؤال
+  حدس‌ها: کریستیانو رونالدو(86%,conf,رتبه‌ی حقیقت 1)
+  مسیر: alive=1 artist=0 iranian=0 athlete=1 h_fifa=1 h_realmadrid=1 h_england=1 award=1 ltr20=1
+
+### ماریو — بُرد با 17 سؤال
+  حدس‌ها: ماریو(84%,conf,رتبه‌ی حقیقت 1)
+  مسیر: real=0 is_film=0 male=1 cartoon_char=0.75 american=0.25 comedy=0.25 eastern=0.75 superpower=0.25 cartoon_media=0.75 animal=0 epic=0 villain=0 iranian=0 lead=1 teen=0 playable=1 h_mario=1
+
+### پیکاچو — بُرد با 14 سؤال
+  حدس‌ها: پیکاچو(89%,conf,رتبه‌ی حقیقت 1)
+  مسیر: alive=0 iranian=0 cartoon_media=1 is_film=0 comedy=0.25 superpower=1 male=? american=0 eastern=1 monster=0 teen=0 animal=1 h_pokemon=1 ltr2=1
+
+### شرک — بُرد با 22 سؤال
+  حدس‌ها: شرک(87%,conf,رتبه‌ی حقیقت 1)
+  مسیر: alive=0 comedy=1 is_film=0 american=1 cartoon_char=1 animal=0 h_disney=0 male=1 superpower=0 retro=0 series=0 villain=0 cinema=1 lead=1 epic=0 cartoon_media=1 h_simpsons=0 h_dreamworks=1 h_madagascar=0 h_shrek=1 monster=0.75 ltr13=1
+
+### آلبرت اینشتین — بُرد با 19 سؤال
+  حدس‌ها: آلبرت اینشتین(84%,conf,رتبه‌ی حقیقت 1)
+  مسیر: american=0.75 alive=0 is_film=0 cartoon_char=0 male=1 real=1 iranian=0 artist=0 scientist=1 european=1 ancient=0 h_nobel=1 ltr0=1 glasses=0.25 doctor=0 mustache=1 inventor=0.75 award=1 ltr23=0
+
+### حافظ — بُرد با 13 سؤال
+  حدس‌ها: حافظ(90%,conf,رتبه‌ی حقیقت 1)
+  مسیر: alive=0 american=0 cinema=0 real=1 iranian=1 ancient=1 poet=1 h_classicpoet=1 religious=0.75 world=0.75 ltr23=0 love=1 ltr6=1
+!! نیست: دونالد ترامپ
+
+### گوگوش — بُرد با 11 سؤال
+  حدس‌ها: گوگوش(94%,conf,رتبه‌ی حقیقت 1)
+  مسیر: iranian=1 alive=1 actor=0.75 male=0 artist=1 cinema=0.75 award=0 comedy=0 singer=1 h_la=1 ltr21=1
+
+### عادل فردوسی‌پور — بُرد با 29 سؤال
+  حدس‌ها: علی ضیا(81%,conf,رتبه‌ی حقیقت 2) → احسان علیخانی(35%,igfloor,رتبه‌ی حقیقت 2) → عادل فردوسی‌پور(49%,igfloor,رتبه‌ی حقیقت 1)
+  مسیر: iranian=1 alive=1 artist=0 h_teammelli=0 fam_close=0 real=1 male=1 athlete=0 actor=0 world=0 singer=0 tvhost=1 ltr0=0 h_kidtv=0 comedy=0 internet=1 h_dubbing=0 controversial=0.75 tv=1 ltr16=1 writer=0.75 book_media=0 businessman=0 everyone=1 stadium=0.75 footballer=0 serious=0.75 dahe60=0.25 kids=0
+
+### لیونل مسی — بُرد با 11 سؤال
+  حدس‌ها: لیونل مسی(90%,conf,رتبه‌ی حقیقت 1)
+  مسیر: iranian=0 male=1 american=0 alive=1 athlete=1 h_fifa=1 h_england=0 h_realmadrid=0 h_barca=1 h_olympic=1 ltr22=1
+
+### کلاه‌قرمزی — بُرد با 12 سؤال
+  حدس‌ها: کلاه‌قرمزی(92%,conf,رتبه‌ی حقیقت 1)
+  مسیر: iranian=1 cinema=0.75 real=0 is_film=0 male=1 comedy=1 lead=1 series=1 h_modiri=0 h_paytakht=0 puppet=1 h_kolah=1
+
+### ناصر حجازی — بُرد با 13 سؤال
+  حدس‌ها: ناصر حجازی(89%,conf,رتبه‌ی حقیقت 1)
+  مسیر: iranian=1 cinema=0 artist=0 real=1 male=1 athlete=1 h_teammelli=1 h_persepolis=0 h_olympic=0 footballer=1 h_esteghlal=1 alive=0 ltr24=1
+
+بُرد 18/18

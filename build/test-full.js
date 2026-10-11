@@ -11,18 +11,18 @@ const ENG = eval(src.slice(s, e) + '\n;ENG');
 
 /* همان ثابت‌هایی که در بازی هستند — اگر آن‌جا عوض شدند این‌جا هم باید عوض شوند،
    وگرنه این تست چیزی را می‌سنجد که منتشر نشده است. */
-const MAXQ = 28, MINQ = 8, RATIO = 6, CONF = 0.80, IG_FLOOR = 0.15, MAX_GUESSES = 3;
+const MAXQ = 32, MINQ = 8, RATIO = 6, CONF = 0.80, IG_FLOOR = 0.15, MAX_GUESSES = 3, EXT_Q = 5;
 
 function play(truth, noise) {
   let log = CHARACTERS.map(c => Math.log(c.prior));
   const asked = [], cc = {}, rejected = [];
-  let n = 0, guesses = [];
+  let n = 0, guesses = [], cap = MAXQ;   // سقف بعد از هر حدسِ ردشده EXT_Q تا جلو می‌رود
   for (;;) {
     const probs = ENG.toProbs(log);
     const top = CHARACTERS.map((c, i) => ({ c, p: probs[i] }))
       .filter(x => !rejected.includes(x.c.id)).sort((a, b) => b.p - a.p);
     let ready = (n >= MINQ && top[0].p > CONF &&
-                 top[0].p / Math.max(top[1]?.p ?? 1e-9, 1e-9) > RATIO) || n >= MAXQ;
+                 top[0].p / Math.max(top[1]?.p ?? 1e-9, 1e-9) > RATIO) || n >= cap;
     const pool = ready ? null : ENG.rankQuestions(probs, asked, cc);
     if (!ready && n >= MINQ && pool.reduce((m, x) => Math.max(m, x.ig), 0) < IG_FLOOR) ready = true;
     const q = ready ? null : ENG.pickQuestion(probs, asked, cc, pool);
@@ -32,6 +32,7 @@ function play(truth, noise) {
       if (top[0].c.id === truth.id || guesses.length >= MAX_GUESSES) return { guesses, n };
       rejected.push(top[0].c.id);
       log[CHARACTERS.findIndex(c => c.id === top[0].c.id)] -= 8;
+      cap = Math.max(cap, n + EXT_Q);
       continue;
     }
     const p = truth.a[q.id];

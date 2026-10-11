@@ -1,0 +1,21 @@
+N=100 seed=4 noise=0 final6 {"EXT":4}   حدس اول 83.0%  سه حدس 94.0%  میانگین سؤال 20.9
+دلیل توقف: {"igfloor":12,"conf":69,"maxq":19}  رتبه‌ی حقیقت: {"1":83,"2":3,"3":2,"4":2,"7":1,"8":2,"9":1,"10":1,">10":5}
+توزیع n: 11:3 12:3 13:5 14:6 15:8 16:7 17:6 18:3 19:9 20:3 21:7 22:6 23:3 25:7 26:4 27:1 28:6 29:1 31:1 32:5 36:6
+شکست‌ها بر حسب تعداد سؤال‌های جداکننده (Δp>0.5): {"3-5":3,"6+":14}
+پورکی پیگ → حدس: دینو  n=19 رتبه=10 pT=0.14 pG=0.14 [igfloor] جداکننده‌ها=3 (پرسیده‌شده 1): chubby,ltr2,ltr8
+حبیب پارسا → حدس: بن‌هور  n=32 رتبه=8 pT=0.09 pG=0.09 [maxq] جداکننده‌ها=10 (پرسیده‌شده 7): iranian,american,legend,cinema,series,love
+شدو → حدس: فرانت‌من  n=36 رتبه=17 pT=0.02 pG=0.06 [maxq] جداکننده‌ها=12 (پرسیده‌شده 6): series,superpower,animal,game,space,horror
+بن تن → حدس: سوپربوی  n=29 رتبه=2 pT=0.26 pG=0.26 [maxq] جداکننده‌ها=5 (پرسیده‌شده 4): tv,space,h_dc,ltr1,ltr12
+آرتور کانن دویل → حدس: پائولو کوئیلو  n=31 رتبه=8 pT=0.91 pG=0.91 [maxq] جداکننده‌ها=11 (پرسیده‌شده 9): alive,old_person,european,legend,scientist,beard
+آستریکس → حدس: رابین هود  n=32 رتبه=2 pT=0.56 pG=0.56 [maxq] جداکننده‌ها=8 (پرسیده‌شده 6): ancient,mustache,blond,lead,sword,criminal
+مترسک → حدس: هیث لجر  n=32 رتبه=2 pT=0.16 pG=0.16 [maxq] جداکننده‌ها=15 (پرسیده‌شده 8): died_young,artist,actor,scientist,cartoon_media,real
+گنزو واکاباشی → حدس: فوتبالیست‌ها  n=36 رتبه=3 pT=0.50 pG=0.50 [maxq] جداکننده‌ها=6 (پرسیده‌شده 3): footballer,epic,rich,costume,ltr18,ltr21
+آلن ریکمن → حدس: سالوادور دالی  n=32 رتبه=4 pT=0.55 pG=0.55 [maxq] جداکننده‌ها=8 (پرسیده‌شده 6): actor,cinema,controversial,mustache,villain,h_hp
+شهرنوش پارسی‌پور → حدس: فاضل نظری  n=32 رتبه=7 pT=0.18 pG=0.18 [maxq] جداکننده‌ها=9 (پرسیده‌شده 5): male,old_person,active,poet,internet,love
+بلا سوان → حدس: مونیکا گلر  n=36 رتبه=30 pT=0.01 pG=0.08 [maxq] جداکننده‌ها=13 (پرسیده‌شده 6): cinema,series,book_media,comedy,serious,love
+صابر ابر → حدس: پوریا پورسرخ  n=25 رتبه=28 pT=0.01 pG=0.10 [igfloor] جداکننده‌ها=6 (پرسیده‌شده 2): director,tvhost,series,stream,ltr2,ltr14
+ام کلثوم → حدس: سلین دیون  n=26 رتبه=3 pT=0.40 pG=0.40 [igfloor] جداکننده‌ها=9 (پرسیده‌شده 8): alive,prerev,legend,love,pop,traditional
+گانز اند رزز → حدس: دیوید بویی  n=28 رتبه=9 pT=0.05 pG=0.19 [maxq] جداکننده‌ها=9 (پرسیده‌شده 7): alive,american,european,dahe60,pop,blond
+تام کروز → حدس: برد پیت  n=36 رتبه=19 pT=0.03 pG=0.10 [maxq] جداکننده‌ها=7 (پرسیده‌شده 5): epic,controversial,blond,award,h_oscar,ltr1
+هکتور → حدس: ماوریک  n=36 رتبه=116 pT=0.02 pG=0.11 [maxq] جداکننده‌ها=10 (پرسیده‌شده 6): died_young,ancient,glasses,beard,superpower,lead
+ویوالدی → حدس: ادوارد مونک  n=36 رتبه=4 pT=0.19 pG=0.19 [maxq] جداکننده‌ها=4 (پرسیده‌شده 2): musician,traditional,ltr0,ltr25

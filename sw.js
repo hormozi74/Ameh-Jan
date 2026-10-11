@@ -1,5 +1,5 @@
 /* عمه‌جان — کشِ آفلاین. با هر انتشارِ جدید، VERSION را بالا ببر. */
-const VERSION = 'ameh-v1';
+const VERSION = 'ameh-v2';
 const CORE = [
   './', 'index.html', 'manifest.webmanifest',
   'icon-192.png', 'icon-512.png', 'icon-180.png',

@@ -24,10 +24,10 @@ const FIC_QUESTIONS = [
   {id:'villain', cluster:'fict', text:'نقشِ منفی و شرورِ داستانه؟',
    rule:t => has(t,'villain') ? .92 : .05},
 
-  {id:'lead', cluster:'fict', text:'شخصیتِ اصلیِ داستانه؟',
+  {id:'lead', cluster:'fict', text:'شخصیتِ اصلیه؟ یعنی داستان دورِ خودش می‌چرخه؟',
    rule:t => !t.has('fic') ? .10 : has(t,'lead') ? .90 : .12},
 
-  {id:'robot', cluster:'fict', text:'رباته؟',
+  {id:'robot', cluster:'fict', text:'ربات یا آدم‌آهنیه؟',
    rule:t => has(t,'robot') ? .93 : .02},
 
   {id:'monster', cluster:'fict', text:'هیولاست؟ مثل زامبی، خون‌آشام یا غول',
@@ -49,16 +49,16 @@ const FIC_QUESTIONS = [
 
   /* ---------------- gear: ظاهر و ابزار ---------------- */
 
-  {id:'masked', cluster:'gear', text:'ماسک یا نقاب می‌زنه؟',
+  {id:'masked', cluster:'gear', text:'صورتش رو می‌پوشونه؟ ماسک، نقاب یا کلاه‌خود',
    rule:t => has(t,'masked') ? .91 : .04},
 
-  {id:'costume', cluster:'gear', text:'لباسِ مخصوص و همیشگی داره؟',
+  {id:'costume', cluster:'gear', text:'یه لباسِ مخصوص داره که همیشه تنشه؟ مثل یونیفرم یا زره',
    rule:t => has(t,'costume') ? .88 : has(t,'super') ? .40 : .10},
 
-  {id:'gun', cluster:'gear', text:'سلاحش تفنگه؟',
+  {id:'gun', cluster:'gear', text:'با تفنگ و اسلحه‌ی گرم می‌جنگه؟',
    rule:t => has(t,'gun') ? .90 : has(t,'soldier','cop') ? .45 : .04},
 
-  {id:'sword', cluster:'gear', text:'سلاحش شمشیر یا سلاحِ سرده؟',
+  {id:'sword', cluster:'gear', text:'با شمشیر، تبر یا چاقو می‌جنگه؟',
    rule:t => has(t,'sword') ? .90 : has(t,'epic','general') ? .30 : .03},
 
   {id:'weirdhair', cluster:'gear', text:'موهاش رنگِ غیرعادی داره؟ مثل آبی یا صورتی',
@@ -75,17 +75,17 @@ const FIC_QUESTIONS = [
   {id:'soldier', cluster:'prof', text:'نظامیه؟ سرباز یا افسر؟',
    rule:t => has(t,'soldier') ? .90 : has(t,'war','general') ? .30 : .03},
 
-  {id:'teacher', cluster:'prof', text:'معلمه؟',
+  {id:'teacher', cluster:'prof', text:'معلم یا استاده؟',
    rule:t => has(t,'teacher') ? .91 : has(t,'scientist','philosopher') ? .25 : .03},
 
   /* ---------------- work: خودِ اثر، نه شخصیت ----------------
      این‌ها چیزی را می‌پرسند که بازیکن بی‌درنگ بلد است جواب بدهد
      («بازیش رو با گوشی بازی می‌کنی؟») و یک‌تنه صدها نامزد را کنار می‌گذارند. */
 
-  {id:'playable', cluster:'work', text:'تو بازی، خودت کنترلش می‌کنی؟',
+  {id:'playable', cluster:'work', text:'تو بازی خودت کنترلش می‌کنی؟ یعنی با اون بازی می‌کنی، نه اینکه دشمنت باشه؟',
    rule:t => !t.has('game') ? .03 : has(t,'playable') ? .90 : .15},
 
-  {id:'mobile_game', cluster:'work', text:'بازیش موبایلیه؟',
+  {id:'mobile_game', cluster:'work', text:'بازیش موبایلیه؟ یعنی با گوشی بازی می‌کنن؟',
    rule:t => has(t,'mobile') ? .90 : t.has('game') ? .15 : .02},
 
   {id:'online_game', cluster:'work', text:'بازیش آنلاین و چندنفره‌ست؟',
@@ -100,13 +100,13 @@ const FIC_QUESTIONS = [
   {id:'openworld', cluster:'work', text:'بازیش جهان‌بازه؟ مثل جی‌تی‌ای',
    rule:t => has(t,'openworld') ? .89 : t.has('game') ? .15 : .02},
 
-  {id:'retro', cluster:'work', text:'مالِ بازی‌های قدیمیه؟ آتاری، سگا، میکرو؟',
+  {id:'retro', cluster:'work', text:'مالِ نسلِ اولِ بازی‌ها و کارتون‌هاست؟ آتاری، سگا، میکرو، دهه‌ی هشتادِ میلادی',
    rule:t => has(t,'retro') ? .88 : has(t,'d60') ? .30 : .04},
 
-  {id:'longrun', cluster:'work', text:'سریالش فصل‌های زیادی داره؟',
+  {id:'longrun', cluster:'work', text:'سریالش خیلی طولانیه؟ یعنی سال‌ها و فصل‌های زیادی پخش شده؟',
    rule:t => has(t,'longrun') ? .89 : t.has('series') ? .25 : .04},
 
-  {id:'stream', cluster:'work', text:'سریالش مالِ نتفلیکس یا پلتفرم‌های اینترنتیه؟',
+  {id:'stream', cluster:'work', text:'سریالش مالِ نتفلیکس، فیلیمو یا شبکه‌ی خانگیه؟ نه تلویزیونِ سراسری',
    rule:t => has(t,'stream') ? .89 : t.has('series') ? .18 : .03},
 
   {id:'sitcom', cluster:'work', text:'سریالش کمدیِ سیت‌کامه؟ مثل فرندز',
@@ -114,7 +114,7 @@ const FIC_QUESTIONS = [
 
   /* ---------------- bio ---------------- */
 
-  {id:'teen', cluster:'bio', text:'نوجوونه؟',
+  {id:'teen', cluster:'bio', text:'نوجوونه؟ یعنی سنِ مدرسه و دبیرستانه؟',
    rule:t => has(t,'teen') ? .90 : has(t,'young') ? .28 : .04},
 ];
 
