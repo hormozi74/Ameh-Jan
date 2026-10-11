@@ -2,7 +2,7 @@
 const VERSION = 'ameh-v3';
 const CORE = [
   './', 'index.html', 'manifest.webmanifest',
-  'icon-192.png', 'icon-512.png', 'icon-180.png', 'icon-maskable-512.png', 'icon.svg',
+  'icon-192.png', 'icon-512.png', 'icon-180.png', 'icon-maskable-512.png', 'icon.svg', 'favicon.ico', 'favicon-32.png',
   'fonts/Vazirmatn-400.woff2', 'fonts/Vazirmatn-600.woff2', 'fonts/Vazirmatn-800.woff2', 'fonts/Lalezar.woff2'
 ];
 
