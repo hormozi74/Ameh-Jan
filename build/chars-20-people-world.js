@@ -34,11 +34,11 @@ module.exports = [
 'آنتونیو باندراس|زورو و گربه‌ی چکمه‌پوش|3|m,alive,eu,actor,cinema,hero,love,worldfame,fr_shrek,fr_dreamworks',
 
 // ---------- بالیوود ----------
-'آیشواریا رای|ملکه‌ی زیبایی بالیوود|3|f,alive,asia,actor,cinema,love,blond,worldfame,beloved,award',
-'دیپیکا پادوکن|بازیگر بالیوود|2|f,alive,asia,actor,cinema,love,worldfame,active,rich',
-'آکشای کومار|ستاره‌ی اکشن بالیوود|2|m,alive,asia,actor,athlete,cinema,hero,comedy,worldfame,active',
+'آیشواریا رای|ملکه‌ی زیبایی بالیوود|3|f,alive,actor,cinema,love,blond,worldfame,beloved,award',
+'دیپیکا پادوکن|بازیگر بالیوود|2|f,alive,actor,cinema,love,worldfame,active,rich',
+'آکشای کومار|ستاره‌ی اکشن بالیوود|2|m,alive,actor,athlete,cinema,hero,comedy,worldfame,active',
 'میتون چاکرابورتی|رقصنده‌ی دیسکو دنسر|2|m,alive,asia,actor,dancer,cinema,d60,elder,legend,beloved',
-'سری‌دیوی|بانوی سینمای هند|2|f,dead,asia,actor,dancer,cinema,d60,legend,beloved',
+'سری‌دیوی|بانوی سینمای هند|2|f,dead,actor,dancer,cinema,d60,legend,beloved',
 
 // ---------- سریال‌های ترکی ----------
 'بوراک اوزچیویت|بازیگر قیام عثمان|3|m,alive,eu,actor,series,tv,beard,epic,love,worldfame,beloved,active',
@@ -95,7 +95,7 @@ module.exports = [
 'کنی جی|نوازنده‌ی ساکسیفون|2|m,alive,us,musician,composer,pop,love,d60,beloved,worldfame',
 'آندره‌آ بوچلی|تنور نابینای ایتالیایی|2|m,alive,eu,singer,classical,love,elder,legend,beloved,worldfame',
 'کیتارو|آهنگساز جاده‌ی ابریشم|2|m,alive,asia,composer,musician,mystic,elder,award,d60,beloved',
-'کاظم الساهر|قیصر آواز عرب|2|m,alive,asia,singer,composer,pop,traditional,love,elder,beloved',
+'کاظم الساهر|قیصر آواز عرب|2|m,alive,singer,composer,pop,traditional,love,elder,beloved',
 'ماهر زین|خواننده‌ی ترانه‌های مذهبی|2|m,alive,eu,singer,religious,pop,beard,beloved,active,internet',
 
 // ---------- فوتبال: ستاره‌های امروز ----------
@@ -138,7 +138,7 @@ module.exports = [
 'مانی پاکیائو|بوکسور فیلیپینی|2|m,alive,asia,athlete,champion,stadium,worldfame,legend,beloved,fr_fight',
 'کانلو آلوارز|بوکسور مکزیکی|2|m,alive,us,athlete,champion,stadium,worldfame,blond,active,rich,fr_fight',
 'تایسون فیوری|بوکسور سنگین‌وزن بریتانیایی|2|m,alive,eu,athlete,champion,stadium,worldfame,beard,controversial,fr_fight',
-'آنتونی جاشوا|بوکسور بریتانیایی|2|m,alive,eu,athlete,champion,stadium,worldfame,beard,fr_olympic,fr_fight',
+'آنتونی جاشوا|بوکسور بریتانیایی|2|m,alive,eu,athlete,champion,stadium,worldfame,beard,fr_olympic,fr_fight,bald',
 'جورج فورمن|بوکسور و کباب‌پز|2|m,dead,us,athlete,champion,stadium,worldfame,legend,bald,business,prerev,fr_olympic,fr_fight',
 'ایواندر هولیفیلد|بوکسور گوش‌گازگرفته|2|m,alive,us,athlete,champion,stadium,worldfame,d60,religious,fr_fight',
 'اسلام ماخاچف|قهرمان داغستانی یو‌اف‌سی|2|m,alive,eu,athlete,champion,stadium,beard,religious,active,fr_fight',
@@ -206,14 +206,14 @@ module.exports = [
 'الکساندر دوما|نویسنده‌ی سه تفنگدار|3|m,dead,eu,writer,book,old,epic,mustache,worldfame,legend',
 'گوته|شاعر آلمانی فاوست|2|m,dead,eu,poet,writer,scientist,book,theater,old,worldfame,legend,love',
 'هومر|شاعر ایلیاد و ادیسه|3|m,dead,eu,poet,ancient,epic,beard,book,legend,worldfame',
-'جبران خلیل جبران|نویسنده‌ی کتاب پیامبر|2|m,dead,asia,writer,poet,painter,mystic,book,mustache,beloved',
+'جبران خلیل جبران|نویسنده‌ی کتاب پیامبر|2|m,dead,writer,poet,painter,mystic,book,mustache,beloved',
 'اورهان پاموک|نویسنده‌ی نوبلی ترک|2|m,alive,eu,writer,book,glasses,elder,award,worldfame,fr_nobel',
 'الیف شافاک|نویسنده‌ی ملت عشق|3|f,alive,eu,writer,book,mystic,love,worldfame,beloved,active',
 'جورج آر. آر. مارتین|خالق بازی تاج و تخت|2|m,alive,us,writer,book,fantasy,beard,glasses,chubby,elder,worldfame,fr_got',
 'دن براون|نویسنده‌ی رمز داوینچی|2|m,alive,us,writer,book,controversial,rich,worldfame',
 'هاروکی موراکامی|نویسنده‌ی ژاپنی|2|m,alive,asia,writer,book,serious,love,elder,worldfame',
 'میلان کوندرا|نویسنده‌ی بار هستی|2|m,dead,eu,writer,book,serious,love,elder,worldfame',
-'سروانتس|نویسنده‌ی دن کیشوت|2|m,dead,eu,writer,book,old,comedy,soldier,beard,worldfame,legend',
+'سروانتس|نویسنده‌ی دن کیشوت|2|m,dead,eu,writer,book,old,comedy,soldier,beard,worldfame,legend,ancient',
 'آرتور کانن دویل|خالق شرلوک هلمز|3|m,dead,eu,writer,doctor,book,mustache,worldfame,legend,fr_sherlock',
 
 // ---------- نقاشان ----------
@@ -226,7 +226,7 @@ module.exports = [
 'بنیتو موسولینی|دیکتاتور ایتالیا|2|m,dead,eu,king,general,war,villain,bald,prerev,worldfame',
 'کمال آتاتورک|بنیان‌گذار ترکیه|2|m,dead,eu,king,general,war,blond,prerev,legend,worldfame',
 'توت‌عنخ‌آمون|فرعون نوجوان|3|m,dead,asia,king,ancient,teen,diedyoung,masked,legend,worldfame',
-'رامسس دوم|فرعون بزرگ مصر|2|m,dead,asia,king,general,ancient,war,villain,elder,legend,worldfame',
+'رامسس دوم|فرعون بزرگ مصر|2|m,dead,king,general,ancient,war,villain,elder,legend,worldfame',
 'نرون|امپراتور دیوانه‌ی روم|2|m,dead,eu,king,ancient,villain,controversial,diedyoung,chubby,worldfame',
 'ریچارد شیردل|پادشاه جنگ‌های صلیبی|2|m,dead,eu,king,general,ancient,war,epic,beard,blond,worldfame',
 'ژاندارک|دختر قهرمان فرانسه|3|f,dead,eu,soldier,religious,hero,ancient,young,diedyoung,legend,worldfame',

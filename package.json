@@ -1,0 +1,9 @@
+{
+  "name": "ameh-jan",
+  "private": true,
+  "description": "عمه‌جان — بازیِ حدسِ شخصیت",
+  "scripts": {
+    "build": "node build/generate.js && node build/inject.js && node build/publish.js",
+    "test": "node build/test-all.js"
+  }
+}

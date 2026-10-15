@@ -1,7 +1,9 @@
-/* عمه‌جان — کشِ آفلاین. با هر انتشارِ جدید، VERSION را بالا ببر. */
-const VERSION = 'ameh-v6';
+/* عمه‌جان — کشِ آفلاین. VERSION و نشانیِ data.js را build/inject.js با هشِ داده می‌نویسد؛
+   داده که عوض شود کشِ قدیمی پاک می‌شود. صفحه همیشه اول از شبکه می‌آید. */
+const VERSION = 'ameh-df2d1193ba1';
+const DATA = 'data.js?v=f2d1193ba1';
 const CORE = [
-  './', 'index.html', 'manifest.webmanifest',
+  './', 'index.html', 'manifest.webmanifest', DATA,
   'icon-192.png', 'icon-512.png', 'icon-180.png', 'icon-maskable-512.png', 'icon.svg', 'favicon.ico', 'favicon-32.png',
   'fonts/Vazirmatn-400.woff2', 'fonts/Vazirmatn-600.woff2', 'fonts/Vazirmatn-800.woff2', 'fonts/Lalezar.woff2'
 ];

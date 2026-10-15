@@ -12,6 +12,5 @@ module.exports = {
   'تیم برتون':'fr_dc',
   'جیم کری':'fr_sonic',
   'سلنا گومز':'fr_disney',
-  'بریتنی اسپیرز':'fr_disney',
   'ژان پل سارتر':'fr_nobel',
 };

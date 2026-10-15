@@ -26,7 +26,7 @@ $ev = json_decode($raw, true);
 if (!is_array($ev) || !isset($ev['v'], $ev['won'], $ev['n'])) { http_response_code(400); echo '{"ok":false}'; exit; }
 
 /* فقط فیلدهای شناخته‌شده نگه داشته می‌شوند — هرچه کاربر بفرستد ذخیره نمی‌شود */
-$keep = ['v','sid','gid','won','n','guesses','truth','taught','answers','heat','kin','film','ref','ua','lang','tz','dur'];
+$keep = ['v','sid','gid','won','n','guesses','truth','taught','answers','heat','kin','film','book','ref','ua','lang','tz','dur'];
 $row = [];
 foreach ($keep as $k) if (array_key_exists($k, $ev)) $row[$k] = $ev[$k];
 $row['ts'] = gmdate('c');

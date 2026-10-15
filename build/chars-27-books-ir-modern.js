@@ -35,7 +35,6 @@ module.exports = [
 'علویه خانم|داستانِ بلندِ صادق هدایت|1|bookw,ir,novel,old,prerev,pre2000,femlead,comedy,road,religious',
 'حاجی آقا|رمانِ طنزِ صادق هدایت|1|bookw,ir,novel,prerev,pre2000,comedy,controversial,rich',
 'توپ مرواری|طنزِ ممنوعه‌ی صادق هدایت|1|bookw,ir,novel,prerev,pre2000,comedy,controversial,religious',
-'وغ وغ ساهاب|کتابِ طنزِ هدایت و مجتبی مینوی|1|bookw,ir,shortstories,old,prerev,pre2000,comedy',
 'نیرنگستان|پژوهشِ هدایت درباره‌ی باورهای عامیانه|1|bookw,ir,nonfic,old,prerev,pre2000,traditional',
 
 // ---------- بزرگ علوی، صادق چوبک، جمالزاده ----------
@@ -45,7 +44,6 @@ module.exports = [
 'موریانه|رمانِ بزرگ علوی|1|bookw,ir,novel,d60,pre2000,serious,controversial',
 'تنگسیر|رمانِ صادق چوبک|3|bookw,ir,novel,prerev,pre2000,cinema,action,village,crime,serious,legend,beloved',
 'سنگ صبور|رمانِ صادق چوبک|2|bookw,ir,novel,prerev,pre2000,mindbend,sadend,serious,controversial,crime',
-'انتری که لوطیش مرده بود|مجموعه‌داستانِ صادق چوبک|1|bookw,ir,shortstories,prerev,pre2000,animals,sadend,serious',
 'صحرای محشر|داستانِ طنزِ جمالزاده درباره‌ی روزِ قیامت|1|bookw,ir,novel,prerev,pre2000,comedy,religious,mindbend',
 
 // ---------- جلال آل‌احمد ----------
@@ -73,7 +71,6 @@ module.exports = [
 'آینه‌های دردار|رمانِ هوشنگ گلشیری|1|bookw,ir,novel,d60,pre2000,love,road,mindbend',
 'عزاداران بیل|مجموعه‌داستانِ غلامحسین ساعدی|2|bookw,ir,shortstories,prerev,pre2000,village,horror,mindbend,cinema,legend',
 'ترس و لرز|مجموعه‌داستانِ غلامحسین ساعدی|1|bookw,ir,shortstories,prerev,pre2000,sea,horror,village',
-'واهمه‌های بی‌نام و نشان|مجموعه‌داستانِ غلامحسین ساعدی|1|bookw,ir,shortstories,prerev,pre2000,horror,mindbend,serious',
 'آی با کلاه، آی بی کلاه|نمایشنامه‌ی غلامحسین ساعدی|1|bookw,ir,play,prerev,pre2000,comedy,controversial,serious',
 'ملکوت|رمانِ کوتاهِ بهرام صادقی|2|bookw,ir,novel,prerev,pre2000,horror,crime,mindbend,legend',
 'سنگر و قمقمه‌های خالی|مجموعه‌داستانِ بهرام صادقی|1|bookw,ir,shortstories,prerev,pre2000,comedy,mindbend,serious',
@@ -115,7 +112,6 @@ module.exports = [
 'سمفونی مردگان|رمانِ عباس معروفی|3|bookw,ir,novel,d60,pre2000,family,sadend,mindbend,legend,beloved,controversial',
 'سال بلوا|رمانِ عباس معروفی|1|bookw,ir,novel,d60,pre2000,love,sadend,mindbend,serious',
 'پیکر فرهاد|رمانِ عباس معروفی|1|bookw,ir,novel,d60,pre2000,femlead,mindbend,love',
-'فریدون سه پسر داشت|رمانِ عباس معروفی|1|bookw,ir,novel,modern,family,controversial,sadend',
 'دایی جان ناپلئون|رمانِ طنزِ ایرج پزشک‌زاد|4|bookw,ir,novel,prerev,pre2000,comedy,family,series,love,kidlead,legend,beloved',
 'سال‌های ابری|رمانِ چهارجلدیِ علی‌اشرف درویشیان|1|bookw,ir,novel,d60,pre2000,bookseries,kidlead,village,family',
 'گاوخونی|رمانِ جعفر مدرس صادقی|1|bookw,ir,novel,d60,pre2000,mindbend,family,serious,sadend',
@@ -127,7 +123,7 @@ module.exports = [
 'سفر به گرای ۲۷۰ درجه|رمانِ جنگیِ احمد دهقان|1|bookw,ir,novel,d60,pre2000,warfilm,serious,kidlead',
 
 // ---------- رمانِ عامه‌پسند و عاشقانه ----------
-'بامداد خمار|رمانِ فتانه حاج سیدجوادی|3|bookw,ir,novel,d60,pre2000,femauthor,femlead,love,sadend,beloved,family',
+'بامداد خمار|رمانِ فتانه حاج سیدجوادی|3|bookw,ir,novel,d60,pre2000,femauthor,femlead,love,sadend,beloved,family,cinema',
 'سهم من|رمانِ پرینوش صنیعی|2|bookw,ir,novel,modern,femauthor,femlead,love,family,sadend,beloved',
 'دالان بهشت|رمانِ عاشقانه‌ی نازی صفوی|2|bookw,ir,novel,d60,pre2000,femauthor,love,family,beloved',
 
@@ -151,7 +147,6 @@ module.exports = [
 'آتش بدون دود|رمانِ هفت‌جلدیِ نادر ابراهیمی|2|bookw,ir,novel,d60,pre2000,bookseries,epic,love,legend,beloved,village',
 'چهل نامه کوتاه به همسرم|نامه‌های عاشقانه‌ی نادر ابراهیمی|2|bookw,ir,nonfic,d60,pre2000,love,family,truestory,beloved',
 'کافه پیانو|رمانِ فرهاد جعفری|2|bookw,ir,novel,modern,family,love,comedy,beloved',
-'انگار گفته بودی لیلی|رمانِ سپیده شاملو|1|bookw,ir,novel,modern,femauthor,femlead,love,family',
 'پاییز فصل آخر سال است|رمانِ نسیم مرعشی|2|bookw,ir,novel,newgen,femauthor,femlead,beloved,love',
 'عقرب روی پله‌های راه‌آهن اندیمشک|رمانِ جنگیِ حسین مرتضاییان آبکنار|1|bookw,ir,novel,modern,warfilm,comedy,mindbend,controversial',
 'پرنده من|رمانِ فریبا وفی|1|bookw,ir,novel,modern,femauthor,femlead,family,serious',
@@ -174,7 +169,7 @@ module.exports = [
 'دختر شینا|خاطراتِ همسرِ یک رزمنده به قلمِ بهناز ضرابی‌زاده|2|bookw,ir,nonfic,modern,truestory,warfilm,femlead,femauthor,family,love',
 'من زنده‌ام|خاطراتِ اسارتِ معصومه آباد|2|bookw,ir,nonfic,modern,truestory,warfilm,femlead,femauthor,prison',
 'پایی که جا ماند|خاطراتِ اسارتِ سید ناصر حسینی‌پور|2|bookw,ir,nonfic,modern,truestory,warfilm,prison,serious',
-'آن بیست و سه نفر|خاطراتِ احمد یوسف‌زاده از نوجوانانِ اسیر|2|bookw,ir,nonfic,newgen,truestory,warfilm,prison,kidlead',
+'آن بیست و سه نفر|خاطراتِ احمد یوسف‌زاده از نوجوانانِ اسیر|2|bookw,ir,nonfic,newgen,truestory,warfilm,prison,kidlead,cinema',
 'نورالدین پسر ایران|خاطراتِ جنگِ سید نورالدین عافی|1|bookw,ir,nonfic,modern,truestory,warfilm,kidlead,action',
 'سلام بر ابراهیم|زندگی‌نامه‌ی ابراهیم هادی|2|bookw,ir,nonfic,modern,truestory,warfilm,religious,sport',
 'خاک‌های نرم کوشک|زندگی‌نامه‌ی عبدالحسین برونسی|1|bookw,ir,nonfic,modern,truestory,warfilm,religious,village',
@@ -224,7 +219,6 @@ module.exports = [
 'آینه‌ای برای صداها|گزیده‌ی شعرِ شفیعی کدکنی|1|bookw,ir,poetry,d60,pre2000,serious,legend',
 'هزاره دوم آهوی کوهی|دفترِ شعرِ شفیعی کدکنی|1|bookw,ir,poetry,d60,pre2000,mythic,serious',
 'حنجره زخمی تغزل|نخستین دفترِ غزلِ حسین منزوی|1|bookw,ir,poetry,prerev,pre2000,love,traditional,sadend',
-'گاهی دلم برای خودم تنگ می‌شود|دفترِ غزلِ محمدعلی بهمنی|1|bookw,ir,poetry,d60,pre2000,love,traditional',
 
 // ---------- قیصر امین‌پور و غزلِ امروز ----------
 'تنفس صبح|نخستین دفترِ شعرِ قیصر امین‌پور|1|bookw,ir,poetry,d60,pre2000,warfilm,religious',
@@ -246,13 +240,12 @@ module.exports = [
 // ---------- غیرداستانیِ ماندگار ----------
 'لغت‌نامه دهخدا|بزرگ‌ترین فرهنگِ لغتِ فارسی|3|bookw,ir,nonfic,prerev,pre2000,bookseries,legend,school,traditional',
 'امثال و حکم|کتابِ ضرب‌المثل‌های دهخدا|1|bookw,ir,nonfic,old,prerev,pre2000,bookseries,traditional',
-'فرهنگ معین|فرهنگِ لغتِ شش‌جلدیِ محمد معین|2|bookw,ir,nonfic,prerev,pre2000,bookseries,school,beloved',
+'فرهنگ معین|فرهنگِ لغتِ شش‌جلدیِ محمد معین|2|bookw,ir,nonfic,prerev,pre2000,bookseries,beloved',
 'داستان راستان|حکایت‌های اخلاقیِ مرتضی مطهری|3|bookw,ir,shortstories,prerev,pre2000,religious,schoolread,beloved,kids',
 'کویر|کتابِ علی شریعتی|2|bookw,ir,nonfic,prerev,pre2000,religious,controversial,beloved,serious',
 'دو قرن سکوت|تاریخِ عبدالحسین زرین‌کوب|2|bookw,ir,nonfic,prerev,pre2000,controversial,legend,serious,warfilm',
 'پله پله تا ملاقات خدا|زندگی‌نامه‌ی مولانا به قلمِ زرین‌کوب|2|bookw,ir,nonfic,d60,pre2000,religious,beloved,fr_masnavi',
 'حافظ‌نامه|شرحِ دیوانِ حافظ از بهاءالدین خرمشاهی|1|bookw,ir,nonfic,d60,pre2000,bookseries,traditional',
-'سبک‌شناسی|کتابِ سه‌جلدیِ ملک‌الشعرای بهار|1|bookw,ir,nonfic,old,prerev,pre2000,bookseries,school',
 'از صبا تا نیما|تاریخِ ادبیاتِ یحیی آرین‌پور|1|bookw,ir,nonfic,prerev,pre2000,bookseries,school,legend',
 'صور خیال در شعر فارسی|پژوهشِ شفیعی کدکنی|1|bookw,ir,nonfic,prerev,pre2000,school,traditional',
 'تاریخ تحلیلی شعر نو|پژوهشِ چهارجلدیِ شمس لنگرودی|1|bookw,ir,nonfic,d60,pre2000,bookseries,school',
@@ -321,7 +314,7 @@ module.exports = [
 // ---------- شخصیت‌ها: رمان‌های پس از انقلاب ----------
 'اورهان|برادرِ حسودِ «سمفونی مردگان»|1|m,ir,fic,book,novelchar,old,villain,business,serious',
 'سورملینا|همسرِ ارمنیِ آیدین|1|f,ir,fic,book,novelchar,old,love,young,serious',
-'رحیمِ بامداد خمار|شوهرِ نجارِ محبوبه|2|m,ir,fic,book,novelchar,old,love,villain,young',
+'رحیمِ بامداد خمار|شوهرِ نجارِ محبوبه|2|m,ir,fic,book,novelchar,old,love,villain,young,cinema',
 'معصومه|قهرمانِ «سهم من»|1|f,ir,fic,book,novelchar,prerev,lead,love,serious,hero',
 'مهناز|عروسِ جوانِ «دالان بهشت»|1|f,ir,fic,book,novelchar,d60,love,young,lead',
 'کلاریس|راویِ «چراغ‌ها را من خاموش می‌کنم»|2|f,ir,fic,book,novelchar,prerev,lead,love,serious',
@@ -334,7 +327,6 @@ module.exports = [
 
 // ---------- نویسندگان و شاعرانِ تازه ----------
 'حسن مقدم|نویسنده‌ی «جعفرخان از فرنگ برگشته»|1|m,dead,ir,writer,theater,old,diedyoung,comedy',
-'محمدباقر میرزا خسروی|نویسنده‌ی «شمس و طغرا»|1|m,dead,ir,writer,book,old,love',
 'یحیی آرین‌پور|نویسنده‌ی «از صبا تا نیما»|1|m,dead,ir,writer,book,prerev,teacher',
 'جعفر مدرس صادقی|نویسنده‌ی «گاوخونی»|1|m,alive,ir,writer,book,d60,serious',
 'فرهاد جعفری|نویسنده‌ی «کافه پیانو»|1|m,alive,ir,writer,book,modern,beloved',
@@ -342,9 +334,7 @@ module.exports = [
 'نسیم مرعشی|نویسنده‌ی «پاییز فصل آخر سال است»|1|f,alive,ir,writer,book,newgen,young,active',
 'سیده زهرا حسینی|راویِ خاطراتِ «دا»|2|f,alive,ir,writer,book,war,religious,modern',
 'بهناز ضرابی‌زاده|نویسنده‌ی «دختر شینا»|1|f,alive,ir,writer,book,war,modern',
-'معصومه آباد|نویسنده‌ی «من زنده‌ام»|1|f,alive,ir,writer,book,war,modern,religious',
 'سید ناصر حسینی‌پور|نویسنده‌ی «پایی که جا ماند»|1|m,alive,ir,writer,book,war,soldier,modern',
 'احمد یوسف‌زاده|نویسنده‌ی «آن بیست و سه نفر»|1|m,alive,ir,writer,book,war,soldier,newgen',
-'احمد اکبرپور|نویسنده‌ی «من نوکر بابا نیستم»|1|m,alive,ir,writer,book,kids,modern',
 
 ];

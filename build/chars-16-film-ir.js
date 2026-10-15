@@ -18,7 +18,7 @@ module.exports = [
 'سلطان قلب‌ها|فیلمفارسیِ محمدعلی فردین|3|film,ir,prerev,pre2000,musical,love,beloved,legend',
 'ممل آمریکایی|کمدیِ پیش از انقلاب|2|film,ir,prerev,pre2000,comedy,love,beloved',
 'صمد و فولادزره دیو|کمدیِ پرویز صیاد|2|film,ir,prerev,pre2000,comedy,fantasy,monster,village,kids',
-'آقای هالو|کمدیِ داریوش مهرجویی|2|film,ir,prerev,pre2000,comedy,village,love,road',
+'آقای هالو|کمدیِ داریوش مهرجویی|2|film,ir,prerev,pre2000,comedy,love,road',
 'دایره مینا|فیلمِ داریوش مهرجویی|2|film,ir,prerev,pre2000,crime,book,controversial,sadend,serious',
 'شازده احتجاب|فیلمِ بهمن فرمان‌آرا|2|film,ir,prerev,pre2000,book,royal,family,sadend,serious',
 'خشت و آینه|فیلمِ ابراهیم گلستان|1|film,ir,prerev,pre2000,serious,legend,road',
@@ -28,7 +28,7 @@ module.exports = [
 'دختر لر|نخستین فیلمِ ناطقِ ایرانی|2|film,ir,prerev,pre2000,love,legend,village,action,musical',
 'همسفر|فیلمِ گوگوش و وثوقی|2|film,ir,prerev,pre2000,love,road,musical,beloved',
 'در امتداد شب|فیلمِ پرویز صیاد با گوگوش|2|film,ir,prerev,pre2000,love,musical,femlead',
-'تپلی|فیلمِ رضا میرلوحی|2|film,ir,prerev,pre2000,love,book,sadend',
+'تپلی|فیلمِ رضا میرلوحی|2|film,ir,prerev,pre2000,love,book,sadend,village',
 'مسافر|فیلمِ اولِ کیارستمی|2|film,ir,prerev,pre2000,kidlead,road,sport,village',
 
 // ---------- دهه‌ی شصت و هفتاد ----------
@@ -211,11 +211,11 @@ module.exports = [
 '۵۰ کیلو آلبالو|کمدیِ مانی حقیقی|2|film,ir,newgen,modern,comedy,love,controversial',
 
 // ---------- مذهبی و تاریخی ----------
-'محمد رسول‌الله|فیلمِ مجید مجیدی|3|film,ir,newgen,religious,ancient,kidlead,fr_mokhtar,controversial',
-'ملک سلیمان|فیلمِ شهریار بحرانی|3|film,ir,modern,religious,ancient,royal,fantasy,monster,fr_mokhtar,action',
+'محمد رسول‌الله|فیلمِ مجید مجیدی|3|film,ir,newgen,religious,ancient,kidlead,fr_mokhtar,controversial,fr_prophet',
+'ملک سلیمان|فیلمِ شهریار بحرانی|3|film,ir,modern,religious,ancient,royal,fantasy,monster,fr_mokhtar,action,fr_prophet',
 'مریم مقدس|فیلمِ شهریار بحرانی|2|film,ir,modern,religious,ancient,femlead,fr_mokhtar,serious',
-'مسیح|فیلمِ نادر طالب‌زاده|1|film,ir,modern,religious,ancient,fr_mokhtar,twist',
+'مسیح|فیلمِ نادر طالب‌زاده|1|film,ir,modern,religious,ancient,fr_mokhtar,twist,fr_prophet',
 'روز واقعه|فیلمِ شهرام اسدی|2|film,ir,d60,pre2000,religious,ancient,love,road,fr_mokhtar,sadend',
 'رستاخیز|فیلمِ احمدرضا درویش|2|film,ir,newgen,religious,ancient,warfilm,action,controversial,fr_mokhtar,sadend',
-'مست عشق|فیلمِ حسن فتحی|2|film,ir,newgen,truestory,ancient,religious,road,serious',
+'مست عشق|فیلمِ حسن فتحی|2|film,ir,newgen,truestory,ancient,religious,road,serious,fr_masnavi',
 ];

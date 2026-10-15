@@ -31,7 +31,7 @@ const G = [...games.values()];
 const N = G.length, won = G.filter(g => g.won).length;
 const avg = a => a.length ? (a.reduce((x, y) => x + y, 0) / a.length).toFixed(1) : '-';
 console.log(`دست‌ها: ${N}   بازیکنانِ یکتا: ${new Set(G.map(g => g.sid)).size}   برد عمه: ${(won / N * 100).toFixed(1)}%   میانگین سؤال: ${avg(G.map(g => g.n))}   موبایل: ${(G.filter(g => g.ua === 'm').length / N * 100).toFixed(0)}%   از لینکِ دعوت: ${G.filter(g => g.ref).length}`);
-console.log(`فامیل: ${G.filter(g => g.kin).length}   فیلم: ${G.filter(g => g.film).length}   باختِ با «یادش دادم»: ${G.filter(g => !g.won && g.taught).length} از ${G.filter(g => !g.won).length}`);
+console.log(`فامیل: ${G.filter(g => g.kin).length}   فیلم: ${G.filter(g => g.film).length}   کتاب: ${G.filter(g => g.book).length}   باختِ با «یادش دادم»: ${G.filter(g => !g.won && g.taught).length} از ${G.filter(g => !g.won).length}`);
 
 const count = (arr) => { const m = new Map(); for (const x of arr) if (x) m.set(x, (m.get(x) || 0) + 1); return [...m.entries()].sort((a, b) => b[1] - a[1]); };
 console.log('\nپرانتخاب‌ترین‌ها:'); count(G.map(g => g.truth)).slice(0, 25).forEach(([n, c]) => console.log(`  ${String(c).padStart(3)}  ${n}`));

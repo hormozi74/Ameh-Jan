@@ -9,9 +9,9 @@ module.exports = [
 // ---------- سریال‌های ایرانی ----------
 'مراد بیگ|قهرمانِ روزی روزگاری|3|m,ir,fic,series,tv,old,lead,criminal,hero,mustache,traditional,legend,serious,d60',
 'حاج یونس|پیرمردِ عاشقِ میوه‌ی ممنوعه|2|m,ir,fic,series,tv,elder,rich,love,religious,traditional,modern,serious',
-'ابن زیاد|حاکمِ کوفه در مختارنامه|3|m,ir,fic,series,tv,ancient,religious,villain,king,rich,young,beard,serious,fr_mokhtar',
-'شمر|فرمانده‌ی سنگدلِ کوفه|3|m,ir,fic,series,tv,ancient,religious,villain,soldier,sword,war,beard,horror,fr_mokhtar',
-'حرمله|تیراندازِ کوفه|2|m,ir,fic,series,tv,ancient,religious,villain,soldier,war,criminal,serious,fr_mokhtar',
+'ابن زیاد|حاکمِ کوفه در مختارنامه|3|m,ir,fic,series,tv,ancient,religious,villain,king,rich,young,beard,serious,fr_mokhtar,historic',
+'شمر|فرمانده‌ی سنگدلِ کوفه|3|m,ir,fic,series,tv,ancient,religious,villain,soldier,sword,war,beard,horror,fr_mokhtar,historic',
+'حرمله|تیراندازِ کوفه|2|m,ir,fic,series,tv,ancient,religious,villain,soldier,war,criminal,serious,fr_mokhtar,historic',
 
 // ---------- قصه‌ها و کارتون‌های ایرانی ----------
 'ماهی سیاه کوچولو|قهرمانِ قصه‌ی صمد بهرنگی|3|ir,fic,book,cartoon,kids,animal,lead,hero,legend,d60,beloved,prerev',
@@ -23,10 +23,10 @@ module.exports = [
 
 // ---------- شاهنامه ----------
 'رخش|اسبِ رستم|3|ir,fic,mythic,book,animal,epic,ancient,hero,legend,beloved,fr_shahnameh',
-'افراسیاب|پادشاهِ توران|2|m,ir,fic,mythic,book,villain,king,epic,ancient,war,fr_shahnameh,legend',
-'رودابه|مادرِ رستم|2|f,ir,fic,mythic,book,love,king,ancient,epic,legend,fr_shahnameh',
+'افراسیاب|پادشاهِ توران|3|m,ir,fic,mythic,book,villain,king,epic,ancient,war,fr_shahnameh,legend',
+'رودابه|مادرِ رستم|2|f,ir,fic,mythic,book,love,king,ancient,epic,legend,fr_shahnameh,lead',
 'منیژه|دلدارِ بیژن|2|f,ir,fic,mythic,book,love,ancient,epic,young,traditional,fr_shahnameh',
-'کیکاووس|شاهِ خودسرِ کیانی|2|m,ir,fic,mythic,book,king,ancient,epic,controversial,elder,fr_shahnameh',
+'کیکاووس|شاهِ خودسرِ کیانی|3|m,ir,fic,mythic,book,king,ancient,epic,controversial,elder,fr_shahnameh',
 
 // ---------- هری پاتر ----------
 'جینی ویزلی|خواهرِ رون|2|f,eu,fic,cinema,book,novelchar,fantasy,super,teen,love,beloved,fr_hp',
@@ -51,7 +51,7 @@ module.exports = [
 'دارث مال|سیثِ شاخ‌دار|3|m,us,fic,cinema,space,villain,super,sword,bald,horror,costume,fr_starwars',
 'کنت دوکو|لردِ سیثِ پیر|2|m,us,fic,cinema,space,villain,super,sword,elder,beard,rich,costume,fr_starwars',
 'جابا هات|خلافکارِ حلزونیِ کهکشان|3|m,us,fic,cinema,space,villain,criminal,monster,chubby,rich,fr_starwars',
-'پادمه آمیدالا|ملکه‌ی نابو|2|f,us,fic,cinema,space,king,love,costume,young,gun,fr_starwars',
+'پادمه آمیدالا|ملکه‌ی نابو|2|f,us,fic,cinema,space,king,love,costume,young,gun,fr_starwars,diedyoung',
 'میس ویندو|استادِ جدای با شمشیرِ بنفش|2|m,us,fic,cinema,space,hero,super,sword,bald,serious,fr_starwars',
 'استورم‌تروپر|سربازِ سفیدپوشِ امپراتوری|3|us,fic,cinema,space,soldier,villain,masked,costume,gun,worldfame,fr_starwars',
 
@@ -61,8 +61,8 @@ module.exports = [
 'شوری|خواهرِ نابغه‌ی بلک پنتر|2|f,us,fic,cinema,super,hero,techie,scientist,young,comedy,fr_marvel',
 'پپر پاتس|دستیار و همسرِ آیرون‌من|2|f,us,fic,cinema,blond,love,business,rich,young,beloved,fr_marvel',
 'میستریو|شعبده‌بازِ کلاه‌شیشه‌ای|2|m,us,fic,cinema,cartoon,villain,masked,costume,techie,criminal,fr_marvel',
-'دردویل|وکیلِ نابینای نقاب‌دار|2|m,us,fic,series,cinema,hero,masked,costume,lead,serious,fr_marvel',
-'پانیشر|انتقام‌گیرِ اسلحه‌به‌دست|2|m,us,fic,series,cinema,hero,soldier,gun,serious,costume,horror,fr_marvel',
+'دردویل|وکیلِ نابینای نقاب‌دار|2|m,us,fic,series,cinema,hero,masked,costume,lead,serious,fr_marvel,stream',
+'پانیشر|انتقام‌گیرِ اسلحه‌به‌دست|2|m,us,fic,series,cinema,hero,soldier,gun,serious,costume,horror,fr_marvel,stream',
 'مایلز مورالس|مرد عنکبوتیِ جوان|3|m,us,fic,cartoon,cinema,game,hero,super,teen,masked,costume,lead,newgen,fr_marvel',
 
 // ---------- دی‌سی ----------
@@ -128,7 +128,7 @@ module.exports = [
 
 // ---------- لاک‌پشت‌های نینجا ----------
 'لئوناردو (لاک‌پشت نینجا)|رهبرِ آبی‌نقابِ لاک‌پشت‌ها|3|m,us,fic,cartoon,cinema,kids,animal,masked,teen,hero,lead,sword,serious,fr_turtles',
-'رافائل (لاک‌پشت نینجا)|لاک‌پشتِ قرمزنقابِ عصبی|2|m,us,fic,cartoon,cinema,kids,animal,masked,teen,hero,sword,controversial,fr_turtles',
+'رافائل (لاک‌پشت نینجا)|لاک‌پشتِ قرمزنقابِ عصبی|2|m,us,fic,cartoon,cinema,kids,animal,masked,teen,hero,sword,fr_turtles',
 'دوناتلو|لاک‌پشتِ نابغه‌ی بنفش‌نقاب|2|m,us,fic,cartoon,cinema,kids,animal,masked,teen,hero,techie,inventor,fr_turtles',
 'میکل‌آنژ (لاک‌پشت نینجا)|لاک‌پشتِ شوخِ پیتزاخور|2|m,us,fic,cartoon,cinema,kids,animal,masked,teen,hero,comedy,beloved,fr_turtles',
 'استاد اسپلینتر|موشِ استادِ لاک‌پشت‌ها|2|m,us,fic,cartoon,cinema,kids,animal,teacher,elder,beard,mystic,fr_turtles',
@@ -147,10 +147,10 @@ module.exports = [
 'اسکلتور|شرورِ جمجمه‌صورت|2|m,us,fic,cartoon,tv,kids,villain,super,monster,fantasy,horror,retro',
 
 // ---------- انیمه‌های کلاسیکِ تلویزیون ----------
-'مارکو|پسرِ در جستجوی مادر|3|m,asia,fic,anime,cartoon,tv,kids,lead,d60,beloved,book,serious',
-'ریمی|پسرِ دوره‌گردِ بی‌خانمان|2|m,asia,fic,anime,cartoon,tv,kids,lead,d60,book,novelchar,musician',
-'پرین|دخترِ یتیمِ کارخانه|2|f,asia,fic,anime,cartoon,tv,kids,lead,d60,beloved,book,novelchar,celibate,serious',
-'حنا|دختری در مزرعه|3|f,asia,fic,anime,cartoon,tv,kids,lead,d60,beloved,book,teen',
+'مارکو|پسرِ در جستجوی مادر|3|m,fic,anime,cartoon,tv,kids,lead,d60,beloved,book,serious,eu',
+'ریمی|پسرِ دوره‌گردِ بی‌خانمان|2|m,fic,anime,cartoon,tv,kids,lead,d60,book,novelchar,musician,eu',
+'پرین|دخترِ یتیمِ کارخانه|2|f,fic,anime,cartoon,tv,kids,lead,d60,beloved,book,novelchar,celibate,serious,eu',
+'حنا|دختری در مزرعه|3|f,asia,fic,anime,cartoon,tv,kids,lead,d60,beloved,teen',
 'تام سایر|پسرِ شیطونِ کنارِ می‌سی‌سی‌پی|3|m,us,fic,book,novelchar,anime,cartoon,kids,lead,comedy,d60,legend',
 'اوشین|دخترِ سال‌های دور از خانه|3|f,asia,fic,series,tv,lead,d60,legend,beloved,serious,traditional,longrun',
 

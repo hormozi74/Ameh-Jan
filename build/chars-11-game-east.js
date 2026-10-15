@@ -6,17 +6,17 @@ module.exports = [
 'چون لی|مبارز زن چینی|3|f,asia,fic,game,fighting,playable,hero,cop,costume,worldfame,beloved',
 'آکوما|شیطانِ استریت فایتر|2|m,asia,fic,game,fighting,playable,villain,super,serious,weirdhair,horror',
 'ام بایسون|دیکتاتور استریت فایتر|2|m,asia,fic,game,fighting,villain,general,soldier,costume,super,serious',
-'بلانکا|هیولای سبز برزیلی|2|m,asia,fic,game,fighting,playable,monster,weirdhair,super,comedy,animal',
-'زانگیف|کشتی‌گیر روسی بازی|2|m,asia,fic,game,fighting,playable,wrestler,champion,beard,chubby,comedy',
-'گایل|نظامی موبور بازی|2|m,asia,fic,game,fighting,playable,soldier,blond,war,serious,gun',
+'بلانکا|هیولای سبز برزیلی|2|m,asia,fic,game,fighting,playable,monster,weirdhair,super,comedy',
+'زانگیف|کشتی‌گیر روسی بازی|2|m,asia,fic,game,fighting,playable,wrestler,champion,beard,comedy',
+'گایل|نظامی موبور بازی|2|m,asia,fic,game,fighting,playable,soldier,blond,war,serious',
 'کمی|جاسوس زن موبور|2|f,asia,fic,game,fighting,playable,soldier,blond,costume,young,serious',
 
 // ---------- تکن ----------
 'کازویا میشیما|وارث شرور تکن|2|m,asia,fic,game,fighting,playable,villain,business,serious,super,rich',
-'هیهاچی میشیما|پیرمرد مشت‌زن تکن|2|m,asia,fic,game,fighting,playable,villain,elder,business,rich,champion',
+'هیهاچی میشیما|پیرمرد مشت‌زن تکن|2|m,asia,fic,game,fighting,playable,villain,elder,business,rich,champion,mustache',
 'جین کازاما|قهرمان اصلی تکن|2|m,asia,fic,game,fighting,playable,lead,hero,young,super,serious',
 'پل فینیکس|مبارز موسیخی آمریکایی|2|m,asia,fic,game,fighting,playable,blond,comedy,champion,modern,athlete',
-'کینگ|کشتی‌گیر ماسک پلنگی|2|m,asia,fic,game,fighting,playable,masked,wrestler,animal,costume,beloved',
+'کینگ|کشتی‌گیر ماسک پلنگی|2|m,asia,fic,game,fighting,playable,masked,wrestler,costume,beloved',
 'نینا ویلیامز|قاتل زن موبور|2|f,asia,fic,game,fighting,playable,criminal,blond,gun,serious,modern',
 'یوشیمیتسو|نینجای شمشیرزن عجیب|2|asia,fic,game,fighting,playable,masked,sword,robot,horror,costume',
 'ادی گوردو|رقصنده‌ی کاپوئیرا|2|m,asia,fic,game,fighting,playable,dancer,young,costume,beloved,comedy',
@@ -24,20 +24,19 @@ module.exports = [
 'برایان فیوری|مبارز ربات‌شده|2|m,asia,fic,game,fighting,playable,robot,villain,horror,blond,serious',
 
 // ---------- مورتال کمبت ----------
-'اسکورپیون|نینجای زردپوش جهنمی|3|m,us,fic,game,fighting,playable,masked,monster,horror,worldfame,sword',
-'ساب زیرو|نینجای یخی آبی|3|m,us,fic,game,fighting,playable,masked,super,costume,worldfame,serious',
-'ریدن مورتال کمبت|خدای رعد بازی|3|m,us,fic,game,fighting,playable,super,mythic,elder,hero,costume',
+'اسکورپیون|نینجای زردپوش جهنمی|3|m,us,fic,game,fighting,playable,masked,horror,worldfame,sword,legend,costume,super',
+'ساب زیرو|نینجای یخی آبی|3|m,us,fic,game,fighting,playable,masked,super,costume,worldfame,serious,legend,hero',
 'لیو کانگ|قهرمان مورتال کمبت|2|m,us,fic,game,fighting,playable,lead,hero,champion,young,epic',
-'جانی کیج|بازیگر مبارز بازی|2|m,us,fic,game,fighting,playable,actor,comedy,glasses,rich,modern',
-'سونیا بلید|افسر زن مورتال کمبت|2|f,us,fic,game,fighting,playable,soldier,blond,gun,serious,cop',
-'شائو کان|امپراتور شرور بازی|2|m,us,fic,game,fighting,villain,king,masked,super,epic,general',
+'جانی کیج|بازیگر مبارز بازی|2|m,us,fic,game,fighting,playable,actor,comedy,glasses,rich,modern,champion',
+'سونیا بلید|افسر زن مورتال کمبت|2|f,us,fic,game,fighting,playable,soldier,blond,gun,serious,champion',
+'شائو کان|امپراتور شرور بازی|2|m,us,fic,game,fighting,villain,king,masked,super,epic,general,sword,serious',
 'گورو|غول چهاردست بازی|2|m,us,fic,game,fighting,villain,monster,super,epic,horror,champion',
-'کیتانا|شاهزاده‌خانم آبی‌پوش|2|f,us,fic,game,fighting,playable,king,costume,sword,beloved,young',
+'کیتانا|شاهزاده‌خانم آبی‌پوش|2|f,us,fic,game,fighting,playable,king,costume,sword,beloved,young,masked,super',
 'میلینا|شاهزاده‌ی دنداندار|2|f,us,fic,game,fighting,playable,villain,monster,horror,sword,masked',
 'شنگ سانگ|جادوگر شکل‌عوض‌کن|2|m,us,fic,game,fighting,villain,super,mystic,elder,serious,fantasy',
 'باراکا|هیولای تیغه‌دست|2|m,us,fic,game,fighting,playable,monster,horror,sword,bald,villain',
-'نوب سایبوت|نینجای سایه‌ی سیاه|1|m,us,fic,game,fighting,playable,masked,villain,horror,super,dead',
-'رپتایل|نینجای خزنده‌ی سبز|2|m,us,fic,game,fighting,playable,masked,monster,animal,super,weirdhair',
+'نوب سایبوت|نینجای سایه‌ی سیاه|1|m,us,fic,game,fighting,playable,masked,villain,horror,super',
+'رپتایل|نینجای خزنده‌ی سبز|2|m,us,fic,game,fighting,playable,masked,monster,animal,super',
 
 // ---------- کینگ آو فایترز و نینجا گایدن ----------
 'تری بوگارد|قهرمان کلاه‌قرمز|2|m,asia,fic,game,fighting,playable,lead,hero,blond,retro,costume',
@@ -48,7 +47,7 @@ module.exports = [
 
 // ---------- متال گیر ----------
 'سالید اسنیک|جاسوس افسانه‌ای بازی|3|m,asia,fic,game,shooter,playable,lead,soldier,gun,legend,beard,war',
-'بیگ باس|سرباز افسانه‌ای متال گیر|2|m,asia,fic,game,shooter,playable,soldier,general,gun,war,legend,masked',
+'بیگ باس|سرباز افسانه‌ای متال گیر|2|m,asia,fic,game,shooter,playable,soldier,general,gun,war,legend,beard',
 'رایدن متال گیر|سایبورگ شمشیرزن|2|m,asia,fic,game,shooter,playable,robot,sword,blond,costume,serious',
 'ریوالور اوسلات|شرور هفت‌تیرکش|2|m,asia,fic,game,shooter,villain,gun,soldier,serious,mustache,criminal',
 
@@ -69,9 +68,9 @@ module.exports = [
 'ناین اس نیر|اندروید پسر نیر|1|m,asia,fic,game,playable,robot,apoc,young,space,serious,techie',
 
 // ---------- سامورایی و شکارچی ----------
-'جین ساکای|سامورایی تسوشیما|2|m,asia,fic,game,playable,lead,sword,openworld,war,serious,epic',
-'شکارچی هیولا|قهرمان مونستر هانتر|2|asia,fic,game,playable,online,monster,sword,fantasy,masked,costume',
-'سکیرو|شینوبی یک‌دست|2|m,asia,fic,game,playable,lead,sword,serious,war,costume,epic',
+'جین ساکای|سامورایی تسوشیما|2|m,asia,fic,game,playable,lead,sword,openworld,war,serious,epic,beard',
+'شکارچی هیولا|قهرمان مونستر هانتر|2|asia,fic,game,playable,online,sword,fantasy,masked,costume',
+'سکیرو|شینوبی یک‌دست|2|m,asia,fic,game,playable,lead,sword,serious,war,costume,epic,hero,active',
 
 // ---------- نسل قدیم و رترو ----------
 'مگامن|ربات آبی کوچک|3|m,asia,fic,game,playable,robot,retro,kids,hero,gun,beloved',
@@ -98,7 +97,7 @@ module.exports = [
 'اسنورلکس|پوکمون خوابالوی تپل|3|asia,fic,game,anime,cartoon,kids,animal,chubby,comedy,beloved',
 'گنگار|پوکمون بنفش شیطون|3|asia,fic,game,anime,cartoon,kids,monster,horror,super,comedy',
 'جیگلی‌پاف|پوکمون صورتی خواننده|3|asia,fic,game,anime,cartoon,kids,singer,comedy,beloved,weirdhair',
-'سایداک|اردک زرد سردردی|2|asia,fic,game,anime,cartoon,kids,animal,comedy,beloved,blond',
+'سایداک|اردک زرد سردردی|2|asia,fic,game,anime,cartoon,kids,animal,comedy,beloved',
 'لوکاریو|پوکمون رزمی‌کار|2|asia,fic,game,anime,cartoon,kids,monster,fighting,super,hero',
 
 // ---------- یوگی‌اوه و بیبلید ----------
@@ -113,19 +112,19 @@ module.exports = [
 
 // ---------- گنشین ایمپکت و گاچا ----------
 'پایمون|همراه پرنده‌ی گنشین|3|asia,fic,game,online,mobile,fantasy,kids,comedy,beloved,young',
-'رایدن شوگون|الهه‌ی صاعقه گنشین|2|f,asia,fic,game,online,playable,fantasy,king,sword,super,serious',
+'رایدن شوگون|الهه‌ی صاعقه گنشین|2|f,asia,fic,game,online,playable,fantasy,king,sword,super,serious,weirdhair',
 'ژونگ‌لی|خدای سنگ گنشین|2|m,asia,fic,game,online,playable,fantasy,mythic,elder,rich,serious',
 'هو تائو|دختر مراسم خاکسپاری|2|f,asia,fic,game,online,playable,fantasy,comedy,teen,horror,young',
 'ونتی|خدای باد گنشین|2|m,asia,fic,game,online,playable,fantasy,musician,young,weirdhair,comedy',
 'کلی|دختربچه‌ی بمب‌انداز گنشین|2|f,asia,fic,game,online,playable,fantasy,kids,comedy,blond,childstar',
 'دیلوک|اشراف‌زاده‌ی آتشین گنشین|2|m,asia,fic,game,online,playable,fantasy,rich,business,sword,weirdhair',
-'گانیو|دختر شاخ‌دار گنشین|2|f,asia,fic,game,online,playable,fantasy,monster,animal,serious,beloved',
-'شیائو|محافظ نقاب‌دار گنشین|2|m,asia,fic,game,online,playable,fantasy,masked,serious,young,monster',
+'گانیو|دختر شاخ‌دار گنشین|2|f,asia,fic,game,online,playable,fantasy,serious,beloved,weirdhair',
+'شیائو|محافظ نقاب‌دار گنشین|2|m,asia,fic,game,online,playable,fantasy,masked,serious,young',
 'کازوها|سامورایی موسفید گنشین|2|m,asia,fic,game,online,playable,fantasy,sword,weirdhair,beloved,poet',
 
 // ---------- موبایل و آنلاینِ محبوبِ ایران ----------
 'خدمه‌ی امانگ آس|فضانورد رنگی بازی|3|us,fic,game,mobile,online,space,kids,comedy,costume,worldfame',
-'ایمپاستر|خائنِ امانگ آس|3|us,fic,game,mobile,online,space,villain,criminal,comedy,worldfame,internet',
+'ایمپاستر|خائنِ امانگ آس|3|us,fic,game,mobile,online,space,villain,criminal,comedy,worldfame,internet,masked,costume,active',
 'جیک ساب‌وی سرفرز|نوجوان فراری از پلیس|3|m,eu,fic,game,mobile,kids,teen,criminal,comedy,active,worldfame',
 'تریکی ساب‌وی سرفرز|دختر موصورتی بازی|2|f,eu,fic,game,mobile,kids,teen,weirdhair,comedy,active,young',
 'پسر تمپل ران|فراری از میمون‌ها|3|m,us,fic,game,mobile,kids,comedy,active,worldfame,young',
@@ -142,26 +141,22 @@ module.exports = [
 'کینگ پیگ|خوکِ شاهِ انگری بردز|2|m,eu,fic,game,mobile,kids,animal,villain,king,chubby,comedy',
 'لوبیای فال گایز|آدمکِ رنگیِ مسابقه|3|us,fic,game,online,mobile,kids,comedy,costume,chubby,active',
 'جونزی فورتنایت|شخصیتِ پیش‌فرضِ فورتنایت|2|m,us,fic,game,shooter,online,playable,gun,soldier,comedy,modern',
-'پیلی فورتنایت|موزِ رقصنده|2|us,fic,game,shooter,online,costume,comedy,internet,beloved,kids,dancer',
 'سربازِ پابجی|بازیکنِ نبردِ رویال|3|m,asia,fic,game,shooter,online,mobile,gun,soldier,masked,worldfame',
 'بازیکنِ فری فایر|قهرمانِ بتل رویالِ موبایل|2|m,asia,fic,game,shooter,online,mobile,gun,playable,active,young',
 'لیسلی موبایل لجندز|قاتلِ تفنگ‌دارِ بازی|1|f,asia,fic,game,online,mobile,playable,gun,criminal,young,costume',
-'مینی پکا|شوالیه‌ی صورتیِ کلش رویال|2|eu,fic,game,mobile,online,playable,sword,masked,robot,comedy,weirdhair',
+'مینی پکا|شوالیه‌ی صورتیِ کلش رویال|2|eu,fic,game,mobile,online,playable,sword,masked,robot,comedy',
 'الکترو ویزارد|جادوگرِ برقِ کلش رویال|2|m,eu,fic,game,mobile,online,playable,super,mystic,weirdhair,young',
 'کینگِ کلش رویال|پادشاهِ تپلِ بازی|2|m,eu,fic,game,mobile,online,king,chubby,beard,comedy,internet',
-'بارباریان کلش آف کلنز|جنگجوی موبورِ دهکده|3|m,eu,fic,game,mobile,online,soldier,blond,sword,mustache,war',
-'هاگ رایدر|سوارِ خوکِ کلش|2|m,eu,fic,game,mobile,online,playable,animal,beard,comedy,athlete',
-'آرچر کوئین|ملکه‌ی کمانگیرِ کلش|2|f,eu,fic,game,mobile,online,king,blond,super,serious,hero',
 'بازیکنِ هشت بال پول|بیلیاردبازِ آنلاین|2|m,us,fic,game,mobile,online,athlete,champion,modern,rich',
 'کشاورزِ هی دی|مزرعه‌دارِ موبایلی|1|m,eu,fic,game,mobile,online,kids,comedy,modern,blond,business',
 'نوبِ روبلاکس|آدمکِ مکعبیِ زرد|3|us,fic,game,online,mobile,kids,internet,comedy,costume,newgen',
 'مکعبِ جیومتری دش|مکعبِ پرنده‌ی بازی|2|us,fic,game,mobile,kids,internet,comedy,active,modern,playable',
 'فلپی برد|پرنده‌ی زردِ اعصاب‌خردکن|3|asia,fic,game,mobile,kids,animal,internet,comedy,worldfame',
-'دودل جامپ|موجودِ سبزِ جهنده|2|eu,fic,game,mobile,kids,monster,comedy,internet,retro,playable',
+'دودل جامپ|موجودِ سبزِ جهنده|2|eu,fic,game,mobile,kids,monster,comedy,internet,playable',
 'راننده‌ی هیل کلایم|راننده‌ی ماشینِ کوهستان|2|m,eu,fic,game,mobile,kids,comedy,athlete,masked,active',
 'راننده‌ی آسفالت|مسابقه‌دهنده‌ی سرعتی|1|m,eu,fic,game,mobile,online,athlete,champion,modern,rich,playable',
 'شدو فایت|سایه‌ی شمشیرزنِ موبایل|2|eu,fic,game,mobile,fighting,sword,masked,playable,online,serious',
-'استیکمن|آدمکِ خطیِ بازی‌ها|2|us,fic,game,mobile,internet,kids,comedy,fighting,online,retro',
+'استیکمن|آدمکِ خطیِ بازی‌ها|2|us,fic,game,mobile,internet,kids,comedy,fighting,online',
 
 // ---------- مسابقه‌ای و کنسولی ----------
 'کوکو باندیکوت|خواهرِ کراش باندیکوت|1|f,us,fic,game,playable,animal,kids,glasses,comedy,techie',
@@ -210,14 +205,14 @@ module.exports = [
 'موزان|پادشاهِ دیوها|2|m,asia,fic,anime,cartoon,game,villain,monster,horror,king,rich',
 
 // ---------- بلیچ و کیمیاگر تمام‌فلزی ----------
-'ایچیگو|شینیگامیِ موناری|3|m,asia,fic,anime,cartoon,game,sword,super,teen,blond,lead',
+'ایچیگو|شینیگامیِ موناری|3|m,asia,fic,anime,cartoon,game,sword,super,teen,lead,weirdhair',
 'روکیا|شینیگامیِ دختر|2|f,asia,fic,anime,cartoon,game,sword,super,young,serious,beloved',
 'ادوارد الریک|کیمیاگرِ فلزی|3|m,asia,fic,anime,cartoon,game,blond,super,teen,lead,mystic',
 'آلفونس الریک|روحِ درونِ زره|2|m,asia,fic,anime,cartoon,game,robot,super,young,masked,beloved',
 
 // ---------- وان پانچ‌من و هانتر ----------
 'سایتاما|مردِ یک‌مشتی|3|m,asia,fic,anime,cartoon,game,bald,hero,comedy,super,lead',
-'جنوس|سایبورگِ شاگردِ سایتاما|2|m,asia,fic,anime,cartoon,game,robot,super,young,serious,hero',
+'جنوس|سایبورگِ شاگردِ سایتاما|2|m,asia,fic,anime,cartoon,game,robot,super,young,serious,hero,blond',
 'گون|پسرِ شکارچی|2|m,asia,fic,anime,cartoon,game,lead,teen,super,weirdhair,epic',
 'کیلوا|پسرِ خانواده‌ی قاتلان|2|m,asia,fic,anime,cartoon,game,teen,criminal,super,weirdhair,beloved',
 'هیسوکا|دلقکِ خطرناکِ هانتر|2|m,asia,fic,anime,cartoon,game,villain,criminal,horror,weirdhair,costume',

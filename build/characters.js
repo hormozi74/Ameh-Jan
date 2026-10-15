@@ -174,7 +174,10 @@ for (const f of ['./extra-hot-people.js', './extra-hot-fiction.js', './extra-pai
                  './extra-22-people-ir.js', './extra-23-fiction.js', './extra-24-people-world.js', './extra-25-toon-film-game.js',
                  './extra-26-books-ir-classic.js', './extra-27-books-ir-modern.js', './extra-28-books-world-classic.js',
                  './extra-29-books-world-modern.js', './extra-30-books-epic-fantasy.js', './extra-31-books-ya-fantasy.js',
-                 './extra-32-books-bestsellers.js', './extra-33-books-kids.js']) {
+                 './extra-32-books-bestsellers.js', './extra-33-books-kids.js',
+                 // ۱۶ اکتبر ۲۰۲۶ — بازبینیِ جفت‌ها و رده ۲ (هر گروه برای ردیف‌های فایل‌های گروه‌های دیگر)
+                 './extra-review-R1.js', './extra-review-R2.js', './extra-review-R3.js', './extra-review-R4.js',
+                 './extra-review-R5.js', './extra-review-R6.js', './extra-review-R7.js']) {
   try { EXTRA_BLOCKS.push(require(f)); }
   catch (e) { if (!/Cannot find module/.test(e.message)) throw e; }
 }

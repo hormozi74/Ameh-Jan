@@ -114,7 +114,6 @@ module.exports = [
 'گریومایند|مغزِ غول‌پیکرِ فلاد|1|fic,us,game,book,novelchar,monster,villain,horror,space,super,fr_halo',
 'آرتانیس|رهبرِ جوانِ پروتاس‌ها|1|m,fic,us,game,online,space,king,hero,sword,playable,super',
 'لیلیت دیابلو|مادرِ پناهگاه در دیابلو ۴|1|f,fic,us,game,online,fantasy,villain,monster,super,horror,mythic,king',
-'هرسی هوروس|مجموعه‌ی رمانِ وارهمر ۴۰ هزار|1|bookw,eu,novel,bookseries,modern,scifi,space,warfilm,game,epic,royal',
 'امپراتور بشریت|خدا‌امپراتورِ وارهمر ۴۰ هزار|2|m,fic,eu,book,novelchar,game,king,super,space,legend,internet,costume,war',
 'هوروس لوپرکال|پسرِ خائنِ امپراتور در وارهمر|1|m,fic,eu,book,novelchar,game,villain,general,war,space,super,costume',
 
@@ -262,7 +261,7 @@ module.exports = [
 'سزث|قاتلِ سفیدپوشِ نور طوفان|1|m,fic,us,book,novelchar,fantasy,criminal,sword,bald,costume,villain,super',
 'سیل|اسپرنِ بادیِ همراهِ کالادین|1|f,fic,us,book,novelchar,fantasy,super,comedy,beloved,mythic',
 'مه‌زاد|سه‌گانه‌ی برندون سندرسون|2|bookw,us,novel,bookseries,modern,fantasy,super,femlead,crime,royal,twist',
-'وین مه‌زاد|دخترِ خیابانیِ مه‌زاد|1|f,fic,us,book,novelchar,fantasy,lead,hero,super,teen,criminal,celibate',
+'وین مه‌زاد|دخترِ خیابانیِ مه‌زاد|1|f,fic,us,book,novelchar,fantasy,lead,hero,super,teen,criminal,sword',
 'کلسیر|دزدِ بازمانده‌ی مه‌زاد|1|m,fic,us,book,novelchar,fantasy,criminal,super,hero,controversial,comedy',
 'الند ونچر|اشراف‌زاده‌ی کتاب‌خوانِ مه‌زاد|1|m,fic,us,book,novelchar,fantasy,king,young,love,rich',
 'فرمانروای اعظم|خدا‌امپراتورِ مه‌زاد|1|m,fic,us,book,novelchar,fantasy,villain,king,super,elder,costume',

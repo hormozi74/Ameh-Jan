@@ -64,7 +64,7 @@ rows.forEach((line, i) => {
     errs.push(`${name}: کتاب باید نوعش را بگوید (novel/poetry/shortstories/play/nonfic/selfhelp/comicbook/kidsbook)`);
   if (!film && !book && !T.has('fic') && !T.has('kin') && !T.has('alive') && !T.has('dead') && !T.has('mythic'))
     warn.push(`${name}: آدمِ واقعی بدونِ alive/dead`);
-  const key = norm(name) + (film ? '#film' : book ? '#book' : '');
+  const key = norm(name) + (T.has('kin') ? '#kin' : film ? '#film' : book ? '#book' : '');
   if (seen.has(key)) errs.push(`تکراری در همین فایل: ${name}`);
   seen.set(key, 1);
   if (others.has(key)) errs.push(`تکراری با ${others.get(key)}: ${name}`);

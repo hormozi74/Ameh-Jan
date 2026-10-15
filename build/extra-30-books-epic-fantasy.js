@@ -30,8 +30,6 @@ module.exports = {
   'سیری':'book',
   'تریس مریگولد':'book,series,stream',
   'دندلاین':'book,series,stream',
-  'جرالت ریویایی':'book,novelchar,game,openworld,playable',
-  'ینفر':'book,novelchar,game,openworld',
 
   // ---------- نغمه‌ی یخ و آتش: شخصیت‌های سریالی که از کتاب آمده‌اند ----------
   'جان اسنو':'book,novelchar,fr_got',

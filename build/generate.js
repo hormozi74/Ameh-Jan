@@ -14,6 +14,12 @@ const OUT = path.join(__dirname, 'data-block.js');
    ۱۱ اکتبر ۲۰۲۶: در real-sim (انتخابِ معروف‌محور) +۷ درصد بُرد؛ در انتخابِ یکنواخت
    رده‌۱‌ها ۲ تا ۶ درصد می‌بازند — معامله‌ی آگاهانه. */
 const TIER_PRIOR = { 4: 6.0, 3: 2.2, 2: 0.6, 1: 0.12 };
+
+/* جواب‌های بازیکن‌های واقعی (← learn-from-logs.js). احتمالِ برچسبی وزنِ K «بازیِ خیالی»
+   دارد؛ هر بازیِ واقعی یکی اضافه می‌کند. با کمتر از LEARN_MIN جواب دست نمی‌خورد. */
+let LEARNED = {};
+try { LEARNED = require('./learned-answers.js'); } catch (e) { if (!/Cannot find module/.test(e.message)) throw e; }
+const LEARN_K = 6, LEARN_MIN = 2;
 const clamp = p => Math.max(0.03, Math.min(0.97, p));
 
 /* ---------- نرمال‌سازی فارسی (همان تابعی که در بازی هم هست) ---------- */
@@ -115,7 +121,8 @@ if (process.env.EPONYMS) console.log('  ' + eponymNames.join(' | '));
 console.log(`هم‌نام‌ها: ${merged} ادغام شد، ${split} به‌عنوانِ موجودیتِ متفاوت نگه داشته شد`);
 if (mergedNames.length) console.log('  ادغام‌شده: ' + mergedNames.join(' | '));
 
-rows.forEach(({ i, name, hint, tier, tags, twin }) => {
+let learnedCells = 0;
+rows.forEach(({ i, name, hint, tier, tags, twin, key }) => {
   if (tags.size < 4) problems.push(`${name}: فقط ${tags.size} برچسب`);
   const id = 'c' + i;
   const a = {};
@@ -125,6 +132,8 @@ rows.forEach(({ i, name, hint, tier, tags, twin }) => {
   for (const q of QUESTIONS) {
     let v = probOf(q, tags);
     if (twin && EPONYM_CLUSTERS.has(q.cluster)) v = EPONYM_W * probOf(q, twin.tags) + (1 - EPONYM_W) * v;
+    const L = LEARNED[key]?.[q.id];
+    if (L && L[1] >= LEARN_MIN) { v = (LEARN_K * v + L[0]) / (LEARN_K + L[1]); learnedCells++; }
     a[q.id] = +clamp(v).toFixed(3);
   }
 
@@ -132,6 +141,8 @@ rows.forEach(({ i, name, hint, tier, tags, twin }) => {
   // است نه یک سلبریتی، تا اسمِ واقعیِ ذخیره‌شده را جای نسبت نشان دهد.
   characters.push({ id, name, hint, prior: TIER_PRIOR[tier], a, kin: tags.has('kin'), film: tags.has('film'), book: tags.has('bookw'), _tags: [...tags].join(','), _tier: tier });
 });
+
+if (Object.keys(LEARNED).length) console.log(`یادگیری از بازی‌های واقعی: ${learnedCells} خانه از ${Object.keys(LEARNED).length} ردیف`);
 
 /* ---------- اعتبارسنجی ---------- */
 console.log(`شخصیت‌ها: ${characters.length}   سؤال‌ها: ${QUESTIONS.length}   خانه‌ها: ${characters.length * QUESTIONS.length}`);
