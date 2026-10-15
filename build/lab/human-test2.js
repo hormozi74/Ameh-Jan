@@ -22,8 +22,10 @@ const PROFILES = (process.env.PROFILES || nodePath.join(__dirname, 'profiles.jso
 const idx = new Map(CHARACTERS.map((c, i) => [c.id, i]));
 let wins = 0, tot = 0;
 for (const [truthName, letterName, A] of PROFILES) {
-  const [tn, th] = truthName.split('|');
-  const ti = CHARACTERS.findIndex(c => c.name === tn && !c.f && (!th || c.hint.includes(th)));
+  /* «نام#book» = بازیکن به خودِ کتاب فکر می‌کند، «نام#film» به فیلم (۱۵ اکتبر ۲۰۲۶) */
+  const [tn0, th] = truthName.split('|');
+  const [tn, kind] = tn0.split('#');
+  const ti = CHARACTERS.findIndex(c => c.name === tn && (kind === 'book' ? c.b : kind === 'film' ? c.f : !c.f && !c.b) && (!th || c.hint.includes(th)));
   if (ti < 0) { console.log('!! نیست:', truthName); continue; }
   const truth = CHARACTERS[ti];
   const ans = q => {
@@ -55,7 +57,8 @@ for (const [truthName, letterName, A] of PROFILES) {
     if (w === null) unk.add(q.id);
     log = ENG.update(log, q, w); asked.push(q.id); cc[q.cluster] = (cc[q.cluster] || 0) + 1; n++;
   }
-  const won = guesses.some(g => g.startsWith(truth.name + '(') && /رتبه‌ی حقیقت 1\)/.test(g));
+  /* کتابِ هم‌نام با شخصیت («هری پاتر»): بازیکن هر کدام را عمه بگوید قبول می‌کند */
+  const won = guesses.some(g => g.startsWith(truth.name + '(') && (/رتبه‌ی حقیقت 1\)/.test(g) || kind === 'book'));
   tot++; if (won) wins++;
   if (process.env.QUIET) {} else console.log(`\n### ${truthName} — ${won ? 'بُرد' : 'باخت'} با ${n} سؤال\n  حدس‌ها: ${guesses.join(' → ')}\n  مسیر: ${lines.join(' ')}`);
 }

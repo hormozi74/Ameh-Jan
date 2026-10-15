@@ -306,6 +306,10 @@ Object.assign(KIN_OVERRIDE, FIC_KIN_OVERRIDE);
 const { FILM_QUESTIONS, FILM_OVERRIDE } = require('./film-questions.js');
 QUESTIONS.push(...FILM_QUESTIONS);
 
+/* کتاب — جواب می‌تواند خودِ کتاب باشد (۱۵ اکتبر ۲۰۲۶). ← book-questions.js */
+const { BOOK_QUESTIONS, BOOK_OVERRIDE, EPONYM_CLUSTERS, EPONYM_W } = require('./book-questions.js');
+QUESTIONS.push(...BOOK_QUESTIONS);
+
 /* سؤال‌های داغ — دنیا و گروهِ کوچک؛ عمه فقط وقتی بو برده می‌پرسدشان. ← hot-questions.js */
 const { HOT_QUESTIONS } = require('./hot-questions.js');
 QUESTIONS.push(...HOT_QUESTIONS);
@@ -314,4 +318,4 @@ QUESTIONS.push(...HOT_QUESTIONS);
 const { LETTER_QUESTIONS } = require('./letter-questions.js');
 QUESTIONS.push(...LETTER_QUESTIONS);
 
-module.exports = { QUESTIONS, KIN_OVERRIDE, KIN_CLUSTER_DEFAULT, FILM_OVERRIDE };
+module.exports = { QUESTIONS, KIN_OVERRIDE, KIN_CLUSTER_DEFAULT, FILM_OVERRIDE, BOOK_OVERRIDE, EPONYM_CLUSTERS, EPONYM_W };

@@ -26,7 +26,7 @@ module.exports = [
 'پرندگان|فیلمِ ترسناکِ هیچکاک|2|film,us,horror,animals,village,femlead,pre2000,prerev,legend',
 '۲۰۰۱: یک ادیسه‌ی فضایی|علمی‌تخیلیِ کوبریک|2|film,us,scifi,space,robot,mindbend,book,serious,pre2000,prerev,legend',
 'پرتقال کوکی|فیلمِ جنجالیِ کوبریک|1|film,eu,crime,scifi,prison,book,controversial,serious,pre2000,prerev,legend',
-'درخشش|وحشتِ هتلِ کوبریک|3|film,us,horror,family,book,serious,pre2000,legend,worldfame',
+'درخشش|وحشتِ هتلِ کوبریک|3|film,us,horror,family,book,serious,pre2000,legend,worldfame,fr_king',
 
 // ---------- دهه‌ی هفتاد و هشتاد ----------
 'پدرخوانده|حماسه‌ی مافیاییِ کاپولا|4|film,us,crime,family,fr_godfather,sequel,book,serious,pre2000,prerev,legend,award,fr_oscar,worldfame',
@@ -64,8 +64,8 @@ module.exports = [
 
 // ---------- دهه‌ی نود ----------
 'تنها در خانه|پسربچه و دو دزدِ کریسمس|4|film,us,comedy,kidlead,kids,family,crime,sequel,beloved,pre2000,d60,legend,worldfame',
-'رستگاری در شاوشنک|درامِ زندانِ دهه‌ی نود|3|film,us,prison,crime,book,twist,serious,beloved,pre2000,d60,legend,worldfame',
-'مسیر سبز|زندانِ اعدامیانِ استیون کینگ|3|film,us,prison,sadend,book,fantasy,serious,beloved,pre2000,d60,worldfame',
+'رستگاری در شاوشنک|درامِ زندانِ دهه‌ی نود|3|film,us,prison,crime,book,twist,serious,beloved,pre2000,d60,legend,worldfame,fr_king',
+'مسیر سبز|زندانِ اعدامیانِ استیون کینگ|3|film,us,prison,sadend,book,fantasy,serious,beloved,pre2000,d60,worldfame,fr_king',
 'فارست گامپ|زندگیِ مردِ ساده‌دل|3|film,us,love,warfilm,sadend,book,road,beloved,worldfame,pre2000,d60,award,fr_oscar',
 'سکوت بره‌ها|فیلمِ دکتر لکتر آدم‌خوار|3|film,us,crime,horror,cop,femlead,book,sequel,serious,pre2000,d60,award,fr_oscar',
 'پالپ فیکشن|فیلمِ تارانتینو|3|film,us,crime,comedy,controversial,worldfame,pre2000,d60,legend,award',
@@ -94,7 +94,7 @@ module.exports = [
 'روز موش خرما|فیلمِ تکرارِ یک روز|1|film,us,comedy,mindbend,love,village,pre2000,d60,legend',
 'خانم داوت‌فایر|رابین ویلیامزِ زن‌پوش|2|film,us,comedy,family,masked,beloved,pre2000,d60',
 'جومانجی|فیلمِ بازیِ جادوییِ جنگل|2|film,us,fantasy,animals,kidlead,kids,comedy,sequel,family,pre2000,d60',
-'ماتیلدا|فیلمِ دخترِ نابغه‌ی رولد دال|1|film,us,kidlead,femlead,school,fantasy,family,book,kids,comedy,pre2000,d60',
+'ماتیلدا|فیلمِ دخترِ نابغه‌ی رولد دال|1|film,us,kidlead,femlead,school,fantasy,family,book,kids,comedy,pre2000,d60,fr_dahl',
 'بیب|فیلمِ خوکِ کوچکِ گله‌بان|1|film,us,animals,village,kids,comedy,sequel,beloved,pre2000,d60,award',
 'آناکوندا|فیلمِ مارِ غول‌پیکرِ آمازون|1|film,us,monster,animals,horror,action,road,sequel,pre2000,d60',
 'جیغ|فیلمِ قاتلِ نقاب‌دار|2|film,us,horror,masked,sword,school,femlead,twist,comedy,sequel,pre2000,d60',
@@ -181,16 +181,16 @@ module.exports = [
 'من افسانه هستم|فیلمِ آخرین انسانِ نیویورک|2|film,us,apoc,horror,monster,scifi,sadend,book,action',
 'جنگ جهانی زد|فیلمِ زامبی‌های براد پیت|1|film,us,apoc,monster,action,horror,road,family,book',
 'گزارش اقلیت|فیلمِ پلیسِ پیش‌جنایی|1|film,us,scifi,cop,mindbend,crime,book,action,twist',
-'بازی‌های گرسنگی|فیلمِ مسابقه‌ی مرگِ کتنیس|2|film,us,femlead,kidlead,scifi,apoc,action,sequel,book,love',
-'گرگ و میش|عاشقانه‌ی خون‌آشامیِ نوجوانان|2|film,us,love,monster,femlead,kidlead,school,sequel,book,fantasy,controversial',
-'تلماسه|حماسه‌ی بیابانیِ ویلنوو|2|film,us,scifi,space,royal,book,sequel,newgen,epic,warfilm,award',
+'بازی‌های گرسنگی|فیلمِ مسابقه‌ی مرگِ کتنیس|2|film,us,femlead,kidlead,scifi,apoc,action,sequel,book,love,fr_hunger',
+'گرگ و میش|عاشقانه‌ی خون‌آشامیِ نوجوانان|2|film,us,love,monster,femlead,kidlead,school,sequel,book,fantasy,controversial,fr_twilight',
+'تلماسه|حماسه‌ی بیابانیِ ویلنوو|2|film,us,scifi,space,royal,book,sequel,newgen,epic,warfilm,award,fr_dune',
 'ورود|فیلمِ زبان‌شناس و آدم‌فضایی‌ها|1|film,us,scifi,femlead,mindbend,twist,sadend,book,serious',
 'همه‌چیز همه‌جا به‌یکباره|کمدیِ چندجهانی|1|film,us,mindbend,comedy,femlead,family,action,award,fr_oscar,newgen',
 'ارباب حلقه‌ها|حماسه‌ی حلقه‌ی قدرت|4|film,us,fantasy,fr_lotr,sword,epic,warfilm,monster,road,royal,book,sequel,award,fr_oscar,worldfame,legend',
 'هابیت|فیلمِ ماجرای بیلبو و اژدها|2|film,us,fantasy,fr_lotr,sword,monster,road,book,sequel,action',
 'هری پاتر|فیلم‌های پسرِ جادوگرِ هاگوارتز|4|film,eu,fantasy,fr_hp,school,kidlead,book,sequel,monster,kids,worldfame,beloved,legend',
 'جانوران شگفت‌انگیز|فیلمِ نیوت اسکمندر|1|film,eu,fantasy,fr_hp,animals,monster,sequel,book,action',
-'نارنیا|فیلمِ شیر و کمدِ جادویی|2|film,us,fr_disney,fantasy,kidlead,kids,book,sequel,animals,sword,royal,warfilm',
+'نارنیا|فیلمِ شیر و کمدِ جادویی|2|film,us,fr_disney,fantasy,kidlead,kids,book,sequel,animals,sword,royal,warfilm,fr_narnia',
 'چارلی و کارخانه‌ی شکلات‌سازی|فیلمِ ویلی وانکای تیم برتون|2|film,us,fantasy,kidlead,kids,family,comedy,book,musical',
 'ادوارد دست‌قیچی|فیلمِ تیم برتون|1|film,us,fantasy,love,sadend,sword,village,pre2000,d60',
 'شب در موزه|فیلمِ نگهبانِ موزه‌ی جادویی|2|film,us,comedy,fantasy,kids,family,sequel,ancient,beloved',
@@ -199,7 +199,7 @@ module.exports = [
 
 // ---------- ترسناک ----------
 'احضار|فیلمِ پرونده‌ی خانواده‌ی وارن|2|film,us,horror,monster,truestory,religious,family,sequel',
-'آن|فیلمِ دلقکِ ترسناکِ استیون کینگ|2|film,us,horror,monster,kidlead,book,sequel,village',
+'آن|فیلمِ دلقکِ ترسناکِ استیون کینگ|2|film,us,horror,monster,kidlead,book,sequel,village,fr_king',
 'حلقه|فیلمِ نوارِ ویدیوییِ نفرین‌شده|1|film,asia,horror,monster,femlead,sequel,twist,pre2000',
 'مکانی ساکت|فیلمِ هیولاهای حساس به صدا|1|film,us,horror,monster,apoc,family,sequel,scifi,village',
 'رزیدنت اویل|فیلمِ زامبی‌های آمبرلا|1|film,eu,fr_re,horror,monster,apoc,action,femlead,sequel,scifi',
@@ -228,7 +228,7 @@ module.exports = [
 'لالا لند|موزیکالِ عاشقانه‌ی لس‌آنجلس|2|film,us,musical,love,femlead,sadend,award,beloved,comedy',
 'شیکاگو|موزیکالِ زندانِ زنان|1|film,us,musical,crime,prison,femlead,award,fr_oscar,controversial',
 'ویپلش|فیلمِ درامر و معلمِ سخت‌گیر|1|film,us,musical,school,award,serious,beloved',
-'بینوایان|موزیکالِ هیو جکمن|2|film,eu,musical,book,sadend,prison,warfilm,love,award',
+'بینوایان|موزیکالِ هیو جکمن|2|film,eu,musical,book,sadend,prison,warfilm,love,award,fr_hugo',
 
 // ---------- عاشقانه و درام ----------
 'آملی|فیلمِ دخترِ خیال‌پردازِ پاریسی|1|film,eu,love,femlead,comedy,beloved,musical',

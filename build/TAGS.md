@@ -165,3 +165,16 @@
 - آدم‌های واقعی: `fr_persepolis` `fr_esteghlal` `fr_teammelli` (هر ورزشی) `fr_realmadrid` `fr_barca` `fr_england` `fr_basket` `fr_volley` `fr_fight` (بوکس/UFC/رزمی) `fr_race` `fr_tennis` `fr_olympic` (طلای المپیک) `fr_la` (خواننده‌ی ایرانیِ خارج‌نشین) `fr_rap` `fr_rock` `fr_kpop` `fr_band` `fr_standup` `fr_youtube` `fr_nobel` `fr_oscar` `fr_iranking` (شاهان ایران) `fr_prophet` `fr_classicpoet` `fr_dubbing`
 
 برچسبِ `fr_` که در این فهرست نیست ننویس.
+
+---
+
+## ۱۲) کتاب به‌عنوانِ جواب (۱۵ اکتبر ۲۰۲۶)
+
+وقتی جوابِ بازی **خودِ کتاب** است (نه نویسنده و نه شخصیت): برچسبِ `bookw` — و **`fic` `m` `f` `alive` `dead` `novelchar` `lead` `villain` `hero` را نگذار.** الگو همان فیلم است (بخشِ ۱۰)؛ سؤال‌ها در `book-questions.js`.
+
+- خاستگاه + **نوع** (حداقل یکی): `novel` رمان · `poetry` شعر/دیوان/منظومه · `shortstories` داستانِ کوتاه/حکایت · `play` نمایشنامه · `nonfic` غیرداستانی · `selfhelp` موفقیت/خودیاری · `comicbook` کمیک/مانگا/مصوّر · `kidsbook` کودک/نوجوان.
+- `pre2000` (پیش از ۲۰۰۰) · `classic` (بیش از صد سال) · `bookseries` (چندجلدی) · `schoolread` (تکه‌ای در کتابِ درسیِ ایران) · `femauthor` (نویسنده/شاعرِ زن).
+- برچسب‌های «اثر» از بخشِ ۱۰ (`sadend` `crime` `truestory` `femlead` `kidlead` `animals` `royal` …) برای کتاب هم پرسیده می‌شوند.
+- اقتباس: `cinema` `series` `cartoon` `anime` `game` `stream` روی کتاب یعنی «ازش ساختن».
+- **هم‌نام:** کتابی که عنوانش دقیقاً اسمِ یک شخصیت است («هری پاتر»، «دراکولا»، «شازده کوچولو») را با همان املای ردیفِ شخصیت بنویس؛ generate.js آن دو را وصل می‌کند (سؤال‌های آدم‌محورِ کتاب به سمتِ شخصیت می‌روند و شخصیت برچسبِ خودکارِ `eponym` می‌گیرد — دستی ننویسش).
+- برچسب‌های داغِ تازه‌ی کتاب: `fr_kelileh` `fr_nezami` `fr_masnavi` `fr_homer` `fr_shakespeare` `fr_dickens` `fr_hugo` `fr_dumas` `fr_verne` `fr_rusnovel` `fr_latam` `fr_orwell` `fr_agatha` `fr_king` `fr_dahl` `fr_narnia` `fr_warcraft` `fr_dune` `fr_percy` `fr_hunger` `fr_twilight` — روی کتاب، شخصیت‌ها و نویسنده هر سه.

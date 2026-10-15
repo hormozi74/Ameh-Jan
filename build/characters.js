@@ -27,6 +27,15 @@ const files = [
   './chars-23-fiction.js',
   './chars-24-people-world.js',
   './chars-25-toon-film-game.js',
+  // ۱۵ اکتبر ۲۰۲۶ — کتاب‌ها، شخصیت‌های کتاب و نویسنده‌ها (ردیفِ `bookw` = خودِ کتاب)
+  './chars-26-books-ir-classic.js',
+  './chars-27-books-ir-modern.js',
+  './chars-28-books-world-classic.js',
+  './chars-29-books-world-modern.js',
+  './chars-30-books-epic-fantasy.js',
+  './chars-31-books-ya-fantasy.js',
+  './chars-32-books-bestsellers.js',
+  './chars-33-books-kids.js',
 ];
 
 /* برچسب‌های تکمیلی — از روی گزارش «جفت‌های تفکیک‌ناپذیر» نوشته شده‌اند.
@@ -162,7 +171,10 @@ EXTRA_BLOCKS.push({
 
 /* برچسب‌های داغ (fr_*) برای ردیف‌های قدیمی — ← hot-questions.js */
 for (const f of ['./extra-hot-people.js', './extra-hot-fiction.js', './extra-pairs.js',
-                 './extra-22-people-ir.js', './extra-23-fiction.js', './extra-24-people-world.js', './extra-25-toon-film-game.js']) {
+                 './extra-22-people-ir.js', './extra-23-fiction.js', './extra-24-people-world.js', './extra-25-toon-film-game.js',
+                 './extra-26-books-ir-classic.js', './extra-27-books-ir-modern.js', './extra-28-books-world-classic.js',
+                 './extra-29-books-world-modern.js', './extra-30-books-epic-fantasy.js', './extra-31-books-ya-fantasy.js',
+                 './extra-32-books-bestsellers.js', './extra-33-books-kids.js']) {
   try { EXTRA_BLOCKS.push(require(f)); }
   catch (e) { if (!/Cannot find module/.test(e.message)) throw e; }
 }
@@ -308,8 +320,8 @@ CHARS = CHARS.map(line => {
   if (!add) return line;
   // ردیف ناقص را دست‌نخورده رد می‌کنیم؛ generate.js خودش گزارشش می‌دهد
   if (p.length !== 4) { console.log(`  (رد شد، ستون کم دارد) ${p[0].trim()}`); return line; }
-  // EXTRA مالِ شخصیت‌هاست؛ فیلمِ هم‌نام («شرک») نباید lead و monster بگیرد
-  if (p[3].split(',').map(s => s.trim()).includes('film')) return line;
+  // EXTRA مالِ شخصیت‌هاست؛ فیلم یا کتابِ هم‌نام («شرک»، «دراکولا») نباید lead و monster بگیرد
+  if (p[3].split(',').map(s => s.trim()).some(t => t === 'film' || t === 'bookw')) return line;
   unused.delete(name);
   patched++;
   const have = new Set(p[3].split(',').map(s => s.trim()));

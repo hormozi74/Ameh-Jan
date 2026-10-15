@@ -4,7 +4,7 @@
    ============================================================ */
 const fs = require('fs');
 const path = require('path');
-const { QUESTIONS, KIN_OVERRIDE, KIN_CLUSTER_DEFAULT, FILM_OVERRIDE } = require('./questions.js');
+const { QUESTIONS, KIN_OVERRIDE, KIN_CLUSTER_DEFAULT, FILM_OVERRIDE, BOOK_OVERRIDE, EPONYM_CLUSTERS, EPONYM_W } = require('./questions.js');
 const { CHARS } = require('./characters.js');
 
 const OUT = path.join(__dirname, 'data-block.js');
@@ -43,20 +43,17 @@ const problems = [];
      می‌مانند. قبلاً دومی حذف می‌شد و بازیکنی که به آن فکر می‌کرد هرگز نمی‌بُرد.
    معیار: فاصله‌ی بردارِ احتمال‌ها. هم‌موجودیت‌ها زیر ۲.۵ بودند (هاگ رایدر ۲.۴)، متفاوت‌ها بالای ۲.۸. */
 const SAME_ENTITY = 2.6;
+/* احتمالِ «بله»ی یک سؤال برای یک ردیف — فامیل، فیلم و کتاب هر کدام اوورایدِ خودشان را دارند */
+function probOf(q, tags) {
+  const OV = tags.has('kin') ? KIN_OVERRIDE : tags.has('film') ? FILM_OVERRIDE : tags.has('bookw') ? BOOK_OVERRIDE : null;
+  if (!OV) return q.rule(tags);
+  const ov = OV[q.id];
+  if (ov !== undefined) return typeof ov === 'function' ? ov(tags) : ov;
+  return tags.has('kin') ? (KIN_CLUSTER_DEFAULT[q.cluster] ?? q.rule(tags)) : q.rule(tags);
+}
 function rowProbs(tags) {
   const a = {};
-  for (const q of QUESTIONS) {
-    if (q.cluster === 'letter') continue;
-    let v;
-    if (tags.has('kin')) {
-      const ov = KIN_OVERRIDE[q.id];
-      v = ov !== undefined ? (typeof ov === 'function' ? ov(tags) : ov) : (KIN_CLUSTER_DEFAULT[q.cluster] ?? q.rule(tags));
-    } else if (tags.has('film')) {
-      const ov = FILM_OVERRIDE[q.id];
-      v = ov !== undefined ? (typeof ov === 'function' ? ov(tags) : ov) : q.rule(tags);
-    } else v = q.rule(tags);
-    a[q.id] = v;
-  }
+  for (const q of QUESTIONS) if (q.cluster !== 'letter') a[q.id] = probOf(q, tags);
   return a;
 }
 function probDist(a, b) { let d = 0; for (const k in a) { const t = a[k] - b[k]; d += t * t; } return Math.sqrt(d); }
@@ -70,7 +67,7 @@ CHARS.forEach((line, i) => {
   if (!TIER_PRIOR[tier]) { problems.push(`${name}: رده‌ی نامعتبر ${tierRaw}`); return; }
   const tags = new Set(tagStr.split(',').map(s => s.trim()).filter(Boolean));
   tags.__tier = tier; tags.__name = name;
-  parsed.push({ i, name, hint, tier, tags, key: normalizeFa(name) + (tags.has('kin') ? ' #kin' : tags.has('film') ? ' #film' : '') });
+  parsed.push({ i, name, hint, tier, tags, key: normalizeFa(name) + (tags.has('kin') ? ' #kin' : tags.has('film') ? ' #film' : tags.has('bookw') ? ' #book' : '') });
 });
 const byKey = new Map();
 for (const r of parsed) (byKey.get(r.key) || byKey.set(r.key, []).get(r.key)).push(r);
@@ -90,10 +87,35 @@ for (const group of byKey.values()) {
   rows.push(...kept);
 }
 rows.sort((a, b) => a.i - b.i);
+
+/* ---------- کتابِ هم‌نام با یک شخصیت («هری پاتر»، «شازده کوچولو»، «دراکولا») ----------
+   بازیکنی که به این اسم فکر می‌کند خودش هم نمی‌داند کتاب است یا شخصیت، و هر کدام را
+   عمه حدس بزند قبول می‌کند. پس سؤال‌های آدم‌محورِ کتاب به سمتِ شخصیت می‌روند و شخصیت
+   برچسبِ `eponym` می‌گیرد تا «خودِ کتابه؟» برایش صفر نباشد. ← book-questions.js */
+const charByName = new Map();
+for (const r of rows) {
+  if (r.tags.has('film') || r.tags.has('kin') || r.tags.has('bookw') || !r.tags.has('fic')) continue;
+  const k = normalizeFa(r.name), prev = charByName.get(k);
+  if (!prev || r.tier > prev.tier) charByName.set(k, r);
+}
+/* عنوانی که اتفاقی هم‌نامِ شخصیتِ دیگری است، نه قهرمانِ همان کتاب: «اولیس»ِ جویس ≠ اولیسِ هومر،
+   «پیگمالیون»ِ شاو ≠ پیکرتراشِ اسطوره، «ملکه‌ی سرخ»ِ اویارد ≠ ملکه‌ی آلیس */
+const NOT_EPONYM = new Set(['اولیس', 'پیگمالیون', 'ملکه‌ی سرخ'].map(normalizeFa));
+let eponyms = 0; const eponymNames = [];
+for (const r of rows) {
+  if (!r.tags.has('bookw') || NOT_EPONYM.has(normalizeFa(r.name))) continue;
+  const twin = charByName.get(normalizeFa(r.name));
+  if (!twin) continue;
+  twin.tags.add('eponym');
+  r.twin = twin;
+  eponyms++; eponymNames.push(`${r.name} → ${twin.hint}`);
+}
+console.log(`کتاب‌های هم‌نام با شخصیت: ${eponyms}`);
+if (process.env.EPONYMS) console.log('  ' + eponymNames.join(' | '));
 console.log(`هم‌نام‌ها: ${merged} ادغام شد، ${split} به‌عنوانِ موجودیتِ متفاوت نگه داشته شد`);
 if (mergedNames.length) console.log('  ادغام‌شده: ' + mergedNames.join(' | '));
 
-rows.forEach(({ i, name, hint, tier, tags }) => {
+rows.forEach(({ i, name, hint, tier, tags, twin }) => {
   if (tags.size < 4) problems.push(`${name}: فقط ${tags.size} برچسب`);
   const id = 'c' + i;
   const a = {};
@@ -101,21 +123,14 @@ rows.forEach(({ i, name, hint, tier, tags }) => {
   // «اسمش رو همه شنیدن؟» برای خواهرِ آدم ۰.۹۳ می‌شد (rule از __tier
   // می‌خواند) و کل بازی خراب می‌شد.
   for (const q of QUESTIONS) {
-    let v;
-    if (tags.has('kin')) {
-      const ov = KIN_OVERRIDE[q.id];
-      v = ov !== undefined ? (typeof ov === 'function' ? ov(tags) : ov)
-        : (KIN_CLUSTER_DEFAULT[q.cluster] ?? q.rule(tags));
-    } else if (tags.has('film')) {
-      const ov = FILM_OVERRIDE[q.id];
-      v = ov !== undefined ? (typeof ov === 'function' ? ov(tags) : ov) : q.rule(tags);
-    } else v = q.rule(tags);
+    let v = probOf(q, tags);
+    if (twin && EPONYM_CLUSTERS.has(q.cluster)) v = EPONYM_W * probOf(q, twin.tags) + (1 - EPONYM_W) * v;
     a[q.id] = +clamp(v).toFixed(3);
   }
 
   // kin به داده‌ی بازی هم می‌رود (k:1): رابط کاربری باید بداند این یک نسبت
   // است نه یک سلبریتی، تا اسمِ واقعیِ ذخیره‌شده را جای نسبت نشان دهد.
-  characters.push({ id, name, hint, prior: TIER_PRIOR[tier], a, kin: tags.has('kin'), film: tags.has('film'), _tags: [...tags].join(','), _tier: tier });
+  characters.push({ id, name, hint, prior: TIER_PRIOR[tier], a, kin: tags.has('kin'), film: tags.has('film'), book: tags.has('bookw'), _tags: [...tags].join(','), _tier: tier });
 });
 
 /* ---------- اعتبارسنجی ---------- */
@@ -125,7 +140,7 @@ console.log(`شخصیت‌ها: ${characters.length}   سؤال‌ها: ${QUESTI
    فکر می‌کند شخصیت را تفکیک کرده ولی بازی چیزی نمی‌بیند. این گزارش همان
    اشتباهِ خاموش را بلند می‌کند — چه غلطِ املایی باشد چه برچسبِ بی‌سؤال. */
 {
-  const ruleSrc = ['./questions.js', './kin-questions.js', './fic-questions.js', './film-questions.js', './hot-questions.js']
+  const ruleSrc = ['./questions.js', './kin-questions.js', './fic-questions.js', './film-questions.js', './book-questions.js', './hot-questions.js']
     .map(f => fs.readFileSync(path.join(__dirname, f), 'utf8')).join('\n');
   /* فقط برچسبی «خوانده‌شده» است که داخلِ has(t, …) یا t.has(…) یا جدول‌های
      [tag, text] آمده باشد. قبلاً هر رشته‌ی نقل‌قولی حساب می‌شد و `stadium`
@@ -136,7 +151,7 @@ console.log(`شخصیت‌ها: ${characters.length}   سؤال‌ها: ${QUESTI
     for (const x of m[1].matchAll(/'([a-z_0-9]+)'/g)) referenced.add(x[1]);
   for (const m of ruleSrc.matchAll(/t\.has\('([a-z_0-9]+)'\)/g)) referenced.add(m[1]);
   for (const m of ruleSrc.matchAll(/\['(fr_[a-z0-9]+)'/g)) referenced.add(m[1]);
-  for (const m of ruleSrc.matchAll(/\['f_[a-z0-9]+',\s*'([a-z0-9]+)'/g)) referenced.add(m[1]);
+  for (const m of ruleSrc.matchAll(/\['[fb]_[a-z0-9]+',\s*'([a-z0-9]+)'/g)) referenced.add(m[1]);
 
   const used = {};
   for (const c of characters)
@@ -223,7 +238,7 @@ let written = 0;
 const cOut = finalChars.map(c => {
   const vals = qids.filter(q => c.a[q] !== QDEF[q]).map(q => `${q}:${num(c.a[q])}`);
   written += vals.length;
-  return `{id:'${c.id}',name:'${c.name.replace(/'/g, "\\'")}',hint:'${c.hint.replace(/'/g, "\\'")}',prior:${c.prior}${c.kin ? ',k:1' : ''}${c.film ? ',f:1' : ''},a:{${vals.join(',')}}}`;
+  return `{id:'${c.id}',name:'${c.name.replace(/'/g, "\\'")}',hint:'${c.hint.replace(/'/g, "\\'")}',prior:${c.prior}${c.kin ? ',k:1' : ''}${c.film ? ',f:1' : ''}${c.book ? ',b:1' : ''},a:{${vals.join(',')}}}`;
 }).join(',\n');
 
 fs.writeFileSync(OUT,

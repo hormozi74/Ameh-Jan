@@ -25,7 +25,7 @@ module.exports = [
 'علاءالدین|انیمیشنِ دیزنی|4|film,cartoon,us,kids,royal,love,fantasy,musical,comedy,book,sequel,award,worldfame,beloved,pre2000,fr_oscar,fr_1001,fr_disney',
 'شیرشاه|انیمیشنِ دیزنی|4|film,cartoon,us,kids,animals,royal,musical,family,sequel,award,legend,worldfame,beloved,pre2000,fr_oscar,fr_lionking,fr_disney',
 'پوکاهانتس|انیمیشنِ دیزنی|2|film,cartoon,us,kids,femlead,love,truestory,musical,sadend,pre2000,fr_disney',
-'گوژپشت نتردام|انیمیشنِ دیزنی|2|film,cartoon,us,kids,book,love,musical,serious,religious,pre2000,fr_disney',
+'گوژپشت نتردام|انیمیشنِ دیزنی|2|film,cartoon,us,kids,book,love,musical,serious,religious,pre2000,fr_disney,fr_hugo',
 'هرکول|انیمیشنِ دیزنی|3|film,cartoon,us,kids,mythic,ancient,fantasy,monster,musical,love,comedy,epic,pre2000,fr_disney',
 'مولان|انیمیشنِ دیزنی|3|film,cartoon,us,kids,femlead,warfilm,sword,action,epic,royal,family,musical,book,pre2000,fr_disney',
 'تارزان|انیمیشنِ دیزنی|3|film,cartoon,us,kids,animals,love,book,action,family,pre2000,fr_disney',
@@ -135,7 +135,7 @@ module.exports = [
 'ترنسفورمرز یک|انیمیشنِ ربات‌های تبدیل‌شونده|1|film,cartoon,us,kids,robot,space,scifi,action,twist,newgen,fr_transformers',
 'خانه هیولا|انیمیشنِ ترسناکِ کودکانه|1|film,cartoon,us,kids,kidlead,horror,monster,comedy,twist',
 'کورالاین|انیمیشنِ عروسکیِ لایکا|2|film,cartoon,us,kids,femlead,kidlead,horror,fantasy,book,mindbend,family,monster',
-'آقای روباه شگفت‌انگیز|انیمیشنِ عروسکیِ وس اندرسون|1|film,cartoon,us,kids,animals,book,crime,comedy,family,village',
+'آقای روباه شگفت‌انگیز|انیمیشنِ عروسکیِ وس اندرسون|1|film,cartoon,us,kids,animals,book,crime,comedy,family,village,fr_dahl',
 'رنگو|انیمیشنِ آفتاب‌پرستِ کلانتر|2|film,cartoon,us,kids,animals,comedy,village,action,crime,award,fr_oscar',
 'باب اسفنجی: فیلم سینمایی|انیمیشنِ نیکلودیون|2|film,cartoon,us,kids,sea,comedy,road,sequel,royal',
 'فیلم سیمپسون‌ها|انیمیشنِ سیمپسون‌ها|2|film,cartoon,us,family,comedy,village,apoc,road,worldfame,fr_simpsons',
@@ -190,7 +190,7 @@ module.exports = [
 'نه‌جا|انیمیشنِ اسطوره‌ایِ چینی|2|film,cartoon,asia,kids,kidlead,fantasy,mythic,monster,action,sequel,worldfame,newgen',
 
 // ---------- اروپا ----------
-'قلعه حیوانات|انیمیشنِ انگلیسیِ ۱۹۵۴|1|film,cartoon,eu,animals,book,sadend,village,serious,pre2000,prerev',
+'قلعه حیوانات|انیمیشنِ انگلیسیِ ۱۹۵۴|1|film,cartoon,eu,animals,book,sadend,village,serious,pre2000,prerev,fr_orwell',
 'ملکه برفی|انیمیشنِ کلاسیکِ شوروی|1|film,cartoon,eu,kids,femlead,kidlead,book,fantasy,road,royal,pre2000,prerev',
 'زیردریایی زرد|انیمیشنِ بیتلز|1|film,cartoon,eu,musical,sea,mindbend,comedy,pre2000,prerev,fr_band',
 'دوازده خوان آستریکس|انیمیشنِ فرانسوی|1|film,cartoon,eu,kids,comedy,ancient,road,book,pre2000,prerev',
