@@ -1,4 +1,4 @@
-/* تست دقت روی داده‌ی تولیدشده — با در نظر گرفتن ۳ حدس مجاز بازی */
+/* تست دقت روی داده‌ی تولیدشده — با همان سیاستِ حدسِ بازی (ENG.GUESS: چهار حدس، حدسِ نرم، تمرکز) */
 const fs = require('fs');
 const nodePath = require('path');
 const dataPath = process.argv[2] || nodePath.join(__dirname, 'data-block.js');
@@ -9,40 +9,40 @@ const s = src.indexOf('const ENG'), e = src.indexOf('/* ========================
 const { QUESTIONS, CHARACTERS } = eval(fs.readFileSync(dataPath, 'utf8') + '\n;({QUESTIONS,CHARACTERS})');
 const ENG = eval(src.slice(s, e) + '\n;ENG');
 
-/* همان ثابت‌هایی که در بازی هستند — اگر آن‌جا عوض شدند این‌جا هم باید عوض شوند،
-   وگرنه این تست چیزی را می‌سنجد که منتشر نشده است. */
-const grab = re => { const m = src.match(re); return m ? +m[1] : null; };
-const MAXQ = grab(/const MAXQ\s*=\s*([\d.]+)/) ?? 32, MINQ = 8, RATIO = 6, CONF = 0.80, IG_FLOOR = grab(/const IG_FLOOR\s*=\s*([\d.]+)/) ?? 0.10, MAX_GUESSES = grab(/const MAX_GUESSES\s*=\s*([\d.]+)/) ?? 4, EXT_Q = grab(/const EXT_Q\s*=\s*([\d.]+)/) ?? 5;
+/* سیاستِ حدس (سقف، آستانه‌ها، حدسِ نرم، تمرکز) از خودِ ENG می‌آید — همان چیزی که بازی اجرا می‌کند */
+const CO = JSON.parse(process.env.CONSTS || '{}'); if (CO.EXT !== undefined && !CO.EXTS) CO.EXTS = [CO.EXT];
+const G = Object.assign({}, ENG.GUESS, CO), MAX_GUESSES = G.MAX_GUESSES;   // CONSTS محیطی: اوررایدِ سیاست (مثلاً سیاستِ قدیم)
 
 function play(truth, noise) {
   let log = CHARACTERS.map(c => Math.log(c.prior));
-  const asked = [], ws = [], cc = {}, rejected = [];
-  let n = 0, guesses = [], cap = MAXQ;   // سقف بعد از هر حدسِ ردشده EXT_Q تا جلو می‌رود
+  const asked = [], cc = {}, rejected = new Set(), unk = new Set(), hist = [];
+  let n = 0, lastRejAt = 0, nHard = 0, nSoft = 0; const guesses = [];
+  const ti = CHARACTERS.indexOf(truth);
   for (;;) {
     const probs = ENG.toProbs(log);
-    const top = CHARACTERS.map((c, i) => ({ c, p: probs[i] }))
-      .filter(x => !rejected.includes(x.c.id)).sort((a, b) => b.p - a.p);
-    let ready = (n >= MINQ && top[0].p > CONF &&
-                 top[0].p / Math.max(top[1]?.p ?? 1e-9, 1e-9) > RATIO) || n >= cap;
-    const unk = new Set(asked.filter((id, i) => ws[i] === null));
-    const pool = ready ? null : ENG.rankQuestions(probs, asked, cc, unk);
-    if (!ready && n >= MINQ && pool.reduce((m, x) => Math.max(m, x.ig), 0) < IG_FLOOR) ready = true;
-    const q = ready ? null : ENG.pickQuestion(probs, asked, cc, pool, unk);
-    if (ready || !q) {
-      if (!top.length) return { guesses, n };
-      guesses.push(top[0].c.id);
-      if (top[0].c.id === truth.id || guesses.length >= MAX_GUESSES) return { guesses, n };
-      rejected.push(top[0].c.id);
-      log[CHARACTERS.findIndex(c => c.id === top[0].c.id)] -= 8;
-      cap = Math.max(cap, n + EXT_Q);
+    let bi = -1, b2 = -1;
+    for (let i = 0; i < probs.length; i++) { if (rejected.has(i)) continue; if (bi < 0 || probs[i] > probs[bi]) { b2 = bi; bi = i; } else if (b2 < 0 || probs[i] > probs[b2]) b2 = i; }
+    if (bi < 0) return { guesses, n };
+    hist.push(bi);
+    let pool = null; const getPool = () => pool || (pool = ENG.rankQuestions(probs, asked, cc, unk));
+    let st = ENG.guessReady({ probs, bi, b2, n, nHard, nSoft, lastRejAt, hist, pool: getPool }, G);
+    let q = null;
+    if (!st) { q = ENG.chooseQuestion(probs, asked, cc, unk, n, rejected, pool, G).q; if (!q) st = { reason: 'noq', soft: false }; }
+    if (st) {
+      guesses.push(CHARACTERS[bi].id);
+      if (bi === ti) return { guesses, n };
+      if (st.soft) nSoft++; else nHard++;
+      if (nHard >= MAX_GUESSES) return { guesses, n };
+      rejected.add(bi); log[bi] -= 8; lastRejAt = n;
       continue;
     }
     const p = truth.a[q.id];
     let w;
     if (Math.random() < noise) w = [1, .75, null, .25, 0][Math.floor(Math.random() * 5)];
     else w = Math.random() < p ? (Math.random() < .15 ? .75 : 1) : (Math.random() < .15 ? .25 : 0);
+    if (w === null) unk.add(q.id);
     log = ENG.update(log, q, w);
-    asked.push(q.id); ws.push(w); cc[q.cluster] = (cc[q.cluster] || 0) + 1; n++;
+    asked.push(q.id); cc[q.cluster] = (cc[q.cluster] || 0) + 1; n++;
   }
 }
 
@@ -64,7 +64,7 @@ for (const noise of [0, 0.1]) {
     if (r.guesses[0] === truth.id) t1++;
     if (r.guesses.includes(truth.id)) t3++;
   }
-  console.log(`نویز ${(noise*100).toFixed(0)}%  →  حدس اول: ${(t1/N*100).toFixed(1)}%   تا سه حدس: ${(t3/N*100).toFixed(1)}%   میانگین سؤال: ${(sq/N).toFixed(1)}`);
+  console.log(`نویز ${(noise*100).toFixed(0)}%  →  حدس اول: ${(t1/N*100).toFixed(1)}%   تا ${MAX_GUESSES} حدس: ${(t3/N*100).toFixed(1)}%   میانگین سؤال: ${(sq/N).toFixed(1)}`);
 }
 
 // همان تست ولی با انتخاب یکنواخت (شامل شخصیت‌های گمنام) — بدترین حالت
@@ -75,5 +75,5 @@ for (let i = 0; i < N; i++) {
   if (r.guesses[0] === truth.id) u1++;
   if (r.guesses.includes(truth.id)) u3++;
 }
-console.log(`انتخاب یکنواخت (بدترین حالت) → حدس اول: ${(u1/N*100).toFixed(1)}%   تا سه حدس: ${(u3/N*100).toFixed(1)}%`);
+console.log(`انتخاب یکنواخت (بدترین حالت) → حدس اول: ${(u1/N*100).toFixed(1)}%   تا ${MAX_GUESSES} حدس: ${(u3/N*100).toFixed(1)}%`);
 console.log(`شخصیت‌ها: ${CHARACTERS.length}   سؤال‌ها: ${QUESTIONS.length}`);

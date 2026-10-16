@@ -34,12 +34,19 @@
   "chars-32-books-bestsellers.js": 0,
   "chars-33-books-kids.js": 0
  },
- "profiles2": 36,
- "books": 29,
+ "profiles2": 35,
+ "profiles23": 35,
+ "profiles2Mean": 19.7,
+ "books": 30,
+ "books3": 30,
+ "booksMean": 20.7,
  "realsim": {
-  "first": 47,
-  "three": 60.7,
-  "mean": 30.4,
-  "cap": 55.3
+  "first": 43.7,
+  "three": 61.7,
+  "four": 63.7,
+  "mean": 29.4,
+  "toCorrect": 22.5,
+  "firstAt": 22.1,
+  "cap": 48.7
  }
 }

@@ -13,7 +13,7 @@ const s = src.indexOf('const ENG'), e = src.indexOf('/* ========================
 const { QUESTIONS, CHARACTERS } = eval(fs.readFileSync(nodePath.join(__dirname, 'data-block.js'), 'utf8') + '\n;({QUESTIONS,CHARACTERS})');
 const ENG = eval(src.slice(s, e) + '\n;ENG');
 
-const MAXQ = 32, MINQ = 8, RATIO = 6, CONF = 0.80, IG_FLOOR = 0.15, EXT_Q = 5;
+/* سیاستِ حدس از ENG — این‌جا فقط تا اولین حدس می‌رویم (ردِ حدس را نمی‌سنجیم) */
 const HEAT_T = [0, 0.25, 0.45, 0.62, 0.80];
 const VAGUE = new Set(['serious','beloved','controversial','legend','rich','pop','epic','married_fam','active']);
 const N = +(process.argv[2] || 300);
@@ -30,20 +30,20 @@ for (let g = 0; g < N; g++) {
   const truth = sample();
   let log = CHARACTERS.map(c => Math.log(c.prior));
   const h0 = ENG.entropy(ENG.toProbs(log));
-  const asked = [], cc = {};
+  const asked = [], cc = {}, unk = new Set(), hist = [];
   let n = 0, firstFire = -1, hots = [];
   const heats = [];
   for (;;) {
     const probs = ENG.toProbs(log);
     let bi = 0; for (let i = 1; i < probs.length; i++) if (probs[i] > probs[bi]) bi = i;
-    let second = 0; for (let i = 0; i < probs.length; i++) if (i !== bi && probs[i] > second) second = probs[i];
+    let b2 = -1; for (let i = 0; i < probs.length; i++) if (i !== bi && (b2 < 0 || probs[i] > probs[b2])) b2 = i;
+    hist.push(bi);
     const cool = Math.max(0, Math.min(1, (1 - ENG.entropy(probs) / h0) / 0.7));
     const heat = Math.max(0, Math.min(1, 0.7 * cool + 0.3 * Math.sqrt(probs[bi])));
-    let ready = (n >= MINQ && probs[bi] > CONF && probs[bi] / Math.max(second, 1e-9) > RATIO) || n >= MAXQ;
-    const pool = ready ? null : ENG.rankQuestions(probs, asked, cc);
-    if (!ready && n >= MINQ && pool.reduce((m, x) => Math.max(m, x.ig), 0) < IG_FLOOR) ready = true;
-    const q = ready ? null : ENG.pickQuestion(probs, asked, cc, pool);
-    if (ready || !q) {
+    let pool = null; const getPool = () => pool || (pool = ENG.rankQuestions(probs, asked, cc, unk));
+    const st = ENG.guessReady({ probs, bi, b2, n, nHard: 0, nSoft: 0, lastRejAt: 0, hist, pool: getPool });
+    const q = st ? null : ENG.chooseQuestion(probs, asked, cc, unk, n, null, pool).q;
+    if (st || !q) {
       lvAtGuess[level(heat)]++;
       if (CHARACTERS[bi].id === truth.id) ok++;
       if (truth.f) { filmGames++; if (CHARACTERS[bi].id === truth.id) filmOk++; }
@@ -56,6 +56,7 @@ for (let g = 0; g < N; g++) {
     if (VAGUE.has(q.id)) vague++;
     const p = truth.a[q.id];
     const w = Math.random() < p ? (Math.random() < .15 ? .75 : 1) : (Math.random() < .15 ? .25 : 0);
+    if (w === null) unk.add(q.id);
     log = ENG.update(log, q, w);
     asked.push(q.id); cc[q.cluster] = (cc[q.cluster] || 0) + 1; n++;
   }

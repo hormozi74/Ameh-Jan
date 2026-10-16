@@ -1,6 +1,6 @@
 /* شبیه‌سازِ «بازیکنِ واقعی» — نه برنولیِ i.i.d.
    node real-sim.js N seed [html] [data]
-   محیط: ENG_SRC (موتورِ جایگزین)، ENGF (پرچم‌ها)، CONSTS ('{"MAXQ":32,...}')،
+   محیط: ENG_SRC (موتورِ جایگزین)، ENGF (پرچم‌ها؛ ENGF='{"guess":{"MAXQ":24}}' سیاستِ حدس)، CONSTS ('{"MAXQ":32,...}' اوررایدِ ENG.GUESS)،
          PRIOR ('{"3":6,"1.4":2.2,"0.6":0.6,"0.25":0.12}' بازنگاشتِ prior بر حسبِ مقدارِ فعلی)،
          FAME ('{"4":.5,"3":.35,"2":.12,"1":.03}' سهمِ هر رده در انتخابِ حقیقت)،
          SLOPPY (نسبتِ بازیکنانِ شلخته، پیش‌فرض .3)، VERBOSE=1 (چاپِ باخت‌ها)
@@ -25,9 +25,9 @@ if (process.env.PRIOR) { const m = JSON.parse(process.env.PRIOR); for (const c o
 globalThis.ENGF = JSON.parse(process.env.ENGF || '{}');
 const engSrc = process.env.ENG_SRC ? fs.readFileSync(process.env.ENG_SRC, 'utf8') : src.slice(s, e);
 const ENG = eval(engSrc + '\n;ENG');
-const grab = re => { const m = src.match(re); return m ? +m[1] : null; };
-const C = Object.assign({ MAXQ: grab(/const MAXQ\s*=\s*([\d.]+)/) ?? 32, MINQ: grab(/const MINQ\s*=\s*([\d.]+)/) ?? 8, RATIO: grab(/const RATIO\s*=\s*([\d.]+)/) ?? 6,
-  CONF: grab(/const CONF\s*=\s*([\d.]+)/) ?? .8, IG_FLOOR: grab(/const IG_FLOOR\s*=\s*([\d.]+)/) ?? .15, EXT: grab(/const EXT_Q\s*=\s*([\d.]+)/) ?? 5, MAX_GUESSES: 3 }, JSON.parse(process.env.CONSTS || '{}'));
+/* سیاستِ حدس از خودِ ENG (ENG.GUESS, guessReady, chooseQuestion) — همان چیزی که بازی اجرا می‌کند؛ CONSTS اورراید می‌کند */
+const CO = JSON.parse(process.env.CONSTS || '{}'); if (CO.EXT !== undefined && !CO.EXTS) CO.EXTS = [CO.EXT];
+const C = Object.assign({}, ENG.GUESS, CO);
 const SLOPPY = process.env.SLOPPY !== undefined ? +process.env.SLOPPY : 0.3;
 
 /* ---- جنسِ سؤال ---- */
@@ -48,7 +48,7 @@ function rng(seedv){ let x = seedv >>> 0 || 1; return () => { x ^= x << 13; x >>
 const idx = new Map(CHARACTERS.map((c, i) => [c.id, i]));
 const QI = new Map(QUESTIONS.map((q, i) => [q.id, i]));
 
-let gameNo = 0;
+let gameNo = 0; const REASONS = {};
 function play(truth){
   const gseed = hash32(seed0 + ':' + gameNo + ':' + truth.id); gameNo++;
   const g = rng(gseed);
@@ -74,30 +74,25 @@ function play(truth){
     return w;
   };
   let log = CHARACTERS.map(c => Math.log(c.prior));
-  const asked = [], cc = {}, rejected = new Set();
-  let n = 0, guesses = [], cap = C.MAXQ, firstGuessAt = -1, correctAt = -1; const topHist = [], trace = [], unk = new Set();
+  const asked = [], cc = {}, rejected = new Set(), unk = new Set(), hist = [];
+  let n = 0, lastRejAt = 0, nHard = 0, nSoft = 0, correctIdx = -1; const guessAt = [], gReason = [], trace = [];
   const ti = idx.get(truth.id);
   for (;;) {
     const probs = ENG.toProbs(log);
     let bi = -1, b2 = -1;
     for (let i = 0; i < probs.length; i++) { if (rejected.has(i)) continue; if (bi < 0 || probs[i] > probs[bi]) { b2 = bi; bi = i; } else if (b2 < 0 || probs[i] > probs[b2]) b2 = i; }
-    let reason = null;
-    topHist[n] = bi;
-    const st = ENG.guessReady ? ENG.guessReady(probs, bi, b2, n, topHist, C) : null;   // سیاستِ حدسِ موتورِ تازه (اختیاری)
-    if (st) reason = st;
-    else if (n >= C.MINQ && probs[bi] > C.CONF && probs[bi] / Math.max(b2 >= 0 ? probs[b2] : 1e-9, 1e-9) > C.RATIO) reason = 'conf';
-    else if (n >= cap) reason = 'maxq';
-    const pool = reason ? null : ENG.rankQuestions(probs, asked, cc, unk);
-    if (!reason && n >= C.MINQ && pool.reduce((m, x) => Math.max(m, x.ig), 0) < C.IG_FLOOR) reason = 'igfloor';
-    const q = reason ? null : ENG.pickQuestion(probs, asked, cc, pool, unk);
-    if (!reason && !q) reason = 'noq';
-    if (reason) {
-      if (firstGuessAt < 0) firstGuessAt = n;
-      guesses.push(bi);
-      if (bi === ti) { correctAt = n; break; }
-      if (guesses.length >= C.MAX_GUESSES) break;
-      rejected.add(bi); log[bi] -= 8; cap = Math.max(cap, n + C.EXT);
-      if (ENG.onReject) log = ENG.onReject(log, bi, asked);
+    hist.push(bi);
+    let pool = null; const getPool = () => pool || (pool = ENG.rankQuestions(probs, asked, cc, unk));
+    let st = ENG.guessReady({ probs, bi, b2, n, nHard, nSoft, lastRejAt, hist, pool: getPool }, C);
+    let q = null;
+    if (!st) { q = ENG.chooseQuestion(probs, asked, cc, unk, n, rejected, pool, C).q; if (!q) st = { reason: 'noq', soft: false }; }
+    if (st) {
+      REASONS[st.reason] = (REASONS[st.reason] || 0) + 1;
+      guessAt.push(n); gReason.push(st.reason);
+      if (bi === ti) { correctIdx = guessAt.length; break; }
+      if (st.soft) nSoft++; else nHard++;
+      if (nHard >= C.MAX_GUESSES) break;
+      rejected.add(bi); log[bi] -= 8; lastRejAt = n;
       continue;
     }
     const w = ansFor(q);
@@ -107,8 +102,8 @@ function play(truth){
   }
   const probs = ENG.toProbs(log);
   let r = 1; for (let i = 0; i < probs.length; i++) if (probs[i] > probs[ti]) r++;
-  if (process.env.VERBOSE === '2' && correctAt < 0 && gameNo <= 12) console.log(`\n✗ ${truth.name}${sloppy ? ' (شلخته)' : ''} رتبه=${r} حدس‌ها: ${guesses.map(g => CHARACTERS[g].name).join(' | ')}\n  ${trace.join(' ')}`);
-  return { won: correctAt >= 0, first: guesses[0] === ti, n, firstGuessAt, correctAt, guesses: guesses.length, rank: r, sloppy };
+  if (process.env.VERBOSE === '2' && correctIdx < 0 && gameNo <= 12) console.log(`\n✗ ${truth.name}${sloppy ? ' (شلخته)' : ''} رتبه=${r} حدس در ${guessAt.join(',')} (${gReason.join(',')})\n  ${trace.join(' ')}`);
+  return { won: correctIdx > 0, correctIdx, first: correctIdx === 1, n, firstGuessAt: guessAt[0], firstReason: gReason[0], correctAt: correctIdx > 0 ? guessAt[correctIdx - 1] : -1, guesses: guessAt.length, rank: r, sloppy };
 }
 
 /* انتخابِ حقیقت: سهمِ هر رده (FAME)، داخلِ رده یکنواخت */
@@ -123,15 +118,18 @@ const res = [];
 const t0 = Date.now();
 for (let i = 0; i < N; i++) { const truth = sample(); const r = play(truth); r.name = truth.name; r.tier = tierOf(truth); res.push(r); if (process.env.VERBOSE && !r.won) console.log(`  باخت: ${truth.name} (رده${r.tier}${r.sloppy ? '، شلخته' : ''}) n=${r.n} رتبه=${r.rank} حدس‌ها=${r.guesses}`); }
 const pct = x => (100 * x / N).toFixed(1) + '%';
+const wk = k => res.filter(r => r.won && r.correctIdx <= k).length;
 const won = res.filter(r => r.won), first = res.filter(r => r.first);
 const ns = res.map(r => r.n).sort((a, b) => a - b);
 const mean = a => a.reduce((x, y) => x + y, 0) / (a.length || 1);
-const wonN = won.map(r => r.correctAt);
-console.log(`بازی: ${N}   حدسِ اول: ${pct(first.length)}   تا سه حدس: ${pct(won.length)}   میانگینِ سؤال: ${mean(ns).toFixed(1)}   میانه: ${ns[Math.floor(N / 2)]}`);
-console.log(`بُرد در ≤۲۰ سؤال: ${pct(res.filter(r => r.won && r.correctAt <= 20).length)}   بُرد در ≤۲۵: ${pct(res.filter(r => r.won && r.correctAt <= 25).length)}   اولین حدس به‌طورِ میانگین در سؤالِ ${mean(res.map(r => r.firstGuessAt)).toFixed(1)}   بازی‌های به سقف رسیده: ${pct(res.filter(r => r.n >= C.MAXQ).length)}`);
-for (const t of [4, 3, 2, 1]) { const g = res.filter(r => r.tier === t); if (g.length) console.log(`  رده${t}: ${g.length} بازی، حدسِ اول ${(100 * g.filter(r => r.first).length / g.length).toFixed(0)}%، سه حدس ${(100 * g.filter(r => r.won).length / g.length).toFixed(0)}%، میانگین ${mean(g.map(r => r.n)).toFixed(1)}`); }
+/* «تا سه حدس» برای مقایسه با خطِ مبنای قدیم؛ «تا چهار حدس» = بُردِ واقعیِ بازی (MAX_GUESSES).
+   «به سقف رسیده» = بازی‌هایی که از ۳۲ سؤال (سقفِ قدیم) گذشتند؛ «اولین حدس اجباری» = سقف حدس را تحمیل کرد، نه اطمینان. */
+console.log(`بازی: ${N}   حدسِ اول: ${pct(first.length)}   تا سه حدس: ${pct(wk(3))}   تا چهار حدس: ${pct(wk(4))}   میانگینِ سؤال: ${mean(ns).toFixed(1)}   میانه: ${ns[Math.floor(N / 2)]}`);
+console.log(`بُرد در ≤۲۰ سؤال: ${pct(res.filter(r => r.won && r.correctAt <= 20).length)}   بُرد در ≤۲۵: ${pct(res.filter(r => r.won && r.correctAt <= 25).length)}   میانگینِ سؤال تا حدسِ درست: ${mean(won.map(r => r.correctAt)).toFixed(1)}   اولین حدس به‌طورِ میانگین در سؤالِ ${mean(res.map(r => r.firstGuessAt)).toFixed(1)}   بازی‌های به سقف رسیده: ${pct(res.filter(r => r.n >= 32).length)}   اولین حدس اجباری: ${pct(res.filter(r => r.firstReason === 'maxq').length)}`);
+console.log(`  حدس در هر بازی: ${mean(res.map(r => r.guesses)).toFixed(2)}   طولِ بُردها: ${mean(won.map(r => r.n)).toFixed(1)}   طولِ باخت‌ها: ${mean(res.filter(r => !r.won).map(r => r.n)).toFixed(1)}   دلیلِ حدس‌ها: ${JSON.stringify(REASONS)}`);
+for (const t of [4, 3, 2, 1]) { const g = res.filter(r => r.tier === t); if (g.length) console.log(`  رده${t}: ${g.length} بازی، حدسِ اول ${(100 * g.filter(r => r.first).length / g.length).toFixed(0)}%، تا چهار حدس ${(100 * g.filter(r => r.won).length / g.length).toFixed(0)}%، میانگین ${mean(g.map(r => r.n)).toFixed(1)}`); }
 const rk = { '1': 0, '2-3': 0, '4-10': 0, '11-50': 0, '51+': 0 };
 for (const r of res) if (!r.won) { const x = r.rank; rk[x <= 1 ? '1' : x <= 3 ? '2-3' : x <= 10 ? '4-10' : x <= 50 ? '11-50' : '51+']++; }
 console.log('  رتبه‌ی حقیقت در باخت‌ها:', JSON.stringify(rk));
 const sl = res.filter(r => r.sloppy), ok = res.filter(r => !r.sloppy);
-console.log(`  دقیق: سه حدس ${(100 * ok.filter(r => r.won).length / (ok.length || 1)).toFixed(0)}%   شلخته: ${(100 * sl.filter(r => r.won).length / (sl.length || 1)).toFixed(0)}%   (${((Date.now() - t0) / 1000).toFixed(0)}s)`);
+console.log(`  دقیق: تا چهار حدس ${(100 * ok.filter(r => r.won).length / (ok.length || 1)).toFixed(0)}%   شلخته: ${(100 * sl.filter(r => r.won).length / (sl.length || 1)).toFixed(0)}%   (${((Date.now() - t0) / 1000).toFixed(0)}s)`);

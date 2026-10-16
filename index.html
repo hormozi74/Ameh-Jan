@@ -125,6 +125,16 @@ body[data-screen="s-ask"] .room{max-height:36vh;max-height:36dvh}
 body[data-screen="s-ask"] .stage{width:36%}
 .aunt{display:block;width:100%;height:auto;overflow:visible}
 
+/* دکمه‌های صدا — گوشه‌ی چپِ بالای پنل، روبه‌روی زیرنویسِ راوی */
+.snd-ctl{position:absolute;left:7px;top:7px;display:flex;gap:6px;z-index:4}
+.snd-btn{width:30px;height:30px;padding:0;display:grid;place-items:center;cursor:pointer;color:#1a0c12;
+  background:var(--yellow);border:2.5px solid var(--k);border-radius:6px;box-shadow:3px 3px 0 var(--k);transition:transform .12s}
+.snd-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--k)}
+.snd-btn svg{width:18px;height:18px;display:block;fill:none;stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.snd-btn .off{display:none}
+.snd-btn[aria-pressed="false"]{background:var(--panel-2);color:#7a5a62}
+.snd-btn[aria-pressed="false"] .off{display:inline}
+
 /* زیرنویسِ راوی — جعبه‌ی زردِ کمیک در گوشه‌ی پنل */
 .mood-chip{
   position:absolute;right:7px;top:7px;transform:rotate(-2deg) translateY(-6px) scale(.9);transform-origin:right top;
@@ -522,6 +532,12 @@ button{font-family:inherit;cursor:pointer;border:none}
       <div id="aunt"></div>
     </div>
     <div class="mood-chip" id="moodchip"></div>
+    <div class="snd-ctl">
+      <button class="snd-btn" id="snd-music" aria-pressed="true" aria-label="موسیقی" title="موسیقی" onclick="SND.toggle('music')">
+        <svg viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/><path class="off" d="M3 3l18 18"/></svg></button>
+      <button class="snd-btn" id="snd-sfx" aria-pressed="true" aria-label="صدا" title="صدا و لرزش" onclick="SND.toggle('sfx')">
+        <svg viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path class="off" d="M3 3l18 18"/></svg></button>
+    </div>
   </div>
   <div class="sofreh">
 
@@ -560,7 +576,7 @@ button{font-family:inherit;cursor:pointer;border:none}
     <div class="spacer"></div>
     <div class="row">
       <button class="big" onclick="guessResult(true)">آره خودشه!</button>
-      <button class="big quiet" onclick="guessResult(false)">نه، اشتباهه</button>
+      <button class="big quiet" id="gno" onclick="guessResult(false)">نه، اشتباهه</button>
     </div>
   </section>
 
@@ -619,6 +635,250 @@ button{font-family:inherit;cursor:pointer;border:none}
 
 </div></div>
 
+<script>
+/* ==========================================================
+   صدا و لرزش — عمه‌جان
+   ---------------------------------------------------------
+   همه‌چیز با Web Audio همین‌جا ساخته می‌شود: نه فایلِ صوتی، نه حقِ نشر،
+   نه حجمِ اضافه. سه لایه:
+   ۱) موسیقیِ پس‌زمینه: سنتورِ ساختگی (کارپلاس-استرانگ با سیمِ جفت) در
+      دستگاهِ شور با «سری»ِ واقعی (ربع‌پرده با فرکانس، نه نزدیک‌ترین نیم‌پرده)
+      و ضربِ تمبک در شش‌وهشت. دماسنجِ عمه شدتش را تعیین می‌کند: سرد = تک‌مضراب‌های
+      پراکنده، داغ = تند، پرنت، با ریز و تمبکِ کامل.
+   ۲) صدای حالت‌ها: «دینگ!»ِ چراغِ عمه، بزن‌وبکوبِ برد، هق‌هقِ باخت، غرّشِ
+      عصبانیت، «بویینگ»ِ گیجی، و تقِ جواب‌ها.
+   ۳) لرزشِ گوشی (navigator.vibrate) هم‌پای همان لحظه‌ها.
+   مرورگرها صدا را تا اولین لمسِ کاربر قفل می‌کنند؛ unlock با اولین
+   pointerdown انجام می‌شود. انتخابِ «بی‌صدا» در localStorage می‌ماند.
+   ========================================================== */
+const SND = (() => {
+  const KEY = 'amehjan_snd_v1';
+  const pref = {sfx: true, music: true};
+  try { Object.assign(pref, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch(e){}
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(pref)); } catch(e){} };
+
+  let ctx = null, sfxBus, musBus, revIn, noiseBuf;
+  const MUS_VOL = .34, SFX_VOL = .62;
+
+  function init(){
+    if(ctx) return ctx;
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if(!AC) return null;
+    try { ctx = new AC(); } catch(e){ return null; }
+    const comp = ctx.createDynamicsCompressor();
+    comp.threshold.value = -16; comp.ratio.value = 4; comp.attack.value = .004; comp.release.value = .2;
+    comp.connect(ctx.destination);
+    sfxBus = ctx.createGain(); sfxBus.gain.value = pref.sfx ? SFX_VOL : 0; sfxBus.connect(comp);
+    musBus = ctx.createGain(); musBus.gain.value = 0; musBus.connect(comp);
+    /* اتاقِ کوچک: پژواکِ کوتاه تا سنتور خشک نباشد */
+    const rev = ctx.createConvolver(), n = ctx.sampleRate * 1.6 | 0, ir = ctx.createBuffer(2, n, ctx.sampleRate);
+    for(let c = 0; c < 2; c++){ const d = ir.getChannelData(c); for(let i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / n, 3); }
+    rev.buffer = ir;
+    const rg = ctx.createGain(); rg.gain.value = .28;
+    revIn = ctx.createGain(); revIn.connect(rev); rev.connect(rg); rg.connect(comp);
+    noiseBuf = ctx.createBuffer(1, ctx.sampleRate * .5 | 0, ctx.sampleRate);
+    const nd = noiseBuf.getChannelData(0); for(let i = 0; i < nd.length; i++) nd[i] = Math.random() * 2 - 1;
+    document.addEventListener('visibilitychange', () => { if(!ctx) return; document.hidden ? ctx.suspend() : ctx.resume(); });
+    return ctx;
+  }
+  const now = () => ctx.currentTime;
+  const buzz = p => { if(pref.sfx && navigator.vibrate) try { navigator.vibrate(p); } catch(e){} };
+
+  /* ---------- سنتور: کارپلاس-استرانگ ----------
+     بافر با طولِ صحیحِ N ساخته می‌شود و زیروبمیِ دقیق با playbackRate — پس
+     ربع‌پرده‌ها درست درمی‌آیند. دو سیمِ کمی ناکوک = صدای جفت‌سیمِ سنتور. */
+  const pluckCache = new Map();
+  function pluckBuf(f){
+    const sr = ctx.sampleRate, N = Math.max(2, Math.floor(sr / f));
+    let b = pluckCache.get(N);
+    if(!b){
+      const len = sr * 2.2 | 0, d = new Float32Array(len), ring = new Float32Array(N);
+      for(let i = 0; i < N; i++) ring[i] = (Math.random() * 2 - 1) * (i < N / 2 ? 1 : .6);   // مضرابِ کمی خشن
+      const damp = f > 700 ? .9925 : .9965;
+      for(let i = 0, p = 0; i < len; i++){ const c = ring[p], q = ring[(p + 1) % N]; d[i] = c; ring[p] = damp * .5 * (c + q); p = (p + 1) % N; }
+      b = ctx.createBuffer(1, len, sr); b.copyToChannel(d, 0);
+      pluckCache.set(N, b);
+    }
+    return {b, rate: f / (sr / N)};
+  }
+  function santur(f, t, vol, bus = musBus, dur = 1.8){
+    for(const det of [1, 1.0035]){
+      const {b, rate} = pluckBuf(f * det);
+      const s = ctx.createBufferSource(), g = ctx.createGain();
+      s.buffer = b; s.playbackRate.value = rate;
+      g.gain.setValueAtTime(vol * .55, t); g.gain.exponentialRampToValueAtTime(.0004, t + dur);
+      s.connect(g); g.connect(bus); g.connect(revIn);
+      s.start(t); s.stop(t + dur + .05);
+    }
+  }
+  /* «ریز» — مضراب‌های تندِ پشتِ‌سرِ‌هم روی یک نت؛ امضای سنتور */
+  function riz(f, t, len, vol, bus = musBus){
+    const step = .055;
+    for(let x = 0; x < len; x += step) santur(f, t + x, vol * (.55 + .45 * Math.sin(x / len * Math.PI)), bus, .5);
+  }
+
+  /* ---------- تمبک ---------- */
+  function dom(t, vol, bus = musBus){
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = 'sine'; o.frequency.setValueAtTime(120, t); o.frequency.exponentialRampToValueAtTime(52, t + .16);
+    g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(.0005, t + .42);
+    o.connect(g); g.connect(bus); o.start(t); o.stop(t + .45);
+    tak(t, vol * .25, 900, bus, .03);
+  }
+  function tak(t, vol, freq = 2600, bus = musBus, dur = .07){
+    const s = ctx.createBufferSource(), f = ctx.createBiquadFilter(), g = ctx.createGain();
+    s.buffer = noiseBuf; f.type = 'bandpass'; f.frequency.value = freq; f.Q.value = 1.4;
+    g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(.0005, t + dur);
+    s.connect(f); f.connect(g); g.connect(bus); s.start(t, Math.random() * .3); s.stop(t + dur + .02);
+  }
+  function tone(type, f0, f1, t, dur, vol, bus = sfxBus){
+    const o = ctx.createOscillator(), g = ctx.createGain();
+    o.type = type; o.frequency.setValueAtTime(f0, t); if(f1 !== f0) o.frequency.exponentialRampToValueAtTime(f1, t + dur);
+    g.gain.setValueAtTime(.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + .012); g.gain.exponentialRampToValueAtTime(.0004, t + dur);
+    o.connect(g); g.connect(bus); o.start(t); o.stop(t + dur + .02);
+    return o;
+  }
+
+  /* ---------- دستگاهِ شور روی «ر» ----------
+     فاصله‌ها بر حسبِ سنت: می (سری) ~۱۵۰ سنت بالای ر — همان ربع‌پرده‌ی شور. */
+  const TONIC = 293.66;
+  const SHUR = [0, 150, 300, 500, 700, 800, 1000];
+  const deg = d => { const o = Math.floor(d / 7), i = ((d % 7) + 7) % 7; return TONIC * Math.pow(2, (SHUR[i] + 1200 * o) / 1200); };
+  /* جمله‌های کوتاه در حال‌وهوای شور (درجه از ر = ۰). null = سکوت، عددِ دوم = طول به هشتم */
+  const MOTIFS = [
+    [[3,1],[2,1],[1,1],[2,2],[0,1]],
+    [[0,1],[1,1],[2,1],[3,2],[2,1]],
+    [[4,1],[3,1],[2,1],[3,1],[1,2]],
+    [[2,1],[3,1],[4,2],[5,1],[4,1]],
+    [[1,1],[0,1],[-1,1],[0,3]],
+    [[3,1],[4,1],[3,1],[2,1],[1,1],[0,1]],
+    [[7,2],[6,1],[5,1],[4,2]],
+    [[4,1],[5,1],[4,1],[3,1],[2,2]],
+    [[0,2],[null,1],[3,1],[2,1],[1,1]],
+    [[5,1],[4,1],[3,2],[1,1],[2,1]],
+  ];
+
+  /* ---------- زمان‌بندِ موسیقی (نگاهِ جلو) ---------- */
+  let playing = false, level = 0, duck = false, timer = null, nextT = 0, step = 0, queue = [], qi = 0;
+  const BPM = [76, 82, 90, 100, 112];          // ضربِ هشتم در دقیقه ×۲
+  function bar(){
+    /* هر میزانِ شش‌هشتم یک موتیف؛ در دمای بالا اکتاوِ بالاتر و جمله‌های پرنت‌تر */
+    const m = MOTIFS[Math.floor(Math.random() * MOTIFS.length)];
+    const lift = level >= 3 && Math.random() < .5 ? 7 : 0;
+    const out = [];
+    for(const [d, len] of m) for(let k = 0; k < len; k++) out.push(k === 0 && d !== null ? {d: d + lift, len} : null);
+    while(out.length < 6) out.push(null);
+    return out.slice(0, 6);
+  }
+  function tick(){
+    if(!playing || !ctx) return;
+    const spb = 60 / BPM[level] / 2;
+    while(nextT < now() + .15){
+      const t = nextT, inBar = step % 6;
+      if(inBar === 0){ queue = bar(); qi = 0; }
+      const ev = queue[qi++];
+      const sparse = level === 0 ? .55 : level === 1 ? .8 : 1;
+      if(!duck){
+        if(ev && Math.random() < sparse){
+          const f = deg(ev.d), v = .16 + .03 * level;
+          if(ev.len >= 2 && level >= 2) riz(f, t, spb * ev.len * .9, v * .8); else santur(f, t, v);
+        }
+        /* واخوانِ بم: ر و لا در سرِ میزان */
+        if(inBar === 0) santur(deg(-7), t, .09 + .02 * level, musBus, 2.4);
+        if(inBar === 3 && level >= 1) santur(deg(-3), t, .06, musBus, 1.6);
+        /* تمبکِ شش‌هشتم: بم . تک تک بم تک */
+        if(level >= 1){
+          if(inBar === 0) dom(t, .22 + .05 * level);
+          else if(inBar === 3 && level >= 2) dom(t, .16 + .04 * level);
+          else if(inBar === 2 || inBar === 5) tak(t, .05 + .03 * level);
+          else if(level >= 4) tak(t, .03, 3400);
+        }
+      }
+      nextT += spb; step++;
+    }
+  }
+  function musicOn(){
+    if(!init() || !pref.music) return;
+    if(!playing){ playing = true; nextT = now() + .1; step = 0; timer = setInterval(tick, 30); }
+    musBus.gain.cancelScheduledValues(now());
+    musBus.gain.setTargetAtTime(duck ? MUS_VOL * .25 : MUS_VOL, now(), .4);
+  }
+  function musicOff(fade = .6){
+    if(!ctx) return;
+    musBus.gain.cancelScheduledValues(now());
+    musBus.gain.setTargetAtTime(0, now(), fade / 3);
+    clearInterval(timer); timer = null; playing = false;
+  }
+
+  /* ---------- صدای لحظه‌ها ---------- */
+  const STING = {
+    eureka(){ const t = now();
+      for(const [f, v] of [[1568, .32], [2352, .14], [3136, .07]]) tone('sine', f, f, t, 1.1, v);
+      santur(deg(14), t + .02, .25, sfxBus, 1.2); buzz([15, 40, 25]); },
+    win(){ const t = now();
+      [0,1,2,3,4,5,6,7].forEach((d, i) => santur(deg(d), t + i * .06, .3, sfxBus, 1));
+      [0, .18, .27, .45].forEach((x, i) => (i % 2 ? tak(t + .5 + x, .35, 2600, sfxBus) : dom(t + .5 + x, .55, sfxBus)));
+      [0, 4, 7].forEach(d => santur(deg(d + 7), t + 1.05, .3, sfxBus, 2.2));
+      buzz([30, 60, 30, 60, 140]); },
+    cry(){ const t = now();
+      [[4, 0], [2, .45], [1, .9], [0, 1.4]].forEach(([d, x]) => {
+        const o = tone('triangle', deg(d) / 2, deg(d) / 2 * .97, t + x, .55, .2);
+        const l = ctx.createOscillator(), lg = ctx.createGain(); l.frequency.value = 6; lg.gain.value = 5;
+        l.connect(lg); lg.connect(o.frequency); l.start(t + x); l.stop(t + x + .6); });
+      buzz(260); },
+    angry(){ const t = now(), f = ctx.createBiquadFilter(), g = ctx.createGain();
+      f.type = 'lowpass'; f.frequency.value = 420; g.gain.setValueAtTime(.0001, t);
+      g.gain.exponentialRampToValueAtTime(.32, t + .05); g.gain.exponentialRampToValueAtTime(.0005, t + .6);
+      for(const fr of [68, 71.5]){ const o = ctx.createOscillator(); o.type = 'sawtooth'; o.frequency.setValueAtTime(fr, t);
+        o.frequency.linearRampToValueAtTime(fr * .8, t + .6); o.connect(f); o.start(t); o.stop(t + .62); }
+      f.connect(g); g.connect(sfxBus); dom(t, .4, sfxBus); buzz([60, 40, 60]); },
+    confused(){ const t = now(), o = tone('sine', 300, 300, t, .42, .22);
+      o.frequency.exponentialRampToValueAtTime(760, t + .14); o.frequency.exponentialRampToValueAtTime(240, t + .4); buzz(30); },
+    suspect(){ const t = now(); tone('triangle', 233, 220, t, .16, .16); tone('triangle', 196, 185, t + .2, .3, .16); },
+    happy(){ const t = now(); [3, 5, 7].forEach((d, i) => santur(deg(d + 7), t + i * .07, .2, sfxBus, .9)); },
+  };
+
+  return {
+    /* اولین لمس: قفلِ صدای مرورگر باز می‌شود */
+    unlock(){ if(init() && ctx.state !== 'running') ctx.resume(); },
+    /* موسیقیِ آرامِ صفحه‌ی شروع/پایان (سطحِ صفر) */
+    ambient(){ this.unlock(); if(ctx && !playing){ level = 0; duck = false; musicOn(); } },
+    start(){ this.unlock(); if(!ctx) return; level = 0; duck = false; musicOn();
+      const t = now(); [0, 2, 4].forEach((d, i) => santur(deg(d + 7), t + i * .09, .2, sfxBus, 1.2)); },
+    mood(m){ if(!ctx || !pref.sfx) return; const s = STING[m]; if(s) s(); },
+    heat(lv, moved){
+      if(!ctx) return;
+      level = Math.max(0, Math.min(4, lv | 0));
+      if(moved > 0 && pref.sfx){ const t = now(); for(let i = 0; i <= level; i++) santur(deg(i * 2 + 7), t + i * .07, .14, sfxBus, .8); }
+    },
+    tap(w){ if(!ctx || !pref.sfx) return;
+      const f = w === null ? 520 : 380 + 360 * w; tone('sine', f, f * 1.15, now(), .07, .16); buzz(8); },
+    question(hot){ if(!ctx || !pref.sfx) return; const t = now() + .03;
+      if(hot){ dom(t, .35, sfxBus); riz(deg(11), t + .05, .5, .16, sfxBus); buzz([10, 30, 10]); }
+      else santur(deg(7 + Math.floor(Math.random() * 5)), t, .07, sfxBus, .9); },
+    duck(on){ duck = !!on; if(ctx && playing) musBus.gain.setTargetAtTime(on ? MUS_VOL * .25 : MUS_VOL, now(), .25); },
+    end(won){ if(!ctx) return; duck = false; level = 0; musicOff(.4);
+      /* بعد از نوای برد/باخت، موسیقیِ آرامِ صفحه برمی‌گردد */
+      setTimeout(() => { if(!playing && document.body.dataset.screen === 's-end') musicOn(); }, won ? 4200 : 3600); },
+    chime(){ if(!ctx || !pref.sfx) return; const t = now(); [4, 7].forEach((d, i) => santur(deg(d + 7), t + i * .12, .2, sfxBus, 1.2)); buzz(15); },
+    toggle(kind){
+      pref[kind] = !pref[kind]; save(); this.unlock(); this.sync();
+      if(!ctx) return;
+      if(kind === 'music') pref.music ? musicOn() : musicOff();
+      else sfxBus.gain.setTargetAtTime(pref.sfx ? SFX_VOL : 0, now(), .05);
+      if(pref[kind]) santur(deg(9), now(), .18, kind === 'music' ? musBus : sfxBus, .8);
+    },
+    sync(){
+      for(const k of ['music', 'sfx']){ const b = document.getElementById('snd-' + k); if(b) b.setAttribute('aria-pressed', pref[k] ? 'true' : 'false'); }
+    },
+  };
+})();
+/* قفلِ صدای مرورگر با اولین لمس باز می‌شود؛ موسیقی از همان لحظه روی صفحه‌ی شروع پخش می‌شود */
+document.addEventListener('pointerdown', function first(){
+  document.removeEventListener('pointerdown', first, true);
+  SND.ambient();
+}, true);
+</script>
 <script src="data.js?v=f2d1193ba1"></script>
 <script>
 /* ==========================================================
@@ -819,7 +1079,7 @@ const ENG = (() => {
 
   /* رتبه‌بندی سؤال‌های باقی‌مانده. هم انتخاب‌کننده از آن استفاده می‌کند هم پشت‌صحنه،
      تا این حلقه در هر سؤال دوبار اجرا نشود. */
-  function rankQuestions(probs, asked, clusterCount, unk){
+  function rankQuestions(probs, asked, clusterCount, unk, letterGate){
     refreshLive(probs);
     /* بازیکنی که به سؤال‌های سلیقه‌ای «نمی‌دونم» می‌گوید، باز هم از او نپرس —
        هر «نمی‌دونم» یک سؤالِ سوخته است. وزنِ سؤال‌های نرم با هر «نمی‌دونم» کم می‌شود. */
@@ -833,7 +1093,9 @@ const ENG = (() => {
     const scratch = {ig:0, pYes:0};
     const nL = clusterCount.letter || 0;
     // حرفِ دوم فقط وقتی نامزدِ اول واقعاً جلو افتاده — تأییدِ نهایی، نه بازیِ الفبا
-    const letterOpen = (liveMax >= LETTER_GATE || liveH <= LETTER_H) && (nL === 0 || (nL < 2 && liveMax >= 0.40));
+    // letterGate: دروازه‌ی حرفِ اول از بیرون (chooseQuestion آن را روی کلِ توزیع حساب می‌کند، نه روی ۸ نامزدِ متمرکز)
+    const letterOpen = letterGate !== undefined ? letterGate
+                     : (liveMax >= LETTER_GATE || liveH <= LETTER_H) && (nL === 0 || (nL < 2 && liveMax >= 0.40));
     const lastQ = asked.length ? QUESTIONS.find(x => x.id === asked[asked.length - 1]) : null;
     const lastCl = lastQ ? lastQ.cluster : null;
     for(let q = 0; q < NQ; q++){
@@ -903,8 +1165,98 @@ const ENG = (() => {
     return out;
   }
 
+  /* ---------- سیاستِ حدس و سؤالِ متمرکز — یک جا برای بازی و شبیه‌سازها (۱۶ اکتبر ۲۰۲۶، بخشِ ۱۳ LOG) ----------
+     یافته‌ی real-sim (lab/calib.js): با بازیکنِ واقعی، احتمالِ «نامزدِ اول = جواب» از سؤالِ ۱۶ به بعد
+     روی ~۳۰٪ می‌ماند و p1 حولِ ۰.۳۳ ثابت می‌شود — سؤالِ بیستم به بعد تقریباً هیچ‌چیز اضافه نمی‌کند،
+     ولی ردِ یک حدس (نامزدی با p≈۰.۴) حدودِ یک بیت می‌ارزد، پنج برابرِ یک سؤالِ دیرهنگام. پس:
+       • سقفِ ۲۴ به‌جای ۳۲، و بعد از هر ردِ حدس ۶/۵/۴ سؤالِ تازه (باختِ قبلی: ۳۲+۵+۵+۵ = ۴۷ سؤال).
+         سقفِ ۲۲ برای بازیکنِ واقعی بهتر بود ولی بازیکنِ دقیق (test-full، بدونِ نویز) هنوز دارد همگرا
+         می‌شود و از هر ۲ سؤالِ کمترِ سقف ≈۱ واحد بُرد می‌باخت — ۲۴ مصالحه است.
+       • حدسِ بی‌امید نزن: در سقف اگر p1 < HOPELESS، حدس ۱۰٪ شانس دارد ولی یک حدس از چهار تا را می‌سوزاند؛
+         به‌جایش تا HARDQ (سقفِ قدیم) سؤال بپرس — real-sim «تا سه حدس» +۲، بازیکنِ دقیق +۱.۵.
+       • حدسِ نرم: از سؤالِ ۱۴ با p1 ≥ ۰.۴۵، از ۱۸ با p1 ≥ ۰.۳۵ — وقتی نامزدِ اول دو گام ثابت مانده؛
+         سهمیه‌ی باخت (MAX_GUESSES) را نمی‌خورد، SOFT_MAX بار در هر دست، با لحنِ «یه حدسی می‌زنم…»
+       • تمرکز: از سؤالِ ۱۶ سؤال‌ها روی ۸ نامزدِ اول رتبه‌بندی می‌شوند — بهره‌ی اطلاعاتیِ روی کلِ
+         توزیع صرفِ مرتب‌کردنِ دمِ توزیع می‌شد؛ «تا سه حدس» +۲ تا ۴ واحد در real-sim. دروازه‌ی حرفِ اول
+         عمداً روی همان ۸ نامزد است (FOCUS_LETTER 'focus'): روی کلِ توزیع ۵ واحد کمتر می‌بُرد.
+     اعدادِ قبل/بعد در LOG بخشِ ۱۳. F.guess (ENGF در lab) هر کدام را اورراید می‌کند. */
+  const GUESS = Object.assign({
+    MAXQ: 24, MINQ: 8, CONF: 0.80, RATIO: 6, IG_FLOOR: 0.10, MAX_GUESSES: 4,
+    EXTS: [6, 5, 4],                       // سؤالِ اضافه بعد از ردِ اول/دوم/سوم… (آخری تکرار می‌شود)
+    HOPELESS: 0.10, HARDQ: 32,             // در سقف با p1 < HOPELESS حدس نزن، تا HARDQ بپرس
+    EARLY: [[14, .45, 3], [18, .35, 2]],   // [از سؤالِ n، کمینه‌ی p1، کمینه‌ی p1/p2] — حدسِ نرم
+    STABLE: 2, REJ_WAIT: 3, SOFT_MAX: 2,
+    /* FOCUS_MASS: تمرکز فقط وقتی ۸ نامزدِ اول دست‌کم این‌قدر از جرم را دارند — برای شخصیتِ گمنام (test-full با
+       انتخابِ یکنواخت یا ۱۰٪ نویزِ تصادفی) حقیقت تا دیر بیرونِ ۸تاست و تمرکز سؤالِ بالابرنده‌اش را نمی‌پرسید.
+       ۰.۳: test-full ۱۰٪ نویز ۷۸ → ۸۴ و یکنواخت ۸۰ → ۸۳ (تا چهار حدس)، real-sim −۰.۵ (در حدِ نویز)؛
+       ۰.۵ در test-full بهتر ولی real-sim −۲ در هر سه seed — مصالحه ۰.۳ */
+    FOCUS_N: 16, FOCUS_K: 8, FOCUS_LETTER: 'focus', FOCUS_MASS: 0.3
+  }, F.guess || {});
+  // سقفِ فعلیِ سؤال: بعد از هر ردِ حدس (نرم یا سخت) EXTS[k] سؤالِ دیگر
+  function capOf(nRej, lastRejAt, G = GUESS){
+    if(!nRej) return G.MAXQ;
+    return Math.max(G.MAXQ, lastRejAt + G.EXTS[Math.min(nRej - 1, G.EXTS.length - 1)]);
+  }
+  /* آیا الان حدس بزنیم؟ → {reason, soft} یا null.
+     ctx: probs؛ bi/b2 اندیسِ نامزدِ اول و دوم (بدونِ ردشده‌ها)؛ n؛ nHard/nSoft ردهای تا حالا؛
+          lastRejAt شماره‌ی سؤال در آخرین رد؛ hist نامزدِ اول در هر گام؛ pool() رتبه‌بندیِ کامل (تنبل) */
+  function guessReady(ctx, G = GUESS){
+    const {probs, bi, b2, n, nHard, nSoft, lastRejAt, hist} = ctx;
+    const nRej = nHard + nSoft;
+    const p1 = probs[bi], p2 = b2 >= 0 ? probs[b2] : 1e-9, ratio = p1 / Math.max(p2, 1e-9);
+    if(n >= G.MINQ && p1 > G.CONF && ratio > G.RATIO) return {reason:'conf', soft:false};
+    if(n >= capOf(nRej, lastRejAt, G)){
+      // حدسِ بی‌امید (p1 < HOPELESS) یک حدس از چهار تا را برای ۱۰٪ شانس می‌سوزاند — تا HARDQ باز هم بپرس
+      if(p1 >= G.HOPELESS || n >= capOf(nRej, lastRejAt, Object.assign({}, G, {MAXQ: G.HARDQ}))) return {reason:'maxq', soft:false};
+    }
+    const sinceRej = nRej ? n - lastRejAt : Infinity;
+    if(G.EARLY.length && nSoft < G.SOFT_MAX && n >= G.MINQ && sinceRej >= G.REJ_WAIT){
+      let stable = 0;
+      for(let k = hist.length - 2; k >= 0 && hist[k] === bi; k--) stable++;
+      for(const [n0, conf, r] of G.EARLY)
+        if(n >= n0 && p1 >= conf && ratio >= r && stable >= G.STABLE) return {reason:'early', soft:true};
+    }
+    // نامزدهای باقی‌مانده واقعاً شبیه‌اند و هیچ سؤالی جدایشان نمی‌کند — همان‌جا حدس بزن
+    if(n >= G.MINQ && ctx.pool().reduce((m, x) => Math.max(m, x.ig), 0) < G.IG_FLOOR) return {reason:'igfloor', soft:false};
+    return null;
+  }
+  /* سؤالِ بعدی. از FOCUS_N به بعد رتبه‌بندی روی K نامزدِ اول (بازبهنجارشده) است؛ اگر آن‌جا سؤالی
+     نماند، روی کلِ توزیع. rejected = مجموعه‌ی اندیسِ حدس‌های ردشده؛ fullPool = رتبه‌بندیِ کامل اگر از
+     قبل حساب شده. → {q, pool, focus} — pool همانی است که q از آن آمده (برای پشت‌صحنه) */
+  function chooseQuestion(probs, asked, clusterCount, unk, n, rejected, fullPool, G = GUESS){
+    if(n >= G.FOCUS_N && G.FOCUS_K > 1){
+      const order = [];
+      for(let i = 0; i < NC; i++) if(probs[i] > LIVE_EPS && !(rejected && rejected.has(i))) order.push(i);
+      order.sort((a, b) => probs[b] - probs[a]);
+      const K = Math.min(G.FOCUS_K, order.length);
+      const fp = new Array(NC).fill(0);
+      let z = 0;
+      for(let j = 0; j < K; j++) z += probs[order[j]];
+      // تمرکز فقط وقتی مظنون‌ها واقعی‌اند: اگر K نامزدِ اول کمتر از FOCUS_MASS از جرم را دارند، توزیع هنوز
+      // پخش است و بهره‌ی اطلاعاتیِ کلِ توزیع درست‌تر است (جانی دپ با ۱۹ «نمی‌دونم» رتبه‌ی ۲۰ بود و تمرکز هرگز نپرسید «دزدانِ دریایی؟»)
+      if(z < (G.FOCUS_MASS || 0)) z = 0;
+      if(z > 0) for(let j = 0; j < K; j++) fp[order[j]] = probs[order[j]] / z;
+      if(z > 0){
+      /* دروازه‌ی حرفِ اول روی کلِ توزیع: روی ۸ نامزدِ بازبهنجارشده آنتروپی همیشه ≤ ۳ بیت است و حرفِ اول
+         از همان سؤالِ ۱۲ باز می‌شد — جادوی «اسمش با م شروع می‌شه؟» فقط وقتی عمه واقعاً بو برده */
+      let letterGate;
+      if(G.FOCUS_LETTER !== 'focus'){
+        refreshLive(probs);
+        const nL = clusterCount.letter || 0;
+        letterGate = (liveMax >= LETTER_GATE || liveH <= LETTER_H) && (nL === 0 || (nL < 2 && liveMax >= 0.40));
+      }
+      const fpool = rankQuestions(fp, asked, clusterCount, unk, letterGate);
+      const q = fpool.length ? pickQuestion(fp, asked, clusterCount, fpool, unk) : null;
+      if(q) return {q, pool:fpool, focus:true};
+      }
+    }
+    const pool = fullPool || rankQuestions(probs, asked, clusterCount, unk);
+    return {q: pickQuestion(probs, asked, clusterCount, pool, unk), pool, focus:false};
+  }
+
   return {clamp, ANSWERS, likelihood, lse, toProbs, entropy,
           rankQuestions, pickQuestion, update, rebuild, NQ,
+          GUESS, capOf, guessReady, chooseQuestion,   // سیاستِ حدس — شبیه‌سازها هم از همین می‌خوانند
           get NC(){ return NC; },              // پویا — با «یادش بده» زیاد می‌شود
           setSoft(v){ SOFT = v; },
           get liveCount(){ return liveN; }};   // برای پشت‌صحنه
@@ -1068,26 +1420,9 @@ const KIN = (() => {
 /* ==========================================================
    وضعیت بازی
    ========================================================== */
-/* آستانه‌های حدس — با build/sweep3.js روی همین پایگاه و همین موتور جاروب شده‌اند.
-   قبلاً این‌ها به شکل «آستانه‌ی نرم‌شونده» نوشته شده بودند، ولی کفِ فرمول همیشه
-   قبل از سؤال ششم غالب می‌شد و عملاً ثابت بود؛ جاروب هم نشان داد نرم‌شدن هیچ
-   سودی ندارد. پس صریح و ثابت نوشته شده‌اند. */
-const MAXQ  = 32;    // سقف سؤال — با ۷۶۰۰ شخصیت ۲۸ کم بود (۳۲٪ بازی‌ها به سقف می‌خوردند)؛ ۳۲ در sim ۱۰٪ نویز حدسِ اول را ۷ درصد بالا برد
-const MINQ  = 8;     // زودتر از این حدس نزن
-const CONF  = 0.80;  // کمینه‌ی احتمال نامزد اول
-const RATIO = 6;     // نامزد اول باید چند برابر نامزد دوم باشد
-/* وقتی دو نامزدِ باقی‌مانده واقعاً شبیه‌اند (دو شخصیتِ فرعی از یک سریال)،
-   هیچ سؤالی جدایشان نمی‌کند؛ ولی شرطِ RATIO همچنان برقرار نیست و عمه تا
-   سقفِ ۲۸ سؤال ادامه می‌داد. بازیکن این را «سؤال بی‌خود» حس می‌کند.
-   پس: اگر بهترین سؤالِ باقی‌مانده کمتر از این‌قدر بیت می‌دهد، همان‌جا حدس بزن.
-   جاروب‌شده با build/tune-igfloor.js — دو سؤال کوتاه‌تر، بدون افتِ دقت. */
-const IG_FLOOR = 0.10;   // با جدول‌های نرم‌شده (QEPS) بهره‌ها کوچک‌ترند؛ ۰.۱۵ زود حدس می‌زد
-/* بعد از ردِ یک حدس، به‌جای حدسِ پشتِ حدس تا چهار سؤالِ تازه مجاز است — رد شدن
-   خودش توزیع را عوض می‌کند و این سؤال‌ها در شبیه‌سازی «تا سه حدس» را ۶ درصد بالا بردند. */
-const EXT_Q = 5;
-/* چهار حدس به‌جای سه — مثل آکیناتور که بعد از ردِ حدس باز هم ادامه می‌دهد؛ در شبیه‌سازِ
-   بازیکنِ واقعی (real-sim) پنج درصد بُردِ بیشتر، بی‌هزینه برای بازی‌های آسان. */
-const MAX_GUESSES = 4;
+/* آستانه‌های حدس (سقفِ سؤال، CONF/RATIO، کفِ بهره، سؤال‌های بعد از ردِ حدس، چهار حدس،
+   حدسِ نرم، تمرکز) همه در ENG.GUESS هستند و تصمیمِ «الان حدس بزن؟» را ENG.guessReady
+   می‌گیرد — یک جا برای بازی و شبیه‌سازها (build/lab/real-sim.js، human-test2.js، test-full.js). */
 let S = null;
 function newState(){
   return {
@@ -1098,9 +1433,13 @@ function newState(){
     history: [],          // برای undo
     q: null,
     n: 0,
-    rejected: [],
-    cap: MAXQ,            // سقفِ سؤال — بعد از هر حدسِ رد‌شده EXT_Q تا جلو می‌رود
+    rejected: [],         // همه‌ی حدس‌های ردشده (نرم و سخت)؛ سقفِ سؤال از روی این‌ها می‌آید (ENG.capOf)
+    nSoft: 0,             // چندتای ردشده‌ها حدسِ نرم بودند — این‌ها سهمیه‌ی باخت را نمی‌خورند
+    lastRejAt: 0,         // شماره‌ی سؤال در آخرین ردِ حدس
+    hist: [],             // نامزدِ اول در هر گام — «دو گام ثابت مانده؟» برای حدسِ نرم
     current: null,        // شخصیتی که همین حالا حدس زده شده
+    soft: false,          // حدسِ جاری نرم است («یه حدسی می‌زنم…»)
+    softMiss: false,      // همین حالا یک حدسِ نرم رد شد — زیرلبیِ سؤالِ بعد
     suspicious: false,
     // --- خوراکِ حال‌وهوای عمه (روی محاسبات اثری ندارد) ---
     fog: 0,               // «نمی‌دونم»ها؛ شمارنده‌ی فراموش‌کار، نه پشت‌سرهمِ خشک
@@ -1163,6 +1502,7 @@ function renderHeat(heat, lv, moved){
   $('heat').textContent = HEAT[lv].label;
   $('qnum').textContent = S && S.n ? 'سؤال ' + toFa(S.n) : '';
   if(moved > 0){ room.classList.remove('flare'); void room.offsetWidth; room.classList.add('flare'); }
+  SND.heat(lv, moved);
 }
 // وقتی دما یک پله بالا می‌رود، عمه بلند فکر می‌کند — پله به پله هیجانش بیشتر
 const HEAT_UP = [
@@ -1179,6 +1519,10 @@ const FILM_LINE = ['فهمیدم کدوم فیلمه!','عمه فیلم‌باز
 const BOOK_LINE = ['فهمیدم کدوم کتابه!','عمه اهلِ کتابه‌ها… اینه:','این کتابو که من صد بار خوندم:'];
 
 const GUESS_LINE = ['فهمیدم! فهمیدم!','عمه که گفتم می‌فهمم…','ای شیطون، خودم حدس زدم:','گرفتمت عزیزم:'];
+// حدسِ نرم / کم‌اطمینان — عمه بلند فکر می‌کند، قسم نمی‌خورد
+const HUNCH_LINE = ['یه حدسی می‌زنم… نکنه این باشه؟','به دلم برات شده… اینه؟','بذار یه تیری بندازم:','اگه اشتباه نکنم…','هوم… این نیست؟'];
+// بعد از ردِ حدسِ نرم — نه جا می‌خورد نه کفری می‌شود، فقط ادامه می‌دهد
+const SOFT_MISS = ['باشه، پس اون نبود… بذار بیشتر بپرسم','عه، نزدیک بود ها… ادامه بدیم','آهان، پس یکی دیگه‌ست. خب…','قبول، تیرم به سنگ خورد. بریم جلو'];
 // وقتی اسمِ واقعی را بلدیم، جمله هم باید بوی «می‌شناسمش» بدهد نه «حدس زدم»
 const KNOWN_LINE = ['ای جان! خودشه:','عمه اسمِ کسی یادش نمی‌ره:','همون که فکر می‌کردم:','دیدی شناختمش؟'];
 const WIN_LINE = ['دیدی گفتم! من که عمه‌تم، از چشمات خوندم.','همینو می‌گفتم دیگه! حالا یه شیرینی بردار.','نگفتم؟ عمه‌ت این‌کاره‌ست مادر.'];
@@ -1911,6 +2255,7 @@ function setMood(m, holdMs){
   const st = $('stage');
   clearTimeout(moodHold); moodHold = null;
   if(st.dataset.mood !== m){
+    SND.mood(m);
     st.dataset.mood  = m;
     $('room').dataset.mood = m;   // سرک‌کش‌ها و گربه به حالِ عمه واکنش نشان می‌دهند
     st.dataset.brow  = cfg.brow;
@@ -1971,8 +2316,10 @@ const START_KIN = ['شوهرخاله‌ت','مادربزرگت','پسردایی�
 $('start-kin').textContent = pick(START_KIN);
 renderHeat(0, 0, 0);
 syncKinBtn();
+SND.sync();
 
 function startGame(){
+  SND.start();
   S = newState();
   S.h0 = ENG.entropy(ENG.toProbs(S.log));
   S.t0 = Date.now();
@@ -1986,21 +2333,25 @@ function startGame(){
 function nextQuestion(){
   const probs = ENG.toProbs(S.log);
   const top = bestCandidates(probs);
+  if(!top.length){ S.suspicious = false; doGuess(top); return; }
 
-  let ready = (S.n >= MINQ && top[0].p > CONF &&
-               top[0].p / Math.max(top[1]?.p ?? 1e-9, 1e-9) > RATIO) || S.n >= S.cap;
-  // رتبه‌بندی یک‌بار حساب می‌شود و هم به انتخاب‌کننده می‌رود هم به پشت‌صحنه
+  /* تصمیمِ حدس و انتخابِ سؤال هر دو در ENG است (همان کدی که شبیه‌سازها می‌سنجند) */
+  const rejIdx = new Set(S.rejected.map(id => CHARACTERS.findIndex(c => c.id === id)));
+  const bi = CHARACTERS.indexOf(top[0].c), b2 = top.length > 1 ? CHARACTERS.indexOf(top[1].c) : -1;
+  S.hist.push(bi);
   // «نمی‌دونم»های این دست — موتور از آن‌ها می‌فهمد سؤالِ سلیقه‌ای برای این بازیکن سوخته است
   const unk = new Set(S.answers.filter(a => a.w === null).map(a => a.id));
-  const pool = ready ? null : ENG.rankQuestions(probs, S.asked, S.clusterCount, unk);
-  // بهره‌ی خام بهترین سؤال، نه امتیازِ جریمه‌شده‌ی کلاستر — جریمه فقط برای
-  // تنوع است و نباید تصمیمِ «دیگر سؤالی نمانده» را جابه‌جا کند.
-  if(!ready && S.n >= MINQ && pool.reduce((m,x) => Math.max(m, x.ig), 0) < IG_FLOOR) ready = true;
-  const q = ready ? null : ENG.pickQuestion(probs, S.asked, S.clusterCount, pool, unk);
-  if(ready || !q){ S.suspicious = false; doGuess(top); return; }
+  // رتبه‌بندیِ کامل فقط اگر لازم شد (کفِ بهره / سؤالِ بیرونِ تمرکز) — و همان به پشت‌صحنه می‌رود
+  let pool = null;
+  const getPool = () => pool || (pool = ENG.rankQuestions(probs, S.asked, S.clusterCount, unk));
+  const st = ENG.guessReady({probs, bi, b2, n: S.n, nHard: S.rejected.length - S.nSoft, nSoft: S.nSoft,
+                             lastRejAt: S.lastRejAt, hist: S.hist, pool: getPool});
+  if(st){ S.suspicious = false; doGuess(top, st.soft, probs[bi]); return; }
+  const next = ENG.chooseQuestion(probs, S.asked, S.clusterCount, unk, S.n, rejIdx, pool);
+  if(!next.q){ S.suspicious = false; doGuess(top, false, probs[bi]); return; }
 
   S.n++;
-  askQuestion(q, probs, top, pool);
+  askQuestion(next.q, probs, top, next.pool);
 }
 
 // نمایش یک سؤال بدون تصمیم‌گیری دوباره — هم مسیر عادی از آن استفاده می‌کند هم undo
@@ -2022,6 +2373,7 @@ function askQuestion(q, probs, top, pool){
   /* «یه حدسی زدم…» وقتی دماسنج هنوز «سرد» است دروغ به نظر می‌رسد — گروه‌های
      بزرگ (تیم ملی، اسکار) گاهی زود پرسیده می‌شوند؛ آن‌جا بی‌پیش‌درآمد. */
   const hotLead = q.cluster === 'hot' && lv >= 1;
+  SND.question(hotLead);
   bub.classList.toggle('hot', hotLead);
   bub.textContent = '';
   if(hotLead){
@@ -2033,8 +2385,11 @@ function askQuestion(q, probs, top, pool){
   bub.appendChild(document.createTextNode(q.text));
 
   /* زیرلبی: تناقض > بالا رفتنِ دما > پایین آمدنش > حالِ عادی */
+  const miss = S.softMiss;
+  S.softMiss = false;
   let mood = susp ? 'suspect' : auntMood(), line;
-  if(susp) line = pick(SUSPECT);
+  if(miss){ line = pick(SOFT_MISS); mood = 'think'; }
+  else if(susp) line = pick(SUSPECT);
   else if(moved > 0 && HEAT_UP[lv].length){ line = pick(HEAT_UP[lv]); if(lv >= 3) mood = 'happy'; }
   else if(moved < -1) line = pick(HEAT_DOWN);
   else line = Math.random() < 0.5 ? pick(MUTTER[mood] || MUTTER.idle) : '';
@@ -2053,9 +2408,11 @@ function renderAnswers(){
 
 function answer(k){
   const a = ENG.ANSWERS.find(x => x.k === k);
+  SND.tap(a.w);
   S.history.push({log:[...S.log], asked:[...S.asked], cc:{...S.clusterCount},
                   n:S.n, q:S.q, rejected:[...S.rejected], answers:[...S.answers],
-                  fog:S.fog, firm:S.firm, conf:S.conf, heatLvl:S.heatLvl, cap:S.cap});
+                  nSoft:S.nSoft, lastRejAt:S.lastRejAt, hist:[...S.hist],
+                  fog:S.fog, firm:S.firm, conf:S.conf, heatLvl:S.heatLvl});
   const before = ENG.toProbs(S.log);
   const topBefore = bestCandidates(before)[0];
 
@@ -2096,7 +2453,8 @@ function undo(){
   S.n = h.n; S.rejected = h.rejected; S.answers = h.answers ?? []; S.suspicious = false;
   S.fog = h.fog ?? 0; S.firm = h.firm ?? 0; S.conf = h.conf ?? 0;
   S.heatLvl = h.heatLvl ?? 0;
-  S.cap = h.cap ?? MAXQ;
+  S.nSoft = h.nSoft ?? 0; S.lastRejAt = h.lastRejAt ?? 0; S.hist = h.hist ?? [];
+  S.soft = false; S.softMiss = false;
   askQuestion(h.q);
 }
 
@@ -2107,7 +2465,7 @@ function bestCandidates(probs){
     .sort((a,b) => b.p - a.p);
 }
 
-function doGuess(top){
+function doGuess(top, soft = false, p1 = 1){
   // آستانه‌ی ثابت قبلی (۰.۰۲) برای پایگاهِ ۱۲نفره بود؛ روی ۷۲۵ شخصیت حتی یک
   // حدسِ کاملاً درست هم به آن نمی‌رسید و عمه بی‌آنکه اسمی بیاورد تسلیم می‌شد.
   // عمه همیشه بهترین حدسش را می‌گوید؛ اشتباه بودنش را کاربر با «نه» اعلام می‌کند.
@@ -2116,34 +2474,46 @@ function doGuess(top){
   // یک اسم می‌دهد؛ بین هم‌ترازها قرعه می‌اندازیم تا هر دست تکراری نشود.
   const tied = top.filter(x => x.p >= top[0].p * 0.999);
   S.current = pick(tied).c;
+  S.soft = soft;
+  /* لحن با اطمینان می‌آید: حدسِ نرم یا حدسِ اجباریِ کم‌اطمینان «یه حدسی می‌زنم…» است،
+     نه «فهمیدم! فهمیدم!» — عمه‌ای که با ۲۰٪ اطمینان داد بزند «فهمیدم» دروغگو به نظر می‌رسد. */
+  const sure = !soft && p1 >= 0.6;
   /* اگر اسمِ واقعیِ این نسبت را بلدیم، همان تیتر می‌شود و نسبت می‌رود زیرش —
      «زهرا / خاله‌ی مادری‌ت» به‌جای «خاله‌ی مادری / خواهرِ مامانته». */
   const kn = KIN.nameFor(S.current);
-  $('gtext').textContent = pick(kn ? KNOWN_LINE : S.current.f ? FILM_LINE : S.current.b ? BOOK_LINE : GUESS_LINE);
+  $('gtext').textContent = pick(kn ? KNOWN_LINE : !sure ? HUNCH_LINE : S.current.f ? FILM_LINE : S.current.b ? BOOK_LINE : GUESS_LINE);
   $('gname').textContent = kn || S.current.name;
   $('ghint').textContent = (kn ? S.current.name : S.current.hint) + ' • با ' + toFa(S.n) + ' سؤال';
+  $('gno').textContent = sure ? 'نه، اشتباهه' : 'نه، اون نیست';
   show('s-guess');
-  // چراغ روشن می‌شود، بعد قیافه‌ی «مطمئنم خودشه» می‌گیرد
-  setMood('eureka');
+  SND.duck(true);
+  // چراغ روشن می‌شود، بعد قیافه‌ی «مطمئنم خودشه» می‌گیرد؛ حدسِ نیمه‌مطمئن فقط چشم‌هایش را ریز می‌کند
+  setMood(sure ? 'eureka' : 'think');
   clearTimeout(moodHold);
   moodHold = setTimeout(() => setMood('smug'), 1400);
 }
 
 function guessResult(correct){
+  SND.duck(false);
   if(correct){ LEARN.record(S.current, S.answers); endGame(true); return; }
   S.rejected.push(S.current.id);
   // جریمه‌ی سنگین، نه حذف کامل
   const i = CHARACTERS.findIndex(c => c.id === S.current.id);
   S.log[i] -= 8;
-  if(S.rejected.length >= MAX_GUESSES){ endGame(false); return; }
-  S.cap = Math.max(S.cap, S.n + EXT_Q);
-  S.current = null;   // حدسِ ردشده دیگر «جاری» نیست — وضعیت با صفحه یکی بماند
+  S.lastRejAt = S.n;   // سقفِ سؤال از این‌جا EXTS تا جلو می‌رود (ENG.capOf)
+  const soft = S.soft;
+  if(soft) S.nSoft++;
+  const nHard = S.rejected.length - S.nSoft;
+  if(nHard >= ENG.GUESS.MAX_GUESSES){ endGame(false); return; }
+  S.current = null; S.soft = false;   // حدسِ ردشده دیگر «جاری» نیست — وضعیت با صفحه یکی بماند
   show('s-ask');
-  S.suspicious = true;
-  // ردِ اولِ حدس → جا خورد؛ ردِ دوم → دیگر کفری است
-  S.fog += S.rejected.length >= 2 ? 2.2 : 1.1;
+  /* حدسِ نرم که رد شود عمه جا نمی‌خورد — «باشه، پس اون نبود…» و ادامه؛
+     ردِ حدسِ سخت: ردِ اول → جا خورد؛ ردِ دوم → دیگر کفری است */
+  S.suspicious = !soft;
+  S.softMiss = soft;
+  S.fog += soft ? 0.5 : nHard >= 2 ? 2.2 : 1.1;
   S.firm = 0;
-  const hurt = S.rejected.length >= 2 ? 'angry' : 'confused';
+  const hurt = soft ? 'think' : nHard >= 2 ? 'angry' : 'confused';
   nextQuestion();
   // بعد از nextQuestion، چون askQuestion خودش حالت را می‌نشاند و
   // هر تایمرِ معلق را پاک می‌کند — وگرنه این واکنش بی‌صدا گم می‌شد
@@ -2151,6 +2521,7 @@ function guessResult(correct){
 }
 
 function endGame(won){
+  SND.end(won);
   $('etext').textContent = won ? pick(WIN_LINE) : pick(LOSE_LINE);
   $('estat').textContent = won
     ? 'با ' + toFa(S.n) + ' سؤال پیدات کردم'
@@ -2313,6 +2684,7 @@ function teachCreate(){
   const name = $('teach-in').value.trim();
   if(name.length < 2) return;
   const c = LEARN.create(name, S.answers);
+  SND.chime();
   logGame({won: false, truth: c.name, taught: true});
   $('teach-in').style.display = 'none';
   $('teach-mk').style.display = 'none';
@@ -2324,6 +2696,7 @@ function teachPick(id){
   const c = CHARACTERS.find(x => x.id === id);
   if(!c) return;
   LEARN.record(c, S.answers);
+  SND.chime();
   logGame({won: false, truth: c.name, taught: true});
   $('teach-in').style.display = 'none';
   $('teach-res').innerHTML =

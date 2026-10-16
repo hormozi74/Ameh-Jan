@@ -12,11 +12,10 @@ const { QUESTIONS, CHARACTERS } = eval(fs.readFileSync(dataPath, 'utf8') + '\n;(
 globalThis.ENGF = JSON.parse(process.env.ENGF || '{}');
 const engSrc = process.env.ENG_SRC ? fs.readFileSync(process.env.ENG_SRC, 'utf8') : src.slice(s, e);
 const ENG = eval(engSrc + '\n;ENG');
-const grab = re => { const m = src.match(re); return m ? +m[1] : null; };
-const MAXQ = grab(/const MAXQ\s*=\s*([\d.]+)/), MINQ = grab(/const MINQ\s*=\s*([\d.]+)/), RATIO = grab(/const RATIO\s*=\s*([\d.]+)/),
-      CONF = grab(/const CONF\s*=\s*([\d.]+)/), IG_FLOOR = grab(/const IG_FLOOR\s*=\s*([\d.]+)/), MAX_GUESSES = grab(/const MAX_GUESSES\s*=\s*([\d.]+)/) ?? 3;
-/* EXT هم از HTML خوانده می‌شود (قبلاً پیش‌فرض ۰ بود و باید همیشه CONSTS='{"EXT":4}' می‌دادی) */
-const C = Object.assign({MAXQ, MINQ, RATIO, CONF, IG_FLOOR, EXT: grab(/const EXT_Q\s*=\s*([\d.]+)/) ?? 0}, JSON.parse(process.env.CONSTS || '{}'));
+/* سیاستِ حدس از ENG (ENG.GUESS)؛ CONSTS محیطی اورراید می‌کند (T4/STAG آزمایش‌های قدیمیِ خودِ diag‌اند) */
+const CO = JSON.parse(process.env.CONSTS || '{}'); if (CO.EXT !== undefined && !CO.EXTS) CO.EXTS = [CO.EXT];
+const C = Object.assign({}, ENG.GUESS, CO);
+const MAX_GUESSES = C.MAX_GUESSES;
 const idx = new Map(CHARACTERS.map((c, i) => [c.id, i]));
 
 function hash32(str){ let h = 2166136261 >>> 0; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; } return h; }
@@ -26,36 +25,34 @@ function play(truth) {
   const gseed = hash32(seed0 + ':' + gameNo + ':' + truth.id); gameNo++;
   const ansFor = qid => { const r = rng(hash32(gseed + '|' + qid)); return [r(), r(), r()]; };
   let log = CHARACTERS.map(c => Math.log(c.prior));
-  const asked = [], cc = {}, rejected = new Set();
-  let n = 0, guesses = [], reasons = [], ranks = [], cap = C.MAXQ;
+  const asked = [], cc = {}, rejected = new Set(), unk = new Set(), hist = [];
+  let n = 0, lastRejAt = 0, nHard = 0, nSoft = 0; const guesses = [], reasons = [], ranks = [];
   const hHist = []; let stagUsed = 0;   // آنتروپی در هر گام — برای توقفِ درجازدن (CONSTS.STAG)
+  const ti = idx.get(truth.id);
   for (;;) {
     const probs = ENG.toProbs(log);
     hHist[n] = ENG.entropy(probs);
     let bi = -1, b2 = -1;
-    for (let i = 0; i < probs.length; i++) { if (rejected.has(CHARACTERS[i].id)) continue;
+    for (let i = 0; i < probs.length; i++) { if (rejected.has(i)) continue;
       if (bi < 0 || probs[i] > probs[bi]) { b2 = bi; bi = i; } else if (b2 < 0 || probs[i] > probs[b2]) b2 = i; }
-    let reason = null;
-    if (n >= C.MINQ && probs[bi] > C.CONF && probs[bi] / Math.max(probs[b2] ?? 1e-9, 1e-9) > C.RATIO) reason = 'conf';
+    hist.push(bi);
+    let st = null;
     /* حدسِ زودهنگام برای نامزدِ رده‌۴ (prior ≥ 3): CONSTS.T4 = {MINQ, CONF, RATIO} */
-    else if (C.T4 && CHARACTERS[bi].prior >= 3 && n >= C.T4.MINQ && probs[bi] > C.T4.CONF && probs[bi] / Math.max(probs[b2] ?? 1e-9, 1e-9) > C.T4.RATIO) reason = 'conf4';
-    else if (n >= cap) reason = 'maxq';
-    /* درجازدن: اگر در K سؤالِ آخر آنتروپی کمتر از DH بیت پایین آمده، جواب‌ها با برچسب‌ها
-       نمی‌خوانند و سؤالِ بیشتر فقط بازی را کش می‌دهد — حدس بزن. CONSTS.STAG = {N0, K, DH} */
-    else if (C.STAG && n >= C.STAG.N0 && n - C.STAG.K >= 0 && hHist[n - C.STAG.K] - hHist[n] < C.STAG.DH && !(stagUsed > 0 && n < stagUsed + C.STAG.K)) { reason = 'stag'; stagUsed = n; }
-    const pool = reason ? null : ENG.rankQuestions(probs, asked, cc);
-    if (!reason && n >= C.MINQ && pool.reduce((m, x) => Math.max(m, x.ig), 0) < C.IG_FLOOR) reason = 'igfloor';
-    const q = reason ? null : ENG.pickQuestion(probs, asked, cc, pool);
-    if (!reason && !q) reason = 'noq';
-    if (reason) {
-      const ti = idx.get(truth.id);
-      let r = 1; for (let i = 0; i < probs.length; i++) if (!rejected.has(CHARACTERS[i].id) && probs[i] > probs[ti]) r++;
-      ranks.push(r); reasons.push(reason);
+    if (C.T4 && CHARACTERS[bi].prior >= 3 && n >= C.T4.MINQ && probs[bi] > C.T4.CONF && probs[bi] / Math.max(probs[b2] ?? 1e-9, 1e-9) > C.T4.RATIO) st = { reason: 'conf4', soft: false };
+    /* درجازدن: اگر در K سؤالِ آخر آنتروپی کمتر از DH بیت پایین آمده حدس بزن. CONSTS.STAG = {N0, K, DH} */
+    else if (C.STAG && n >= C.STAG.N0 && n - C.STAG.K >= 0 && hHist[n - C.STAG.K] - hHist[n] < C.STAG.DH && !(stagUsed > 0 && n < stagUsed + C.STAG.K)) { st = { reason: 'stag', soft: false }; stagUsed = n; }
+    let pool = null; const getPool = () => pool || (pool = ENG.rankQuestions(probs, asked, cc, unk));
+    if (!st) st = ENG.guessReady({ probs, bi, b2, n, nHard, nSoft, lastRejAt, hist, pool: getPool }, C);
+    let q = null;
+    if (!st) { q = ENG.chooseQuestion(probs, asked, cc, unk, n, rejected, pool, C).q; if (!q) st = { reason: 'noq', soft: false }; }
+    if (st) {
+      let r = 1; for (let i = 0; i < probs.length; i++) if (!rejected.has(i) && probs[i] > probs[ti]) r++;
+      ranks.push(r); reasons.push(st.reason + (st.soft ? '/نرم' : ''));
       guesses.push(bi);
-      if (bi === ti || guesses.length >= MAX_GUESSES) return { guesses, n, reasons, ranks, asked, pTruth: probs[ti], pTop: probs[bi] };
-      rejected.add(CHARACTERS[bi].id);
-      log[bi] -= 8;
-      cap = Math.max(cap, n + C.EXT);
+      if (bi === ti) return { guesses, n, reasons, ranks, asked, pTruth: probs[ti], pTop: probs[bi] };
+      if (st.soft) nSoft++; else nHard++;
+      if (nHard >= MAX_GUESSES) return { guesses, n, reasons, ranks, asked, pTruth: probs[ti], pTop: probs[bi] };
+      rejected.add(bi); log[bi] -= 8; lastRejAt = n;
       continue;
     }
     const p = truth.a[q.id];
@@ -63,9 +60,10 @@ function play(truth) {
     if (noise < 0) w = p >= .65 ? 1 : p <= .35 ? 0 : null;
     else if (r1 < noise) w = [1, .75, null, .25, 0][Math.floor(r2 * 5)];
     else w = r2 < p ? (r3 < .15 ? .75 : 1) : (r3 < .15 ? .25 : 0);
+    if (w === null) unk.add(q.id);
     log = ENG.update(log, q, w);
-    const st = QSTAT[q.id] || (QSTAT[q.id] = { n: 0, ig: 0, pos: 0 }); st.n++; st.pos += n;
-    const pe = pool.find(x => x.q.id === q.id); if (pe) st.ig += pe.ig;
+    const qs = QSTAT[q.id] || (QSTAT[q.id] = { n: 0, ig: 0, pos: 0 }); qs.n++; qs.pos += n;
+    const pe = getPool().find(x => x.q.id === q.id); if (pe) qs.ig += pe.ig;
     asked.push(q.id); cc[q.cluster] = (cc[q.cluster] || 0) + 1; n++;
   }
 }
