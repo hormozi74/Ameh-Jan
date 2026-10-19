@@ -1,2 +1,4 @@
 api/log.php.key
 api/data/
+node_modules
+.wrangler
